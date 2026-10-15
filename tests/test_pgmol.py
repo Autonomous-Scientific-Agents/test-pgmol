@@ -141,3 +141,23 @@ def test_cli_single_and_multi(capsys: pytest.CaptureFixture[str]) -> None:
 
     analyzer = SymmetryAnalyzer(Molecule.from_xyz(h2o))
     assert analyzer.point_group == "C2v"
+
+
+@pytest.mark.parametrize("n", [13, 14, 15, 16])
+def test_high_rotation_orders_above_12(n: int) -> None:
+    angles = 2.0 * np.pi * np.arange(n) / n
+    coords = np.column_stack((3.0 * np.cos(angles), 3.0 * np.sin(angles), np.zeros(n)))
+    mol = Molecule(elements=("C",) * n, coords=coords)
+    assert detect_point_group(mol) == f"D{n}h"
+
+
+def test_long_string_path_above_255_chars(tmp_path: Path) -> None:
+    nested = tmp_path
+    while len(str(nested / "H2O_C2v.xyz")) < 270:
+        nested = nested / ("a" * 40)
+    nested.mkdir(parents=True, exist_ok=True)
+    target = nested / "H2O_C2v.xyz"
+    target.write_text((CORE_DIR / "H2O_C2v.xyz").read_text(encoding="utf-8"), encoding="utf-8")
+
+    assert len(str(target)) >= 270
+    assert detect_point_group(str(target)) == "C2v"

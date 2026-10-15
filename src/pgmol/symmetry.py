@@ -57,9 +57,13 @@ class Molecule:
             stripped = path_or_text.strip()
             if not stripped:
                 raise ValueError("Empty XYZ input")
-            if "\n" not in path_or_text and len(path_or_text) < 256:
+            if "\n" not in path_or_text:
                 p = Path(path_or_text)
-                if p.is_file():
+                try:
+                    is_file = p.is_file()
+                except OSError:
+                    is_file = False
+                if is_file:
                     text = p.read_text(encoding="utf-8")
                 elif path_or_text.endswith(".xyz"):
                     raise FileNotFoundError(f"XYZ file not found: {path_or_text}")
@@ -354,7 +358,7 @@ class SymmetryAnalyzer:
         possible_orders = sorted(
             {
                 n
-                for n in range(3, min(max_shell, 12) + 1)
+                for n in range(3, max_shell + 1)
                 if any(s % n == 0 or (s - 1) % n == 0 or (s - 2) % n == 0 for s in shell_sizes)
             },
             reverse=True,
