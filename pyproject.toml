@@ -1,11 +1,11 @@
 [project]
 name = "pgmol"
 version = "0.1.0"
-description = "Add your description here"
+description = "Schoenflies point group determination for molecules from 3D coordinates"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "numpy>=2.5.4",
+    "numpy>=2.0",
 ]
 
 [project.scripts]

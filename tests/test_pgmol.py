@@ -4,7 +4,7 @@ from pathlib import Path
 import numpy as np
 import pytest
 
-from pgmol import Molecule, detect_point_group, main
+from pgmol import Molecule, SymmetryAnalyzer, detect_point_group, main, point_group
 from pgmol.symmetry import rotation_matrix
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -79,8 +79,65 @@ def test_challenge_invariance(xyz_path: Path) -> None:
     assert detect_point_group(transformed) == expected
 
 
-def test_cli(capsys: pytest.CaptureFixture[str]) -> None:
+@pytest.mark.parametrize(
+    "xyz_path",
+    [
+        CORE_DIR / "BrF5_C4v.xyz",
+        CORE_DIR / "CCl3H_C3v.xyz",
+        CORE_DIR / "C10FeH10_D5h.xyz",
+        CORE_DIR / "C2H6_D3d.xyz",
+        CHALLENGE_DIR / "C8H8_D4.xyz",
+        CHALLENGE_DIR / "C6H6_S6.xyz",
+        CHALLENGE_DIR / "C5H12_T.xyz",
+        CHALLENGE_DIR / "C5H12_Td.xyz",
+    ],
+    ids=lambda p: p.stem,
+)
+def test_small_coordinate_noise_robustness(xyz_path: Path) -> None:
+    expected = _expected_pg(xyz_path)
+    mol = Molecule.from_xyz(xyz_path)
+    rng = np.random.default_rng(42)
+    for _ in range(5):
+        noisy_coords = mol.coords + rng.normal(scale=1e-4, size=mol.coords.shape)
+        noisy_mol = Molecule(elements=mol.elements, coords=noisy_coords)
+        assert detect_point_group(noisy_mol, tol=1e-2) == expected
+
+
+def test_parser_and_validation_edge_cases() -> None:
+    with pytest.raises(ValueError, match="Empty XYZ"):
+        Molecule.from_xyz("")
+    with pytest.raises(ValueError, match="Empty XYZ"):
+        Molecule.from_xyz("   \n  \n ")
+    with pytest.raises(FileNotFoundError):
+        Molecule.from_xyz("nonexistent_file_12345.xyz")
+    with pytest.raises(FileNotFoundError):
+        Molecule.from_xyz(Path("nonexistent_file_12345.xyz"))
+    with pytest.raises(ValueError, match="Malformed XYZ atom line"):
+        Molecule.from_xyz("1\ncomment\nH 0.0 0.0\n")
+    with pytest.raises(ValueError, match="Expected 2 atoms"):
+        Molecule.from_xyz("2\ncomment\nH 0.0 0.0 0.0\n")
+    with pytest.raises(ValueError, match="shape"):
+        Molecule(elements=("H",), coords=np.zeros((1, 2)))
+    with pytest.raises(ValueError, match="Length of elements"):
+        Molecule(elements=("H", "O"), coords=np.zeros((1, 3)))
+
+    empty_mol = Molecule(elements=(), coords=np.zeros((0, 3)))
+    assert len(empty_mol) == 0
+    assert point_group(empty_mol) == "Kh"
+
+
+def test_cli_single_and_multi(capsys: pytest.CaptureFixture[str]) -> None:
     h2o = CORE_DIR / "H2O_C2v.xyz"
+    nh3 = CORE_DIR / "H3N_C3v.xyz"
+
     main([str(h2o)])
     captured = capsys.readouterr()
     assert captured.out.strip() == "C2v"
+
+    main([str(h2o), str(nh3), "--tol", "0.01"])
+    captured = capsys.readouterr()
+    lines = [line.strip() for line in captured.out.strip().splitlines()]
+    assert lines == [f"{h2o}: C2v", f"{nh3}: C3v"]
+
+    analyzer = SymmetryAnalyzer(Molecule.from_xyz(h2o))
+    assert analyzer.point_group == "C2v"
