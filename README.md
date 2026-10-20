@@ -7,6 +7,8 @@ Clone it, pick any agent harness (Claude Code, Codex, OpenCode, Cursor, Kilo Cod
 what you get with the reference repositories below. This repo is part of the
 [Agentic Coding Tutorial](https://autonomous-scientific-agents.github.io/AgenticCodingTutorial/).
 
+👉 **[Live Benchmark & Interactive 3D Failure-Case Explorer](https://autonomous-scientific-agents.github.io/test-pgmol/)** — inspect the benchmark tables and rotate the 3D structures of the molecules that break external symmetry libraries.
+
 ## What is here
 
 | Folder | Contents |

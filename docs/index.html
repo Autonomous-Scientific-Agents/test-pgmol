@@ -1,0 +1,1244 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pgmol Benchmark &amp; Failure-Case 3D Explorer</title>
+<meta name="description" content="Benchmark comparison of autonomous agent pgmol implementations and external Python symmetry libraries, with an interactive 3D viewer and root-cause analysis of every failure case.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='13' font-size='13'>⬢</text></svg>">
+<style>
+  :root {
+    --bg: #0b0f17;
+    --panel: #131a26;
+    --panel-alt: #182130;
+    --border: #263246;
+    --text: #e6edf3;
+    --muted: #8b98a9;
+    --accent: #38bdf8;
+    --accent-dim: rgba(56, 189, 248, 0.14);
+    --good: #34d399;
+    --good-dim: rgba(52, 211, 153, 0.14);
+    --warn: #fbbf24;
+    --warn-dim: rgba(251, 191, 36, 0.14);
+    --bad: #f87171;
+    --bad-dim: rgba(248, 113, 113, 0.14);
+    --purple: #c084fc;
+    --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #f8fafc;
+      --panel: #ffffff;
+      --panel-alt: #f1f5f9;
+      --border: #cbd5e1;
+      --text: #0f172a;
+      --muted: #475569;
+      --accent: #0284c7;
+      --accent-dim: rgba(2, 132, 199, 0.1);
+      --good: #059669;
+      --good-dim: rgba(5, 150, 105, 0.12);
+      --warn: #d97706;
+      --warn-dim: rgba(217, 119, 6, 0.12);
+      --bad: #dc2626;
+      --bad-dim: rgba(220, 38, 38, 0.1);
+      --purple: #7c3aed;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 15px/1.6 var(--sans);
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  code, pre { font-family: var(--mono); }
+  .container {
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+  }
+  header {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 1rem;
+  }
+  h1 {
+    font-size: 2rem;
+    margin: 0 0 0.35rem;
+    letter-spacing: -0.02em;
+  }
+  .subtitle {
+    color: var(--muted);
+    margin: 0;
+    max-width: 52rem;
+    font-size: 1rem;
+  }
+  .nav-pills {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  .pill-link {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 0.45rem 0.85rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+  .pill-link:hover {
+    border-color: var(--accent);
+    text-decoration: none;
+  }
+  h2 {
+    font-size: 1.35rem;
+    margin: 2.25rem 0 0.75rem;
+    letter-spacing: -0.01em;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  h3 {
+    font-size: 1.05rem;
+    margin: 0 0 0.5rem;
+  }
+  .panel {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  .badge {
+    display: inline-block;
+    padding: 0.18rem 0.55rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    font-family: var(--mono);
+  }
+  .badge-good { background: var(--good-dim); color: var(--good); border: 1px solid var(--good); }
+  .badge-warn { background: var(--warn-dim); color: var(--warn); border: 1px solid var(--warn); }
+  .badge-bad  { background: var(--bad-dim);  color: var(--bad);  border: 1px solid var(--bad); }
+  .badge-info { background: var(--accent-dim); color: var(--accent); border: 1px solid var(--accent); }
+
+  /* Tables */
+  .table-wrap {
+    overflow-x: auto;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+  }
+  th, td {
+    padding: 0.65rem 0.75rem;
+    border-bottom: 1px solid var(--border);
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    color: var(--muted);
+    font-weight: 600;
+    font-size: 0.76rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background: var(--panel-alt);
+  }
+  tr:last-child td { border-bottom: none; }
+  .num { font-family: var(--mono); text-align: right; white-space: nowrap; }
+
+  /* 3D Explorer Layout */
+  .explorer-grid {
+    display: grid;
+    grid-template-columns: 270px 1fr 410px;
+    gap: 1.1rem;
+    align-items: stretch;
+  }
+  @media (max-width: 1080px) {
+    .explorer-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  .mol-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+  }
+  .mol-btn {
+    text-align: left;
+    background: var(--panel-alt);
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    padding: 0.65rem 0.75rem;
+    color: var(--text);
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s;
+  }
+  .mol-btn:hover {
+    border-color: var(--accent);
+  }
+  .mol-btn.active {
+    border-color: var(--accent);
+    background: var(--accent-dim);
+  }
+  .mol-btn-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    font-family: var(--mono);
+    font-size: 0.9rem;
+  }
+  .mol-btn-sub {
+    font-size: 0.78rem;
+    color: var(--muted);
+    margin-top: 0.2rem;
+  }
+
+  .viewer-box {
+    display: flex;
+    flex-direction: column;
+    background: var(--panel-alt);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .viewer-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 0.85rem;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.82rem;
+  }
+  .viewer-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+  }
+  .viewer-controls label {
+    cursor: pointer;
+    user-select: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+  .btn-sm {
+    background: var(--panel);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.28rem 0.65rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .btn-sm:hover { border-color: var(--accent); }
+  .btn-sm.active {
+    background: var(--accent);
+    color: #0b0f17;
+    border-color: var(--accent);
+  }
+  #mol-viewer {
+    position: relative;
+    width: 100%;
+    height: 430px;
+    background: radial-gradient(circle at center, rgba(56,189,248,0.06), transparent 70%);
+  }
+  .viewer-footer {
+    padding: 0.55rem 0.85rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.78rem;
+    color: var(--muted);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+  .swatch {
+    display: inline-block;
+    width: 0.65rem;
+    height: 0.65rem;
+    border-radius: 2px;
+    margin-right: 0.25rem;
+    vertical-align: middle;
+  }
+
+  .inspector-box {
+    background: var(--panel-alt);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    overflow-y: auto;
+    max-height: 530px;
+  }
+  .outcome-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.45rem;
+  }
+  .outcome-card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    padding: 0.45rem 0.6rem;
+    font-size: 0.78rem;
+  }
+  .outcome-card .lib {
+    color: var(--muted);
+    font-size: 0.72rem;
+  }
+  .outcome-card .val {
+    font-family: var(--mono);
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-top: 0.1rem;
+  }
+  .code-block {
+    background: #090d14;
+    color: #e2e8f0;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.7rem 0.8rem;
+    font-size: 0.77rem;
+    line-height: 1.45;
+    overflow-x: auto;
+    margin: 0;
+  }
+  .xyz-details summary {
+    cursor: pointer;
+    font-size: 0.8rem;
+    color: var(--accent);
+    font-weight: 600;
+  }
+  .xyz-pre {
+    background: #090d14;
+    color: #94a3b8;
+    padding: 0.55rem;
+    border-radius: 6px;
+    font-size: 0.72rem;
+    max-height: 150px;
+    overflow: auto;
+    margin-top: 0.4rem;
+  }
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    gap: 1rem;
+  }
+  .analysis-card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.1rem;
+  }
+  .analysis-card h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  footer {
+    margin-top: 3rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.85rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div>
+      <h1>⬢ pgmol Benchmark &amp; Failure-Case 3D Explorer</h1>
+      <p class="subtitle">
+        Evaluating autonomous coding agents and standard Python quantum-chemistry libraries on 91 molecular point-group fixtures (36 Core + 55 Challenge + 91 Randomly Rotated &amp; Atom-Permuted).
+      </p>
+    </div>
+    <nav class="nav-pills">
+      <a class="pill-link" href="#explorer">3D Failure Explorer</a>
+      <a class="pill-link" href="#benchmarks">Benchmark Tables</a>
+      <a class="pill-link" href="#root-causes">Code-Level Root Causes</a>
+      <a class="pill-link" href="#asa-comparison">ASA PGMol vs. my-try</a>
+      <a class="pill-link" href="https://github.com/Autonomous-Scientific-Agents/test-pgmol">GitHub Repo</a>
+    </nav>
+  </header>
+
+  <!-- SECTION 1: INTERACTIVE 3D FAILURE CASE EXPLORER -->
+  <section id="explorer">
+    <h2>Interactive 3D Viewer: Why Do Symmetry Codes Fail?</h2>
+    <p style="color:var(--muted);margin-top:0">
+      Click any of the 7 diagnostic molecules below to inspect its 3D geometry, visualize the symmetry elements that trip up external libraries or orientation-dependent algorithms, and see whether the failure is a <strong>tolerance threshold issue</strong> or a <strong>structural code bug</strong>.
+    </p>
+
+    <div class="explorer-grid">
+      <!-- Left: Molecule selector -->
+      <div class="mol-list" id="mol-list"></div>
+
+      <!-- Center: 3Dmol viewer -->
+      <div class="viewer-box">
+        <div class="viewer-toolbar">
+          <div class="viewer-controls">
+            <label><input type="checkbox" id="toggle-axes" checked> Symmetry axes</label>
+            <label><input type="checkbox" id="toggle-planes" checked> Mirror planes</label>
+            <label><input type="checkbox" id="toggle-com" checked> Origin / radii</label>
+          </div>
+          <div style="display:flex;gap:0.4rem">
+            <button class="btn-sm" id="btn-rotate-pose" title="Apply a random 3D rotation to see why coordinate-axis-dependent methods fail">↻ Random 3D Orientation</button>
+            <button class="btn-sm" id="btn-reset-pose">Reset Pose</button>
+          </div>
+        </div>
+        <div id="mol-viewer"></div>
+        <div class="viewer-footer">
+          <span id="viewer-caption">Drag to rotate · Scroll to zoom</span>
+          <span>
+            <span class="swatch" style="background:#38bdf8"></span>Principal C<sub>n</sub>
+            <span class="swatch" style="background:#34d399;margin-left:0.5rem"></span>Secondary C<sub>2</sub> / C<sub>3</sub>
+            <span class="swatch" style="background:#fbbf24;margin-left:0.5rem"></span>Mirror plane σ
+            <span class="swatch" style="background:#c084fc;margin-left:0.5rem"></span>Inversion / Origin
+          </span>
+        </div>
+      </div>
+
+      <!-- Right: Root cause & library outcomes -->
+      <div class="inspector-box" id="inspector"></div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: BENCHMARK TABLES -->
+  <section id="benchmarks">
+    <h2>Benchmark Results (36 Core + 55 Challenge + 91 Rotated/Permuted)</h2>
+
+    <div class="panel">
+      <h3>Agent <code>pgmol</code> Implementations (Pure Python + NumPy)</h3>
+      <p style="color:var(--muted);font-size:0.86rem;margin:0 0 0.8rem">
+        Evaluated on <code>validation/core_xyz/</code> (36 fixtures), <code>validation/challenge_xyz/</code> (55 fixtures), and all 91 geometries subjected to a random 3D proper rotation in SO(3), a random translation, and a random atom-index permutation.
+      </p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Repository / Branch</th>
+              <th>Agent &amp; Model</th>
+              <th class="num">Core (36)</th>
+              <th class="num">Challenge (55)</th>
+              <th class="num">Rotated + Permuted (91)</th>
+              <th class="num">Core Time (avg / total)</th>
+              <th class="num">Challenge Time (avg / total)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="https://github.com/Autonomous-Scientific-Agents/test-pgmol/tree/my-try"><code>Autonomous-Scientific-Agents/test-pgmol</code> (<code>my-try</code>)</a></td>
+              <td>OpenCode · Gemini 4 Argon</td>
+              <td class="num"><span class="badge badge-good">36/36 (100%)</span></td>
+              <td class="num"><span class="badge badge-good">55/55 (100%)</span></td>
+              <td class="num"><span class="badge badge-good">91/91 (100%)</span></td>
+              <td class="num"><strong>2.61 ms / 0.094 s</strong></td>
+              <td class="num"><strong>13.33 ms / 0.733 s</strong></td>
+            </tr>
+            <tr>
+              <td><a href="https://github.com/Autonomous-Scientific-Agents/PGMol"><code>Autonomous-Scientific-Agents/PGMol</code></a></td>
+              <td>OpenCode · GPT-5.6 Sol</td>
+              <td class="num"><span class="badge badge-good">36/36 (100%)</span></td>
+              <td class="num"><span class="badge badge-good">55/55 (100%)</span></td>
+              <td class="num"><span class="badge badge-good">91/91 (100%)</span></td>
+              <td class="num">3.57 ms / 0.129 s</td>
+              <td class="num">48.28 ms / 2.656 s</td>
+            </tr>
+            <tr>
+              <td><a href="https://github.com/keceli/claude-pgmol"><code>keceli/claude-pgmol</code></a></td>
+              <td>Claude Code · Claude Opus 5</td>
+              <td class="num"><span class="badge badge-good">36/36 (100%)</span></td>
+              <td class="num"><span class="badge badge-good">55/55 (100%)</span></td>
+              <td class="num"><span class="badge badge-good">91/91 (100%)</span></td>
+              <td class="num">10.67 ms / 0.384 s</td>
+              <td class="num">118.46 ms / 6.515 s</td>
+            </tr>
+            <tr>
+              <td><a href="https://github.com/keceli/pgmol-inkling"><code>keceli/pgmol-inkling</code></a></td>
+              <td>Claude Code · Inkling</td>
+              <td class="num"><span class="badge badge-good">36/36 (100%)</span></td>
+              <td class="num"><span class="badge badge-good">55/55 (100%)</span></td>
+              <td class="num"><span class="badge badge-bad">42/91 (46.2%)</span></td>
+              <td class="num">8.88 ms / 0.320 s</td>
+              <td class="num">56.84 ms / 3.126 s</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h3>External Python Symmetry Libraries</h3>
+      <p style="color:var(--muted);font-size:0.86rem;margin:0 0 0.8rem">
+        <strong>Exact</strong> compares raw output directly against the target Schoenflies label (`Cinfv`, `Dinfh`, `Kh`); <strong>Normalized</strong> maps library-specific linear/spherical aliases (<code>C*v</code>/<code>Coov</code>/<code>C0v</code> &rarr; <code>Cinfv</code>, <code>D*h</code>/<code>Dooh</code>/<code>D0h</code> &rarr; <code>Dinfh</code>, <code>SO3</code> &rarr; <code>Kh</code>).
+      </p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Library</th>
+              <th>Version</th>
+              <th class="num">Core Exact / Norm (36)</th>
+              <th class="num">Challenge Exact / Norm (55)</th>
+              <th class="num">Rotated + Permuted (91)</th>
+              <th class="num">Core Time</th>
+              <th class="num">Challenge Time</th>
+              <th>Failure Cases</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="https://pymatgen.org/"><code>pymatgen</code></a> (<code>PointGroupAnalyzer</code>)</td>
+              <td class="num">2026.9.24</td>
+              <td class="num">30/36 · <span class="badge badge-good">36/36</span></td>
+              <td class="num">50/55 · <span class="badge badge-warn">54/55</span></td>
+              <td class="num"><span class="badge badge-warn">90/91 (98.9%)</span></td>
+              <td class="num">1.43 ms / 0.051 s</td>
+              <td class="num">3.69 ms / 0.203 s</td>
+              <td>Crashes with <code>ValueError</code> on <code>H3_D3h.xyz</code></td>
+            </tr>
+            <tr>
+              <td><a href="https://pyscf.org/"><code>pyscf</code></a> (<code>pyscf.symm.detect_symm</code>)</td>
+              <td class="num">2.14.0</td>
+              <td class="num">29/36 · <span class="badge badge-good">36/36</span></td>
+              <td class="num">49/55 · <span class="badge badge-warn">53/55</span></td>
+              <td class="num"><span class="badge badge-warn">89/91 (97.8%)</span></td>
+              <td class="num"><strong>0.68 ms / 0.024 s</strong></td>
+              <td class="num"><strong>1.34 ms / 0.074 s</strong></td>
+              <td>Misclassifies <code>C4N4Pt_C4h</code> (<code>C2h</code>) and <code>C5H5P_C5</code> (<code>C1</code>)</td>
+            </tr>
+            <tr>
+              <td><a href="https://pypi.org/project/pointgroup/"><code>pointgroup</code></a> (<code>PointGroup</code>)</td>
+              <td class="num">0.4.4</td>
+              <td class="num">35/36 · <span class="badge badge-warn">35/36</span></td>
+              <td class="num">54/55 · <span class="badge badge-warn">54/55</span></td>
+              <td class="num"><span class="badge badge-bad">88/91 (96.7%)</span></td>
+              <td class="num">110.4 ms / 3.98 s</td>
+              <td class="num">1143 ms / 62.87 s</td>
+              <td>Fails on <code>Ar_Kh</code> (<code>Dinfh</code>), <code>C2H2O2_D2h</code> (<code>Th</code>), and rotated <code>B12H60_I</code></td>
+            </tr>
+            <tr>
+              <td><a href="https://github.com/NASymmetry/MolSym"><code>molsym</code></a> (<code>find_point_group</code>)</td>
+              <td class="num">1.2.0</td>
+              <td class="num">29/36 · <span class="badge badge-warn">35/36</span></td>
+              <td class="num">50/55 · <span class="badge badge-warn">54/55</span></td>
+              <td class="num"><span class="badge badge-warn">89/91 (97.8%)</span></td>
+              <td class="num">90.7 ms / 3.27 s</td>
+              <td class="num">3341 ms / 183.78 s</td>
+              <td>Fails on <code>Ar_Kh</code> (<code>D0h</code>), <code>C5H12_T</code> (<code>Td</code>); 83s on <code>B12H60_I</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: SUMMARY OF ROOT CAUSES -->
+  <section id="root-causes">
+    <h2>Tolerance Issue vs. Algorithmic Bug: Summary Matrix</h2>
+    <div class="cards-grid">
+      <div class="analysis-card">
+        <h3><span>1. <code>pymatgen</code> on <code>H3_D3h.xyz</code></span> <span class="badge badge-warn">Tolerance + Factor-of-2 Bug</span></h3>
+        <p style="font-size:0.86rem;color:var(--muted)">
+          <code>PointGroupAnalyzer</code> defaults to <code>tolerance=0.3</code> Å. In <code>cluster_sites(mol, tol)</code> (<code>analyzer.py:1645</code>), radial distances are stored as 2D points <code>[[r, 0]]</code> and averaged with <code>np.mean(val)</code> across both columns, halving every atom's distance to <code>r / 2 = 0.25</code> Å! Because <code>0.25 &lt; 0.30</code>, all 3 H atoms are absorbed into <code>origin_site</code>, leaving <code>clustered_sites</code> empty and crashing <code>min(valid_sets, key=len)</code>. Setting <code>tolerance &le; 0.24</code> fixes it.
+        </p>
+      </div>
+      <div class="analysis-card">
+        <h3><span>2. <code>pyscf</code> on <code>C4N4Pt_C4h.xyz</code></span> <span class="badge badge-bad">Algorithmic Bug</span></h3>
+        <p style="font-size:0.86rem;color:var(--muted)">
+          Fails at <strong>all</strong> tolerances (<code>1e-7</code> to <code>0.1</code>). In <code>pyscf/symm/geom.py:244</code>, <code>detect_symm</code> requires the rank-2 Cartesian multipole tensor to have a degenerate <em>strictly positive</em> eigenvalue (<code>w2_degeneracy[w2_degen_values &gt; 0] &ge; 2</code>) before searching for $C_n$ ($n \ge 3$). In a planar $C_{4h}$ pinwheel ($z=0$), $(x^2-y^2)$ and $xy$ transform as the 1D $B_g$ irrep and split (`0.648`, `6.633`), while $(xz, yz)$ are `0`. Thus <code>pyscf</code> tags the molecule as a $D_{2h}$ subgroup and returns <code>C2h</code>.
+        </p>
+      </div>
+      <div class="analysis-card">
+        <h3><span>3. <code>pyscf</code> on <code>C5H5P_C5.xyz</code></span> <span class="badge badge-warn">Tolerance Threshold</span></h3>
+        <p style="font-size:0.86rem;color:var(--muted)">
+          In <code>search_possible_rotations</code> (<code>geom.py:710</code>), candidate rotation orders $n$ are filtered by <code>nfrac = 2*pi / (pi - ang); abs(nfrac - n) &lt; TOLERANCE</code> where <code>TOLERANCE = 1e-5</code>. Floating-point rounding in $\arccos$ on the 12-decimal-place coordinates causes <code>abs(nfrac - 5)</code> to slightly exceed <code>1e-5</code>. Increasing <code>pyscf.symm.geom.TOLERANCE = 1e-4</code> restores <code>C5</code>.
+        </p>
+      </div>
+      <div class="analysis-card">
+        <h3><span>4. <code>pointgroup</code> on <code>C2H2O2_D2h.xyz</code></span> <span class="badge badge-bad">Algorithmic Bug</span></h3>
+        <p style="font-size:0.86rem;color:var(--muted)">
+          <code>C2H2O2_D2h.xyz</code> is an <em>accidental spherical top</em> ($I_x = I_y = I_z = 2/3$). <code>pointgroup</code> checks <code>eig_degeneracy == 3</code> and calls <code>_spherical()</code> with no fallback to $D_{2h}$. Inside <code>_spherical()</code>, <code>while main_axis is None:</code> multiplies <code>self._tolerance_ang *= 1.01</code> 217 times until the angular tolerance balloons past $35^\circ$, hallucinating a false $C_3$ axis and returning <code>Th</code>.
+        </p>
+      </div>
+      <div class="analysis-card">
+        <h3><span>5. <code>molsym</code> on <code>C5H12_T.xyz</code> &amp; <code>B12H60_I</code></span> <span class="badge badge-bad">Unimplemented Path + O(N⁵) Loop</span></h3>
+        <p style="font-size:0.86rem;color:var(--muted)">
+          In <code>molsym/pgdetect/flowchart.py:67</code>, the spherical-top tetrahedral branch literally has <code># Tetrahedral, TODO: No path for T</code> and returns <code>"Th" if invertable else "Td"</code>. Additionally, <code>find_C3s_for_Ih</code> (<code>flowchart_helper.py:426</code>) uses $O(N^3)$ nested atom loops calling $O(N^2)$ <code>isequivalent</code>, taking 82.8 s on <code>B12H60_I.xyz</code>.
+        </p>
+      </div>
+      <div class="analysis-card">
+        <h3><span>6. <code>pgmol-inkling</code> on Rotated XYZs</span> <span class="badge badge-bad">Frame Dependence</span></h3>
+        <p style="font-size:0.86rem;color:var(--muted)">
+          Scores 91/91 on canonical coordinate-aligned fixtures, but drops to <strong>42/91 (46.2%)</strong> under random 3D rotations because <code>symmetry_finder.py</code> seeds axes from hardcoded <code>[1,0,0]</code>, <code>[0,1,phi]</code> vectors, caps atom-pair sampling at 30 pairs, and tests $S_n$ only along <code>[0,0,1]</code>, <code>[0,1,0]</code>, <code>[1,0,0]</code>, and <code>[1,1,1]</code>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: ARCHITECTURAL COMPARISON -->
+  <section id="asa-comparison">
+    <h2>Architectural Comparison: ASA <code>PGMol</code> vs. <code>test-pgmol</code> (<code>my-try</code>)</h2>
+    <div class="panel">
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Dimension</th>
+              <th><code>Autonomous-Scientific-Agents/PGMol</code> (OpenCode · GPT-5.6 Sol)</th>
+              <th><code>test-pgmol</code> (<code>my-try</code>) (OpenCode · Gemini 4 Argon)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Core Formulation</strong></td>
+              <td><strong>Exhaustive $O(3)$ group discovery via orthonormal frames:</strong> picks a non-collinear atom pair $(a_0, b_0)$ as source frame $F_{\text{src}}$, loops over all same-element pairs $(a_i, b_j)$ at matching radii to form $F_{\text{tgt}}$, and tests $O = F_{\text{tgt}}\operatorname{diag}(1,1,\pm 1)F_{\text{src}}^T$.</td>
+              <td><strong>Shell-partitioned geometric axis generation &amp; Schoenflies tree:</strong> partitions atoms into radial shells per element, generates candidate axes from shell covariance eigenvectors, pair midpoints/differences/cross-products, and nearest-neighbor pairs/triplets.</td>
+            </tr>
+            <tr>
+              <td><strong>Classification Rule</strong></td>
+              <td>Counts total proper/improper matrices in the discovered group (<code>&ge;60</code> &rarr; $I/I_h$, <code>&ge;24</code> &rarr; $O/O_h$, <code>&ge;12</code> &rarr; $T/T_h/T_d$); extracts rotation orders via $\arccos((\operatorname{tr}(O)-1)/2)$.</td>
+              <td>Filters candidate orders $n$ by shell-size divisibility ($s \equiv 0, 1, 2 \pmod n$), counts distinct $C_5/C_4/C_3$ axes for $I/O/T$, and directly probes perpendicular $C_2$, $\sigma_h$, $\sigma_v/\sigma_d$, and $S_{2n}$.</td>
+            </tr>
+            <tr>
+              <td><strong>Atom Permutations &amp; Matching</strong></td>
+              <td>Vectorized nearest-neighbor <code>argmin</code> when unique; falls back to an exact DFS <strong>bipartite perfect matching</strong> (<code>_perfect_matching</code>) when tolerance spheres overlap.</td>
+              <td>Shell-by-shell bidirectional squared-distance check with a <strong>1-atom fast-rejection probe</strong> (<code>grp[0] @ op_matrix.T</code>) before computing the full distance matrix on shells with $&gt;8$ atoms.</td>
+            </tr>
+            <tr>
+              <td><strong>Runtime Scaling</strong></td>
+              <td><strong>0.129 s Core / 2.656 s Challenge.</strong> On single-shell 60-atom cages ($\text{C}_{60}$, $\text{B}_{12}\text{H}_{60}$), radial pruning cannot shrink the 60-atom shell, testing $60 \times 59 \times 2 = 7{,}080$ candidate frames.</td>
+              <td><strong>0.094 s Core / 0.733 s Challenge (~3.6&times; faster).</strong> Restricts candidate pairs/triplets on shells $&gt;24$ atoms to nearest neighbors and rejects invalid rotations in $O(1)$ via the single-atom probe.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>Autonomous Scientific Agents · <code>test-pgmol</code> Benchmark Suite</span>
+    <span>3D molecular rendering powered by <a href="https://3dmol.org/">3Dmol.js</a></span>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/3dmol@2.5.5/build/3Dmol-min.js" crossorigin="anonymous"></script>
+<script>
+const FAILURE_CASES = [
+  {
+    id: "H3_D3h",
+    file: "H3_D3h.xyz",
+    formula: "H₃⁺ (Equilateral Triangle)",
+    expected: "D3h",
+    verdictBadge: "Tolerance + Factor-of-2 Bug",
+    verdictClass: "badge-warn",
+    failedBy: "pymatgen",
+    summary: "All 3 hydrogen atoms sit at radius r = 0.50 Å from the center of mass. In pymatgen's cluster_sites(), each atom's distance is stored as a 2-element list [r, 0] and averaged with np.mean([0.50, 0.0]) = 0.25 Å. Because 0.25 Å < 0.30 Å (pymatgen's default tolerance), cluster_sites swallows all 3 atoms into origin_site and crashes with ValueError: min() arg is an empty sequence.",
+    outcomes: [
+      { lib: "Expected / ASA / my-try", val: "D3h", status: "good" },
+      { lib: "pymatgen (tol=0.3)", val: "ValueError!", status: "bad" },
+      { lib: "pymatgen (tol≤0.24)", val: "D3h", status: "good" },
+      { lib: "pyscf / pointgroup / molsym", val: "D3h", status: "good" }
+    ],
+    codeLocation: "pymatgen/symmetry/analyzer.py:1645–1654",
+    codeSnippet: `dists = [[float(np.linalg.norm(site.coords)), 0] for site in mol]
+...
+# BUG: val has shape (k, 2) with a dummy 0 column, so np.mean divides r by 2!
+avg_dist = {key: np.mean(val) for key, val in clustered_dists.items()}
+for key, val in clustered_sites.items():
+    if avg_dist[key] < tol:          # 0.25 < 0.30 -> True!
+        origin_site = val[0]         # All 3 H atoms dropped!`,
+    axes: [
+      { order: 3, dir: [0, 0, 1], label: "C3", color: "#38bdf8" },
+      { order: 2, dir: [1, 0, 0], label: "C2", color: "#34d399" },
+      { order: 2, dir: [-0.5, 0.8660254, 0], label: "C2'", color: "#34d399" },
+      { order: 2, dir: [-0.5, -0.8660254, 0], label: "C2''", color: "#34d399" }
+    ],
+    planes: [
+      { normal: [0, 0, 1], color: "#fbbf24" },
+      { normal: [0, 1, 0], color: "#fbbf24" }
+    ],
+    radiusSphere: 0.5,
+    xyz: `3
+trihydrogen cation H3+; idealized coordinates in angstrom
+H         0.500000000000       0.000000000000       0.000000000000
+H        -0.250000000000       0.433012701892       0.000000000000
+H        -0.250000000000      -0.433012701892       0.000000000000`
+  },
+  {
+    id: "C4N4Pt_C4h",
+    file: "C4N4Pt_C4h.xyz",
+    formula: "Pt(CN)₄ Pinwheel",
+    expected: "C4h",
+    verdictBadge: "Algorithmic Bug",
+    verdictClass: "badge-bad",
+    failedBy: "pyscf (all tolerances)",
+    summary: "Planar C4h pinwheel in the xy-plane (all z = 0) with a C4 axis along z, σh in the xy-plane, and no vertical mirror planes (σv). Under C4h, quadratic functions (x²-y²) and xy both belong to the 1D Bg representation and mix into two non-degenerate positive eigenvalues (0.648, 6.633) of the rank-2 Cartesian multipole tensor, while (xz, yz, z²) are 0. Because pyscf requires a ≥2-fold degeneracy among strictly positive rank-2 eigenvalues, it skips search_c_highest() and hardcodes n = 2 (C2h).",
+    outcomes: [
+      { lib: "Expected / ASA / my-try", val: "C4h", status: "good" },
+      { lib: "pyscf (any tol)", val: "C2h (Bug)", status: "bad" },
+      { lib: "pymatgen / pointgroup", val: "C4h", status: "good" },
+      { lib: "pgmol-inkling (rotated)", val: "Cs (Bug)", status: "bad" }
+    ],
+    codeLocation: "pyscf/symm/geom.py:244–257",
+    codeSnippet: `# w2 eigenvalues for planar C4h: [0, 0, 0, 0.648, 6.633, 7.282]
+# Positive eigenvalues have degeneracy [1, 1, 1] -> condition is False!
+elif (2 in w1_degeneracy and
+      numpy.any(w2_degeneracy[w2_degen_values > 0] >= 2)):
+    ...
+else:
+    n = -1  # tag as D2h and subgroup -> returns C2h!`,
+    axes: [
+      { order: 4, dir: [0, 0, 1], label: "C4 / S4 (missed by pyscf)", color: "#38bdf8" }
+    ],
+    planes: [
+      { normal: [0, 0, 1], color: "#fbbf24" }
+    ],
+    inversion: true,
+    xyz: `9
+C4h pinwheel; idealized coordinates in angstrom
+Pt        0.000000000000       0.000000000000       0.000000000000
+N         2.000000000000       0.000000000000       0.000000000000
+N         0.000000000000       2.000000000000       0.000000000000
+N        -2.000000000000       0.000000000000       0.000000000000
+N        -0.000000000000      -2.000000000000       0.000000000000
+C         2.600000000000       1.000000000000       0.000000000000
+C        -1.000000000000       2.600000000000       0.000000000000
+C        -2.600000000000      -1.000000000000       0.000000000000
+C         1.000000000000      -2.600000000000       0.000000000000`
+  },
+  {
+    id: "C2H2O2_D2h",
+    file: "C2H2O2_D2h.xyz",
+    formula: "C₂H₂O₂ (Accidental Spherical Top)",
+    expected: "D2h",
+    verdictBadge: "Algorithmic Bug",
+    verdictClass: "badge-bad",
+    failedBy: "pointgroup",
+    summary: "Constructed so all three principal moments of inertia are exactly equal (Ix = Iy = Iz = 2/3) despite having only D2h symmetry (no C3, C4, or C5 axes). The pointgroup library sees 3 degenerate inertia eigenvalues and enters _spherical(), which has no fallback to D2h. Its while-loop multiplies tolerance_ang *= 1.01 217 times until angular tolerance exceeds 35°, hallucinating a fake C3 axis and returning Th!",
+    outcomes: [
+      { lib: "Expected / ASA / my-try", val: "D2h", status: "good" },
+      { lib: "pointgroup (0.4.4)", val: "Th (Bug)", status: "bad" },
+      { lib: "pymatgen / pyscf / molsym", val: "D2h", status: "good" },
+      { lib: "pgmol-inkling (rotated)", val: "C2v (Bug)", status: "bad" }
+    ],
+    codeLocation: "pointgroup/__init__.py:77 & 209–226",
+    codeSnippet: `elif eig_degeneracy == 3:
+    self._spherical()  # Assumes T, Th, Td, O, Oh, I, or Ih!
+...
+while main_axis is None:
+    # Loops 217 times on D2h until tolerance_ang > 35 degrees!
+    print('increase tolerance')
+    self._tolerance_ang *= 1.01`,
+    axes: [
+      { order: 2, dir: [1, 0, 0], label: "C2(x)", color: "#38bdf8" },
+      { order: 2, dir: [0, 1, 0], label: "C2(y)", color: "#34d399" },
+      { order: 2, dir: [0, 0, 1], label: "C2(z)", color: "#34d399" }
+    ],
+    planes: [
+      { normal: [1, 0, 0], color: "#fbbf24" },
+      { normal: [0, 1, 0], color: "#fbbf24" },
+      { normal: [0, 0, 1], color: "#fbbf24" }
+    ],
+    inversion: true,
+    xyz: `6
+accidental spherical top (D2h); idealized coordinates in angstrom
+H         4.142362156544       0.000000000000       0.000000000000
+H        -4.142362156544       0.000000000000       0.000000000000
+C         0.000000000000       1.200000000000       0.000000000000
+C         0.000000000000      -1.200000000000       0.000000000000
+O         0.000000000000       0.000000000000       1.039713199701
+O         0.000000000000       0.000000000000      -1.039713199701`
+  },
+  {
+    id: "C5H12_T",
+    file: "C5H12_T.xyz",
+    formula: "Chiral Neopentane (20° Twist)",
+    expected: "T",
+    verdictBadge: "Unimplemented Branch (TODO)",
+    verdictClass: "badge-bad",
+    failedBy: "molsym (all tolerances)",
+    summary: "Neopentane with all four methyl groups twisted by 20°, breaking all 6 dihedral mirror planes (σd) and S4 axes while preserving the 4 C3 and 3 C2 axes of the chiral tetrahedral group T. In molsym/pgdetect/flowchart.py, the tetrahedral branch has a literal comment '# Tetrahedral, TODO: No path for T' and unconditionally returns Td when inversion is absent.",
+    outcomes: [
+      { lib: "Expected / ASA / my-try", val: "T", status: "good" },
+      { lib: "molsym (1.2.0)", val: "Td (TODO Bug)", status: "bad" },
+      { lib: "pymatgen / pyscf / pointgroup", val: "T", status: "good" },
+      { lib: "pgmol-inkling (rotated)", val: "C1 (Bug)", status: "bad" }
+    ],
+    codeLocation: "molsym/pgdetect/flowchart.py:67–74",
+    codeSnippet: `# Tetrahedral, TODO: No path for T
+elif n == 3:
+    paxis = axes[0]
+    saxis = axes[1]
+    if invertable:
+        pg = "Th"
+    else:
+        pg = "Td"  # <-- Always returns Td for chiral T molecules!`,
+    axes: [
+      { order: 3, dir: [0.57735, 0.57735, 0.57735], label: "C3", color: "#38bdf8" },
+      { order: 3, dir: [-0.57735, -0.57735, 0.57735], label: "C3", color: "#38bdf8" },
+      { order: 3, dir: [0.57735, -0.57735, -0.57735], label: "C3", color: "#38bdf8" },
+      { order: 3, dir: [-0.57735, 0.57735, -0.57735], label: "C3", color: "#38bdf8" },
+      { order: 2, dir: [1, 0, 0], label: "C2", color: "#34d399" },
+      { order: 2, dir: [0, 1, 0], label: "C2", color: "#34d399" },
+      { order: 2, dir: [0, 0, 1], label: "C2", color: "#34d399" }
+    ],
+    planes: [],
+    xyz: `17
+neopentane (methyl rotation 20 deg); idealized coordinates in angstrom
+C         0.000000000000       0.000000000000       0.000000000000
+C         0.889119414552       0.889119414552       0.889119414552
+C        -0.889119414552      -0.889119414552       0.889119414552
+C         0.889119414552      -0.889119414552      -0.889119414552
+C        -0.889119414552       0.889119414552      -0.889119414552
+H         1.244583597734       1.741656616580       0.310391902132
+H         0.310391902132       1.244583597734       1.741656616580
+H        -1.244583597734      -1.741656616580       0.310391902132
+H         1.741656616580       0.310391902132       1.244583597734
+H        -0.310391902132      -1.244583597734       1.741656616580
+H         0.310391902132      -1.244583597734      -1.741656616580
+H        -1.741656616580      -0.310391902132       1.244583597734
+H         1.741656616580      -0.310391902132      -1.244583597734
+H        -1.741656616580       0.310391902132      -1.244583597734
+H        -0.310391902132       1.244583597734      -1.741656616580
+H         1.244583597734      -1.741656616580      -0.310391902132
+H        -1.244583597734       1.741656616580      -0.310391902132`
+  },
+  {
+    id: "C5H5P_C5",
+    file: "C5H5P_C5.xyz",
+    formula: "C₅H₅P Propeller",
+    expected: "C5",
+    verdictBadge: "Tolerance Threshold",
+    verdictClass: "badge-warn",
+    failedBy: "pyscf (at default tol=1e-5)",
+    summary: "Chiral C5 propeller with a single 5-fold rotation axis along z. In pyscf's search_possible_rotations(), candidate rotation orders n are estimated from chord angles via nfrac = 2π / (π - ang) and accepted only if |nfrac - round(nfrac)| < TOLERANCE (1e-5). Floating-point rounding in arccos on the 12-decimal-place coordinates pushes |nfrac - 5| slightly above 1e-5, rejecting the C5 candidate. Increasing TOLERANCE to 1e-4 fixes it.",
+    outcomes: [
+      { lib: "Expected / ASA / my-try", val: "C5", status: "good" },
+      { lib: "pyscf (TOL=1e-5)", val: "C1", status: "bad" },
+      { lib: "pyscf (TOL=1e-4)", val: "C5", status: "good" },
+      { lib: "pymatgen / pointgroup / molsym", val: "C5", status: "good" }
+    ],
+    codeLocation: "pyscf/symm/geom.py:705–713",
+    codeSnippet: `angs = numpy.arccos(cos_angs)
+for ang in angs:
+    nfrac = numpy.pi*2 / (numpy.pi-ang)
+    n = int(numpy.around(nfrac))
+    if abs(nfrac-n) < TOLERANCE:  # Default 1e-5 is too tight for arccos!
+        maybe_cn.append(n)`,
+    axes: [
+      { order: 5, dir: [0, 0, 1], label: "C5", color: "#38bdf8" }
+    ],
+    planes: [],
+    xyz: `11
+C5 propeller; idealized coordinates in angstrom
+P         0.000000000000       0.000000000000       0.000000000000
+C         1.500000000000       0.000000000000       0.000000000000
+C         0.463525491562       1.426584774443       0.000000000000
+C        -1.213525491562       0.881677878439       0.000000000000
+C        -1.213525491562      -0.881677878439       0.000000000000
+C         0.463525491562      -1.426584774443       0.000000000000
+H         2.092324335849       0.679837387625       0.500000000000
+H         0.000000000000       2.200000000000       0.500000000000
+H        -2.092324335849       0.679837387625       0.500000000000
+H        -1.293127555043      -1.779837387625       0.500000000000
+H         1.293127555043      -1.779837387625       0.500000000000`
+  },
+  {
+    id: "B12H60_I",
+    file: "B12H60_I.xyz",
+    formula: "B₁₂H₆₀ Chiral Icosahedral Cluster",
+    expected: "I",
+    verdictBadge: "Grid Crash + O(N⁵) Scaling",
+    verdictClass: "badge-bad",
+    failedBy: "pointgroup (rotated), pgmol-inkling (rotated), molsym (82.8s)",
+    summary: "72-atom chiral icosahedral cage (group order 60, 6 C5 axes, 10 C3 axes, 15 C2 axes, no inversion). Under random 3D rotation: (1) pointgroup crashes with Exception('Error orientation I group') because its 4° azimuthal scan misses the second C5 axis; (2) pgmol-inkling returns C1 because it relies on hardcoded (0, 1, φ) vectors; (3) molsym takes 82.8 seconds due to O(N³) atom-triplet loops calling O(N²) isequivalent.",
+    outcomes: [
+      { lib: "test-pgmol (my-try)", val: "I (19 ms)", status: "good" },
+      { lib: "pointgroup (rotated)", val: "Exception!", status: "bad" },
+      { lib: "pgmol-inkling (rotated)", val: "C1 (Bug)", status: "bad" },
+      { lib: "molsym (1.2.0)", val: "I (82.8 s!)", status: "warn" }
+    ],
+    codeLocation: "pointgroup/__init__.py:242 & molsym/pgdetect/flowchart_helper.py:426",
+    codeSnippet: `# pointgroup/__init__.py:257 (crashes when rotated)
+for ang in np.arange(0, 2*np.pi, self._tolerance_ang):
+    if self._check_rot_axis(axis, 5): return ...
+raise Exception('Error orientation I group')
+
+# molsym/pgdetect/flowchart_helper.py:426 (82.8s runtime)
+for i in range(mol.natoms):
+    for j in range(i+1, mol.natoms):
+        for k in range(j+1, mol.natoms):  # 59,640 triplets x O(N^2)!`,
+    axes: [
+      { order: 5, dir: [0, 0.525731, 0.850651], label: "C5", color: "#38bdf8" },
+      { order: 5, dir: [0, -0.525731, 0.850651], label: "C5", color: "#38bdf8" },
+      { order: 5, dir: [0.850651, 0, 0.525731], label: "C5", color: "#38bdf8" },
+      { order: 5, dir: [-0.850651, 0, 0.525731], label: "C5", color: "#38bdf8" },
+      { order: 5, dir: [0.525731, 0.850651, 0], label: "C5", color: "#38bdf8" },
+      { order: 5, dir: [-0.525731, 0.850651, 0], label: "C5", color: "#38bdf8" }
+    ],
+    planes: [],
+    xyz: `72
+chiral icosahedral cluster B12H60; idealized coordinates in angstrom
+B         0.000000000000       0.888485579481       1.437599866115
+B         1.437599866115       0.000000000000       0.888485579481
+B        -0.000000000000      -0.888485579481       1.437599866115
+B         0.888485579481       1.437599866115       0.000000000000
+B        -1.437599866115       0.000000000000       0.888485579481
+B         1.437599866115      -0.000000000000      -0.888485579481
+B        -0.888485579481      -1.437599866115       0.000000000000
+B        -0.888485579481       1.437599866115       0.000000000000
+B         0.888485579481      -1.437599866115       0.000000000000
+B        -1.437599866115       0.000000000000      -0.888485579481
+B         0.000000000000       0.888485579481      -1.437599866115
+B         0.000000000000      -0.888485579481      -1.437599866115
+H         1.000000000000       1.577193336357       2.551952425056
+H         2.551952425056       1.000000000000       1.577193336357
+H        -1.000000000000      -1.577193336357       2.551952425056
+H         0.309016994375       2.386210330732       2.051952425056
+H         1.577193336357       2.551952425056       1.000000000000
+H        -2.551952425056      -1.000000000000       1.577193336357
+H         0.768176341982       3.051952425056       0.309016994375
+H         2.551952425056      -1.000000000000      -1.577193336357
+H         2.242935430681      -0.809016994375       2.077193336357
+H         2.051952425056       0.309016994375       2.386210330732
+H        -0.309016994375      -2.386210330732       2.051952425056
+H        -0.809016994375       2.077193336357       2.242935430681
+H        -1.577193336357      -2.551952425056       1.000000000000
+H        -1.077193336357       2.860969419431       0.809016994375
+H         1.577193336357      -2.551952425056      -1.000000000000
+H         0.809016994375      -2.077193336357       2.242935430681
+H         0.309016994375       0.768176341982       3.051952425056
+H        -0.768176341982      -3.051952425056       0.309016994375
+H        -2.077193336357       2.242935430681       0.809016994375
+H        -1.577193336357       2.551952425056      -1.000000000000
+H        -2.551952425056       1.000000000000      -1.577193336357
+H         0.809016994375       1.077193336357      -2.860969419431
+H         2.077193336357       2.242935430681      -0.809016994375
+H        -2.242935430681       0.809016994375       2.077193336357
+H         2.386210330732       2.051952425056       0.309016994375
+H        -2.051952425056      -0.309016994375       2.386210330732
+H         2.051952425056      -0.309016994375      -2.386210330732
+H         2.860969419431      -0.809016994375       1.077193336357
+H        -0.809016994375       1.077193336357       2.860969419431
+H         1.000000000000      -1.577193336357      -2.551952425056
+H         2.077193336357      -2.242935430681       0.809016994375
+H         0.809016994375      -1.077193336357       2.860969419431
+H         1.077193336357      -2.860969419431       0.809016994375
+H        -1.000000000000       1.577193336357      -2.551952425056
+H         2.242935430681       0.809016994375      -2.077193336357
+H         3.051952425056       0.309016994375       0.768176341982
+H        -0.309016994375      -0.768176341982       3.051952425056
+H         0.309016994375      -0.768176341982      -3.051952425056
+H         2.386210330732      -2.051952425056      -0.309016994375
+H        -3.051952425056      -0.309016994375       0.768176341982
+H        -2.386210330732      -2.051952425056       0.309016994375
+H        -2.860969419431       0.809016994375       1.077193336357
+H        -0.809016994375      -1.077193336357      -2.860969419431
+H        -2.051952425056       0.309016994375      -2.386210330732
+H        -2.077193336357      -2.242935430681      -0.809016994375
+H        -0.768176341982       3.051952425056      -0.309016994375
+H        -2.386210330732       2.051952425056      -0.309016994375
+H        -0.309016994375       0.768176341982      -3.051952425056
+H         1.077193336357       2.860969419431      -0.809016994375
+H         0.809016994375       2.077193336357      -2.242935430681
+H         2.860969419431       0.809016994375      -1.077193336357
+H         3.051952425056      -0.309016994375      -0.768176341982
+H        -2.860969419431      -0.809016994375      -1.077193336357
+H        -2.242935430681      -0.809016994375      -2.077193336357
+H        -3.051952425056       0.309016994375      -0.768176341982
+H        -0.309016994375       2.386210330732      -2.051952425056
+H         0.768176341982      -3.051952425056      -0.309016994375
+H         0.309016994375      -2.386210330732      -2.051952425056
+H        -0.809016994375      -2.077193336357      -2.242935430681
+H        -1.077193336357      -2.860969419431      -0.809016994375`
+  },
+  {
+    id: "Ar_Kh",
+    file: "Ar_Kh.xyz",
+    formula: "Single Argon Atom",
+    expected: "Kh",
+    verdictBadge: "Missing Single-Atom Guard",
+    verdictClass: "badge-bad",
+    failedBy: "pointgroup (Dinfh), molsym (D0h)",
+    summary: "A single atom translated away from the origin (0.3, -0.2, 1.0) has full 3D rotational and reflection symmetry O(3) = Kh. After centering at the center of mass, all three moments of inertia are 0.0. Because neither pointgroup nor molsym checks for natoms == 1 before testing for a zero principal moment of inertia (Ia == 0), both route a single atom into their linear-molecule handler and return Dinfh / D0h.",
+    outcomes: [
+      { lib: "Expected / ASA / my-try", val: "Kh", status: "good" },
+      { lib: "pyscf (normalized)", val: "SO3 -> Kh", status: "good" },
+      { lib: "pointgroup (0.4.4)", val: "Dinfh (Bug)", status: "bad" },
+      { lib: "molsym (1.2.0)", val: "D0h (Bug)", status: "bad" }
+    ],
+    codeLocation: "pointgroup/__init__.py:64 & molsym/pgdetect/flowchart.py:24",
+    codeSnippet: `# pointgroup/__init__.py:64
+if np.min(abs(self._eigenvalues)) < self._tolerance_eig:
+    self._lineal()   # [0, 0, 0] -> routed to linear Dinfh!
+
+# molsym/pgdetect/flowchart.py:24
+if np.isclose(Ia_mol, 0.0, atol=mol.tol):
+    pg = "D0h"       # No natoms == 1 check before linear test!`,
+    axes: [
+      { order: 0, dir: [1, 0, 0], label: "∞-fold (SO(3))", color: "#38bdf8" },
+      { order: 0, dir: [0, 1, 0], label: "∞-fold (SO(3))", color: "#38bdf8" },
+      { order: 0, dir: [0, 0, 1], label: "∞-fold (SO(3))", color: "#38bdf8" }
+    ],
+    planes: [],
+    inversion: true,
+    xyz: `1
+argon atom; idealized coordinates in angstrom
+Ar        0.300000000000      -0.200000000000       1.000000000000`
+  }
+];
+
+let viewer = null;
+let currentCase = FAILURE_CASES[0];
+let currentRotation = [[1,0,0],[0,1,0],[0,0,1]];
+let isRotatedPose = false;
+
+function matVec(R, v) {
+  return [
+    R[0][0]*v[0] + R[0][1]*v[1] + R[0][2]*v[2],
+    R[1][0]*v[0] + R[1][1]*v[1] + R[1][2]*v[2],
+    R[2][0]*v[0] + R[2][1]*v[1] + R[2][2]*v[2]
+  ];
+}
+
+function randomRotationMatrix() {
+  // Generate a random proper rotation matrix via QR/axis-angle
+  const u1 = Math.random(), u2 = Math.random(), u3 = Math.random();
+  const q0 = Math.sqrt(1 - u1) * Math.sin(2 * Math.PI * u2);
+  const q1 = Math.sqrt(1 - u1) * Math.cos(2 * Math.PI * u2);
+  const q2 = Math.sqrt(u1) * Math.sin(2 * Math.PI * u3);
+  const q3 = Math.sqrt(u1) * Math.cos(2 * Math.PI * u3);
+  return [
+    [1 - 2*(q2*q2 + q3*q3), 2*(q1*q2 - q0*q3),     2*(q1*q3 + q0*q2)],
+    [2*(q1*q2 + q0*q3),     1 - 2*(q1*q1 + q3*q3), 2*(q2*q3 - q0*q1)],
+    [2*(q1*q3 - q0*q2),     2*(q2*q3 + q0*q1),     1 - 2*(q1*q1 + q2*q2)]
+  ];
+}
+
+function centerAndRotateXYZ(xyzText, R) {
+  const lines = xyzText.trim().split(/\r?\n/);
+  const n = parseInt(lines[0].trim(), 10);
+  const comment = lines[1] || "";
+  const atoms = [];
+  let cx = 0, cy = 0, cz = 0;
+  for (let i = 2; i < 2 + n; i++) {
+    const parts = lines[i].trim().split(/\s+/);
+    const el = parts[0];
+    const x = parseFloat(parts[1]), y = parseFloat(parts[2]), z = parseFloat(parts[3]);
+    atoms.push({ el, x, y, z });
+    cx += x; cy += y; cz += z;
+  }
+  cx /= n; cy /= n; cz /= n;
+  let maxR = 0.8;
+  const outLines = [String(n), comment];
+  for (const a of atoms) {
+    const v = [a.x - cx, a.y - cy, a.z - cz];
+    const rv = matVec(R, v);
+    const dist = Math.hypot(rv[0], rv[1], rv[2]);
+    if (dist > maxR) maxR = dist;
+    outLines.push(`${a.el.padEnd(4)} ${rv[0].toFixed(8).padStart(14)} ${rv[1].toFixed(8).padStart(14)} ${rv[2].toFixed(8).padStart(14)}`);
+  }
+  return { xyz: outLines.join("\n"), maxR };
+}
+
+function perpendicularBasis(n) {
+  const away = Math.abs(n[0]) < 0.85 ? [1, 0, 0] : [0, 1, 0];
+  let u = [
+    away[1]*n[2] - away[2]*n[1],
+    away[2]*n[0] - away[0]*n[2],
+    away[0]*n[1] - away[1]*n[0]
+  ];
+  const len = Math.hypot(...u) || 1;
+  u = u.map(v => v / len);
+  const v = [
+    n[1]*u[2] - n[2]*u[1],
+    n[2]*u[0] - n[0]*u[2],
+    n[0]*u[1] - n[1]*u[0]
+  ];
+  return [u, v];
+}
+
+function drawMirrorPlane(normal, radius, color) {
+  const [u, v] = perpendicularBasis(normal);
+  const segments = 36;
+  const pt = (i) => {
+    const a = (2 * Math.PI * i) / segments;
+    const c = Math.cos(a) * radius, s = Math.sin(a) * radius;
+    return { x: u[0]*c + v[0]*s, y: u[1]*c + v[1]*s, z: u[2]*c + v[2]*s };
+  };
+  for (let i = 0; i < segments; i++) {
+    viewer.addCylinder({
+      start: pt(i), end: pt(i + 1), radius: 0.025,
+      color: color, fromCap: 1, toCap: 1
+    });
+  }
+}
+
+function render3D() {
+  if (!window.$3Dmol) return;
+  if (!viewer) {
+    viewer = $3Dmol.createViewer(document.getElementById("mol-viewer"), { backgroundAlpha: 0 });
+  }
+  viewer.clear();
+  const { xyz, maxR } = centerAndRotateXYZ(currentCase.xyz, currentRotation);
+  viewer.addModel(xyz, "xyz");
+  viewer.setStyle({}, { stick: { radius: 0.11 }, sphere: { scale: 0.26 } });
+
+  const reach = Math.max(maxR * 1.4, 1.3);
+  const showAxes = document.getElementById("toggle-axes").checked;
+  const showPlanes = document.getElementById("toggle-planes").checked;
+  const showCom = document.getElementById("toggle-com").checked;
+
+  if (showAxes && currentCase.axes) {
+    for (const ax of currentCase.axes) {
+      const d = matVec(currentRotation, ax.dir);
+      const len = Math.hypot(...d) || 1;
+      const u = d.map(x => x / len);
+      const p1 = { x: -u[0]*reach, y: -u[1]*reach, z: -u[2]*reach };
+      const p2 = { x:  u[0]*reach, y:  u[1]*reach, z:  u[2]*reach };
+      viewer.addCylinder({
+        start: p1, end: p2, radius: 0.04,
+        color: ax.color || "#38bdf8", fromCap: 1, toCap: 1
+      });
+      viewer.addLabel(ax.label, {
+        position: p2, fontSize: 11, fontColor: ax.color || "#38bdf8",
+        backgroundColor: "#090d14", backgroundOpacity: 0.65, inFront: true
+      });
+    }
+  }
+
+  if (showPlanes && currentCase.planes) {
+    for (const pl of currentCase.planes) {
+      const n = matVec(currentRotation, pl.normal);
+      drawMirrorPlane(n, reach * 0.85, pl.color || "#fbbf24");
+    }
+  }
+
+  if (showCom) {
+    viewer.addSphere({ center: { x: 0, y: 0, z: 0 }, radius: 0.1, color: "#c084fc", alpha: 0.9 });
+    if (currentCase.radiusSphere) {
+      viewer.addSphere({
+        center: { x: 0, y: 0, z: 0 },
+        radius: currentCase.radiusSphere,
+        color: "#f87171",
+        alpha: 0.18,
+        wireframe: true
+      });
+    }
+  }
+
+  viewer.zoomTo();
+  viewer.render();
+
+  document.getElementById("viewer-caption").textContent =
+    `${currentCase.file} · True Point Group: ${currentCase.expected}` +
+    (isRotatedPose ? " · [Random 3D Rotation Applied]" : " · [Canonical Fixture Orientation]");
+}
+
+function renderInspector() {
+  const box = document.getElementById("inspector");
+  const outcomesHtml = currentCase.outcomes.map(o => {
+    const color = o.status === "good" ? "var(--good)" : (o.status === "warn" ? "var(--warn)" : "var(--bad)");
+    return `<div class="outcome-card">
+      <div class="lib">${o.lib}</div>
+      <div class="val" style="color:${color}">${o.val}</div>
+    </div>`;
+  }).join("");
+
+  box.innerHTML = `
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:0.5rem">
+      <div>
+        <h3 style="margin:0;font-family:var(--mono)">${currentCase.file}</h3>
+        <div style="font-size:0.83rem;color:var(--muted)">${currentCase.formula} · True Group: <strong>${currentCase.expected}</strong></div>
+      </div>
+      <span class="badge ${currentCase.verdictClass}">${currentCase.verdictBadge}</span>
+    </div>
+    <div class="outcome-grid">${outcomesHtml}</div>
+    <div style="font-size:0.84rem;line-height:1.5">${currentCase.summary}</div>
+    <div>
+      <div style="font-size:0.75rem;color:var(--muted);font-family:var(--mono);margin-bottom:0.25rem">${currentCase.codeLocation}</div>
+      <pre class="code-block"><code>${currentCase.codeSnippet.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")}</code></pre>
+    </div>
+    <details class="xyz-details">
+      <summary>View Raw XYZ Coordinates</summary>
+      <pre class="xyz-pre">${currentCase.xyz}</pre>
+    </details>
+  `;
+}
+
+function renderMolList() {
+  const list = document.getElementById("mol-list");
+  list.innerHTML = "";
+  for (const item of FAILURE_CASES) {
+    const btn = document.createElement("button");
+    btn.className = "mol-btn" + (item.id === currentCase.id ? " active" : "");
+    btn.innerHTML = `
+      <div class="mol-btn-top">
+        <span>${item.file}</span>
+        <span class="badge ${item.verdictClass}" style="font-size:0.68rem">${item.expected}</span>
+      </div>
+      <div class="mol-btn-sub">${item.formula} · Fails: ${item.failedBy}</div>
+    `;
+    btn.addEventListener("click", () => {
+      currentCase = item;
+      isRotatedPose = false;
+      currentRotation = [[1,0,0],[0,1,0],[0,0,1]];
+      document.getElementById("btn-rotate-pose").classList.remove("active");
+      renderMolList();
+      renderInspector();
+      render3D();
+    });
+    list.appendChild(btn);
+  }
+}
+
+document.getElementById("toggle-axes").addEventListener("change", render3D);
+document.getElementById("toggle-planes").addEventListener("change", render3D);
+document.getElementById("toggle-com").addEventListener("change", render3D);
+document.getElementById("btn-rotate-pose").addEventListener("click", () => {
+  currentRotation = randomRotationMatrix();
+  isRotatedPose = true;
+  document.getElementById("btn-rotate-pose").classList.add("active");
+  render3D();
+});
+document.getElementById("btn-reset-pose").addEventListener("click", () => {
+  currentRotation = [[1,0,0],[0,1,0],[0,0,1]];
+  isRotatedPose = false;
+  document.getElementById("btn-rotate-pose").classList.remove("active");
+  render3D();
+});
+
+window.addEventListener("DOMContentLoaded", () => {
+  renderMolList();
+  renderInspector();
+  render3D();
+});
+</script>
+</body>
+</html>
