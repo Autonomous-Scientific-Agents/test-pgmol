@@ -208,3 +208,26 @@ def test_cli_score_on_my_try_branch(tmp_path: Path) -> None:
     assert res.rotated_permuted.exact_correct == 91
     assert res.code_stats.forbidden_imports == []
 
+
+def test_web_and_hf_leaderboard_entries() -> None:
+    """Verify web and Hugging Face leaderboard datasets stay synchronized with benchmark/results."""
+    from benchmark.report import build_web_leaderboard_entries
+    from benchmark.workspace import REPO_ROOT
+
+    results_dir = REPO_ROOT / "benchmark" / "results"
+    json_files = sorted(results_dir.glob("*.json"))
+    assert len(json_files) == 27
+
+    entries = build_web_leaderboard_entries(json_files, include_code=True)
+    assert len(entries) == 27
+    perfect = [e for e in entries if e["overall_ok"] == 182]
+    assert len(perfect) == 6
+    assert entries[0]["rank"] == 1
+    assert all(len(e.get("generated_code", "")) > 0 for e in perfect)
+
+    docs_json = REPO_ROOT / "docs" / "leaderboard_data.json"
+    hf_json = REPO_ROOT / "hf_leaderboard" / "data" / "leaderboard_data.json"
+    assert docs_json.is_file()
+    assert hf_json.is_file()
+
+

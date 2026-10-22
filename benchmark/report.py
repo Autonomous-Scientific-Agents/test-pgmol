@@ -109,3 +109,100 @@ def generate_markdown_leaderboard(json_files: list[Path]) -> str:
         )
 
     return "\n".join(table_lines)
+
+
+def classify_model_family(model: str) -> str:
+    """Group model names into high-level families for leaderboard filtering."""
+    m = model.lower()
+    if "claude" in m:
+        return "Anthropic Claude"
+    if "gpt-oss" in m or "@cborg" in m:
+        return "CBorg / Open-Weights"
+    if "gpt-" in m:
+        return "OpenAI GPT"
+    if "gemini" in m or "gemma" in m:
+        return "Google Gemini"
+    return "Amazon / Mistral / NVIDIA"
+
+
+def build_web_leaderboard_entries(
+    json_files: list[Path],
+    include_code: bool = False,
+) -> list[dict[str, Any]]:
+    """Build structured leaderboard entries from benchmark JSON report files."""
+    entries: list[dict[str, Any]] = []
+    for path in json_files:
+        data = json.loads(path.read_text(encoding="utf-8"))
+        m = data["metadata"]
+        ev = data["evaluation"]
+        c = ev["core"]
+        ch = ev["challenge"]
+        rot = ev["rotated_permuted"]
+        code_stats = ev.get("code_stats", {})
+
+        def _fmt_failures(split_dict: dict[str, Any], limit: int = 8) -> list[str]:
+            items = []
+            for f in split_dict.get("failures", [])[:limit]:
+                err = f.get("error")
+                suffix = f" ({err})" if err else ""
+                items.append(
+                    f"{f['name']}: expected={f['expected']}, got={f['predicted']}{suffix}"
+                )
+            return items
+
+        core_ok = int(c["exact_correct"])
+        chal_ok = int(ch["exact_correct"])
+        rot_ok = int(rot["exact_correct"])
+        overall_ok = core_ok + chal_ok + rot_ok
+        overall_tot = int(c["total"]) + int(ch["total"]) + int(rot["total"])
+
+        entry: dict[str, Any] = {
+            "run_id": m["run_id"],
+            "harness": m["harness"],
+            "model": m["model"],
+            "family": classify_model_family(m["model"]),
+            "mode": m["mode"],
+            "turns_used": int(m.get("turns_used", 1)),
+            "wall_s": round(float(m.get("wall_time_s", 0.0)), 1),
+            "loc": int(code_stats.get("lines_of_code", 0)),
+            "forbidden_imports": list(code_stats.get("forbidden_imports", [])),
+            "core_ok": core_ok,
+            "core_tot": int(c["total"]),
+            "core_pct": round(float(c["exact_accuracy"]) * 100.0, 1),
+            "core_ms": round(float(c["avg_ms"]), 2),
+            "core_s": round(float(c["total_s"]), 3),
+            "chal_ok": chal_ok,
+            "chal_tot": int(ch["total"]),
+            "chal_pct": round(float(ch["exact_accuracy"]) * 100.0, 1),
+            "chal_ms": round(float(ch["avg_ms"]), 2),
+            "chal_s": round(float(ch["total_s"]), 3),
+            "rot_ok": rot_ok,
+            "rot_tot": int(rot["total"]),
+            "rot_pct": round(float(rot["exact_accuracy"]) * 100.0, 1),
+            "rot_ms": round(float(rot["avg_ms"]), 2),
+            "rot_s": round(float(rot["total_s"]), 3),
+            "overall_ok": overall_ok,
+            "overall_tot": overall_tot,
+            "overall_pct": round(float(ev.get("overall_exact_accuracy", 0.0)) * 100.0, 1),
+            "core_failures": _fmt_failures(c),
+            "chal_failures": _fmt_failures(ch),
+            "rot_failures": _fmt_failures(rot),
+        }
+        if include_code:
+            gen_path = path.parent / "generated" / f"{m['run_id']}.py"
+            entry["generated_code"] = (
+                gen_path.read_text(encoding="utf-8") if gen_path.exists() else ""
+            )
+        entries.append(entry)
+
+    entries.sort(
+        key=lambda r: (
+            -r["overall_ok"],
+            r["chal_s"] if r["chal_ok"] > 0 else 1e9,
+            r["loc"] if r["loc"] > 0 else 1e9,
+        )
+    )
+    for idx, entry in enumerate(entries, start=1):
+        entry["rank"] = idx
+    return entries
+

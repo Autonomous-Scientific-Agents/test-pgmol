@@ -16,6 +16,7 @@ what you get with the reference repositories below. This repo is part of the
 | `validation/core_xyz/` | 36 molecules, from H₂ to ferrocene and cubane. The expected point group is in the filename: `<formula>_<pointgroup>.xyz`. |
 | `validation/challenge_xyz/` | 55 harder cases (high symmetry groups, near-symmetric geometries) for after the core set passes. |
 | `benchmark/` | Standardized `pgmol-bench` runner for evaluating both LLM APIs (1-shot or multi-turn) and headless CLI agents (`claude-code`, `opencode`, `codex`, `aider`) with strict workspace isolation and anonymized evaluation. |
+| `hf_leaderboard/` | Hugging Face Space (Gradio) leaderboard app with interactive filtering across all 27 AmSC MAG zero-shot runs, agent repositories, and external libraries, plus a live code/failure inspector and submission evaluator. |
 
 Infinite groups use the ASCII labels `Cinfv` and `Dinfh`; a single atom is `Kh`. Coordinates are in ångströms.
 
@@ -85,6 +86,37 @@ the specification and the core molecules; check it out to start from exactly the
 ## Benchmark results
 
 Evaluated on all 36 `validation/core_xyz/` and 55 `validation/challenge_xyz/` molecules, both on the original coordinates and under random 3D rigid rotations, translations, and atom permutations. For external libraries, equivalent infinite/single-atom Schoenflies notations (`C*v`/`C0v`/`Coov` → `Cinfv`, `D*h`/`D0h`/`Dooh` → `Dinfh`, `SO3`/`K` → `Kh`) are normalized in the **Normalized** column.
+
+### Zero-Shot LLM API Leaderboard (27 Models on AmSC MAG)
+
+Evaluated via `python -m benchmark api --mode zero-shot --turns 1` against the [AmSC Model Access Gateway](https://docs.amsc.energy.gov/model-access-gateway/). Each model receives only the specification prompt (`benchmark/prompts/spec_zero_shot.md`) in a single turn with **zero access to any XYZ files or test feedback**, and its generated Python module (`benchmark/results/generated/`) is scored on all 182 anonymized test cases:
+
+| Rank | Model (AmSC MAG) | Core (36) | Challenge (55) | Rotated + Permuted (91) | Core time (avg / total) | Challenge time (avg / total) | Gen Time | LOC | Generated Code |
+|---:|---|---:|---:|---:|---:|---:|---:|---:|---|
+| 1 | `gpt-6-astra` | **36/36 (100.0%)** | **55/55 (100.0%)** | **91/91 (100.0%)** | 2.38 ms / 0.086 s | **2.99 ms / 0.164 s** | 202.0 s | 488 | [`.py`](benchmark/results/generated/api_gpt-6-astra_zero-shot_t1.py) |
+| 2 | `claude-sonnet-5-5` | **36/36 (100.0%)** | **55/55 (100.0%)** | **91/91 (100.0%)** | **1.26 ms / 0.045 s** | 3.11 ms / 0.171 s | 234.3 s | **171** | [`.py`](benchmark/results/generated/api_claude-sonnet-5-5_zero-shot_t1.py) |
+| 3 | `gpt-6.1-sol` | **36/36 (100.0%)** | **55/55 (100.0%)** | **91/91 (100.0%)** | 3.26 ms / 0.117 s | 5.20 ms / 0.286 s | 126.7 s | 385 | [`.py`](benchmark/results/generated/api_gpt-6.1-sol_zero-shot_t1.py) |
+| 4 | `gpt-5.6-terra` | **36/36 (100.0%)** | **55/55 (100.0%)** | **91/91 (100.0%)** | 7.64 ms / 0.275 s | 12.88 ms / 0.709 s | 60.5 s | 351 | [`.py`](benchmark/results/generated/api_gpt-5.6-terra_zero-shot_t1.py) |
+| 5 | `claude-opus-5-5-medium@amazon` | **36/36 (100.0%)** | **55/55 (100.0%)** | **91/91 (100.0%)** | 1.48 ms / 0.053 s | 16.31 ms / 0.897 s | 194.3 s | 367 | [`.py`](benchmark/results/generated/api_claude-opus-5-5_zero-shot_t1.py) |
+| 6 | `claude-haiku-low` (`claude-haiku-5-5`) | **36/36 (100.0%)** | **55/55 (100.0%)** | **91/91 (100.0%)** | 2.48 ms / 0.089 s | 42.42 ms / 2.333 s | 144.9 s | 241 | [`.py`](benchmark/results/generated/api_claude-haiku-5-5_zero-shot_t1.py) |
+| 7 | `gemini-4-argon@google` | **36/36 (100.0%)** | **55/55 (100.0%)** | 90/91 (98.9%) | 32.83 ms / 1.182 s | 210.76 ms / 11.592 s | 107.5 s | 548 | [`.py`](benchmark/results/generated/api_gemini-4-argon@google_zero-shot_t1.py) |
+| 8 | `gpt-5.6-sol` | **36/36 (100.0%)** | 54/55 (98.2%) | 90/91 (98.9%) | 11.34 ms / 0.408 s | 77.95 ms / 4.287 s | 119.2 s | 462 | [`.py`](benchmark/results/generated/api_gpt-5.6-sol_zero-shot_t1.py) |
+| 9 | `gemini-3.8-flash-low@google` | 35/36 (97.2%) | 51/55 (92.7%) | 85/91 (93.4%) | 11.64 ms / 0.419 s | 42.76 ms / 2.352 s | 31.6 s | 337 | [`.py`](benchmark/results/generated/api_gemini-3.8-flash@google_zero-shot_t1.py) |
+| 10 | `gemini-3.1-pro-preview@google` | 35/36 (97.2%) | 50/55 (90.9%) | 86/91 (94.5%) | 6.17 ms / 0.222 s | 96.62 ms / 5.314 s | 187.3 s | 202 | [`.py`](benchmark/results/generated/api_gemini-3.1-pro-preview@google_zero-shot_t1.py) |
+| 11 | `gemini-3.7-flash-medium@google` | 35/36 (97.2%) | 44/55 (80.0%) | 80/91 (87.9%) | 79.21 ms / 2.851 s | 587.12 ms / 32.292 s | 80.6 s | 295 | [`.py`](benchmark/results/generated/api_gemini-3.7-flash@google_zero-shot_t1.py) |
+| 12 | `gpt-5.6-luna` | 31/36 (86.1%) | 45/55 (81.8%) | 76/91 (83.5%) | 6.97 ms / 0.251 s | 104.22 ms / 5.732 s | 53.6 s | 350 | [`.py`](benchmark/results/generated/api_gpt-5.6-luna_zero-shot_t1.py) |
+| 13 | `inkling-small@cborg` | 31/36 (86.1%) | 42/55 (76.4%) | 71/91 (78.0%) | 4.77 ms / 0.172 s | 22.38 ms / 1.231 s | 109.1 s | 331 | [`.py`](benchmark/results/generated/api_inkling-small@cborg_zero-shot_t1.py) |
+| 14 | `gpt-6-sol` | 34/36 (94.4%) | 38/55 (69.1%) | 72/91 (79.1%) | 7.14 ms / 0.257 s | 115.90 ms / 6.375 s | 62.8 s | 283 | [`.py`](benchmark/results/generated/api_gpt-6-sol_zero-shot_t1.py) |
+| 15 | `gpt-6-luna` | 32/36 (88.9%) | 37/55 (67.3%) | 69/91 (75.8%) | 4.82 ms / 0.174 s | 36.68 ms / 2.017 s | 59.1 s | 408 | [`.py`](benchmark/results/generated/api_gpt-6-luna_zero-shot_t1.py) |
+| 16 | `gpt-oss-120b` | 23/36 (63.9%) | 29/55 (52.7%) | 37/91 (40.7%) | 25.79 ms / 0.928 s | 294.80 ms / 16.214 s | 30.1 s | 280 | [`.py`](benchmark/results/generated/api_gpt-oss-120b_zero-shot_t1.py) |
+| 17 | `gemma-4@cborg` | 20/36 (55.6%) | 32/55 (58.2%) | 27/91 (29.7%) | 2.72 ms / 0.098 s | 6.55 ms / 0.360 s | 28.1 s | 181 | [`.py`](benchmark/results/generated/api_gemma-4@cborg_zero-shot_t1.py) |
+| 18 | `gemini-3.1-flash-lite@google` | 9/36 (25.0%) | 6/55 (10.9%) | 15/91 (16.5%) | 0.19 ms / 0.007 s | 0.25 ms / 0.014 s | 3.9 s | 60 | [`.py`](benchmark/results/generated/api_gemini-3.1-flash-lite@google_zero-shot_t1.py) |
+| 19 | `llama-4-maverick@amazon` | 7/36 (19.4%) | 4/55 (7.3%) | 11/91 (12.1%) | 0.92 ms / 0.033 s | 1.02 ms / 0.056 s | 12.0 s | 191 | [`.py`](benchmark/results/generated/api_llama-4-maverick@amazon_zero-shot_t1.py) |
+| 20 | `gemini-2.5-pro@google` | 8/36 (22.2%) | 5/55 (9.1%) | 8/91 (8.8%) | 2.84 ms / 0.102 s | 51.21 ms / 2.817 s | 149.1 s | 275 | [`.py`](benchmark/results/generated/api_gemini-2.5-pro@google_zero-shot_t1.py) |
+| 21 | `gpt-oss-20b@cborg` | 6/36 (16.7%) | 4/55 (7.3%) | 3/91 (3.3%) | 1.69 ms / 0.061 s | 0.98 ms / 0.054 s | 69.6 s | 266 | [`.py`](benchmark/results/generated/api_gpt-oss-20b@cborg_zero-shot_t1.py) |
+| 22 | `nova-pro-1@amazon` | 4/36 (11.1%) | 2/55 (3.6%) | 6/91 (6.6%) | 0.76 ms / 0.028 s | 0.13 ms / 0.007 s | 4.9 s | 48 | [`.py`](benchmark/results/generated/api_nova-pro-1@amazon_zero-shot_t1.py) |
+| 23 | `devstral-2@amazon` | 1/36 (2.8%) | 0/55 (0.0%) | 1/91 (1.1%) | 0.35 ms / 0.013 s | 0.15 ms / 0.008 s | 48.7 s | 248 | [`.py`](benchmark/results/generated/api_devstral-2@amazon_zero-shot_t1.py) |
+| 24–27 | `mistral-large-3@amazon`, `nemotron-super-3@amazon`, `gemini-3.5-flash@google`, `gemini-3.5-flash-lite@google` | 0/36 (0.0%) | 0/55 (0.0%) | 0/91 (0.0%) | — | — | — | — | [all reports](benchmark/results/) |
 
 ### Agent `pgmol` repositories
 

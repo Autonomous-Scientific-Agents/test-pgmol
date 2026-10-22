@@ -356,6 +356,85 @@
     gap: 0.5rem;
     margin-bottom: 0.5rem;
   }
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 0.9rem;
+    margin-bottom: 1.15rem;
+  }
+  .kpi-card {
+    background: var(--panel-alt);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 0.85rem 1rem;
+  }
+  .kpi-label {
+    color: var(--muted);
+    font-size: 0.76rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-weight: 600;
+  }
+  .kpi-value {
+    font-size: 1.45rem;
+    font-weight: 700;
+    font-family: var(--mono);
+    margin: 0.2rem 0 0.1rem;
+    color: var(--text);
+  }
+  .kpi-sub {
+    color: var(--muted);
+    font-size: 0.78rem;
+  }
+  .lb-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.9rem;
+  }
+  .lb-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+  .lb-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  .lb-input, .lb-select {
+    background: var(--panel-alt);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    padding: 0.35rem 0.65rem;
+    font-size: 0.82rem;
+    font-family: var(--sans);
+  }
+  .lb-row {
+    cursor: pointer;
+    transition: background 0.12s;
+  }
+  .lb-row:hover {
+    background: var(--panel-alt);
+  }
+  .lb-detail-row td {
+    background: var(--panel-alt);
+    padding: 0.9rem 1rem;
+  }
+  .family-tag {
+    display: inline-block;
+    font-size: 0.7rem;
+    padding: 0.1rem 0.45rem;
+    border-radius: 5px;
+    background: var(--panel-alt);
+    border: 1px solid var(--border);
+    color: var(--muted);
+    margin-left: 0.35rem;
+  }
   footer {
     margin-top: 3rem;
     padding-top: 1.25rem;
@@ -379,13 +458,91 @@
       </p>
     </div>
     <nav class="nav-pills">
+      <a class="pill-link" href="#mag-leaderboard">AmSC MAG Leaderboard (27 Models)</a>
       <a class="pill-link" href="#explorer">3D Failure Explorer</a>
-      <a class="pill-link" href="#benchmarks">Benchmark Tables</a>
+      <a class="pill-link" href="#benchmarks">Agent &amp; Library Tables</a>
       <a class="pill-link" href="#root-causes">Code-Level Root Causes</a>
       <a class="pill-link" href="#asa-comparison">ASA PGMol vs. my-try</a>
+      <a class="pill-link" href="https://github.com/Autonomous-Scientific-Agents/test-pgmol/tree/main/hf_leaderboard">HF Space Leaderboard</a>
       <a class="pill-link" href="https://github.com/Autonomous-Scientific-Agents/test-pgmol">GitHub Repo</a>
     </nav>
   </header>
+
+  <!-- SECTION 0: ZERO-SHOT AMSC MAG LEADERBOARD (27 MODELS) -->
+  <section id="mag-leaderboard">
+    <h2>🏆 Zero-Shot LLM Leaderboard — 27 Models on AmSC Model Access Gateway</h2>
+    <p style="color:var(--muted);margin-top:0">
+      Standardized <strong>1-shot, zero-shot</strong> evaluation (<code>python -m benchmark api --mode zero-shot --turns 1</code>): each model receives only the specification prompt with <strong>no access to any XYZ files or test feedback</strong>, and must write a complete, pure-Python + NumPy Schoenflies point-group detector evaluated on <strong>182 anonymized molecules</strong> (36 Core + 55 Challenge + 91 randomly 3D-rotated, translated &amp; atom-permuted). Click any row to inspect failure cases and generated Python source code.
+    </p>
+
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-label">Models Evaluated (AmSC MAG)</div>
+        <div class="kpi-value">27</div>
+        <div class="kpi-sub">OpenAI, Anthropic, Google, CBorg, Amazon, Mistral, NVIDIA</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Perfect 182/182 (100%) Zero-Shot</div>
+        <div class="kpi-value" style="color:var(--good)">6 Models</div>
+        <div class="kpi-sub"><code>gpt-6-astra</code>, <code>claude-sonnet-5-5</code>, <code>gpt-6.1-sol</code>, <code>gpt-5.6-terra</code>, <code>claude-opus-5-5</code>, <code>claude-haiku-5-5</code></div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Most Concise &amp; Fastest Core (100%)</div>
+        <div class="kpi-value" style="color:var(--accent)">171 LOC · 1.26 ms</div>
+        <div class="kpi-sub"><code>claude-sonnet-5-5</code> (0.045 s total Core, 0.171 s Challenge)</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Fastest Challenge Runtime (100%)</div>
+        <div class="kpi-value" style="color:var(--purple)">2.99 ms / mol</div>
+        <div class="kpi-sub"><code>gpt-6-astra</code> (0.164 s total across 55 Challenge cages)</div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="lb-toolbar">
+        <div class="lb-filters" id="mag-family-filters">
+          <button class="btn-sm active" data-family="ALL">All (27)</button>
+          <button class="btn-sm" data-family="100%">100% Club (6)</button>
+          <button class="btn-sm" data-family="OpenAI GPT">OpenAI GPT (7)</button>
+          <button class="btn-sm" data-family="Anthropic Claude">Anthropic Claude (3)</button>
+          <button class="btn-sm" data-family="Google Gemini">Google Gemini (8)</button>
+          <button class="btn-sm" data-family="CBorg / Open-Weights">CBorg / Open-Weights (4)</button>
+          <button class="btn-sm" data-family="Amazon / Mistral / NVIDIA">Amazon / Mistral / NVIDIA (5)</button>
+        </div>
+        <div class="lb-controls">
+          <input type="search" id="mag-search" class="lb-input" placeholder="Filter model name...">
+          <select id="mag-sort" class="lb-select" aria-label="Sort leaderboard">
+            <option value="overall">Sort: Overall Accuracy (High → Low)</option>
+            <option value="chal_time">Sort: Challenge Speed (Fast → Slow)</option>
+            <option value="core_time">Sort: Core Speed (Fast → Slow)</option>
+            <option value="loc">Sort: Conciseness / LOC (Low → High)</option>
+            <option value="wall">Sort: Generation Time (Fast → Slow)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table id="mag-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Model (AmSC MAG)</th>
+              <th class="num">Overall (182)</th>
+              <th class="num">Core (36)</th>
+              <th class="num">Challenge (55)</th>
+              <th class="num">Rotated + Permuted (91)</th>
+              <th class="num">Core Time (avg / tot)</th>
+              <th class="num">Challenge Time (avg / tot)</th>
+              <th class="num">Gen Time</th>
+              <th class="num">LOC</th>
+              <th>Code / Inspect</th>
+            </tr>
+          </thead>
+          <tbody id="mag-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
 
   <!-- SECTION 1: INTERACTIVE 3D FAILURE CASE EXPLORER -->
   <section id="explorer">
@@ -1238,7 +1395,180 @@ window.addEventListener("DOMContentLoaded", () => {
   renderMolList();
   renderInspector();
   render3D();
+  initMagLeaderboard();
 });
+
+const MAG_LEADERBOARD_DATA = [
+  {"run_id": "api_gpt-6-astra_zero-shot_t1", "harness": "llm-api (1-shot)", "model": "gpt-6-astra", "family": "OpenAI GPT", "mode": "zero-shot", "turns_used": 1, "wall_s": 202.0, "loc": 488, "forbidden_imports": [], "core_ok": 36, "core_tot": 36, "core_pct": 100.0, "core_ms": 2.38, "core_s": 0.086, "chal_ok": 55, "chal_tot": 55, "chal_pct": 100.0, "chal_ms": 2.99, "chal_s": 0.164, "rot_ok": 91, "rot_tot": 91, "rot_pct": 100.0, "rot_ms": 2.41, "rot_s": 0.219, "overall_ok": 182, "overall_tot": 182, "overall_pct": 100.0, "core_failures": [], "chal_failures": [], "rot_failures": [], "rank": 1},
+  {"run_id": "api_claude-sonnet-5-5_zero-shot_t1", "harness": "llm-api (1-shot)", "model": "claude-sonnet-5-5", "family": "Anthropic Claude", "mode": "zero-shot", "turns_used": 1, "wall_s": 234.3, "loc": 171, "forbidden_imports": [], "core_ok": 36, "core_tot": 36, "core_pct": 100.0, "core_ms": 1.26, "core_s": 0.045, "chal_ok": 55, "chal_tot": 55, "chal_pct": 100.0, "chal_ms": 3.11, "chal_s": 0.171, "rot_ok": 91, "rot_tot": 91, "rot_pct": 100.0, "rot_ms": 2.48, "rot_s": 0.225, "overall_ok": 182, "overall_tot": 182, "overall_pct": 100.0, "core_failures": [], "chal_failures": [], "rot_failures": [], "rank": 2},
+  {"run_id": "api_gpt-6.1-sol_zero-shot_t1", "harness": "llm-api (1-shot)", "model": "gpt-6.1-sol", "family": "OpenAI GPT", "mode": "zero-shot", "turns_used": 1, "wall_s": 126.7, "loc": 385, "forbidden_imports": [], "core_ok": 36, "core_tot": 36, "core_pct": 100.0, "core_ms": 3.26, "core_s": 0.117, "chal_ok": 55, "chal_tot": 55, "chal_pct": 100.0, "chal_ms": 5.2, "chal_s": 0.286, "rot_ok": 91, "rot_tot": 91, "rot_pct": 100.0, "rot_ms": 4.21, "rot_s": 0.383, "overall_ok": 182, "overall_tot": 182, "overall_pct": 100.0, "core_failures": [], "chal_failures": [], "rot_failures": [], "rank": 3},
+  {"run_id": "api_gpt-5.6-terra_zero-shot_t1", "harness": "llm-api (1-shot)", "model": "gpt-5.6-terra", "family": "OpenAI GPT", "mode": "zero-shot", "turns_used": 1, "wall_s": 60.5, "loc": 351, "forbidden_imports": [], "core_ok": 36, "core_tot": 36, "core_pct": 100.0, "core_ms": 7.64, "core_s": 0.275, "chal_ok": 55, "chal_tot": 55, "chal_pct": 100.0, "chal_ms": 12.88, "chal_s": 0.709, "rot_ok": 91, "rot_tot": 91, "rot_pct": 100.0, "rot_ms": 9.9, "rot_s": 0.901, "overall_ok": 182, "overall_tot": 182, "overall_pct": 100.0, "core_failures": [], "chal_failures": [], "rot_failures": [], "rank": 4},
+  {"run_id": "api_claude-opus-5-5_zero-shot_t1", "harness": "llm-api (1-shot)", "model": "claude-opus-5-5-medium@amazon", "family": "Anthropic Claude", "mode": "zero-shot", "turns_used": 1, "wall_s": 194.3, "loc": 367, "forbidden_imports": [], "core_ok": 36, "core_tot": 36, "core_pct": 100.0, "core_ms": 1.48, "core_s": 0.053, "chal_ok": 55, "chal_tot": 55, "chal_pct": 100.0, "chal_ms": 16.31, "chal_s": 0.897, "rot_ok": 91, "rot_tot": 91, "rot_pct": 100.0, "rot_ms": 10.3, "rot_s": 0.937, "overall_ok": 182, "overall_tot": 182, "overall_pct": 100.0, "core_failures": [], "chal_failures": [], "rot_failures": [], "rank": 5},
+  {"run_id": "api_claude-haiku-5-5_zero-shot_t1", "harness": "llm-api (1-shot)", "model": "claude-haiku-low", "family": "Anthropic Claude", "mode": "zero-shot", "turns_used": 1, "wall_s": 144.9, "loc": 241, "forbidden_imports": [], "core_ok": 36, "core_tot": 36, "core_pct": 100.0, "core_ms": 2.48, "core_s": 0.089, "chal_ok": 55, "chal_tot": 55, "chal_pct": 100.0, "chal_ms": 42.42, "chal_s": 2.333, "rot_ok": 91, "rot_tot": 91, "rot_pct": 100.0, "rot_ms": 23.14, "rot_s": 2.105, "overall_ok": 182, "overall_tot": 182, "overall_pct": 100.0, "core_failures": [], "chal_failures": [], "rot_failures": [], "rank": 6},
+  {"run_id": "api_gemini-4-argon@google_zero-shot_t1", "harness": "llm-api (1-shot)", "model": "gemini-4-argon@google", "family": "Google Gemini", "mode": "zero-shot", "turns_used": 1, "wall_s": 107.5, "loc": 548, "forbidden_imports": [], "core_ok": 36, "core_tot": 36, "core_pct": 100.0, "core_ms": 32.83, "core_s": 1.182, "chal_ok": 55, "chal_tot": 55, "chal_pct": 100.0, "chal_ms": 210.76, "chal_s": 11.592, "rot_ok": 90, "rot_tot": 91, "rot_pct": 98.9, "rot_ms": 150.29, "rot_s": 13.676, "overall_ok": 181, "overall_tot": 182, "overall_pct": 99.5, "core_failures": [], "chal_failures": [], "rot_failures": ["CoN6O12_Th.xyz: expected=Th, got=S6"], "rank": 7},
+  {"run_id": "api_gpt-5.6-sol_zero-shot_t1", "harness": "llm-api (1-shot)", "model": "gpt-5.6-sol", "family": "OpenAI GPT", "mode": "zero-shot", "turns_used": 1, "wall_s": 119.2, "loc": 462, "forbidden_imports": [], "core_ok": 36, "core_tot": 36, "core_pct": 100.0, "core_ms": 11.34, "core_s": 0.408, "chal_ok": 54, "chal_tot": 55, "chal_pct": 98.2, "chal_ms": 77.95, "chal_s": 4.287, "rot_ok": 90, "rot_tot": 91, "rot_pct": 98.9, "rot_ms": 52.88, "rot_s": 4.812, "overall_ok": 180, "overall_tot": 182, "overall_pct": 98.9, "core_failures": [], "chal_failures": ["C60_Ih.xyz: expected=Ih, got=None (TimeoutError: Molecule evaluation exceeded per-molecule timeout (5.0s))"], "rot_failures": ["C60_Ih.xyz: expected=Ih, got=None (TimeoutError: Molecule evaluation exceeded per-molecule timeout (5.0s))"], "rank": 8},
+  {"run_id": "api_gemini-3.8-flash@google_zero-shot_t1", "harness": "llm-api (1-shot)", "model": "gemini-3.8-flash-low@google", "family": "Google Gemini", "mode": "zero-shot", "turns_used": 1, "wall_s": 31.6, "loc": 337, "forbidden_imports": [], "core_ok": 35, "core_tot": 36, "core_pct": 97.2, "core_ms": 11.64, "core_s": 0.419, "chal_ok": 51, "chal_tot": 55, "chal_pct": 92.7, "chal_ms": 42.76, "chal_s": 2.352, "rot_ok": 85, "rot_tot": 91, "rot_pct": 93.4, "rot_ms": 28.44, "rot_s": 2.588, "overall_ok": 171, "overall_tot": 182, "overall_pct": 94.0, "core_failures": ["F6S_Oh.xyz: expected=Oh, got=D4h"], "chal_failures": ["C60_Ih.xyz: expected=Ih, got=Th", "Cl3MoN3_C3v.xyz: expected=C3v, got=Cs", "CoN6O12_Th.xyz: expected=Th, got=D2h", "H24N6Ni_O.xyz: expected=O, got=D4"], "rot_failures": ["F6S_Oh.xyz: expected=Oh, got=D4h", "C20H20_Ih.xyz: expected=Ih, got=Th", "C60_Ih.xyz: expected=Ih, got=Th", "Cl3MoN3_C3v.xyz: expected=C3v, got=Cs"], "rank": 9},
+  {"run_id": "api_gemini-3.1-pro-preview@google_zero-shot_t1", "harness": "llm-api (1-shot)", "model": "gemini-3.1-pro-preview@google", "family": "Google Gemini", "mode": "zero-shot", "turns_used": 1, "wall_s": 187.3, "loc": 202, "forbidden_imports": [], "core_ok": 35, "core_tot": 36, "core_pct": 97.2, "core_ms": 6.17, "core_s": 0.222, "chal_ok": 50, "chal_tot": 55, "chal_pct": 90.9, "chal_ms": 96.62, "chal_s": 5.314, "rot_ok": 86, "rot_tot": 91, "rot_pct": 94.5, "rot_ms": 59.92, "rot_s": 5.453, "overall_ok": 171, "overall_tot": 182, "overall_pct": 94.0, "core_failures": ["C3H4_D2d.xyz: expected=D2d, got=D2"], "chal_failures": ["B12H60_I.xyz: expected=I, got=None (TimeoutError: Molecule evaluation exceeded per-molecule timeout (5.0s))", "C20H20_Ih.xyz: expected=Ih, got=Th", "C60_Ih.xyz: expected=Ih, got=Th", "Cl3MoN3_C3v.xyz: expected=C3v, got=Cs"], "rot_failures": ["B12H60_I.xyz: expected=I, got=None (TimeoutError: Molecule evaluation exceeded per-molecule timeout (5.0s))", "C20H20_Ih.xyz: expected=Ih, got=Th", "C60_Ih.xyz: expected=Ih, got=Th", "Cl3MoN3_C3v.xyz: expected=C3v, got=Cs"], "rank": 10},
+  {"run_id": "api_gemini-3.7-flash@google_zero-shot_t1", "harness": "llm-api (1-shot)", "model": "gemini-3.7-flash-medium@google", "family": "Google Gemini", "mode": "zero-shot", "turns_used": 1, "wall_s": 80.6, "loc": 295, "forbidden_imports": [], "core_ok": 35, "core_tot": 36, "core_pct": 97.2, "core_ms": 79.21, "core_s": 2.851, "chal_ok": 44, "chal_tot": 55, "chal_pct": 80.0, "chal_ms": 587.12, "chal_s": 32.292, "rot_ok": 80, "rot_tot": 91, "rot_pct": 87.9, "rot_ms": 429.14, "rot_s": 39.052, "overall_ok": 159, "overall_tot": 182, "overall_pct": 87.4, "core_failures": ["C3H4_D2d.xyz: expected=D2d, got=D2"], "chal_failures": ["B12H60_I.xyz: expected=I, got=None (TimeoutError: Molecule evaluation exceeded per-molecule timeout (5.0s))", "C10FeH10_D5.xyz: expected=D5, got=None (TimeoutError: Molecule evaluation exceeded per-molecule timeout (5.0s))", "C10H16_Td.xyz: expected=Td, got=None (TimeoutError: Molecule evaluation exceeded per-molecule timeout (5.0s))", "C12CrH12_D6.xyz: expected=D6, got=None (TimeoutError: Molecule evaluation exceeded per-molecule timeout (5.0s))"], "rot_failures": ["B12H60_I.xyz: expected=I, got=None (TimeoutError: Molecule evaluation exceeded per-molecule timeout (5.0s))", "C10FeH10_D5.xyz: expected=D5, got=None (TimeoutError: Molecule evaluation exceeded per-molecule timeout (5.0s))", "C10H16_Td.xyz: expected=Td, got=None (TimeoutError: Molecule evaluation exceeded per-molecule timeout (5.0s))", "C12CrH12_D6.xyz: expected=D6, got=None (TimeoutError: Molecule evaluation exceeded per-molecule timeout (5.0s))"], "rank": 11},
+  {"run_id": "api_gpt-5.6-luna_zero-shot_t1", "harness": "llm-api (1-shot)", "model": "gpt-5.6-luna", "family": "OpenAI GPT", "mode": "zero-shot", "turns_used": 1, "wall_s": 53.6, "loc": 350, "forbidden_imports": [], "core_ok": 31, "core_tot": 36, "core_pct": 86.1, "core_ms": 6.97, "core_s": 0.251, "chal_ok": 45, "chal_tot": 55, "chal_pct": 81.8, "chal_ms": 104.22, "chal_s": 5.732, "rot_ok": 76, "rot_tot": 91, "rot_pct": 83.5, "rot_ms": 65.41, "rot_s": 5.952, "overall_ok": 152, "overall_tot": 182, "overall_pct": 83.5, "core_failures": ["C2H6_D3d.xyz: expected=D3d, got=D3h", "C6H6_D6h.xyz: expected=D6h, got=Th", "CHN_Cinfv.xyz: expected=Cinfv, got=Dinfh", "CO_Cinfv.xyz: expected=Cinfv, got=Dinfh"], "chal_failures": ["B12H60_I.xyz: expected=I, got=None (TimeoutError: Molecule evaluation exceeded per-molecule timeout (5.0s))", "C10FeH10_D5d.xyz: expected=D5d, got=D5h", "C12CrH12_D6.xyz: expected=D6, got=T", "C12CrH12_D6d.xyz: expected=D6d, got=Td"], "rot_failures": ["C2H6_D3d.xyz: expected=D3d, got=D3h", "C6H6_D6h.xyz: expected=D6h, got=Th", "CHN_Cinfv.xyz: expected=Cinfv, got=Dinfh", "CO_Cinfv.xyz: expected=Cinfv, got=Dinfh"], "rank": 12},
+  {"run_id": "api_inkling-small@cborg_zero-shot_t1", "harness": "llm-api (1-shot)", "model": "inkling-small@cborg", "family": "CBorg / Open-Weights", "mode": "zero-shot", "turns_used": 1, "wall_s": 109.1, "loc": 331, "forbidden_imports": [], "core_ok": 31, "core_tot": 36, "core_pct": 86.1, "core_ms": 4.77, "core_s": 0.172, "chal_ok": 42, "chal_tot": 55, "chal_pct": 76.4, "chal_ms": 22.38, "chal_s": 1.231, "rot_ok": 71, "rot_tot": 91, "rot_pct": 78.0, "rot_ms": 14.63, "rot_s": 1.331, "overall_ok": 144, "overall_tot": 182, "overall_pct": 79.1, "core_failures": ["B12H12_Ih.xyz: expected=Ih, got=D5h", "C2H2_Dinfh.xyz: expected=Dinfh, got=Cinfv", "C3H4_D2d.xyz: expected=D2d, got=D2", "CO2_Dinfh.xyz: expected=Dinfh, got=Cinfv"], "chal_failures": ["B12H60_I.xyz: expected=I, got=D5", "C10FeH10_D5d.xyz: expected=D5d, got=D5h", "C12CrH12_D6d.xyz: expected=D6d, got=D6h", "C16H16U_D8d.xyz: expected=D8d, got=D8h"], "rot_failures": ["B12H12_Ih.xyz: expected=Ih, got=D5h", "C2H2_Dinfh.xyz: expected=Dinfh, got=Cinfv", "C3H4_D2d.xyz: expected=D2d, got=D2", "CCl2H2_C2v.xyz: expected=C2v, got=C2h"], "rank": 13},
+  {"run_id": "api_gpt-6-sol_zero-shot_t1", "harness": "llm-api (1-shot)", "model": "gpt-6-sol", "family": "OpenAI GPT", "mode": "zero-shot", "turns_used": 1, "wall_s": 62.8, "loc": 283, "forbidden_imports": [], "core_ok": 34, "core_tot": 36, "core_pct": 94.4, "core_ms": 7.14, "core_s": 0.257, "chal_ok": 38, "chal_tot": 55, "chal_pct": 69.1, "chal_ms": 115.9, "chal_s": 6.375, "rot_ok": 72, "rot_tot": 91, "rot_pct": 79.1, "rot_ms": 75.03, "rot_s": 6.828, "overall_ok": 144, "overall_tot": 182, "overall_pct": 79.1, "core_failures": ["C10FeH10_D5h.xyz: expected=D5h, got=I", "C6H6_D6h.xyz: expected=D6h, got=Ih"], "chal_failures": ["B12H60_I.xyz: expected=I, got=None (TimeoutError: Molecule evaluation exceeded per-molecule timeout (5.0s))", "C10FeH10_D5.xyz: expected=D5, got=I", "C10FeH10_D5d.xyz: expected=D5d, got=Ih", "C12CrH12_D6.xyz: expected=D6, got=I"], "rot_failures": ["C10FeH10_D5h.xyz: expected=D5h, got=I", "C6H6_D6h.xyz: expected=D6h, got=Ih", "B12H60_I.xyz: expected=I, got=None (TimeoutError: Molecule evaluation exceeded per-molecule timeout (5.0s))", "C10FeH10_D5.xyz: expected=D5, got=I"], "rank": 14},
+  {"run_id": "api_gpt-6-luna_zero-shot_t1", "harness": "llm-api (1-shot)", "model": "gpt-6-luna", "family": "OpenAI GPT", "mode": "zero-shot", "turns_used": 1, "wall_s": 59.1, "loc": 408, "forbidden_imports": [], "core_ok": 32, "core_tot": 36, "core_pct": 88.9, "core_ms": 4.82, "core_s": 0.174, "chal_ok": 37, "chal_tot": 55, "chal_pct": 67.3, "chal_ms": 36.68, "chal_s": 2.017, "rot_ok": 69, "rot_tot": 91, "rot_pct": 75.8, "rot_ms": 24.74, "rot_s": 2.251, "overall_ok": 138, "overall_tot": 182, "overall_pct": 75.8, "core_failures": ["C3H3P_C3.xyz: expected=C3, got=C3v", "CHN_Cinfv.xyz: expected=Cinfv, got=Dinfh", "CO_Cinfv.xyz: expected=Cinfv, got=Dinfh", "ClH_Cinfv.xyz: expected=Cinfv, got=Dinfh"], "chal_failures": ["BH3O3_C3h.xyz: expected=C3h, got=D3h", "C10H16_Td.xyz: expected=Td, got=D7d", "C12CrH12_D6.xyz: expected=D6, got=D6d", "C4H4P_C4.xyz: expected=C4, got=C4v"], "rot_failures": ["C3H3P_C3.xyz: expected=C3, got=C3v", "CHN_Cinfv.xyz: expected=Cinfv, got=Dinfh", "CO_Cinfv.xyz: expected=Cinfv, got=Dinfh", "ClH_Cinfv.xyz: expected=Cinfv, got=Dinfh"], "rank": 15},
+  {"run_id": "api_gpt-oss-120b_zero-shot_t1", "harness": "llm-api (1-shot)", "model": "gpt-oss-120b", "family": "CBorg / Open-Weights", "mode": "zero-shot", "turns_used": 1, "wall_s": 30.1, "loc": 280, "forbidden_imports": [], "core_ok": 23, "core_tot": 36, "core_pct": 63.9, "core_ms": 25.79, "core_s": 0.928, "chal_ok": 29, "chal_tot": 55, "chal_pct": 52.7, "chal_ms": 294.8, "chal_s": 16.214, "rot_ok": 37, "rot_tot": 91, "rot_pct": 40.7, "rot_ms": 187.74, "rot_s": 17.084, "overall_ok": 89, "overall_tot": 182, "overall_pct": 48.9, "core_failures": ["C10FeH10_D5h.xyz: expected=D5h, got=I", "C2Cl2F2H2_Ci.xyz: expected=Ci, got=S2", "C2H6_D3d.xyz: expected=D3d, got=Th", "C2H6_D3h.xyz: expected=D3h, got=T"], "chal_failures": ["B12H60_I.xyz: expected=I, got=None (TimeoutError: Molecule evaluation exceeded per-molecule timeout (5.0s))", "C10FeH10_D5.xyz: expected=D5, got=C1", "C10FeH10_D5d.xyz: expected=D5d, got=C2h", "C12CrH12_D6.xyz: expected=D6, got=D2"], "rot_failures": ["BF3_D3h.xyz: expected=D3h, got=C3h", "BrF5_C4v.xyz: expected=C4v, got=C4", "C10FeH10_D5h.xyz: expected=D5h, got=I", "C2Cl2F2H2_Ci.xyz: expected=Ci, got=S2"], "rank": 16},
+  {"run_id": "api_gemma-4@cborg_zero-shot_t1", "harness": "llm-api (1-shot)", "model": "gemma-4@cborg", "family": "CBorg / Open-Weights", "mode": "zero-shot", "turns_used": 1, "wall_s": 28.1, "loc": 181, "forbidden_imports": [], "core_ok": 20, "core_tot": 36, "core_pct": 55.6, "core_ms": 2.72, "core_s": 0.098, "chal_ok": 32, "chal_tot": 55, "chal_pct": 58.2, "chal_ms": 6.55, "chal_s": 0.36, "rot_ok": 27, "rot_tot": 91, "rot_pct": 29.7, "rot_ms": 3.94, "rot_s": 0.358, "overall_ok": 79, "overall_tot": 182, "overall_pct": 43.4, "core_failures": ["B12H12_Ih.xyz: expected=Ih, got=C2h", "BF3_D3h.xyz: expected=D3h, got=C2v", "C2H2_Dinfh.xyz: expected=Dinfh, got=D8h", "C2H6_D3d.xyz: expected=D3d, got=C3"], "chal_failures": ["B12H60_I.xyz: expected=I, got=C2", "C10FeH10_D5.xyz: expected=D5, got=C2", "C10H16_Td.xyz: expected=Td, got=T", "C12CrH12_D6d.xyz: expected=D6d, got=D6"], "rot_failures": ["B12H12_Ih.xyz: expected=Ih, got=Ci", "BF3_D3h.xyz: expected=D3h, got=C3h", "BrF5_C4v.xyz: expected=C4v, got=C4", "C10FeH10_D5h.xyz: expected=D5h, got=C5h"], "rank": 17},
+  {"run_id": "api_gemini-3.1-flash-lite@google_zero-shot_t1", "harness": "llm-api (1-shot)", "model": "gemini-3.1-flash-lite@google", "family": "Google Gemini", "mode": "zero-shot", "turns_used": 1, "wall_s": 3.9, "loc": 60, "forbidden_imports": [], "core_ok": 9, "core_tot": 36, "core_pct": 25.0, "core_ms": 0.19, "core_s": 0.007, "chal_ok": 6, "chal_tot": 55, "chal_pct": 10.9, "chal_ms": 0.25, "chal_s": 0.014, "rot_ok": 15, "rot_tot": 91, "rot_pct": 16.5, "rot_ms": 0.18, "rot_s": 0.017, "overall_ok": 30, "overall_tot": 182, "overall_pct": 16.5, "core_failures": ["B12H12_Ih.xyz: expected=Ih, got=Ci", "BF3_D3h.xyz: expected=D3h, got=Ci", "BrF5_C4v.xyz: expected=C4v, got=Cs", "C10FeH10_D5h.xyz: expected=D5h, got=Ci"], "chal_failures": ["B12H60_I.xyz: expected=I, got=Ci", "B2H6_D2h.xyz: expected=D2h, got=Ci", "BH3O3_C3h.xyz: expected=C3h, got=Ci", "C10FeH10_D5.xyz: expected=D5, got=Ci"], "rot_failures": ["B12H12_Ih.xyz: expected=Ih, got=Ci", "BF3_D3h.xyz: expected=D3h, got=Ci", "BrF5_C4v.xyz: expected=C4v, got=C1", "C10FeH10_D5h.xyz: expected=D5h, got=Ci"], "rank": 18},
+  {"run_id": "api_llama-4-maverick@amazon_zero-shot_t1", "harness": "llm-api (1-shot)", "model": "llama-4-maverick@amazon", "family": "Amazon / Mistral / NVIDIA", "mode": "zero-shot", "turns_used": 1, "wall_s": 12.0, "loc": 191, "forbidden_imports": [], "core_ok": 7, "core_tot": 36, "core_pct": 19.4, "core_ms": 0.92, "core_s": 0.033, "chal_ok": 4, "chal_tot": 55, "chal_pct": 7.3, "chal_ms": 1.02, "chal_s": 0.056, "rot_ok": 11, "rot_tot": 91, "rot_pct": 12.1, "rot_ms": 1.03, "rot_s": 0.094, "overall_ok": 22, "overall_tot": 182, "overall_pct": 12.1, "core_failures": ["B12H12_Ih.xyz: expected=Ih, got=None (NameError: name 'elements' is not defined)", "BF3_D3h.xyz: expected=D3h, got=None (NameError: name 'elements' is not defined)", "BrCClFH_C1.xyz: expected=C1, got=None (NameError: name 'elements' is not defined)", "BrF5_C4v.xyz: expected=C4v, got=None (NameError: name 'elements' is not defined)"], "chal_failures": ["B12H60_I.xyz: expected=I, got=None (NameError: name 'elements' is not defined)", "B2H6_D2h.xyz: expected=D2h, got=None (NameError: name 'elements' is not defined)", "BH3O3_C3h.xyz: expected=C3h, got=None (NameError: name 'elements' is not defined)", "C10FeH10_D5.xyz: expected=D5, got=None (NameError: name 'elements' is not defined)"], "rot_failures": ["B12H12_Ih.xyz: expected=Ih, got=None (NameError: name 'elements' is not defined)", "BF3_D3h.xyz: expected=D3h, got=None (NameError: name 'elements' is not defined)", "BrCClFH_C1.xyz: expected=C1, got=None (NameError: name 'elements' is not defined)", "BrF5_C4v.xyz: expected=C4v, got=None (NameError: name 'elements' is not defined)"], "rank": 19},
+  {"run_id": "api_gemini-2.5-pro@google_zero-shot_t1", "harness": "llm-api (1-shot)", "model": "gemini-2.5-pro@google", "family": "Google Gemini", "mode": "zero-shot", "turns_used": 1, "wall_s": 149.1, "loc": 275, "forbidden_imports": [], "core_ok": 8, "core_tot": 36, "core_pct": 22.2, "core_ms": 2.84, "core_s": 0.102, "chal_ok": 5, "chal_tot": 55, "chal_pct": 9.1, "chal_ms": 51.21, "chal_s": 2.817, "rot_ok": 8, "rot_tot": 91, "rot_pct": 8.8, "rot_ms": 134.27, "rot_s": 12.219, "overall_ok": 21, "overall_tot": 182, "overall_pct": 11.5, "core_failures": ["B12H12_Ih.xyz: expected=Ih, got=C24", "BF3_D3h.xyz: expected=D3h, got=C4", "BrF5_C4v.xyz: expected=C4v, got=C1", "C10FeH10_D5h.xyz: expected=D5h, got=C21h"], "chal_failures": ["B12H60_I.xyz: expected=I, got=C72", "B2H6_D2h.xyz: expected=D2h, got=C8", "BH3O3_C3h.xyz: expected=C3h, got=C7", "C10FeH10_D5.xyz: expected=D5, got=C21h"], "rot_failures": ["B12H12_Ih.xyz: expected=Ih, got=C1", "BF3_D3h.xyz: expected=D3h, got=C1", "BrF5_C4v.xyz: expected=C4v, got=C1", "C10FeH10_D5h.xyz: expected=D5h, got=C1"], "rank": 20},
+  {"run_id": "api_gpt-oss-20b@cborg_zero-shot_t1", "harness": "llm-api (1-shot)", "model": "gpt-oss-20b@cborg", "family": "CBorg / Open-Weights", "mode": "zero-shot", "turns_used": 1, "wall_s": 69.6, "loc": 266, "forbidden_imports": [], "core_ok": 6, "core_tot": 36, "core_pct": 16.7, "core_ms": 1.69, "core_s": 0.061, "chal_ok": 4, "chal_tot": 55, "chal_pct": 7.3, "chal_ms": 0.98, "chal_s": 0.054, "rot_ok": 3, "rot_tot": 91, "rot_pct": 3.3, "rot_ms": 0.63, "rot_s": 0.058, "overall_ok": 13, "overall_tot": 182, "overall_pct": 7.1, "core_failures": ["B12H12_Ih.xyz: expected=Ih, got=C2v", "BF3_D3h.xyz: expected=D3h, got=Cs", "BrF5_C4v.xyz: expected=C4v, got=Cs", "C10FeH10_D5h.xyz: expected=D5h, got=C5v"], "chal_failures": ["B12H60_I.xyz: expected=I, got=C1", "B2H6_D2h.xyz: expected=D2h, got=C2v", "BH3O3_C3h.xyz: expected=C3h, got=C1", "C10FeH10_D5.xyz: expected=D5, got=None (UFuncTypeError: Cannot cast ufunc 'subtract' output from dtype('float64') to dtype('int64') with casting rule 'same_kind')"], "rot_failures": ["B12H12_Ih.xyz: expected=Ih, got=C1", "BF3_D3h.xyz: expected=D3h, got=C1", "BrF5_C4v.xyz: expected=C4v, got=C1", "C10FeH10_D5h.xyz: expected=D5h, got=C1"], "rank": 21},
+  {"run_id": "api_nova-pro-1@amazon_zero-shot_t1", "harness": "llm-api (1-shot)", "model": "nova-pro-1@amazon", "family": "Amazon / Mistral / NVIDIA", "mode": "zero-shot", "turns_used": 1, "wall_s": 4.9, "loc": 48, "forbidden_imports": [], "core_ok": 4, "core_tot": 36, "core_pct": 11.1, "core_ms": 0.76, "core_s": 0.028, "chal_ok": 2, "chal_tot": 55, "chal_pct": 3.6, "chal_ms": 0.13, "chal_s": 0.007, "rot_ok": 6, "rot_tot": 91, "rot_pct": 6.6, "rot_ms": 0.11, "rot_s": 0.01, "overall_ok": 12, "overall_tot": 182, "overall_pct": 6.6, "core_failures": ["B12H12_Ih.xyz: expected=Ih, got=Dnh", "BF3_D3h.xyz: expected=D3h, got=Dnh", "BrCClFH_C1.xyz: expected=C1, got=Dnh", "BrF5_C4v.xyz: expected=C4v, got=Dnh"], "chal_failures": ["B12H60_I.xyz: expected=I, got=Dnh", "B2H6_D2h.xyz: expected=D2h, got=Dnh", "BH3O3_C3h.xyz: expected=C3h, got=Dnh", "C10FeH10_D5.xyz: expected=D5, got=Dnh"], "rot_failures": ["B12H12_Ih.xyz: expected=Ih, got=Dnh", "BF3_D3h.xyz: expected=D3h, got=Dnh", "BrCClFH_C1.xyz: expected=C1, got=Dnh", "BrF5_C4v.xyz: expected=C4v, got=Dnh"], "rank": 22},
+  {"run_id": "api_devstral-2@amazon_zero-shot_t1", "harness": "llm-api (1-shot)", "model": "devstral-2@amazon", "family": "Amazon / Mistral / NVIDIA", "mode": "zero-shot", "turns_used": 1, "wall_s": 48.7, "loc": 248, "forbidden_imports": ["scipy"], "core_ok": 1, "core_tot": 36, "core_pct": 2.8, "core_ms": 0.35, "core_s": 0.013, "chal_ok": 0, "chal_tot": 55, "chal_pct": 0.0, "chal_ms": 0.15, "chal_s": 0.008, "rot_ok": 1, "rot_tot": 91, "rot_pct": 1.1, "rot_ms": 0.12, "rot_s": 0.011, "overall_ok": 2, "overall_tot": 182, "overall_pct": 1.1, "core_failures": ["B12H12_Ih.xyz: expected=Ih, got=None (ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all())", "BF3_D3h.xyz: expected=D3h, got=None (ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all())", "BrCClFH_C1.xyz: expected=C1, got=None (ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all())", "BrF5_C4v.xyz: expected=C4v, got=None (ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all())"], "chal_failures": ["B12H60_I.xyz: expected=I, got=None (ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all())", "B2H6_D2h.xyz: expected=D2h, got=None (ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all())", "BH3O3_C3h.xyz: expected=C3h, got=None (ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all())", "C10FeH10_D5.xyz: expected=D5, got=None (ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all())"], "rot_failures": ["B12H12_Ih.xyz: expected=Ih, got=None (ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all())", "BF3_D3h.xyz: expected=D3h, got=None (ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all())", "BrCClFH_C1.xyz: expected=C1, got=None (ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all())", "BrF5_C4v.xyz: expected=C4v, got=None (ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all())"], "rank": 23},
+  {"run_id": "api_gemini-3.5-flash@google_zero-shot_t1", "harness": "llm-api (1-shot)", "model": "gemini-3.5-flash@google", "family": "Google Gemini", "mode": "zero-shot", "turns_used": 1, "wall_s": 134.8, "loc": 290, "forbidden_imports": [], "core_ok": 0, "core_tot": 36, "core_pct": 0.0, "core_ms": 0.0, "core_s": 0.0, "chal_ok": 0, "chal_tot": 55, "chal_pct": 0.0, "chal_ms": 0.0, "chal_s": 0.0, "rot_ok": 0, "rot_tot": 91, "rot_pct": 0.0, "rot_ms": 0.0, "rot_s": 0.0, "overall_ok": 0, "overall_tot": 182, "overall_pct": 0.0, "core_failures": ["Ar_Kh.xyz: expected=Kh, got=None (SyntaxError: invalid syntax (__init__.py, line 380))", "B12H12_Ih.xyz: expected=Ih, got=None (SyntaxError: invalid syntax (__init__.py, line 380))", "BF3_D3h.xyz: expected=D3h, got=None (SyntaxError: invalid syntax (__init__.py, line 380))", "BrCClFH_C1.xyz: expected=C1, got=None (SyntaxError: invalid syntax (__init__.py, line 380))"], "chal_failures": ["B12H60_I.xyz: expected=I, got=None (SyntaxError: invalid syntax (__init__.py, line 380))", "B2H6_D2h.xyz: expected=D2h, got=None (SyntaxError: invalid syntax (__init__.py, line 380))", "BH3O3_C3h.xyz: expected=C3h, got=None (SyntaxError: invalid syntax (__init__.py, line 380))", "C10FeH10_D5.xyz: expected=D5, got=None (SyntaxError: invalid syntax (__init__.py, line 380))"], "rot_failures": ["Ar_Kh.xyz: expected=Kh, got=None (SyntaxError: invalid syntax (__init__.py, line 380))", "B12H12_Ih.xyz: expected=Ih, got=None (SyntaxError: invalid syntax (__init__.py, line 380))", "BF3_D3h.xyz: expected=D3h, got=None (SyntaxError: invalid syntax (__init__.py, line 380))", "BrCClFH_C1.xyz: expected=C1, got=None (SyntaxError: invalid syntax (__init__.py, line 380))"], "rank": 24},
+  {"run_id": "api_nemotron-super-3@amazon_zero-shot_t1", "harness": "llm-api (1-shot)", "model": "nemotron-super-3@amazon", "family": "Amazon / Mistral / NVIDIA", "mode": "zero-shot", "turns_used": 1, "wall_s": 32.7, "loc": 353, "forbidden_imports": [], "core_ok": 0, "core_tot": 36, "core_pct": 0.0, "core_ms": 0.09, "core_s": 0.003, "chal_ok": 0, "chal_tot": 55, "chal_pct": 0.0, "chal_ms": 0.04, "chal_s": 0.002, "rot_ok": 0, "rot_tot": 91, "rot_pct": 0.0, "rot_ms": 0.08, "rot_s": 0.007, "overall_ok": 0, "overall_tot": 182, "overall_pct": 0.0, "core_failures": ["Ar_Kh.xyz: expected=Kh, got=None (ValueError: Invalid atom line 1: molecule_0001\n)", "B12H12_Ih.xyz: expected=Ih, got=None (ValueError: Invalid atom line 1: molecule_0002\n)", "BF3_D3h.xyz: expected=D3h, got=None (ValueError: Invalid atom line 1: molecule_0003\n)", "BrCClFH_C1.xyz: expected=C1, got=None (ValueError: Invalid atom line 1: molecule_0004\n)"], "chal_failures": ["B12H60_I.xyz: expected=I, got=None (ValueError: Invalid atom line 1: molecule_0037\n)", "B2H6_D2h.xyz: expected=D2h, got=None (ValueError: Invalid atom line 1: molecule_0038\n)", "BH3O3_C3h.xyz: expected=C3h, got=None (ValueError: Invalid atom line 1: molecule_0039\n)", "C10FeH10_D5.xyz: expected=D5, got=None (ValueError: Invalid atom line 1: molecule_0040\n)"], "rot_failures": ["Ar_Kh.xyz: expected=Kh, got=None (ValueError: Invalid atom line 1: rotated_translated_permuted\n)", "B12H12_Ih.xyz: expected=Ih, got=None (ValueError: Invalid atom line 1: rotated_translated_permuted\n)", "BF3_D3h.xyz: expected=D3h, got=None (ValueError: Invalid atom line 1: rotated_translated_permuted\n)", "BrCClFH_C1.xyz: expected=C1, got=None (ValueError: Invalid atom line 1: rotated_translated_permuted\n)"], "rank": 25},
+  {"run_id": "api_gemini-3.5-flash-lite@google_zero-shot_t1", "harness": "llm-api (1-shot)", "model": "gemini-3.5-flash-lite@google", "family": "Google Gemini", "mode": "zero-shot", "turns_used": 1, "wall_s": 16.3, "loc": 396, "forbidden_imports": [], "core_ok": 0, "core_tot": 36, "core_pct": 0.0, "core_ms": 0.0, "core_s": 0.0, "chal_ok": 0, "chal_tot": 55, "chal_pct": 0.0, "chal_ms": 0.0, "chal_s": 0.0, "rot_ok": 0, "rot_tot": 91, "rot_pct": 0.0, "rot_ms": 0.0, "rot_s": 0.0, "overall_ok": 0, "overall_tot": 182, "overall_pct": 0.0, "core_failures": ["Ar_Kh.xyz: expected=Kh, got=None (IndentationError: unexpected indent (__init__.py, line 430))", "B12H12_Ih.xyz: expected=Ih, got=None (IndentationError: unexpected indent (__init__.py, line 430))", "BF3_D3h.xyz: expected=D3h, got=None (IndentationError: unexpected indent (__init__.py, line 430))", "BrCClFH_C1.xyz: expected=C1, got=None (IndentationError: unexpected indent (__init__.py, line 430))"], "chal_failures": ["B12H60_I.xyz: expected=I, got=None (IndentationError: unexpected indent (__init__.py, line 430))", "B2H6_D2h.xyz: expected=D2h, got=None (IndentationError: unexpected indent (__init__.py, line 430))", "BH3O3_C3h.xyz: expected=C3h, got=None (IndentationError: unexpected indent (__init__.py, line 430))", "C10FeH10_D5.xyz: expected=D5, got=None (IndentationError: unexpected indent (__init__.py, line 430))"], "rot_failures": ["Ar_Kh.xyz: expected=Kh, got=None (IndentationError: unexpected indent (__init__.py, line 430))", "B12H12_Ih.xyz: expected=Ih, got=None (IndentationError: unexpected indent (__init__.py, line 430))", "BF3_D3h.xyz: expected=D3h, got=None (IndentationError: unexpected indent (__init__.py, line 430))", "BrCClFH_C1.xyz: expected=C1, got=None (IndentationError: unexpected indent (__init__.py, line 430))"], "rank": 26},
+  {"run_id": "api_mistral-large-3@amazon_zero-shot_t1", "harness": "llm-api (1-shot)", "model": "mistral-large-3@amazon", "family": "Amazon / Mistral / NVIDIA", "mode": "zero-shot", "turns_used": 1, "wall_s": 99.6, "loc": 429, "forbidden_imports": [], "core_ok": 0, "core_tot": 36, "core_pct": 0.0, "core_ms": 0.0, "core_s": 0.0, "chal_ok": 0, "chal_tot": 55, "chal_pct": 0.0, "chal_ms": 0.0, "chal_s": 0.0, "rot_ok": 0, "rot_tot": 91, "rot_pct": 0.0, "rot_ms": 0.0, "rot_s": 0.0, "overall_ok": 0, "overall_tot": 182, "overall_pct": 0.0, "core_failures": ["Ar_Kh.xyz: expected=Kh, got=None (NameError: name 'detect_point_group' is not defined)", "B12H12_Ih.xyz: expected=Ih, got=None (NameError: name 'detect_point_group' is not defined)", "BF3_D3h.xyz: expected=D3h, got=None (NameError: name 'detect_point_group' is not defined)", "BrCClFH_C1.xyz: expected=C1, got=None (NameError: name 'detect_point_group' is not defined)"], "chal_failures": ["B12H60_I.xyz: expected=I, got=None (NameError: name 'detect_point_group' is not defined)", "B2H6_D2h.xyz: expected=D2h, got=None (NameError: name 'detect_point_group' is not defined)", "BH3O3_C3h.xyz: expected=C3h, got=None (NameError: name 'detect_point_group' is not defined)", "C10FeH10_D5.xyz: expected=D5, got=None (NameError: name 'detect_point_group' is not defined)"], "rot_failures": ["Ar_Kh.xyz: expected=Kh, got=None (NameError: name 'detect_point_group' is not defined)", "B12H12_Ih.xyz: expected=Ih, got=None (NameError: name 'detect_point_group' is not defined)", "BF3_D3h.xyz: expected=D3h, got=None (NameError: name 'detect_point_group' is not defined)", "BrCClFH_C1.xyz: expected=C1, got=None (NameError: name 'detect_point_group' is not defined)"], "rank": 27}
+];
+
+let magActiveFamily = "ALL";
+let magSearchQuery = "";
+let magSortMode = "overall";
+let magExpandedRunId = null;
+
+function scoreBadge(ok, tot) {
+  const pct = ((ok / tot) * 100).toFixed(1);
+  const cls = ok === tot ? "badge-good" : (ok / tot >= 0.85 ? "badge-warn" : "badge-bad");
+  return `<span class="badge ${cls}">${ok}/${tot} (${pct}%)</span>`;
+}
+
+function escapeHtml(s) {
+  return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+}
+
+function renderMagLeaderboard() {
+  const tbody = document.getElementById("mag-tbody");
+  if (!tbody) return;
+  let rows = MAG_LEADERBOARD_DATA.filter((r) => {
+    if (magActiveFamily === "100%") {
+      if (r.overall_ok !== r.overall_tot) return false;
+    } else if (magActiveFamily !== "ALL" && r.family !== magActiveFamily) {
+      return false;
+    }
+    if (magSearchQuery) {
+      const q = magSearchQuery.toLowerCase();
+      if (!r.model.toLowerCase().includes(q) && !r.family.toLowerCase().includes(q)) return false;
+    }
+    return true;
+  });
+
+  rows.sort((a, b) => {
+    if (magSortMode === "chal_time") {
+      const ta = a.chal_ok > 0 ? a.chal_s : 1e9;
+      const tb = b.chal_ok > 0 ? b.chal_s : 1e9;
+      return ta - tb || b.overall_ok - a.overall_ok;
+    }
+    if (magSortMode === "core_time") {
+      const ta = a.core_ok > 0 ? a.core_s : 1e9;
+      const tb = b.core_ok > 0 ? b.core_s : 1e9;
+      return ta - tb || b.overall_ok - a.overall_ok;
+    }
+    if (magSortMode === "loc") {
+      const la = a.loc > 0 ? a.loc : 1e9;
+      const lb = b.loc > 0 ? b.loc : 1e9;
+      return la - lb || b.overall_ok - a.overall_ok;
+    }
+    if (magSortMode === "wall") {
+      return a.wall_s - b.wall_s || b.overall_ok - a.overall_ok;
+    }
+    const ca = a.chal_ok > 0 ? a.chal_s : 1e9;
+    const cb = b.chal_ok > 0 ? b.chal_s : 1e9;
+    return b.overall_ok - a.overall_ok || ca - cb || a.loc - b.loc;
+  });
+
+  tbody.innerHTML = "";
+  for (const r of rows) {
+    const tr = document.createElement("tr");
+    tr.className = "lb-row";
+    const codeUrl = `https://github.com/Autonomous-Scientific-Agents/test-pgmol/blob/main/benchmark/results/generated/${encodeURIComponent(r.run_id)}.py`;
+    const jsonUrl = `https://github.com/Autonomous-Scientific-Agents/test-pgmol/blob/main/benchmark/results/${encodeURIComponent(r.run_id)}.json`;
+    const isExpanded = magExpandedRunId === r.run_id;
+    tr.innerHTML = `
+      <td class="num">${r.rank}</td>
+      <td>
+        <strong><code>${escapeHtml(r.model)}</code></strong>
+        <span class="family-tag">${escapeHtml(r.family)}</span>
+        ${r.forbidden_imports && r.forbidden_imports.length ? `<span class="badge badge-bad" style="margin-left:0.3rem">imported ${escapeHtml(r.forbidden_imports.join(","))}</span>` : ""}
+      </td>
+      <td class="num">${scoreBadge(r.overall_ok, r.overall_tot)}</td>
+      <td class="num">${scoreBadge(r.core_ok, r.core_tot)}</td>
+      <td class="num">${scoreBadge(r.chal_ok, r.chal_tot)}</td>
+      <td class="num">${scoreBadge(r.rot_ok, r.rot_tot)}</td>
+      <td class="num">${r.core_ok > 0 ? `${r.core_ms.toFixed(2)} ms / ${r.core_s.toFixed(3)} s` : "—"}</td>
+      <td class="num">${r.chal_ok > 0 ? `${r.chal_ms.toFixed(2)} ms / ${r.chal_s.toFixed(3)} s` : "—"}</td>
+      <td class="num">${r.wall_s.toFixed(1)} s</td>
+      <td class="num">${r.loc}</td>
+      <td>
+        <button class="btn-sm">${isExpanded ? "▾ Hide" : "▸ Inspect"}</button>
+        <a href="${codeUrl}" target="_blank" rel="noopener" style="margin-left:0.35rem;font-size:0.78rem" onclick="event.stopPropagation()">.py</a>
+      </td>
+    `;
+    tr.addEventListener("click", () => {
+      magExpandedRunId = isExpanded ? null : r.run_id;
+      renderMagLeaderboard();
+    });
+    tbody.appendChild(tr);
+
+    if (isExpanded) {
+      const detailTr = document.createElement("tr");
+      detailTr.className = "lb-detail-row";
+      const allFails = [
+        ...r.core_failures.map((f) => `[Core] ${f}`),
+        ...r.chal_failures.map((f) => `[Challenge] ${f}`),
+        ...r.rot_failures.map((f) => `[Rotated+Permuted] ${f}`),
+      ];
+      const failHtml = allFails.length === 0
+        ? `<div style="color:var(--good);font-weight:600">✓ Passed all 182/182 test cases (36 Core + 55 Challenge + 91 Rotated/Permuted) with zero failures!</div>`
+        : `<div style="font-size:0.82rem"><strong>Sample Failures (${r.overall_tot - r.overall_ok} total failed out of ${r.overall_tot}):</strong><ul style="margin:0.4rem 0 0;padding-left:1.2rem;font-family:var(--mono);font-size:0.76rem;color:var(--muted)">${allFails.map((f) => `<li>${escapeHtml(f)}</li>`).join("")}</ul></div>`;
+      detailTr.innerHTML = `
+        <td colspan="11">
+          <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;gap:1rem">
+            <div style="flex:1;min-width:280px">${failHtml}</div>
+            <div style="display:flex;gap:0.6rem;align-items:center">
+              <a class="pill-link" href="${codeUrl}" target="_blank" rel="noopener">View Generated Python (${r.loc} LOC) ↗</a>
+              <a class="pill-link" href="${jsonUrl}" target="_blank" rel="noopener">Full Evaluation JSON ↗</a>
+            </div>
+          </div>
+        </td>
+      `;
+      tbody.appendChild(detailTr);
+    }
+  }
+}
+
+function initMagLeaderboard() {
+  const filterBtns = document.querySelectorAll("#mag-family-filters button");
+  filterBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      filterBtns.forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+      magActiveFamily = btn.getAttribute("data-family");
+      renderMagLeaderboard();
+    });
+  });
+  const searchEl = document.getElementById("mag-search");
+  if (searchEl) {
+    searchEl.addEventListener("input", (e) => {
+      magSearchQuery = e.target.value;
+      renderMagLeaderboard();
+    });
+  }
+  const sortEl = document.getElementById("mag-sort");
+  if (sortEl) {
+    sortEl.addEventListener("change", (e) => {
+      magSortMode = e.target.value;
+      renderMagLeaderboard();
+    });
+  }
+  renderMagLeaderboard();
+}
 </script>
 </body>
 </html>
