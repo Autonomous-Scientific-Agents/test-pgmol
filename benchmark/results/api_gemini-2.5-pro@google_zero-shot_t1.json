@@ -1,0 +1,3039 @@
+{
+  "metadata": {
+    "run_id": "api_gemini-2.5-pro@google_zero-shot_t1",
+    "runner_type": "api",
+    "harness": "llm-api (1-shot)",
+    "model": "gemini-2.5-pro@google",
+    "mode": "zero-shot",
+    "max_turns": 1,
+    "turns_used": 1,
+    "wall_time_s": 149.11546664894558,
+    "input_tokens": 1300,
+    "output_tokens": 15415,
+    "total_tokens": 16715,
+    "cost_usd": null,
+    "timestamp_utc": "2026-10-22T06:01:27.393581+00:00",
+    "workdir": null,
+    "exit_code": 0,
+    "notes": ""
+  },
+  "evaluation": {
+    "target": "/tmp/pgmol_bench_api_gemini-2.5-pro@google_zero-shot_t1_v53jgy_a",
+    "core": {
+      "split": "core",
+      "total": 36,
+      "exact_correct": 8,
+      "normalized_correct": 8,
+      "exact_accuracy": 0.2222222222222222,
+      "normalized_accuracy": 0.2222222222222222,
+      "avg_ms": 2.8389938686612166,
+      "p95_ms": 9.860454767476767,
+      "total_s": 0.1022037792718038,
+      "failures": [
+        {
+          "name": "B12H12_Ih.xyz",
+          "expected": "Ih",
+          "predicted": "C24",
+          "error": null
+        },
+        {
+          "name": "BF3_D3h.xyz",
+          "expected": "D3h",
+          "predicted": "C4",
+          "error": null
+        },
+        {
+          "name": "BrF5_C4v.xyz",
+          "expected": "C4v",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "C10FeH10_D5h.xyz",
+          "expected": "D5h",
+          "predicted": "C21h",
+          "error": null
+        },
+        {
+          "name": "C10H8_D2h.xyz",
+          "expected": "D2h",
+          "predicted": "C18",
+          "error": null
+        },
+        {
+          "name": "C2Cl2F2H2_Ci.xyz",
+          "expected": "Ci",
+          "predicted": "C8",
+          "error": null
+        },
+        {
+          "name": "C2Cl2H2_C2h.xyz",
+          "expected": "C2h",
+          "predicted": "C6",
+          "error": null
+        },
+        {
+          "name": "C2H4_D2h.xyz",
+          "expected": "D2h",
+          "predicted": "C6",
+          "error": null
+        },
+        {
+          "name": "C2H6_D3d.xyz",
+          "expected": "D3d",
+          "predicted": "C8h",
+          "error": null
+        },
+        {
+          "name": "C2H6_D3h.xyz",
+          "expected": "D3h",
+          "predicted": "C8h",
+          "error": null
+        },
+        {
+          "name": "C3H3P_C3.xyz",
+          "expected": "C3",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "C3H4_D2d.xyz",
+          "expected": "D2d",
+          "predicted": "C7h",
+          "error": null
+        },
+        {
+          "name": "C4H6_C2h.xyz",
+          "expected": "C2h",
+          "predicted": "C10",
+          "error": null
+        },
+        {
+          "name": "C6H6_D6h.xyz",
+          "expected": "D6h",
+          "predicted": "C12",
+          "error": null
+        },
+        {
+          "name": "C8H8_Oh.xyz",
+          "expected": "Oh",
+          "predicted": "C16h",
+          "error": null
+        },
+        {
+          "name": "CCl2H2_C2v.xyz",
+          "expected": "C2v",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "CCl3H_C3v.xyz",
+          "expected": "C3v",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "CClFH2_Cs.xyz",
+          "expected": "Cs",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "CH4_Td.xyz",
+          "expected": "Td",
+          "predicted": "Ih",
+          "error": null
+        },
+        {
+          "name": "Cl5P_D3h.xyz",
+          "expected": "D3h",
+          "predicted": "C6h",
+          "error": null
+        },
+        {
+          "name": "ClHO_Cs.xyz",
+          "expected": "Cs",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "F4Xe_D4h.xyz",
+          "expected": "D4h",
+          "predicted": "C5",
+          "error": null
+        },
+        {
+          "name": "F6S_Oh.xyz",
+          "expected": "Oh",
+          "predicted": "C7h",
+          "error": null
+        },
+        {
+          "name": "H2O2_C2.xyz",
+          "expected": "C2",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "H2O_C2v.xyz",
+          "expected": "C2v",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "H3N_C3v.xyz",
+          "expected": "C3v",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "O3_C2v.xyz",
+          "expected": "C2v",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "P4_Td.xyz",
+          "expected": "Td",
+          "predicted": "C4",
+          "error": null
+        }
+      ]
+    },
+    "challenge": {
+      "split": "challenge",
+      "total": 55,
+      "exact_correct": 5,
+      "normalized_correct": 5,
+      "exact_accuracy": 0.09090909090909091,
+      "normalized_accuracy": 0.09090909090909091,
+      "avg_ms": 51.20946221180599,
+      "p95_ms": 106.71312499325717,
+      "total_s": 2.8165204216493294,
+      "failures": [
+        {
+          "name": "B12H60_I.xyz",
+          "expected": "I",
+          "predicted": "C72",
+          "error": null
+        },
+        {
+          "name": "B2H6_D2h.xyz",
+          "expected": "D2h",
+          "predicted": "C8",
+          "error": null
+        },
+        {
+          "name": "BH3O3_C3h.xyz",
+          "expected": "C3h",
+          "predicted": "C7",
+          "error": null
+        },
+        {
+          "name": "C10FeH10_D5.xyz",
+          "expected": "D5",
+          "predicted": "C21h",
+          "error": null
+        },
+        {
+          "name": "C10FeH10_D5d.xyz",
+          "expected": "D5d",
+          "predicted": "C21h",
+          "error": null
+        },
+        {
+          "name": "C10H16_Td.xyz",
+          "expected": "Td",
+          "predicted": "C26",
+          "error": null
+        },
+        {
+          "name": "C12CrH12_D6.xyz",
+          "expected": "D6",
+          "predicted": "C25h",
+          "error": null
+        },
+        {
+          "name": "C12CrH12_D6d.xyz",
+          "expected": "D6d",
+          "predicted": "C25h",
+          "error": null
+        },
+        {
+          "name": "C12CrH12_D6h.xyz",
+          "expected": "D6h",
+          "predicted": "C25h",
+          "error": null
+        },
+        {
+          "name": "C16H16U_D8d.xyz",
+          "expected": "D8d",
+          "predicted": "C33h",
+          "error": null
+        },
+        {
+          "name": "C16H16U_D8h.xyz",
+          "expected": "D8h",
+          "predicted": "C33h",
+          "error": null
+        },
+        {
+          "name": "C20H20_Ih.xyz",
+          "expected": "Ih",
+          "predicted": "C40",
+          "error": null
+        },
+        {
+          "name": "C2Cl2H2_C2v.xyz",
+          "expected": "C2v",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "C2H2O2_D2h.xyz",
+          "expected": "D2h",
+          "predicted": "C6",
+          "error": null
+        },
+        {
+          "name": "C2H2_D2h.xyz",
+          "expected": "D2h",
+          "predicted": "C4",
+          "error": null
+        },
+        {
+          "name": "C2H4_D2.xyz",
+          "expected": "D2",
+          "predicted": "C6h",
+          "error": null
+        },
+        {
+          "name": "C2H6_D3.xyz",
+          "expected": "D3",
+          "predicted": "C8h",
+          "error": null
+        },
+        {
+          "name": "C3H6_D3h.xyz",
+          "expected": "D3h",
+          "predicted": "C9",
+          "error": null
+        },
+        {
+          "name": "C4H4P_C4.xyz",
+          "expected": "C4",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "C4H4Si_S4.xyz",
+          "expected": "S4",
+          "predicted": "C9",
+          "error": null
+        },
+        {
+          "name": "C4H4_D4h.xyz",
+          "expected": "D4h",
+          "predicted": "C8",
+          "error": null
+        },
+        {
+          "name": "C4H8_D4h.xyz",
+          "expected": "D4h",
+          "predicted": "C12",
+          "error": null
+        },
+        {
+          "name": "C4N4Pt_C4h.xyz",
+          "expected": "C4h",
+          "predicted": "C9",
+          "error": null
+        },
+        {
+          "name": "C5H12_T.xyz",
+          "expected": "T",
+          "predicted": "C17",
+          "error": null
+        },
+        {
+          "name": "C5H12_Td.xyz",
+          "expected": "Td",
+          "predicted": "C17",
+          "error": null
+        },
+        {
+          "name": "C5H5NNiO_C5v.xyz",
+          "expected": "C5v",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "C5H5P_C5.xyz",
+          "expected": "C5",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "C5H5_C5h.xyz",
+          "expected": "C5h",
+          "predicted": "C10",
+          "error": null
+        },
+        {
+          "name": "C5H5_D5h.xyz",
+          "expected": "D5h",
+          "predicted": "C10",
+          "error": null
+        },
+        {
+          "name": "C60_Ih.xyz",
+          "expected": "Ih",
+          "predicted": "C60",
+          "error": null
+        },
+        {
+          "name": "C6CrH6_C6v.xyz",
+          "expected": "C6v",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "C6H12_D3d.xyz",
+          "expected": "D3d",
+          "predicted": "C18",
+          "error": null
+        },
+        {
+          "name": "C6H6P_C6.xyz",
+          "expected": "C6",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "C6H6_S6.xyz",
+          "expected": "S6",
+          "predicted": "C12",
+          "error": null
+        },
+        {
+          "name": "C6O6_C6h.xyz",
+          "expected": "C6h",
+          "predicted": "C12",
+          "error": null
+        },
+        {
+          "name": "C8H8_D4.xyz",
+          "expected": "D4",
+          "predicted": "C16",
+          "error": null
+        },
+        {
+          "name": "C8H8_S8.xyz",
+          "expected": "S8",
+          "predicted": "C16",
+          "error": null
+        },
+        {
+          "name": "C9CrH6O3_C3v.xyz",
+          "expected": "C3v",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "Cl2OS_Cs.xyz",
+          "expected": "Cs",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "Cl3MoN3_C2v.xyz",
+          "expected": "C2v",
+          "predicted": "C7",
+          "error": null
+        },
+        {
+          "name": "Cl3MoN3_C3v.xyz",
+          "expected": "C3v",
+          "predicted": "C7",
+          "error": null
+        },
+        {
+          "name": "CoN6O12_Th.xyz",
+          "expected": "Th",
+          "predicted": "C19",
+          "error": null
+        },
+        {
+          "name": "F4S_C2v.xyz",
+          "expected": "C2v",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "F7I_D5h.xyz",
+          "expected": "D5h",
+          "predicted": "C8",
+          "error": null
+        },
+        {
+          "name": "F8Zr_D4d.xyz",
+          "expected": "D4d",
+          "predicted": "C9",
+          "error": null
+        },
+        {
+          "name": "Fe4S4_Td.xyz",
+          "expected": "Td",
+          "predicted": "C8",
+          "error": null
+        },
+        {
+          "name": "H24N6Ni_O.xyz",
+          "expected": "O",
+          "predicted": "C31h",
+          "error": null
+        },
+        {
+          "name": "H3_D3h.xyz",
+          "expected": "D3h",
+          "predicted": "Th",
+          "error": null
+        },
+        {
+          "name": "Na8_Oh.xyz",
+          "expected": "Oh",
+          "predicted": "C8h",
+          "error": null
+        },
+        {
+          "name": "S8_D4d.xyz",
+          "expected": "D4d",
+          "predicted": "C8",
+          "error": null
+        }
+      ]
+    },
+    "rotated_permuted": {
+      "split": "rotated_permuted",
+      "total": 91,
+      "exact_correct": 8,
+      "normalized_correct": 8,
+      "exact_accuracy": 0.08791208791208792,
+      "normalized_accuracy": 0.08791208791208792,
+      "avg_ms": 134.27337823092816,
+      "p95_ms": 332.6033945195377,
+      "total_s": 12.218877419014461,
+      "failures": [
+        {
+          "name": "B12H12_Ih.xyz",
+          "expected": "Ih",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "BF3_D3h.xyz",
+          "expected": "D3h",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "BrF5_C4v.xyz",
+          "expected": "C4v",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "C10FeH10_D5h.xyz",
+          "expected": "D5h",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "C10H8_D2h.xyz",
+          "expected": "D2h",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "C2Cl2F2H2_Ci.xyz",
+          "expected": "Ci",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "C2Cl2H2_C2h.xyz",
+          "expected": "C2h",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "C2H2_Dinfh.xyz",
+          "expected": "Dinfh",
+          "predicted": "Cinfv",
+          "error": null
+        },
+        {
+          "name": "C2H4_D2h.xyz",
+          "expected": "D2h",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "C2H6_D3d.xyz",
+          "expected": "D3d",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "C2H6_D3h.xyz",
+          "expected": "D3h",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "C3H3P_C3.xyz",
+          "expected": "C3",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "C3H4_D2d.xyz",
+          "expected": "D2d",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "C4H6_C2h.xyz",
+          "expected": "C2h",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "C6H6_D6h.xyz",
+          "expected": "D6h",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "C8H8_Oh.xyz",
+          "expected": "Oh",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "CCl2H2_C2v.xyz",
+          "expected": "C2v",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "CCl3H_C3v.xyz",
+          "expected": "C3v",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "CClFH2_Cs.xyz",
+          "expected": "Cs",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "CH4_Td.xyz",
+          "expected": "Td",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "CO2_Dinfh.xyz",
+          "expected": "Dinfh",
+          "predicted": "Cinfv",
+          "error": null
+        },
+        {
+          "name": "Cl5P_D3h.xyz",
+          "expected": "D3h",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "ClHO_Cs.xyz",
+          "expected": "Cs",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "F4Xe_D4h.xyz",
+          "expected": "D4h",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "F6S_Oh.xyz",
+          "expected": "Oh",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "H2O2_C2.xyz",
+          "expected": "C2",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "H2O_C2v.xyz",
+          "expected": "C2v",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "H2_Dinfh.xyz",
+          "expected": "Dinfh",
+          "predicted": "Cinfv",
+          "error": null
+        },
+        {
+          "name": "H3N_C3v.xyz",
+          "expected": "C3v",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "O3_C2v.xyz",
+          "expected": "C2v",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "P4_Td.xyz",
+          "expected": "Td",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "B12H60_I.xyz",
+          "expected": "I",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "B2H6_D2h.xyz",
+          "expected": "D2h",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "BH3O3_C3h.xyz",
+          "expected": "C3h",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "C10FeH10_D5.xyz",
+          "expected": "D5",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "C10FeH10_D5d.xyz",
+          "expected": "D5d",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "C10H16_Td.xyz",
+          "expected": "Td",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "C12CrH12_D6.xyz",
+          "expected": "D6",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "C12CrH12_D6d.xyz",
+          "expected": "D6d",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "C12CrH12_D6h.xyz",
+          "expected": "D6h",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "C16H16U_D8d.xyz",
+          "expected": "D8d",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "C16H16U_D8h.xyz",
+          "expected": "D8h",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "C20H20_Ih.xyz",
+          "expected": "Ih",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "C2Cl2H2_C2v.xyz",
+          "expected": "C2v",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "C2H2O2_D2h.xyz",
+          "expected": "D2h",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "C2H2_D2h.xyz",
+          "expected": "D2h",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "C2H4_D2.xyz",
+          "expected": "D2",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "C2H6_D3.xyz",
+          "expected": "D3",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "C3H6_D3h.xyz",
+          "expected": "D3h",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "C4H4P_C4.xyz",
+          "expected": "C4",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "C4H4Si_S4.xyz",
+          "expected": "S4",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "C4H4_D4h.xyz",
+          "expected": "D4h",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "C4H8_D4h.xyz",
+          "expected": "D4h",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "C4N4Pt_C4h.xyz",
+          "expected": "C4h",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "C5H12_T.xyz",
+          "expected": "T",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "C5H12_Td.xyz",
+          "expected": "Td",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "C5H5NNiO_C5v.xyz",
+          "expected": "C5v",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "C5H5P_C5.xyz",
+          "expected": "C5",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "C5H5_C5h.xyz",
+          "expected": "C5h",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "C5H5_D5h.xyz",
+          "expected": "D5h",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "C60_Ih.xyz",
+          "expected": "Ih",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "C6CrH6_C6v.xyz",
+          "expected": "C6v",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "C6H12_D3d.xyz",
+          "expected": "D3d",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "C6H6P_C6.xyz",
+          "expected": "C6",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "C6H6_S6.xyz",
+          "expected": "S6",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "C6O6_C6h.xyz",
+          "expected": "C6h",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "C8H8_D4.xyz",
+          "expected": "D4",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "C8H8_S8.xyz",
+          "expected": "S8",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "C9CrH6O3_C3v.xyz",
+          "expected": "C3v",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "Cl2OS_Cs.xyz",
+          "expected": "Cs",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "Cl3MoN3_C2v.xyz",
+          "expected": "C2v",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "Cl3MoN3_C3v.xyz",
+          "expected": "C3v",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "CoN6O12_Th.xyz",
+          "expected": "Th",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "F4S_C2v.xyz",
+          "expected": "C2v",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "F7I_D5h.xyz",
+          "expected": "D5h",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "F8Zr_D4d.xyz",
+          "expected": "D4d",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "Fe4S4_Td.xyz",
+          "expected": "Td",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "H24N6Ni_O.xyz",
+          "expected": "O",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "H3_D3h.xyz",
+          "expected": "D3h",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "I3_Dinfh.xyz",
+          "expected": "Dinfh",
+          "predicted": "Cinfv",
+          "error": null
+        },
+        {
+          "name": "N2_Dinfh.xyz",
+          "expected": "Dinfh",
+          "predicted": "Cinfv",
+          "error": null
+        },
+        {
+          "name": "Na8_Oh.xyz",
+          "expected": "Oh",
+          "predicted": "C1",
+          "error": null
+        },
+        {
+          "name": "S8_D4d.xyz",
+          "expected": "D4d",
+          "predicted": "C1",
+          "error": null
+        }
+      ]
+    },
+    "overall_exact_accuracy": 0.11538461538461539,
+    "overall_normalized_accuracy": 0.11538461538461539,
+    "code_stats": {
+      "python_files": 1,
+      "lines_of_code": 275,
+      "forbidden_imports": []
+    },
+    "cases": [
+      {
+        "name": "Ar_Kh.xyz",
+        "split": "core",
+        "expected": "Kh",
+        "predicted": "Kh",
+        "normalized_predicted": "Kh",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.08579203858971596,
+        "error": null
+      },
+      {
+        "name": "B12H12_Ih.xyz",
+        "split": "core",
+        "expected": "Ih",
+        "predicted": "C24",
+        "normalized_predicted": "C24",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 20.623332005925477,
+        "error": null
+      },
+      {
+        "name": "BF3_D3h.xyz",
+        "split": "core",
+        "expected": "D3h",
+        "predicted": "C4",
+        "normalized_predicted": "C4",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.8422549581155181,
+        "error": null
+      },
+      {
+        "name": "BrCClFH_C1.xyz",
+        "split": "core",
+        "expected": "C1",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 2.971267909742892,
+        "error": null
+      },
+      {
+        "name": "BrF5_C4v.xyz",
+        "split": "core",
+        "expected": "C4v",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 3.453186945989728,
+        "error": null
+      },
+      {
+        "name": "C10FeH10_D5h.xyz",
+        "split": "core",
+        "expected": "D5h",
+        "predicted": "C21h",
+        "normalized_predicted": "C21h",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 25.66819591447711,
+        "error": null
+      },
+      {
+        "name": "C10H8_D2h.xyz",
+        "split": "core",
+        "expected": "D2h",
+        "predicted": "C18",
+        "normalized_predicted": "C18",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 6.044910987839103,
+        "error": null
+      },
+      {
+        "name": "C2Cl2F2H2_Ci.xyz",
+        "split": "core",
+        "expected": "Ci",
+        "predicted": "C8",
+        "normalized_predicted": "C8",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 2.2011800901964307,
+        "error": null
+      },
+      {
+        "name": "C2Cl2H2_C2h.xyz",
+        "split": "core",
+        "expected": "C2h",
+        "predicted": "C6",
+        "normalized_predicted": "C6",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.2152990093454719,
+        "error": null
+      },
+      {
+        "name": "C2H2_Dinfh.xyz",
+        "split": "core",
+        "expected": "Dinfh",
+        "predicted": "Dinfh",
+        "normalized_predicted": "Dinfh",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.10954204481095076,
+        "error": null
+      },
+      {
+        "name": "C2H4_D2h.xyz",
+        "split": "core",
+        "expected": "D2h",
+        "predicted": "C6",
+        "normalized_predicted": "C6",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.1010899906978011,
+        "error": null
+      },
+      {
+        "name": "C2H6_D3d.xyz",
+        "split": "core",
+        "expected": "D3d",
+        "predicted": "C8h",
+        "normalized_predicted": "C8h",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.7809689743444324,
+        "error": null
+      },
+      {
+        "name": "C2H6_D3h.xyz",
+        "split": "core",
+        "expected": "D3h",
+        "predicted": "C8h",
+        "normalized_predicted": "C8h",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 2.7577249566093087,
+        "error": null
+      },
+      {
+        "name": "C3H3P_C3.xyz",
+        "split": "core",
+        "expected": "C3",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 6.2728290213271976,
+        "error": null
+      },
+      {
+        "name": "C3H4_D2d.xyz",
+        "split": "core",
+        "expected": "D2d",
+        "predicted": "C7h",
+        "normalized_predicted": "C7h",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.1707149678841233,
+        "error": null
+      },
+      {
+        "name": "C4H6_C2h.xyz",
+        "split": "core",
+        "expected": "C2h",
+        "predicted": "C10",
+        "normalized_predicted": "C10",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 2.5708909379318357,
+        "error": null
+      },
+      {
+        "name": "C6H6_D6h.xyz",
+        "split": "core",
+        "expected": "D6h",
+        "predicted": "C12",
+        "normalized_predicted": "C12",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 2.8254759963601828,
+        "error": null
+      },
+      {
+        "name": "C8H8_Oh.xyz",
+        "split": "core",
+        "expected": "Oh",
+        "predicted": "C16h",
+        "normalized_predicted": "C16h",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 5.462698987685144,
+        "error": null
+      },
+      {
+        "name": "CCl2H2_C2v.xyz",
+        "split": "core",
+        "expected": "C2v",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 2.2210549796000123,
+        "error": null
+      },
+      {
+        "name": "CCl3H_C3v.xyz",
+        "split": "core",
+        "expected": "C3v",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 2.2348889615386724,
+        "error": null
+      },
+      {
+        "name": "CClFH2_Cs.xyz",
+        "split": "core",
+        "expected": "Cs",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 2.434222958981991,
+        "error": null
+      },
+      {
+        "name": "CH4_Td.xyz",
+        "split": "core",
+        "expected": "Td",
+        "predicted": "Ih",
+        "normalized_predicted": "Ih",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.5824619438499212,
+        "error": null
+      },
+      {
+        "name": "CHN_Cinfv.xyz",
+        "split": "core",
+        "expected": "Cinfv",
+        "predicted": "Cinfv",
+        "normalized_predicted": "Cinfv",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.09058392606675625,
+        "error": null
+      },
+      {
+        "name": "CO2_Dinfh.xyz",
+        "split": "core",
+        "expected": "Dinfh",
+        "predicted": "Dinfh",
+        "normalized_predicted": "Dinfh",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.09750097524374723,
+        "error": null
+      },
+      {
+        "name": "CO_Cinfv.xyz",
+        "split": "core",
+        "expected": "Cinfv",
+        "predicted": "Cinfv",
+        "normalized_predicted": "Cinfv",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.08129188790917397,
+        "error": null
+      },
+      {
+        "name": "Cl5P_D3h.xyz",
+        "split": "core",
+        "expected": "D3h",
+        "predicted": "C6h",
+        "normalized_predicted": "C6h",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.8576720720157027,
+        "error": null
+      },
+      {
+        "name": "ClHO_Cs.xyz",
+        "split": "core",
+        "expected": "Cs",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.6151290144771338,
+        "error": null
+      },
+      {
+        "name": "ClH_Cinfv.xyz",
+        "split": "core",
+        "expected": "Cinfv",
+        "predicted": "Cinfv",
+        "normalized_predicted": "Cinfv",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.09524996858090162,
+        "error": null
+      },
+      {
+        "name": "F4Xe_D4h.xyz",
+        "split": "core",
+        "expected": "D4h",
+        "predicted": "C5",
+        "normalized_predicted": "C5",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.6960040191188455,
+        "error": null
+      },
+      {
+        "name": "F6S_Oh.xyz",
+        "split": "core",
+        "expected": "Oh",
+        "predicted": "C7h",
+        "normalized_predicted": "C7h",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.8660049643367529,
+        "error": null
+      },
+      {
+        "name": "H2O2_C2.xyz",
+        "split": "core",
+        "expected": "C2",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.1122149880975485,
+        "error": null
+      },
+      {
+        "name": "H2O_C2v.xyz",
+        "split": "core",
+        "expected": "C2v",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.5470450269058347,
+        "error": null
+      },
+      {
+        "name": "H2_Dinfh.xyz",
+        "split": "core",
+        "expected": "Dinfh",
+        "predicted": "Dinfh",
+        "normalized_predicted": "Dinfh",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.08800090290606022,
+        "error": null
+      },
+      {
+        "name": "H3N_C3v.xyz",
+        "split": "core",
+        "expected": "C3v",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.200214959681034,
+        "error": null
+      },
+      {
+        "name": "O3_C2v.xyz",
+        "split": "core",
+        "expected": "C2v",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.5363780073821545,
+        "error": null
+      },
+      {
+        "name": "P4_Td.xyz",
+        "split": "core",
+        "expected": "Td",
+        "predicted": "C4",
+        "normalized_predicted": "C4",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.6905039772391319,
+        "error": null
+      },
+      {
+        "name": "B12H60_I.xyz",
+        "split": "challenge",
+        "expected": "I",
+        "predicted": "C72",
+        "normalized_predicted": "C72",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1369.2866860656068,
+        "error": null
+      },
+      {
+        "name": "B2H6_D2h.xyz",
+        "split": "challenge",
+        "expected": "D2h",
+        "predicted": "C8",
+        "normalized_predicted": "C8",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.7102599376812577,
+        "error": null
+      },
+      {
+        "name": "BH3O3_C3h.xyz",
+        "split": "challenge",
+        "expected": "C3h",
+        "predicted": "C7",
+        "normalized_predicted": "C7",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.9239699468016624,
+        "error": null
+      },
+      {
+        "name": "C10FeH10_D5.xyz",
+        "split": "challenge",
+        "expected": "D5",
+        "predicted": "C21h",
+        "normalized_predicted": "C21h",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 22.865428938530385,
+        "error": null
+      },
+      {
+        "name": "C10FeH10_D5d.xyz",
+        "split": "challenge",
+        "expected": "D5d",
+        "predicted": "C21h",
+        "normalized_predicted": "C21h",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 19.101948011666536,
+        "error": null
+      },
+      {
+        "name": "C10H16_Td.xyz",
+        "split": "challenge",
+        "expected": "Td",
+        "predicted": "C26",
+        "normalized_predicted": "C26",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 50.41246907785535,
+        "error": null
+      },
+      {
+        "name": "C12CrH12_D6.xyz",
+        "split": "challenge",
+        "expected": "D6",
+        "predicted": "C25h",
+        "normalized_predicted": "C25h",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 36.45980195142329,
+        "error": null
+      },
+      {
+        "name": "C12CrH12_D6d.xyz",
+        "split": "challenge",
+        "expected": "D6d",
+        "predicted": "C25h",
+        "normalized_predicted": "C25h",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 38.93044195137918,
+        "error": null
+      },
+      {
+        "name": "C12CrH12_D6h.xyz",
+        "split": "challenge",
+        "expected": "D6h",
+        "predicted": "C25h",
+        "normalized_predicted": "C25h",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 23.128430941142142,
+        "error": null
+      },
+      {
+        "name": "C16H16U_D8d.xyz",
+        "split": "challenge",
+        "expected": "D8d",
+        "predicted": "C33h",
+        "normalized_predicted": "C33h",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 88.29528104979545,
+        "error": null
+      },
+      {
+        "name": "C16H16U_D8h.xyz",
+        "split": "challenge",
+        "expected": "D8h",
+        "predicted": "C33h",
+        "normalized_predicted": "C33h",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 55.121830897405744,
+        "error": null
+      },
+      {
+        "name": "C20H20_Ih.xyz",
+        "split": "challenge",
+        "expected": "Ih",
+        "predicted": "C40",
+        "normalized_predicted": "C40",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 97.13112493045628,
+        "error": null
+      },
+      {
+        "name": "C2Cl2H2_C2v.xyz",
+        "split": "challenge",
+        "expected": "C2v",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 3.587854909710586,
+        "error": null
+      },
+      {
+        "name": "C2H2NO_C1.xyz",
+        "split": "challenge",
+        "expected": "C1",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 4.07702405937016,
+        "error": null
+      },
+      {
+        "name": "C2H2O2_D2h.xyz",
+        "split": "challenge",
+        "expected": "D2h",
+        "predicted": "C6",
+        "normalized_predicted": "C6",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.1442559771239758,
+        "error": null
+      },
+      {
+        "name": "C2H2_D2h.xyz",
+        "split": "challenge",
+        "expected": "D2h",
+        "predicted": "C4",
+        "normalized_predicted": "C4",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.6256710039451718,
+        "error": null
+      },
+      {
+        "name": "C2H4_D2.xyz",
+        "split": "challenge",
+        "expected": "D2",
+        "predicted": "C6h",
+        "normalized_predicted": "C6h",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.0882150381803513,
+        "error": null
+      },
+      {
+        "name": "C2H6_D3.xyz",
+        "split": "challenge",
+        "expected": "D3",
+        "predicted": "C8h",
+        "normalized_predicted": "C8h",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 2.6526818983256817,
+        "error": null
+      },
+      {
+        "name": "C3H6_D3h.xyz",
+        "split": "challenge",
+        "expected": "D3h",
+        "predicted": "C9",
+        "normalized_predicted": "C9",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 3.342270036228001,
+        "error": null
+      },
+      {
+        "name": "C4H4P_C4.xyz",
+        "split": "challenge",
+        "expected": "C4",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 10.949815972708166,
+        "error": null
+      },
+      {
+        "name": "C4H4Si_S4.xyz",
+        "split": "challenge",
+        "expected": "S4",
+        "predicted": "C9",
+        "normalized_predicted": "C9",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 3.260144032537937,
+        "error": null
+      },
+      {
+        "name": "C4H4_D4h.xyz",
+        "split": "challenge",
+        "expected": "D4h",
+        "predicted": "C8",
+        "normalized_predicted": "C8",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.2389649637043476,
+        "error": null
+      },
+      {
+        "name": "C4H8_D4h.xyz",
+        "split": "challenge",
+        "expected": "D4h",
+        "predicted": "C12",
+        "normalized_predicted": "C12",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 3.7339390255510807,
+        "error": null
+      },
+      {
+        "name": "C4N4Pt_C4h.xyz",
+        "split": "challenge",
+        "expected": "C4h",
+        "predicted": "C9",
+        "normalized_predicted": "C9",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 2.5060150073841214,
+        "error": null
+      },
+      {
+        "name": "C5H12_T.xyz",
+        "split": "challenge",
+        "expected": "T",
+        "predicted": "C17",
+        "normalized_predicted": "C17",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 17.979733063839376,
+        "error": null
+      },
+      {
+        "name": "C5H12_Td.xyz",
+        "split": "challenge",
+        "expected": "Td",
+        "predicted": "C17",
+        "normalized_predicted": "C17",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 13.64041492342949,
+        "error": null
+      },
+      {
+        "name": "C5H5NNiO_C5v.xyz",
+        "split": "challenge",
+        "expected": "C5v",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 39.942448027431965,
+        "error": null
+      },
+      {
+        "name": "C5H5P_C5.xyz",
+        "split": "challenge",
+        "expected": "C5",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 22.80667901504785,
+        "error": null
+      },
+      {
+        "name": "C5H5_C5h.xyz",
+        "split": "challenge",
+        "expected": "C5h",
+        "predicted": "C10",
+        "normalized_predicted": "C10",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 3.044642973691225,
+        "error": null
+      },
+      {
+        "name": "C5H5_D5h.xyz",
+        "split": "challenge",
+        "expected": "D5h",
+        "predicted": "C10",
+        "normalized_predicted": "C10",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 2.9554760549217463,
+        "error": null
+      },
+      {
+        "name": "C60_Ih.xyz",
+        "split": "challenge",
+        "expected": "Ih",
+        "predicted": "C60",
+        "normalized_predicted": "C60",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 508.2851380575448,
+        "error": null
+      },
+      {
+        "name": "C6CrH6_C6v.xyz",
+        "split": "challenge",
+        "expected": "C6v",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 27.615041006356478,
+        "error": null
+      },
+      {
+        "name": "C6H12_D3d.xyz",
+        "split": "challenge",
+        "expected": "D3d",
+        "predicted": "C18",
+        "normalized_predicted": "C18",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 12.799951946362853,
+        "error": null
+      },
+      {
+        "name": "C6H6P_C6.xyz",
+        "split": "challenge",
+        "expected": "C6",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 32.777154934592545,
+        "error": null
+      },
+      {
+        "name": "C6H6_S6.xyz",
+        "split": "challenge",
+        "expected": "S6",
+        "predicted": "C12",
+        "normalized_predicted": "C12",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 4.864695947617292,
+        "error": null
+      },
+      {
+        "name": "C6O6_C6h.xyz",
+        "split": "challenge",
+        "expected": "C6h",
+        "predicted": "C12",
+        "normalized_predicted": "C12",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 3.1145609682425857,
+        "error": null
+      },
+      {
+        "name": "C8H8_D4.xyz",
+        "split": "challenge",
+        "expected": "D4",
+        "predicted": "C16",
+        "normalized_predicted": "C16",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 14.564753975719213,
+        "error": null
+      },
+      {
+        "name": "C8H8_S8.xyz",
+        "split": "challenge",
+        "expected": "S8",
+        "predicted": "C16",
+        "normalized_predicted": "C16",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 17.185311997309327,
+        "error": null
+      },
+      {
+        "name": "C9CrH6O3_C3v.xyz",
+        "split": "challenge",
+        "expected": "C3v",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 120.33176503609866,
+        "error": null
+      },
+      {
+        "name": "COS_Cinfv.xyz",
+        "split": "challenge",
+        "expected": "Cinfv",
+        "predicted": "Cinfv",
+        "normalized_predicted": "Cinfv",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.3307099686935544,
+        "error": null
+      },
+      {
+        "name": "Cl2OS_Cs.xyz",
+        "split": "challenge",
+        "expected": "Cs",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.327300094999373,
+        "error": null
+      },
+      {
+        "name": "Cl3MoN3_C2v.xyz",
+        "split": "challenge",
+        "expected": "C2v",
+        "predicted": "C7",
+        "normalized_predicted": "C7",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.1902989353984594,
+        "error": null
+      },
+      {
+        "name": "Cl3MoN3_C3v.xyz",
+        "split": "challenge",
+        "expected": "C3v",
+        "predicted": "C7",
+        "normalized_predicted": "C7",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.2020900612697005,
+        "error": null
+      },
+      {
+        "name": "CoN6O12_Th.xyz",
+        "split": "challenge",
+        "expected": "Th",
+        "predicted": "C19",
+        "normalized_predicted": "C19",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 14.34221095405519,
+        "error": null
+      },
+      {
+        "name": "F4S_C2v.xyz",
+        "split": "challenge",
+        "expected": "C2v",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 2.4266400141641498,
+        "error": null
+      },
+      {
+        "name": "F7I_D5h.xyz",
+        "split": "challenge",
+        "expected": "D5h",
+        "predicted": "C8",
+        "normalized_predicted": "C8",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.9071369897574186,
+        "error": null
+      },
+      {
+        "name": "F8Zr_D4d.xyz",
+        "split": "challenge",
+        "expected": "D4d",
+        "predicted": "C9",
+        "normalized_predicted": "C9",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 2.358056022785604,
+        "error": null
+      },
+      {
+        "name": "Fe4S4_Td.xyz",
+        "split": "challenge",
+        "expected": "Td",
+        "predicted": "C8",
+        "normalized_predicted": "C8",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.8298440845683217,
+        "error": null
+      },
+      {
+        "name": "H24N6Ni_O.xyz",
+        "split": "challenge",
+        "expected": "O",
+        "predicted": "C31h",
+        "normalized_predicted": "C31h",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 100.87656497489661,
+        "error": null
+      },
+      {
+        "name": "H3_Cinfv.xyz",
+        "split": "challenge",
+        "expected": "Cinfv",
+        "predicted": "Cinfv",
+        "normalized_predicted": "Cinfv",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.2577099949121475,
+        "error": null
+      },
+      {
+        "name": "H3_D3h.xyz",
+        "split": "challenge",
+        "expected": "D3h",
+        "predicted": "Th",
+        "normalized_predicted": "Th",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.367293949238956,
+        "error": null
+      },
+      {
+        "name": "I3_Dinfh.xyz",
+        "split": "challenge",
+        "expected": "Dinfh",
+        "predicted": "Dinfh",
+        "normalized_predicted": "Dinfh",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.0991669949144125,
+        "error": null
+      },
+      {
+        "name": "N2_Dinfh.xyz",
+        "split": "challenge",
+        "expected": "Dinfh",
+        "predicted": "Dinfh",
+        "normalized_predicted": "Dinfh",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.09625102393329144,
+        "error": null
+      },
+      {
+        "name": "Na8_Oh.xyz",
+        "split": "challenge",
+        "expected": "Oh",
+        "predicted": "C8h",
+        "normalized_predicted": "C8h",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.1769660050049424,
+        "error": null
+      },
+      {
+        "name": "S8_D4d.xyz",
+        "split": "challenge",
+        "expected": "D4d",
+        "predicted": "C8",
+        "normalized_predicted": "C8",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 2.2498880280181766,
+        "error": null
+      },
+      {
+        "name": "Ar_Kh.xyz",
+        "split": "rotated_permuted",
+        "expected": "Kh",
+        "predicted": "Kh",
+        "normalized_predicted": "Kh",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.0878339633345604,
+        "error": null
+      },
+      {
+        "name": "B12H12_Ih.xyz",
+        "split": "rotated_permuted",
+        "expected": "Ih",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 86.36660198681056,
+        "error": null
+      },
+      {
+        "name": "BF3_D3h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D3h",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.0224638972431421,
+        "error": null
+      },
+      {
+        "name": "BrCClFH_C1.xyz",
+        "split": "rotated_permuted",
+        "expected": "C1",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 2.8102670330554247,
+        "error": null
+      },
+      {
+        "name": "BrF5_C4v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C4v",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 3.541604964993894,
+        "error": null
+      },
+      {
+        "name": "C10FeH10_D5h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D5h",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 106.92068410571665,
+        "error": null
+      },
+      {
+        "name": "C10H8_D2h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D2h",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 19.881536019966006,
+        "error": null
+      },
+      {
+        "name": "C2Cl2F2H2_Ci.xyz",
+        "split": "rotated_permuted",
+        "expected": "Ci",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 4.861820954829454,
+        "error": null
+      },
+      {
+        "name": "C2Cl2H2_C2h.xyz",
+        "split": "rotated_permuted",
+        "expected": "C2h",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 2.3664309410378337,
+        "error": null
+      },
+      {
+        "name": "C2H2_Dinfh.xyz",
+        "split": "rotated_permuted",
+        "expected": "Dinfh",
+        "predicted": "Cinfv",
+        "normalized_predicted": "Cinfv",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.14083506539463997,
+        "error": null
+      },
+      {
+        "name": "C2H4_D2h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D2h",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.7965110018849373,
+        "error": null
+      },
+      {
+        "name": "C2H6_D3d.xyz",
+        "split": "rotated_permuted",
+        "expected": "D3d",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 4.336943035013974,
+        "error": null
+      },
+      {
+        "name": "C2H6_D3h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D3h",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 7.192334975115955,
+        "error": null
+      },
+      {
+        "name": "C3H3P_C3.xyz",
+        "split": "rotated_permuted",
+        "expected": "C3",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 6.921459105797112,
+        "error": null
+      },
+      {
+        "name": "C3H4_D2d.xyz",
+        "split": "rotated_permuted",
+        "expected": "D2d",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 3.922565025277436,
+        "error": null
+      },
+      {
+        "name": "C4H6_C2h.xyz",
+        "split": "rotated_permuted",
+        "expected": "C2h",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 7.291126996278763,
+        "error": null
+      },
+      {
+        "name": "C6H6_D6h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D6h",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 9.240763960406184,
+        "error": null
+      },
+      {
+        "name": "C8H8_Oh.xyz",
+        "split": "rotated_permuted",
+        "expected": "Oh",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 23.484808043576777,
+        "error": null
+      },
+      {
+        "name": "CCl2H2_C2v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C2v",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 2.477223053574562,
+        "error": null
+      },
+      {
+        "name": "CCl3H_C3v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C3v",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 2.3817640030756593,
+        "error": null
+      },
+      {
+        "name": "CClFH2_Cs.xyz",
+        "split": "rotated_permuted",
+        "expected": "Cs",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 2.548806951381266,
+        "error": null
+      },
+      {
+        "name": "CH4_Td.xyz",
+        "split": "rotated_permuted",
+        "expected": "Td",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.6465929802507162,
+        "error": null
+      },
+      {
+        "name": "CHN_Cinfv.xyz",
+        "split": "rotated_permuted",
+        "expected": "Cinfv",
+        "predicted": "Cinfv",
+        "normalized_predicted": "Cinfv",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.10287505574524403,
+        "error": null
+      },
+      {
+        "name": "CO2_Dinfh.xyz",
+        "split": "rotated_permuted",
+        "expected": "Dinfh",
+        "predicted": "Cinfv",
+        "normalized_predicted": "Cinfv",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.08412590250372887,
+        "error": null
+      },
+      {
+        "name": "CO_Cinfv.xyz",
+        "split": "rotated_permuted",
+        "expected": "Cinfv",
+        "predicted": "Cinfv",
+        "normalized_predicted": "Cinfv",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.08033390622586012,
+        "error": null
+      },
+      {
+        "name": "Cl5P_D3h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D3h",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 2.1760539384558797,
+        "error": null
+      },
+      {
+        "name": "ClHO_Cs.xyz",
+        "split": "rotated_permuted",
+        "expected": "Cs",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.6081289611756802,
+        "error": null
+      },
+      {
+        "name": "ClH_Cinfv.xyz",
+        "split": "rotated_permuted",
+        "expected": "Cinfv",
+        "predicted": "Cinfv",
+        "normalized_predicted": "Cinfv",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.08333299774676561,
+        "error": null
+      },
+      {
+        "name": "F4Xe_D4h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D4h",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.9407970355823636,
+        "error": null
+      },
+      {
+        "name": "F6S_Oh.xyz",
+        "split": "rotated_permuted",
+        "expected": "Oh",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 2.6806830428540707,
+        "error": null
+      },
+      {
+        "name": "H2O2_C2.xyz",
+        "split": "rotated_permuted",
+        "expected": "C2",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.2152570998296142,
+        "error": null
+      },
+      {
+        "name": "H2O_C2v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C2v",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.6039210129529238,
+        "error": null
+      },
+      {
+        "name": "H2_Dinfh.xyz",
+        "split": "rotated_permuted",
+        "expected": "Dinfh",
+        "predicted": "Cinfv",
+        "normalized_predicted": "Cinfv",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.09216705802828074,
+        "error": null
+      },
+      {
+        "name": "H3N_C3v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C3v",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.1893820483237505,
+        "error": null
+      },
+      {
+        "name": "O3_C2v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C2v",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.5925450241193175,
+        "error": null
+      },
+      {
+        "name": "P4_Td.xyz",
+        "split": "rotated_permuted",
+        "expected": "Td",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.362715964205563,
+        "error": null
+      },
+      {
+        "name": "B12H60_I.xyz",
+        "split": "rotated_permuted",
+        "expected": "I",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 4983.067816938274,
+        "error": null
+      },
+      {
+        "name": "B2H6_D2h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D2h",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 4.048983100801706,
+        "error": null
+      },
+      {
+        "name": "BH3O3_C3h.xyz",
+        "split": "rotated_permuted",
+        "expected": "C3h",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 3.9698570035398006,
+        "error": null
+      },
+      {
+        "name": "C10FeH10_D5.xyz",
+        "split": "rotated_permuted",
+        "expected": "D5",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 109.25811401102692,
+        "error": null
+      },
+      {
+        "name": "C10FeH10_D5d.xyz",
+        "split": "rotated_permuted",
+        "expected": "D5d",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 74.15102806407958,
+        "error": null
+      },
+      {
+        "name": "C10H16_Td.xyz",
+        "split": "rotated_permuted",
+        "expected": "Td",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 209.21138196717948,
+        "error": null
+      },
+      {
+        "name": "C12CrH12_D6.xyz",
+        "split": "rotated_permuted",
+        "expected": "D6",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 175.57234701234847,
+        "error": null
+      },
+      {
+        "name": "C12CrH12_D6d.xyz",
+        "split": "rotated_permuted",
+        "expected": "D6d",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 166.35199903976172,
+        "error": null
+      },
+      {
+        "name": "C12CrH12_D6h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D6h",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 104.31895998772234,
+        "error": null
+      },
+      {
+        "name": "C16H16U_D8d.xyz",
+        "split": "rotated_permuted",
+        "expected": "D8d",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 401.6989970114082,
+        "error": null
+      },
+      {
+        "name": "C16H16U_D8h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D8h",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 263.50779202766716,
+        "error": null
+      },
+      {
+        "name": "C20H20_Ih.xyz",
+        "split": "rotated_permuted",
+        "expected": "Ih",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 466.7166800936684,
+        "error": null
+      },
+      {
+        "name": "C2Cl2H2_C2v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C2v",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 3.4673960180953145,
+        "error": null
+      },
+      {
+        "name": "C2H2NO_C1.xyz",
+        "split": "rotated_permuted",
+        "expected": "C1",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 3.9500240236520767,
+        "error": null
+      },
+      {
+        "name": "C2H2O2_D2h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D2h",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.939011039212346,
+        "error": null
+      },
+      {
+        "name": "C2H2_D2h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D2h",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.8410050068050623,
+        "error": null
+      },
+      {
+        "name": "C2H4_D2.xyz",
+        "split": "rotated_permuted",
+        "expected": "D2",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 2.691807923838496,
+        "error": null
+      },
+      {
+        "name": "C2H6_D3.xyz",
+        "split": "rotated_permuted",
+        "expected": "D3",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 7.029250031337142,
+        "error": null
+      },
+      {
+        "name": "C3H6_D3h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D3h",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 9.69930796418339,
+        "error": null
+      },
+      {
+        "name": "C4H4P_C4.xyz",
+        "split": "rotated_permuted",
+        "expected": "C4",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 11.305277002975345,
+        "error": null
+      },
+      {
+        "name": "C4H4Si_S4.xyz",
+        "split": "rotated_permuted",
+        "expected": "S4",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 8.710885071195662,
+        "error": null
+      },
+      {
+        "name": "C4H4_D4h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D4h",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 2.933808951638639,
+        "error": null
+      },
+      {
+        "name": "C4H8_D4h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D4h",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 12.450159061700106,
+        "error": null
+      },
+      {
+        "name": "C4N4Pt_C4h.xyz",
+        "split": "rotated_permuted",
+        "expected": "C4h",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 5.895034992136061,
+        "error": null
+      },
+      {
+        "name": "C5H12_T.xyz",
+        "split": "rotated_permuted",
+        "expected": "T",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 76.9350880291313,
+        "error": null
+      },
+      {
+        "name": "C5H12_Td.xyz",
+        "split": "rotated_permuted",
+        "expected": "Td",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 49.36958895996213,
+        "error": null
+      },
+      {
+        "name": "C5H5NNiO_C5v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C5v",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 37.413349957205355,
+        "error": null
+      },
+      {
+        "name": "C5H5P_C5.xyz",
+        "split": "rotated_permuted",
+        "expected": "C5",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 22.123674978502095,
+        "error": null
+      },
+      {
+        "name": "C5H5_C5h.xyz",
+        "split": "rotated_permuted",
+        "expected": "C5h",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 8.600426954217255,
+        "error": null
+      },
+      {
+        "name": "C5H5_D5h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D5h",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 8.652467979118228,
+        "error": null
+      },
+      {
+        "name": "C60_Ih.xyz",
+        "split": "rotated_permuted",
+        "expected": "Ih",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 3662.8693419042975,
+        "error": null
+      },
+      {
+        "name": "C6CrH6_C6v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C6v",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 31.36135498061776,
+        "error": null
+      },
+      {
+        "name": "C6H12_D3d.xyz",
+        "split": "rotated_permuted",
+        "expected": "D3d",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 49.40946400165558,
+        "error": null
+      },
+      {
+        "name": "C6H6P_C6.xyz",
+        "split": "rotated_permuted",
+        "expected": "C6",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 30.513308010995388,
+        "error": null
+      },
+      {
+        "name": "C6H6_S6.xyz",
+        "split": "rotated_permuted",
+        "expected": "S6",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 16.60093292593956,
+        "error": null
+      },
+      {
+        "name": "C6O6_C6h.xyz",
+        "split": "rotated_permuted",
+        "expected": "C6h",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 8.958262973465025,
+        "error": null
+      },
+      {
+        "name": "C8H8_D4.xyz",
+        "split": "rotated_permuted",
+        "expected": "D4",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 60.023152036592364,
+        "error": null
+      },
+      {
+        "name": "C8H8_S8.xyz",
+        "split": "rotated_permuted",
+        "expected": "S8",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 61.88945600297302,
+        "error": null
+      },
+      {
+        "name": "C9CrH6O3_C3v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C3v",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 118.78525500651449,
+        "error": null
+      },
+      {
+        "name": "COS_Cinfv.xyz",
+        "split": "rotated_permuted",
+        "expected": "Cinfv",
+        "predicted": "Cinfv",
+        "normalized_predicted": "Cinfv",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.24479301646351814,
+        "error": null
+      },
+      {
+        "name": "Cl2OS_Cs.xyz",
+        "split": "rotated_permuted",
+        "expected": "Cs",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.3859670143574476,
+        "error": null
+      },
+      {
+        "name": "Cl3MoN3_C2v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C2v",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 2.7958499267697334,
+        "error": null
+      },
+      {
+        "name": "Cl3MoN3_C3v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C3v",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 2.868225914426148,
+        "error": null
+      },
+      {
+        "name": "CoN6O12_Th.xyz",
+        "split": "rotated_permuted",
+        "expected": "Th",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 52.163147018291056,
+        "error": null
+      },
+      {
+        "name": "F4S_C2v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C2v",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 2.563931979238987,
+        "error": null
+      },
+      {
+        "name": "F7I_D5h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D5h",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 4.774069995619357,
+        "error": null
+      },
+      {
+        "name": "F8Zr_D4d.xyz",
+        "split": "rotated_permuted",
+        "expected": "D4d",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 7.254543015733361,
+        "error": null
+      },
+      {
+        "name": "Fe4S4_Td.xyz",
+        "split": "rotated_permuted",
+        "expected": "Td",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 7.3607530212029815,
+        "error": null
+      },
+      {
+        "name": "H24N6Ni_O.xyz",
+        "split": "rotated_permuted",
+        "expected": "O",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 536.5598490461707,
+        "error": null
+      },
+      {
+        "name": "H3_Cinfv.xyz",
+        "split": "rotated_permuted",
+        "expected": "Cinfv",
+        "predicted": "Cinfv",
+        "normalized_predicted": "Cinfv",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.27883495204150677,
+        "error": null
+      },
+      {
+        "name": "H3_D3h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D3h",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.6934209959581494,
+        "error": null
+      },
+      {
+        "name": "I3_Dinfh.xyz",
+        "split": "rotated_permuted",
+        "expected": "Dinfh",
+        "predicted": "Cinfv",
+        "normalized_predicted": "Cinfv",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.09220896754413843,
+        "error": null
+      },
+      {
+        "name": "N2_Dinfh.xyz",
+        "split": "rotated_permuted",
+        "expected": "Dinfh",
+        "predicted": "Cinfv",
+        "normalized_predicted": "Cinfv",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.08529203478246927,
+        "error": null
+      },
+      {
+        "name": "Na8_Oh.xyz",
+        "split": "rotated_permuted",
+        "expected": "Oh",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 4.276108928024769,
+        "error": null
+      },
+      {
+        "name": "S8_D4d.xyz",
+        "split": "rotated_permuted",
+        "expected": "D4d",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 6.135078030638397,
+        "error": null
+      }
+    ]
+  }
+}

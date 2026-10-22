@@ -257,9 +257,10 @@ class LLMAPIRunner:
                 code = extract_python_code(reply_text)
                 init_path = ctx.workdir / "src" / "pgmol" / "__init__.py"
                 init_path.write_text(code, encoding="utf-8")
-                gen_dir = REPO_ROOT / "benchmark" / "results" / "generated"
-                gen_dir.mkdir(parents=True, exist_ok=True)
-                (gen_dir / f"{run_id}.py").write_text(code, encoding="utf-8")
+                if self.workspace_manager.base_temp_dir is None:
+                    gen_dir = REPO_ROOT / "benchmark" / "results" / "generated"
+                    gen_dir.mkdir(parents=True, exist_ok=True)
+                    (gen_dir / f"{run_id}.py").write_text(code, encoding="utf-8")
 
                 if turn >= max_turns:
                     break

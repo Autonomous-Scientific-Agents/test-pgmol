@@ -1,0 +1,3155 @@
+{
+  "metadata": {
+    "run_id": "api_devstral-2@amazon_zero-shot_t1",
+    "runner_type": "api",
+    "harness": "llm-api (1-shot)",
+    "model": "devstral-2@amazon",
+    "mode": "zero-shot",
+    "max_turns": 1,
+    "turns_used": 1,
+    "wall_time_s": 48.730754975927994,
+    "input_tokens": 1281,
+    "output_tokens": 3453,
+    "total_tokens": 4734,
+    "cost_usd": null,
+    "timestamp_utc": "2026-10-22T06:27:41.700812+00:00",
+    "workdir": null,
+    "exit_code": 0,
+    "notes": ""
+  },
+  "evaluation": {
+    "target": "/tmp/pgmol_bench_api_devstral-2@amazon_zero-shot_t1_k9a4z9a2",
+    "core": {
+      "split": "core",
+      "total": 36,
+      "exact_correct": 1,
+      "normalized_correct": 1,
+      "exact_accuracy": 0.027777777777777776,
+      "normalized_accuracy": 0.027777777777777776,
+      "avg_ms": 0.3536189679935988,
+      "p95_ms": 1.0057039617095143,
+      "total_s": 0.012730282847769558,
+      "failures": [
+        {
+          "name": "B12H12_Ih.xyz",
+          "expected": "Ih",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "BF3_D3h.xyz",
+          "expected": "D3h",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "BrCClFH_C1.xyz",
+          "expected": "C1",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "BrF5_C4v.xyz",
+          "expected": "C4v",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C10FeH10_D5h.xyz",
+          "expected": "D5h",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C10H8_D2h.xyz",
+          "expected": "D2h",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C2Cl2F2H2_Ci.xyz",
+          "expected": "Ci",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C2Cl2H2_C2h.xyz",
+          "expected": "C2h",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C2H2_Dinfh.xyz",
+          "expected": "Dinfh",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C2H4_D2h.xyz",
+          "expected": "D2h",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C2H6_D3d.xyz",
+          "expected": "D3d",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C2H6_D3h.xyz",
+          "expected": "D3h",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C3H3P_C3.xyz",
+          "expected": "C3",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C3H4_D2d.xyz",
+          "expected": "D2d",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C4H6_C2h.xyz",
+          "expected": "C2h",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C6H6_D6h.xyz",
+          "expected": "D6h",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C8H8_Oh.xyz",
+          "expected": "Oh",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "CCl2H2_C2v.xyz",
+          "expected": "C2v",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "CCl3H_C3v.xyz",
+          "expected": "C3v",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "CClFH2_Cs.xyz",
+          "expected": "Cs",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "CH4_Td.xyz",
+          "expected": "Td",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "CHN_Cinfv.xyz",
+          "expected": "Cinfv",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "CO2_Dinfh.xyz",
+          "expected": "Dinfh",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "CO_Cinfv.xyz",
+          "expected": "Cinfv",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "Cl5P_D3h.xyz",
+          "expected": "D3h",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "ClHO_Cs.xyz",
+          "expected": "Cs",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "ClH_Cinfv.xyz",
+          "expected": "Cinfv",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "F4Xe_D4h.xyz",
+          "expected": "D4h",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "F6S_Oh.xyz",
+          "expected": "Oh",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "H2O2_C2.xyz",
+          "expected": "C2",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "H2O_C2v.xyz",
+          "expected": "C2v",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "H2_Dinfh.xyz",
+          "expected": "Dinfh",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "H3N_C3v.xyz",
+          "expected": "C3v",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "O3_C2v.xyz",
+          "expected": "C2v",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "P4_Td.xyz",
+          "expected": "Td",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        }
+      ]
+    },
+    "challenge": {
+      "split": "challenge",
+      "total": 55,
+      "exact_correct": 0,
+      "normalized_correct": 0,
+      "exact_accuracy": 0.0,
+      "normalized_accuracy": 0.0,
+      "avg_ms": 0.15196908392350783,
+      "p95_ms": 0.24945578770711976,
+      "total_s": 0.00835829961579293,
+      "failures": [
+        {
+          "name": "B12H60_I.xyz",
+          "expected": "I",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "B2H6_D2h.xyz",
+          "expected": "D2h",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "BH3O3_C3h.xyz",
+          "expected": "C3h",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C10FeH10_D5.xyz",
+          "expected": "D5",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C10FeH10_D5d.xyz",
+          "expected": "D5d",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C10H16_Td.xyz",
+          "expected": "Td",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C12CrH12_D6.xyz",
+          "expected": "D6",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C12CrH12_D6d.xyz",
+          "expected": "D6d",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C12CrH12_D6h.xyz",
+          "expected": "D6h",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C16H16U_D8d.xyz",
+          "expected": "D8d",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C16H16U_D8h.xyz",
+          "expected": "D8h",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C20H20_Ih.xyz",
+          "expected": "Ih",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C2Cl2H2_C2v.xyz",
+          "expected": "C2v",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C2H2NO_C1.xyz",
+          "expected": "C1",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C2H2O2_D2h.xyz",
+          "expected": "D2h",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C2H2_D2h.xyz",
+          "expected": "D2h",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C2H4_D2.xyz",
+          "expected": "D2",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C2H6_D3.xyz",
+          "expected": "D3",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C3H6_D3h.xyz",
+          "expected": "D3h",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C4H4P_C4.xyz",
+          "expected": "C4",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C4H4Si_S4.xyz",
+          "expected": "S4",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C4H4_D4h.xyz",
+          "expected": "D4h",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C4H8_D4h.xyz",
+          "expected": "D4h",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C4N4Pt_C4h.xyz",
+          "expected": "C4h",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C5H12_T.xyz",
+          "expected": "T",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C5H12_Td.xyz",
+          "expected": "Td",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C5H5NNiO_C5v.xyz",
+          "expected": "C5v",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C5H5P_C5.xyz",
+          "expected": "C5",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C5H5_C5h.xyz",
+          "expected": "C5h",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C5H5_D5h.xyz",
+          "expected": "D5h",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C60_Ih.xyz",
+          "expected": "Ih",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C6CrH6_C6v.xyz",
+          "expected": "C6v",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C6H12_D3d.xyz",
+          "expected": "D3d",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C6H6P_C6.xyz",
+          "expected": "C6",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C6H6_S6.xyz",
+          "expected": "S6",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C6O6_C6h.xyz",
+          "expected": "C6h",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C8H8_D4.xyz",
+          "expected": "D4",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C8H8_S8.xyz",
+          "expected": "S8",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C9CrH6O3_C3v.xyz",
+          "expected": "C3v",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "COS_Cinfv.xyz",
+          "expected": "Cinfv",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "Cl2OS_Cs.xyz",
+          "expected": "Cs",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "Cl3MoN3_C2v.xyz",
+          "expected": "C2v",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "Cl3MoN3_C3v.xyz",
+          "expected": "C3v",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "CoN6O12_Th.xyz",
+          "expected": "Th",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "F4S_C2v.xyz",
+          "expected": "C2v",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "F7I_D5h.xyz",
+          "expected": "D5h",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "F8Zr_D4d.xyz",
+          "expected": "D4d",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "Fe4S4_Td.xyz",
+          "expected": "Td",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "H24N6Ni_O.xyz",
+          "expected": "O",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "H3_Cinfv.xyz",
+          "expected": "Cinfv",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "H3_D3h.xyz",
+          "expected": "D3h",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "I3_Dinfh.xyz",
+          "expected": "Dinfh",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "N2_Dinfh.xyz",
+          "expected": "Dinfh",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "Na8_Oh.xyz",
+          "expected": "Oh",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "S8_D4d.xyz",
+          "expected": "D4d",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        }
+      ]
+    },
+    "rotated_permuted": {
+      "split": "rotated_permuted",
+      "total": 91,
+      "exact_correct": 1,
+      "normalized_correct": 1,
+      "exact_accuracy": 0.01098901098901099,
+      "normalized_accuracy": 0.01098901098901099,
+      "avg_ms": 0.12205977371515153,
+      "p95_ms": 0.17195945838466287,
+      "total_s": 0.01110743940807879,
+      "failures": [
+        {
+          "name": "B12H12_Ih.xyz",
+          "expected": "Ih",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "BF3_D3h.xyz",
+          "expected": "D3h",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "BrCClFH_C1.xyz",
+          "expected": "C1",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "BrF5_C4v.xyz",
+          "expected": "C4v",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C10FeH10_D5h.xyz",
+          "expected": "D5h",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C10H8_D2h.xyz",
+          "expected": "D2h",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C2Cl2F2H2_Ci.xyz",
+          "expected": "Ci",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C2Cl2H2_C2h.xyz",
+          "expected": "C2h",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C2H2_Dinfh.xyz",
+          "expected": "Dinfh",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C2H4_D2h.xyz",
+          "expected": "D2h",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C2H6_D3d.xyz",
+          "expected": "D3d",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C2H6_D3h.xyz",
+          "expected": "D3h",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C3H3P_C3.xyz",
+          "expected": "C3",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C3H4_D2d.xyz",
+          "expected": "D2d",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C4H6_C2h.xyz",
+          "expected": "C2h",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C6H6_D6h.xyz",
+          "expected": "D6h",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C8H8_Oh.xyz",
+          "expected": "Oh",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "CCl2H2_C2v.xyz",
+          "expected": "C2v",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "CCl3H_C3v.xyz",
+          "expected": "C3v",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "CClFH2_Cs.xyz",
+          "expected": "Cs",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "CH4_Td.xyz",
+          "expected": "Td",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "CHN_Cinfv.xyz",
+          "expected": "Cinfv",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "CO2_Dinfh.xyz",
+          "expected": "Dinfh",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "CO_Cinfv.xyz",
+          "expected": "Cinfv",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "Cl5P_D3h.xyz",
+          "expected": "D3h",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "ClHO_Cs.xyz",
+          "expected": "Cs",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "ClH_Cinfv.xyz",
+          "expected": "Cinfv",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "F4Xe_D4h.xyz",
+          "expected": "D4h",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "F6S_Oh.xyz",
+          "expected": "Oh",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "H2O2_C2.xyz",
+          "expected": "C2",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "H2O_C2v.xyz",
+          "expected": "C2v",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "H2_Dinfh.xyz",
+          "expected": "Dinfh",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "H3N_C3v.xyz",
+          "expected": "C3v",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "O3_C2v.xyz",
+          "expected": "C2v",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "P4_Td.xyz",
+          "expected": "Td",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "B12H60_I.xyz",
+          "expected": "I",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "B2H6_D2h.xyz",
+          "expected": "D2h",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "BH3O3_C3h.xyz",
+          "expected": "C3h",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C10FeH10_D5.xyz",
+          "expected": "D5",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C10FeH10_D5d.xyz",
+          "expected": "D5d",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C10H16_Td.xyz",
+          "expected": "Td",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C12CrH12_D6.xyz",
+          "expected": "D6",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C12CrH12_D6d.xyz",
+          "expected": "D6d",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C12CrH12_D6h.xyz",
+          "expected": "D6h",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C16H16U_D8d.xyz",
+          "expected": "D8d",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C16H16U_D8h.xyz",
+          "expected": "D8h",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C20H20_Ih.xyz",
+          "expected": "Ih",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C2Cl2H2_C2v.xyz",
+          "expected": "C2v",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C2H2NO_C1.xyz",
+          "expected": "C1",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C2H2O2_D2h.xyz",
+          "expected": "D2h",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C2H2_D2h.xyz",
+          "expected": "D2h",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C2H4_D2.xyz",
+          "expected": "D2",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C2H6_D3.xyz",
+          "expected": "D3",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C3H6_D3h.xyz",
+          "expected": "D3h",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C4H4P_C4.xyz",
+          "expected": "C4",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C4H4Si_S4.xyz",
+          "expected": "S4",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C4H4_D4h.xyz",
+          "expected": "D4h",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C4H8_D4h.xyz",
+          "expected": "D4h",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C4N4Pt_C4h.xyz",
+          "expected": "C4h",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C5H12_T.xyz",
+          "expected": "T",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C5H12_Td.xyz",
+          "expected": "Td",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C5H5NNiO_C5v.xyz",
+          "expected": "C5v",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C5H5P_C5.xyz",
+          "expected": "C5",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C5H5_C5h.xyz",
+          "expected": "C5h",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C5H5_D5h.xyz",
+          "expected": "D5h",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C60_Ih.xyz",
+          "expected": "Ih",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C6CrH6_C6v.xyz",
+          "expected": "C6v",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C6H12_D3d.xyz",
+          "expected": "D3d",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C6H6P_C6.xyz",
+          "expected": "C6",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C6H6_S6.xyz",
+          "expected": "S6",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C6O6_C6h.xyz",
+          "expected": "C6h",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C8H8_D4.xyz",
+          "expected": "D4",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C8H8_S8.xyz",
+          "expected": "S8",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "C9CrH6O3_C3v.xyz",
+          "expected": "C3v",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "COS_Cinfv.xyz",
+          "expected": "Cinfv",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "Cl2OS_Cs.xyz",
+          "expected": "Cs",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "Cl3MoN3_C2v.xyz",
+          "expected": "C2v",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "Cl3MoN3_C3v.xyz",
+          "expected": "C3v",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "CoN6O12_Th.xyz",
+          "expected": "Th",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "F4S_C2v.xyz",
+          "expected": "C2v",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "F7I_D5h.xyz",
+          "expected": "D5h",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "F8Zr_D4d.xyz",
+          "expected": "D4d",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "Fe4S4_Td.xyz",
+          "expected": "Td",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "H24N6Ni_O.xyz",
+          "expected": "O",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "H3_Cinfv.xyz",
+          "expected": "Cinfv",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "H3_D3h.xyz",
+          "expected": "D3h",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "I3_Dinfh.xyz",
+          "expected": "Dinfh",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "N2_Dinfh.xyz",
+          "expected": "Dinfh",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "Na8_Oh.xyz",
+          "expected": "Oh",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        },
+        {
+          "name": "S8_D4d.xyz",
+          "expected": "D4d",
+          "predicted": null,
+          "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+        }
+      ]
+    },
+    "overall_exact_accuracy": 0.01098901098901099,
+    "overall_normalized_accuracy": 0.01098901098901099,
+    "code_stats": {
+      "python_files": 1,
+      "lines_of_code": 248,
+      "forbidden_imports": [
+        "scipy"
+      ]
+    },
+    "cases": [
+      {
+        "name": "Ar_Kh.xyz",
+        "split": "core",
+        "expected": "Kh",
+        "predicted": "Kh",
+        "normalized_predicted": "Kh",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.11512497439980507,
+        "error": null
+      },
+      {
+        "name": "B12H12_Ih.xyz",
+        "split": "core",
+        "expected": "Ih",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 5.007278989069164,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "BF3_D3h.xyz",
+        "split": "core",
+        "expected": "D3h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.15354307834059,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "BrCClFH_C1.xyz",
+        "split": "core",
+        "expected": "C1",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.13579207006841898,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "BrF5_C4v.xyz",
+        "split": "core",
+        "expected": "C4v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.1399599714204669,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C10FeH10_D5h.xyz",
+        "split": "core",
+        "expected": "D5h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.1607099547982216,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C10H8_D2h.xyz",
+        "split": "core",
+        "expected": "D2h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.23129291366785765,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C2Cl2F2H2_Ci.xyz",
+        "split": "core",
+        "expected": "Ci",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.12600095942616463,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C2Cl2H2_C2h.xyz",
+        "split": "core",
+        "expected": "C2h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.11020898818969727,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C2H2_Dinfh.xyz",
+        "split": "core",
+        "expected": "Dinfh",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.11870998423546553,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C2H4_D2h.xyz",
+        "split": "core",
+        "expected": "D2h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.1085010590031743,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C2H6_D3d.xyz",
+        "split": "core",
+        "expected": "D3d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.10970898438245058,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C2H6_D3h.xyz",
+        "split": "core",
+        "expected": "D3h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.10904192458838224,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C3H3P_C3.xyz",
+        "split": "core",
+        "expected": "C3",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.11170899961143732,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C3H4_D2d.xyz",
+        "split": "core",
+        "expected": "D2d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 3.3273110166192055,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C4H6_C2h.xyz",
+        "split": "core",
+        "expected": "C2h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.23183494340628386,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C6H6_D6h.xyz",
+        "split": "core",
+        "expected": "D6h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.14633405953645706,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C8H8_Oh.xyz",
+        "split": "core",
+        "expected": "Oh",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.1441680360585451,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "CCl2H2_C2v.xyz",
+        "split": "core",
+        "expected": "C2v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.12220896314829588,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "CCl3H_C3v.xyz",
+        "split": "core",
+        "expected": "C3v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.18083397299051285,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "CClFH2_Cs.xyz",
+        "split": "core",
+        "expected": "Cs",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.10591698810458183,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "CH4_Td.xyz",
+        "split": "core",
+        "expected": "Td",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.1573340268805623,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "CHN_Cinfv.xyz",
+        "split": "core",
+        "expected": "Cinfv",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.19162602256983519,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "CO2_Dinfh.xyz",
+        "split": "core",
+        "expected": "Dinfh",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.11329201515763998,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "CO_Cinfv.xyz",
+        "split": "core",
+        "expected": "Cinfv",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.10429194662719965,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "Cl5P_D3h.xyz",
+        "split": "core",
+        "expected": "D3h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.11516804806888103,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "ClHO_Cs.xyz",
+        "split": "core",
+        "expected": "Cs",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.11245894711464643,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "ClH_Cinfv.xyz",
+        "split": "core",
+        "expected": "Cinfv",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.11841696687042713,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "F4Xe_D4h.xyz",
+        "split": "core",
+        "expected": "D4h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.11037604417651892,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "F6S_Oh.xyz",
+        "split": "core",
+        "expected": "Oh",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.10599999222904444,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "H2O2_C2.xyz",
+        "split": "core",
+        "expected": "C2",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.10316702537238598,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "H2O_C2v.xyz",
+        "split": "core",
+        "expected": "C2v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.10225106962025166,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "H2_Dinfh.xyz",
+        "split": "core",
+        "expected": "Dinfh",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.09650096762925386,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "H3N_C3v.xyz",
+        "split": "core",
+        "expected": "C3v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.10108307469636202,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "O3_C2v.xyz",
+        "split": "core",
+        "expected": "C2v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.09979191236197948,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "P4_Td.xyz",
+        "split": "core",
+        "expected": "Td",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.10233395732939243,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "B12H60_I.xyz",
+        "split": "challenge",
+        "expected": "I",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.5475039361044765,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "B2H6_D2h.xyz",
+        "split": "challenge",
+        "expected": "D2h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.11275091674178839,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "BH3O3_C3h.xyz",
+        "split": "challenge",
+        "expected": "C3h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.10583398398011923,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C10FeH10_D5.xyz",
+        "split": "challenge",
+        "expected": "D5",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.13675098307430744,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C10FeH10_D5d.xyz",
+        "split": "challenge",
+        "expected": "D5d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.1448759576305747,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C10H16_Td.xyz",
+        "split": "challenge",
+        "expected": "Td",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.1478339545428753,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C12CrH12_D6.xyz",
+        "split": "challenge",
+        "expected": "D6",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.14408398419618607,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C12CrH12_D6d.xyz",
+        "split": "challenge",
+        "expected": "D6d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.14075101353228092,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C12CrH12_D6h.xyz",
+        "split": "challenge",
+        "expected": "D6h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.13837602455168962,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C16H16U_D8d.xyz",
+        "split": "challenge",
+        "expected": "D8d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.16441801562905312,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C16H16U_D8h.xyz",
+        "split": "challenge",
+        "expected": "D8h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.15583389904350042,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C20H20_Ih.xyz",
+        "split": "challenge",
+        "expected": "Ih",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.1825900292024016,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C2Cl2H2_C2v.xyz",
+        "split": "challenge",
+        "expected": "C2v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.20558503456413746,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C2H2NO_C1.xyz",
+        "split": "challenge",
+        "expected": "C1",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.1108760479837656,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C2H2O2_D2h.xyz",
+        "split": "challenge",
+        "expected": "D2h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.10433397255837917,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C2H2_D2h.xyz",
+        "split": "challenge",
+        "expected": "D2h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.1009589759632945,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C2H4_D2.xyz",
+        "split": "challenge",
+        "expected": "D2",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.10383408516645432,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C2H6_D3.xyz",
+        "split": "challenge",
+        "expected": "D3",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.11520890984684229,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C3H6_D3h.xyz",
+        "split": "challenge",
+        "expected": "D3h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.1270420616492629,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C4H4P_C4.xyz",
+        "split": "challenge",
+        "expected": "C4",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.11045904830098152,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C4H4Si_S4.xyz",
+        "split": "challenge",
+        "expected": "S4",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.1105000264942646,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C4H4_D4h.xyz",
+        "split": "challenge",
+        "expected": "D4h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.10529300197958946,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C4H8_D4h.xyz",
+        "split": "challenge",
+        "expected": "D4h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.16883399803191423,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C4N4Pt_C4h.xyz",
+        "split": "challenge",
+        "expected": "C4h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.11379201896488667,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C5H12_T.xyz",
+        "split": "challenge",
+        "expected": "T",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.1305839978158474,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C5H12_Td.xyz",
+        "split": "challenge",
+        "expected": "Td",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.12666801922023296,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C5H5NNiO_C5v.xyz",
+        "split": "challenge",
+        "expected": "C5v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.35104400012642145,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C5H5P_C5.xyz",
+        "split": "challenge",
+        "expected": "C5",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.1348749501630664,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C5H5_C5h.xyz",
+        "split": "challenge",
+        "expected": "C5h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.12475100811570883,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C5H5_D5h.xyz",
+        "split": "challenge",
+        "expected": "D5h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.11112599167972803,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C60_Ih.xyz",
+        "split": "challenge",
+        "expected": "Ih",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.2059179823845625,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C6CrH6_C6v.xyz",
+        "split": "challenge",
+        "expected": "C6v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.1143760746344924,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C6H12_D3d.xyz",
+        "split": "challenge",
+        "expected": "D3d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.13508391566574574,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C6H6P_C6.xyz",
+        "split": "challenge",
+        "expected": "C6",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.11358398478478193,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C6H6_S6.xyz",
+        "split": "challenge",
+        "expected": "S6",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.1080420333892107,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C6O6_C6h.xyz",
+        "split": "challenge",
+        "expected": "C6h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.10504201054573059,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C8H8_D4.xyz",
+        "split": "challenge",
+        "expected": "D4",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.11495896615087986,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C8H8_S8.xyz",
+        "split": "challenge",
+        "expected": "S8",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.11354207526892424,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C9CrH6O3_C3v.xyz",
+        "split": "challenge",
+        "expected": "C3v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.12183398939669132,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "COS_Cinfv.xyz",
+        "split": "challenge",
+        "expected": "Cinfv",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.09241700172424316,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "Cl2OS_Cs.xyz",
+        "split": "challenge",
+        "expected": "Cs",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.10845891665667295,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "Cl3MoN3_C2v.xyz",
+        "split": "challenge",
+        "expected": "C2v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.09929295629262924,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "Cl3MoN3_C3v.xyz",
+        "split": "challenge",
+        "expected": "C3v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.09629200212657452,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "CoN6O12_Th.xyz",
+        "split": "challenge",
+        "expected": "Th",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.14558399561792612,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "F4S_C2v.xyz",
+        "split": "challenge",
+        "expected": "C2v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.09587593376636505,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "F7I_D5h.xyz",
+        "split": "challenge",
+        "expected": "D5h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.09820901323109865,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "F8Zr_D4d.xyz",
+        "split": "challenge",
+        "expected": "D4d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.10083394590765238,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "Fe4S4_Td.xyz",
+        "split": "challenge",
+        "expected": "Td",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.09908410720527172,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "H24N6Ni_O.xyz",
+        "split": "challenge",
+        "expected": "O",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.14975096564739943,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "H3_Cinfv.xyz",
+        "split": "challenge",
+        "expected": "Cinfv",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.10758393909782171,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "H3_D3h.xyz",
+        "split": "challenge",
+        "expected": "D3h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.08929194882512093,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "I3_Dinfh.xyz",
+        "split": "challenge",
+        "expected": "Dinfh",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0867089256644249,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "N2_Dinfh.xyz",
+        "split": "challenge",
+        "expected": "Dinfh",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.08529203478246927,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "Na8_Oh.xyz",
+        "split": "challenge",
+        "expected": "Oh",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.09708304423838854,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "S8_D4d.xyz",
+        "split": "challenge",
+        "expected": "D4d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0967920059338212,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "Ar_Kh.xyz",
+        "split": "rotated_permuted",
+        "expected": "Kh",
+        "predicted": "Kh",
+        "normalized_predicted": "Kh",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.027374946512281895,
+        "error": null
+      },
+      {
+        "name": "B12H12_Ih.xyz",
+        "split": "rotated_permuted",
+        "expected": "Ih",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.12858409900218248,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "BF3_D3h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D3h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.09275099728256464,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "BrCClFH_C1.xyz",
+        "split": "rotated_permuted",
+        "expected": "C1",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.8666720241308212,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "BrF5_C4v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C4v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.13791793026030064,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C10FeH10_D5h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D5h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.1520001096650958,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C10H8_D2h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D2h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.16108399722725153,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C2Cl2F2H2_Ci.xyz",
+        "split": "rotated_permuted",
+        "expected": "Ci",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.128416926600039,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C2Cl2H2_C2h.xyz",
+        "split": "rotated_permuted",
+        "expected": "C2h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.10950106661766768,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C2H2_Dinfh.xyz",
+        "split": "rotated_permuted",
+        "expected": "Dinfh",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.10583398398011923,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C2H4_D2h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D2h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.1061679795384407,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C2H6_D3d.xyz",
+        "split": "rotated_permuted",
+        "expected": "D3d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.11229293886572123,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C2H6_D3h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D3h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.10791793465614319,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C3H3P_C3.xyz",
+        "split": "rotated_permuted",
+        "expected": "C3",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.10812596883624792,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C3H4_D2d.xyz",
+        "split": "rotated_permuted",
+        "expected": "D2d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.10945904068648815,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C4H6_C2h.xyz",
+        "split": "rotated_permuted",
+        "expected": "C2h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.13279297854751348,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C6H6_D6h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D6h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.11462497059255838,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C8H8_Oh.xyz",
+        "split": "rotated_permuted",
+        "expected": "Oh",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.13025104999542236,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "CCl2H2_C2v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C2v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.10566797573119402,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "CCl3H_C3v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C3v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.10150100570172071,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "CClFH2_Cs.xyz",
+        "split": "rotated_permuted",
+        "expected": "Cs",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.10099995415657759,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "CH4_Td.xyz",
+        "split": "rotated_permuted",
+        "expected": "Td",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.09891693480312824,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "CHN_Cinfv.xyz",
+        "split": "rotated_permuted",
+        "expected": "Cinfv",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.09912601672112942,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "CO2_Dinfh.xyz",
+        "split": "rotated_permuted",
+        "expected": "Dinfh",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.15095900744199753,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "CO_Cinfv.xyz",
+        "split": "rotated_permuted",
+        "expected": "Cinfv",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.10129192378371954,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "Cl5P_D3h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D3h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.10125094559043646,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "ClHO_Cs.xyz",
+        "split": "rotated_permuted",
+        "expected": "Cs",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.1097510103136301,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "ClH_Cinfv.xyz",
+        "split": "rotated_permuted",
+        "expected": "Cinfv",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.10008399840444326,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "F4Xe_D4h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D4h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.15554192941635847,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "F6S_Oh.xyz",
+        "split": "rotated_permuted",
+        "expected": "Oh",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.13579207006841898,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "H2O2_C2.xyz",
+        "split": "rotated_permuted",
+        "expected": "C2",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.10249996557831764,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "H2O_C2v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C2v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.09808398317545652,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "H2_Dinfh.xyz",
+        "split": "rotated_permuted",
+        "expected": "Dinfh",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.11029304005205631,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "H3N_C3v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C3v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.09204191155731678,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "O3_C2v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C2v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.09016692638397217,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "P4_Td.xyz",
+        "split": "rotated_permuted",
+        "expected": "Td",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.09099999442696571,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "B12H60_I.xyz",
+        "split": "rotated_permuted",
+        "expected": "I",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.2232929691672325,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "B2H6_D2h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D2h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.10470894630998373,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "BH3O3_C3h.xyz",
+        "split": "rotated_permuted",
+        "expected": "C3h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.09987503290176392,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C10FeH10_D5.xyz",
+        "split": "rotated_permuted",
+        "expected": "D5",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.12283399701118469,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C10FeH10_D5d.xyz",
+        "split": "rotated_permuted",
+        "expected": "D5d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.13737601693719625,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C10H16_Td.xyz",
+        "split": "rotated_permuted",
+        "expected": "Td",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.13241695705801249,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C12CrH12_D6.xyz",
+        "split": "rotated_permuted",
+        "expected": "D6",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.129251042380929,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C12CrH12_D6d.xyz",
+        "split": "rotated_permuted",
+        "expected": "D6d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.12737605720758438,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C12CrH12_D6h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D6h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.12729200534522533,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C16H16U_D8d.xyz",
+        "split": "rotated_permuted",
+        "expected": "D8d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.14512601774185896,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C16H16U_D8h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D8h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.14095893129706383,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C20H20_Ih.xyz",
+        "split": "rotated_permuted",
+        "expected": "Ih",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.1632509520277381,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C2Cl2H2_C2v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C2v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.09854196105152369,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C2H2NO_C1.xyz",
+        "split": "rotated_permuted",
+        "expected": "C1",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.09541702456772327,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C2H2O2_D2h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D2h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.09416707325726748,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C2H2_D2h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D2h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0914169941097498,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C2H4_D2.xyz",
+        "split": "rotated_permuted",
+        "expected": "D2",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.09362504351884127,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C2H6_D3.xyz",
+        "split": "rotated_permuted",
+        "expected": "D3",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.09766698349267244,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C3H6_D3h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D3h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.09991694241762161,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C4H4P_C4.xyz",
+        "split": "rotated_permuted",
+        "expected": "C4",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.09862601291388273,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C4H4Si_S4.xyz",
+        "split": "rotated_permuted",
+        "expected": "S4",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.09941798634827137,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C4H4_D4h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D4h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.10708393529057503,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C4H8_D4h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D4h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.10612502228468657,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C4N4Pt_C4h.xyz",
+        "split": "rotated_permuted",
+        "expected": "C4h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.10045908857136965,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C5H12_T.xyz",
+        "split": "rotated_permuted",
+        "expected": "T",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.11366698890924454,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C5H12_Td.xyz",
+        "split": "rotated_permuted",
+        "expected": "Td",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.1121259992942214,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C5H5NNiO_C5v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C5v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.10712596122175455,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C5H5P_C5.xyz",
+        "split": "rotated_permuted",
+        "expected": "C5",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.1028749393299222,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C5H5_C5h.xyz",
+        "split": "rotated_permuted",
+        "expected": "C5h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.10025000665336847,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C5H5_D5h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D5h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.10116701014339924,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C60_Ih.xyz",
+        "split": "rotated_permuted",
+        "expected": "Ih",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.20516803488135338,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C6CrH6_C6v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C6v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.10879291221499443,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C6H12_D3d.xyz",
+        "split": "rotated_permuted",
+        "expected": "D3d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.11525105219334364,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C6H6P_C6.xyz",
+        "split": "rotated_permuted",
+        "expected": "C6",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.10800093878060579,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C6H6_S6.xyz",
+        "split": "rotated_permuted",
+        "expected": "S6",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.1033339649438858,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C6O6_C6h.xyz",
+        "split": "rotated_permuted",
+        "expected": "C6h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.10291696526110172,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C8H8_D4.xyz",
+        "split": "rotated_permuted",
+        "expected": "D4",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.11095893569290638,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C8H8_S8.xyz",
+        "split": "rotated_permuted",
+        "expected": "S8",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.1103340182453394,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "C9CrH6O3_C3v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C3v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.1311670057475567,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "COS_Cinfv.xyz",
+        "split": "rotated_permuted",
+        "expected": "Cinfv",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.08858297951519489,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "Cl2OS_Cs.xyz",
+        "split": "rotated_permuted",
+        "expected": "Cs",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.09020895231515169,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "Cl3MoN3_C2v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C2v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.09600003249943256,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "Cl3MoN3_C3v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C3v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.09458407294005156,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "CoN6O12_Th.xyz",
+        "split": "rotated_permuted",
+        "expected": "Th",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.11537503451108932,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "F4S_C2v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C2v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.09112595580518246,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "F7I_D5h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D5h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.09587605018168688,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "F8Zr_D4d.xyz",
+        "split": "rotated_permuted",
+        "expected": "D4d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.09854300878942013,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "Fe4S4_Td.xyz",
+        "split": "rotated_permuted",
+        "expected": "Td",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.09675102774053812,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "H24N6Ni_O.xyz",
+        "split": "rotated_permuted",
+        "expected": "O",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.15512609388679266,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "H3_Cinfv.xyz",
+        "split": "rotated_permuted",
+        "expected": "Cinfv",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0895840348675847,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "H3_D3h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D3h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.08820893708616495,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "I3_Dinfh.xyz",
+        "split": "rotated_permuted",
+        "expected": "Dinfh",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.18245901446789503,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "N2_Dinfh.xyz",
+        "split": "rotated_permuted",
+        "expected": "Dinfh",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.18066796474158764,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "Na8_Oh.xyz",
+        "split": "rotated_permuted",
+        "expected": "Oh",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.1015419838950038,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "S8_D4d.xyz",
+        "split": "rotated_permuted",
+        "expected": "D4d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0967090018093586,
+        "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      }
+    ]
+  }
+}

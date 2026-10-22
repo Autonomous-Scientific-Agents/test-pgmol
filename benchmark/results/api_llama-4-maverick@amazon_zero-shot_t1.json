@@ -1,0 +1,3033 @@
+{
+  "metadata": {
+    "run_id": "api_llama-4-maverick@amazon_zero-shot_t1",
+    "runner_type": "api",
+    "harness": "llm-api (1-shot)",
+    "model": "llama-4-maverick@amazon",
+    "mode": "zero-shot",
+    "max_turns": 1,
+    "turns_used": 1,
+    "wall_time_s": 12.032280424959026,
+    "input_tokens": 1273,
+    "output_tokens": 2739,
+    "total_tokens": 4012,
+    "cost_usd": null,
+    "timestamp_utc": "2026-10-22T06:34:00.226997+00:00",
+    "workdir": null,
+    "exit_code": 0,
+    "notes": ""
+  },
+  "evaluation": {
+    "target": "/tmp/pgmol_bench_api_llama-4-maverick@amazon_zero-shot_t1_lzbzpbl6",
+    "core": {
+      "split": "core",
+      "total": 36,
+      "exact_correct": 7,
+      "normalized_correct": 7,
+      "exact_accuracy": 0.19444444444444445,
+      "normalized_accuracy": 0.19444444444444445,
+      "avg_ms": 0.9234170009019889,
+      "p95_ms": 3.293147194199264,
+      "total_s": 0.0332430120324716,
+      "failures": [
+        {
+          "name": "B12H12_Ih.xyz",
+          "expected": "Ih",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "BF3_D3h.xyz",
+          "expected": "D3h",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "BrCClFH_C1.xyz",
+          "expected": "C1",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "BrF5_C4v.xyz",
+          "expected": "C4v",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C10FeH10_D5h.xyz",
+          "expected": "D5h",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C10H8_D2h.xyz",
+          "expected": "D2h",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C2Cl2F2H2_Ci.xyz",
+          "expected": "Ci",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C2Cl2H2_C2h.xyz",
+          "expected": "C2h",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C2H4_D2h.xyz",
+          "expected": "D2h",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C2H6_D3d.xyz",
+          "expected": "D3d",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C2H6_D3h.xyz",
+          "expected": "D3h",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C3H3P_C3.xyz",
+          "expected": "C3",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C3H4_D2d.xyz",
+          "expected": "D2d",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C4H6_C2h.xyz",
+          "expected": "C2h",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C6H6_D6h.xyz",
+          "expected": "D6h",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C8H8_Oh.xyz",
+          "expected": "Oh",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "CCl2H2_C2v.xyz",
+          "expected": "C2v",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "CCl3H_C3v.xyz",
+          "expected": "C3v",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "CClFH2_Cs.xyz",
+          "expected": "Cs",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "CH4_Td.xyz",
+          "expected": "Td",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "Cl5P_D3h.xyz",
+          "expected": "D3h",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "ClHO_Cs.xyz",
+          "expected": "Cs",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "F4Xe_D4h.xyz",
+          "expected": "D4h",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "F6S_Oh.xyz",
+          "expected": "Oh",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "H2O2_C2.xyz",
+          "expected": "C2",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "H2O_C2v.xyz",
+          "expected": "C2v",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "H3N_C3v.xyz",
+          "expected": "C3v",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "O3_C2v.xyz",
+          "expected": "C2v",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "P4_Td.xyz",
+          "expected": "Td",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        }
+      ]
+    },
+    "challenge": {
+      "split": "challenge",
+      "total": 55,
+      "exact_correct": 4,
+      "normalized_correct": 4,
+      "exact_accuracy": 0.07272727272727272,
+      "normalized_accuracy": 0.07272727272727272,
+      "avg_ms": 1.0153901043602012,
+      "p95_ms": 2.6045798906125097,
+      "total_s": 0.05584645573981106,
+      "failures": [
+        {
+          "name": "B12H60_I.xyz",
+          "expected": "I",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "B2H6_D2h.xyz",
+          "expected": "D2h",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "BH3O3_C3h.xyz",
+          "expected": "C3h",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C10FeH10_D5.xyz",
+          "expected": "D5",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C10FeH10_D5d.xyz",
+          "expected": "D5d",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C10H16_Td.xyz",
+          "expected": "Td",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C12CrH12_D6.xyz",
+          "expected": "D6",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C12CrH12_D6d.xyz",
+          "expected": "D6d",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C12CrH12_D6h.xyz",
+          "expected": "D6h",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C16H16U_D8d.xyz",
+          "expected": "D8d",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C16H16U_D8h.xyz",
+          "expected": "D8h",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C20H20_Ih.xyz",
+          "expected": "Ih",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C2Cl2H2_C2v.xyz",
+          "expected": "C2v",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C2H2NO_C1.xyz",
+          "expected": "C1",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C2H2O2_D2h.xyz",
+          "expected": "D2h",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C2H2_D2h.xyz",
+          "expected": "D2h",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C2H4_D2.xyz",
+          "expected": "D2",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C2H6_D3.xyz",
+          "expected": "D3",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C3H6_D3h.xyz",
+          "expected": "D3h",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C4H4P_C4.xyz",
+          "expected": "C4",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C4H4Si_S4.xyz",
+          "expected": "S4",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C4H4_D4h.xyz",
+          "expected": "D4h",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C4H8_D4h.xyz",
+          "expected": "D4h",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C4N4Pt_C4h.xyz",
+          "expected": "C4h",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C5H12_T.xyz",
+          "expected": "T",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C5H12_Td.xyz",
+          "expected": "Td",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C5H5NNiO_C5v.xyz",
+          "expected": "C5v",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C5H5P_C5.xyz",
+          "expected": "C5",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C5H5_C5h.xyz",
+          "expected": "C5h",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C5H5_D5h.xyz",
+          "expected": "D5h",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C60_Ih.xyz",
+          "expected": "Ih",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C6CrH6_C6v.xyz",
+          "expected": "C6v",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C6H12_D3d.xyz",
+          "expected": "D3d",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C6H6P_C6.xyz",
+          "expected": "C6",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C6H6_S6.xyz",
+          "expected": "S6",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C6O6_C6h.xyz",
+          "expected": "C6h",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C8H8_D4.xyz",
+          "expected": "D4",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C8H8_S8.xyz",
+          "expected": "S8",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C9CrH6O3_C3v.xyz",
+          "expected": "C3v",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "Cl2OS_Cs.xyz",
+          "expected": "Cs",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "Cl3MoN3_C2v.xyz",
+          "expected": "C2v",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "Cl3MoN3_C3v.xyz",
+          "expected": "C3v",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "CoN6O12_Th.xyz",
+          "expected": "Th",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "F4S_C2v.xyz",
+          "expected": "C2v",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "F7I_D5h.xyz",
+          "expected": "D5h",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "F8Zr_D4d.xyz",
+          "expected": "D4d",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "Fe4S4_Td.xyz",
+          "expected": "Td",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "H24N6Ni_O.xyz",
+          "expected": "O",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "H3_D3h.xyz",
+          "expected": "D3h",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "Na8_Oh.xyz",
+          "expected": "Oh",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "S8_D4d.xyz",
+          "expected": "D4d",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        }
+      ]
+    },
+    "rotated_permuted": {
+      "split": "rotated_permuted",
+      "total": 91,
+      "exact_correct": 11,
+      "normalized_correct": 11,
+      "exact_accuracy": 0.12087912087912088,
+      "normalized_accuracy": 0.12087912087912088,
+      "avg_ms": 1.0296698585459656,
+      "p95_ms": 2.821934991516173,
+      "total_s": 0.09369995712768286,
+      "failures": [
+        {
+          "name": "B12H12_Ih.xyz",
+          "expected": "Ih",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "BF3_D3h.xyz",
+          "expected": "D3h",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "BrCClFH_C1.xyz",
+          "expected": "C1",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "BrF5_C4v.xyz",
+          "expected": "C4v",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C10FeH10_D5h.xyz",
+          "expected": "D5h",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C10H8_D2h.xyz",
+          "expected": "D2h",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C2Cl2F2H2_Ci.xyz",
+          "expected": "Ci",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C2Cl2H2_C2h.xyz",
+          "expected": "C2h",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C2H4_D2h.xyz",
+          "expected": "D2h",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C2H6_D3d.xyz",
+          "expected": "D3d",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C2H6_D3h.xyz",
+          "expected": "D3h",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C3H3P_C3.xyz",
+          "expected": "C3",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C3H4_D2d.xyz",
+          "expected": "D2d",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C4H6_C2h.xyz",
+          "expected": "C2h",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C6H6_D6h.xyz",
+          "expected": "D6h",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C8H8_Oh.xyz",
+          "expected": "Oh",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "CCl2H2_C2v.xyz",
+          "expected": "C2v",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "CCl3H_C3v.xyz",
+          "expected": "C3v",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "CClFH2_Cs.xyz",
+          "expected": "Cs",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "CH4_Td.xyz",
+          "expected": "Td",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "Cl5P_D3h.xyz",
+          "expected": "D3h",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "ClHO_Cs.xyz",
+          "expected": "Cs",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "F4Xe_D4h.xyz",
+          "expected": "D4h",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "F6S_Oh.xyz",
+          "expected": "Oh",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "H2O2_C2.xyz",
+          "expected": "C2",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "H2O_C2v.xyz",
+          "expected": "C2v",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "H3N_C3v.xyz",
+          "expected": "C3v",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "O3_C2v.xyz",
+          "expected": "C2v",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "P4_Td.xyz",
+          "expected": "Td",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "B12H60_I.xyz",
+          "expected": "I",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "B2H6_D2h.xyz",
+          "expected": "D2h",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "BH3O3_C3h.xyz",
+          "expected": "C3h",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C10FeH10_D5.xyz",
+          "expected": "D5",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C10FeH10_D5d.xyz",
+          "expected": "D5d",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C10H16_Td.xyz",
+          "expected": "Td",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C12CrH12_D6.xyz",
+          "expected": "D6",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C12CrH12_D6d.xyz",
+          "expected": "D6d",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C12CrH12_D6h.xyz",
+          "expected": "D6h",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C16H16U_D8d.xyz",
+          "expected": "D8d",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C16H16U_D8h.xyz",
+          "expected": "D8h",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C20H20_Ih.xyz",
+          "expected": "Ih",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C2Cl2H2_C2v.xyz",
+          "expected": "C2v",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C2H2NO_C1.xyz",
+          "expected": "C1",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C2H2O2_D2h.xyz",
+          "expected": "D2h",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C2H2_D2h.xyz",
+          "expected": "D2h",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C2H4_D2.xyz",
+          "expected": "D2",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C2H6_D3.xyz",
+          "expected": "D3",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C3H6_D3h.xyz",
+          "expected": "D3h",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C4H4P_C4.xyz",
+          "expected": "C4",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C4H4Si_S4.xyz",
+          "expected": "S4",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C4H4_D4h.xyz",
+          "expected": "D4h",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C4H8_D4h.xyz",
+          "expected": "D4h",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C4N4Pt_C4h.xyz",
+          "expected": "C4h",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C5H12_T.xyz",
+          "expected": "T",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C5H12_Td.xyz",
+          "expected": "Td",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C5H5NNiO_C5v.xyz",
+          "expected": "C5v",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C5H5P_C5.xyz",
+          "expected": "C5",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C5H5_C5h.xyz",
+          "expected": "C5h",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C5H5_D5h.xyz",
+          "expected": "D5h",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C60_Ih.xyz",
+          "expected": "Ih",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C6CrH6_C6v.xyz",
+          "expected": "C6v",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C6H12_D3d.xyz",
+          "expected": "D3d",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C6H6P_C6.xyz",
+          "expected": "C6",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C6H6_S6.xyz",
+          "expected": "S6",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C6O6_C6h.xyz",
+          "expected": "C6h",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C8H8_D4.xyz",
+          "expected": "D4",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C8H8_S8.xyz",
+          "expected": "S8",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "C9CrH6O3_C3v.xyz",
+          "expected": "C3v",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "Cl2OS_Cs.xyz",
+          "expected": "Cs",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "Cl3MoN3_C2v.xyz",
+          "expected": "C2v",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "Cl3MoN3_C3v.xyz",
+          "expected": "C3v",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "CoN6O12_Th.xyz",
+          "expected": "Th",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "F4S_C2v.xyz",
+          "expected": "C2v",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "F7I_D5h.xyz",
+          "expected": "D5h",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "F8Zr_D4d.xyz",
+          "expected": "D4d",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "Fe4S4_Td.xyz",
+          "expected": "Td",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "H24N6Ni_O.xyz",
+          "expected": "O",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "H3_D3h.xyz",
+          "expected": "D3h",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "Na8_Oh.xyz",
+          "expected": "Oh",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        },
+        {
+          "name": "S8_D4d.xyz",
+          "expected": "D4d",
+          "predicted": null,
+          "error": "NameError: name 'elements' is not defined"
+        }
+      ]
+    },
+    "overall_exact_accuracy": 0.12087912087912088,
+    "overall_normalized_accuracy": 0.12087912087912088,
+    "code_stats": {
+      "python_files": 1,
+      "lines_of_code": 191,
+      "forbidden_imports": []
+    },
+    "cases": [
+      {
+        "name": "Ar_Kh.xyz",
+        "split": "core",
+        "expected": "Kh",
+        "predicted": "Kh",
+        "normalized_predicted": "Kh",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 3.031020052731037,
+        "error": null
+      },
+      {
+        "name": "B12H12_Ih.xyz",
+        "split": "core",
+        "expected": "Ih",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 3.231729962863028,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "BF3_D3h.xyz",
+        "split": "core",
+        "expected": "D3h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.481294933706522,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "BrCClFH_C1.xyz",
+        "split": "core",
+        "expected": "C1",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.4576280480250716,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "BrF5_C4v.xyz",
+        "split": "core",
+        "expected": "C4v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.49775303341448307,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C10FeH10_D5h.xyz",
+        "split": "core",
+        "expected": "D5h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.3763009337708354,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C10H8_D2h.xyz",
+        "split": "core",
+        "expected": "D2h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 7.056964095681906,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C2Cl2F2H2_Ci.xyz",
+        "split": "core",
+        "expected": "Ci",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 3.477398888207972,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C2Cl2H2_C2h.xyz",
+        "split": "core",
+        "expected": "C2h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.6150041008368134,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C2H2_Dinfh.xyz",
+        "split": "core",
+        "expected": "Dinfh",
+        "predicted": "Dinfh",
+        "normalized_predicted": "Dinfh",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.2416679635643959,
+        "error": null
+      },
+      {
+        "name": "C2H4_D2h.xyz",
+        "split": "core",
+        "expected": "D2h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.5325450329110026,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C2H6_D3d.xyz",
+        "split": "core",
+        "expected": "D3d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.6395459640771151,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C2H6_D3h.xyz",
+        "split": "core",
+        "expected": "D3h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.6611290154978633,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C3H3P_C3.xyz",
+        "split": "core",
+        "expected": "C3",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.6661299848929048,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C3H4_D2d.xyz",
+        "split": "core",
+        "expected": "D2d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.5526290042325854,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C4H6_C2h.xyz",
+        "split": "core",
+        "expected": "C2h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.6899629952386022,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C6H6_D6h.xyz",
+        "split": "core",
+        "expected": "D6h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.7797129219397902,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C8H8_Oh.xyz",
+        "split": "core",
+        "expected": "Oh",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.9604710396379232,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "CCl2H2_C2v.xyz",
+        "split": "core",
+        "expected": "C2v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.578087056055665,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "CCl3H_C3v.xyz",
+        "split": "core",
+        "expected": "C3v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.5300029879435897,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "CClFH2_Cs.xyz",
+        "split": "core",
+        "expected": "Cs",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.4113359609618783,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "CH4_Td.xyz",
+        "split": "core",
+        "expected": "Td",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.44608605094254017,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "CHN_Cinfv.xyz",
+        "split": "core",
+        "expected": "Cinfv",
+        "predicted": "Cinfv",
+        "normalized_predicted": "Cinfv",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.10608404409140348,
+        "error": null
+      },
+      {
+        "name": "CO2_Dinfh.xyz",
+        "split": "core",
+        "expected": "Dinfh",
+        "predicted": "Dinfh",
+        "normalized_predicted": "Dinfh",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.12291804887354374,
+        "error": null
+      },
+      {
+        "name": "CO_Cinfv.xyz",
+        "split": "core",
+        "expected": "Cinfv",
+        "predicted": "Cinfv",
+        "normalized_predicted": "Cinfv",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.07404200732707977,
+        "error": null
+      },
+      {
+        "name": "Cl5P_D3h.xyz",
+        "split": "core",
+        "expected": "D3h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.5332529544830322,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "ClHO_Cs.xyz",
+        "split": "core",
+        "expected": "Cs",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.3180439816787839,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "ClH_Cinfv.xyz",
+        "split": "core",
+        "expected": "Cinfv",
+        "predicted": "Cinfv",
+        "normalized_predicted": "Cinfv",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.07029192056506872,
+        "error": null
+      },
+      {
+        "name": "F4Xe_D4h.xyz",
+        "split": "core",
+        "expected": "D4h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.5642540054395795,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "F6S_Oh.xyz",
+        "split": "core",
+        "expected": "Oh",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.7164630806073546,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "H2O2_C2.xyz",
+        "split": "core",
+        "expected": "C2",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.40262704715132713,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "H2O_C2v.xyz",
+        "split": "core",
+        "expected": "C2v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.31050294637680054,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "H2_Dinfh.xyz",
+        "split": "core",
+        "expected": "Dinfh",
+        "predicted": "Dinfh",
+        "normalized_predicted": "Dinfh",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.09258405771106482,
+        "error": null
+      },
+      {
+        "name": "H3N_C3v.xyz",
+        "split": "core",
+        "expected": "C3v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.36641897168010473,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "O3_C2v.xyz",
+        "split": "core",
+        "expected": "C2v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.30104396864771843,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "P4_Td.xyz",
+        "split": "core",
+        "expected": "Td",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.35008497070521116,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "B12H60_I.xyz",
+        "split": "challenge",
+        "expected": "I",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 4.049736075103283,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "B2H6_D2h.xyz",
+        "split": "challenge",
+        "expected": "D2h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.7129630539566278,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "BH3O3_C3h.xyz",
+        "split": "challenge",
+        "expected": "C3h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.5282119382172823,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C10FeH10_D5.xyz",
+        "split": "challenge",
+        "expected": "D5",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.3201340334489942,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C10FeH10_D5d.xyz",
+        "split": "challenge",
+        "expected": "D5d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.294216956011951,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C10H16_Td.xyz",
+        "split": "challenge",
+        "expected": "Td",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.6023439820855856,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C12CrH12_D6.xyz",
+        "split": "challenge",
+        "expected": "D6",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.60438590683043,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C12CrH12_D6d.xyz",
+        "split": "challenge",
+        "expected": "D6d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.6436780570074916,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C12CrH12_D6h.xyz",
+        "split": "challenge",
+        "expected": "D6h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.6220109537243843,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C16H16U_D8d.xyz",
+        "split": "challenge",
+        "expected": "D8d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 2.0851800218224525,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C16H16U_D8h.xyz",
+        "split": "challenge",
+        "expected": "D8h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 2.070680959150195,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C20H20_Ih.xyz",
+        "split": "challenge",
+        "expected": "Ih",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 2.285639988258481,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C2Cl2H2_C2v.xyz",
+        "split": "challenge",
+        "expected": "C2v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.5058780079707503,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C2H2NO_C1.xyz",
+        "split": "challenge",
+        "expected": "C1",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.4747950006276369,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C2H2O2_D2h.xyz",
+        "split": "challenge",
+        "expected": "D2h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.49121095798909664,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C2H2_D2h.xyz",
+        "split": "challenge",
+        "expected": "D2h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.36050297785550356,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C2H4_D2.xyz",
+        "split": "challenge",
+        "expected": "D2",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.46983594074845314,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C2H6_D3.xyz",
+        "split": "challenge",
+        "expected": "D3",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.5958790425211191,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C3H6_D3h.xyz",
+        "split": "challenge",
+        "expected": "D3h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.7019210606813431,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C4H4P_C4.xyz",
+        "split": "challenge",
+        "expected": "C4",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.7123789982870221,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C4H4Si_S4.xyz",
+        "split": "challenge",
+        "expected": "S4",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.65508799161762,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C4H4_D4h.xyz",
+        "split": "challenge",
+        "expected": "D4h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.6110039539635181,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C4H8_D4h.xyz",
+        "split": "challenge",
+        "expected": "D4h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.8157560368999839,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C4N4Pt_C4h.xyz",
+        "split": "challenge",
+        "expected": "C4h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.6338380044326186,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C5H12_T.xyz",
+        "split": "challenge",
+        "expected": "T",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.0629239259287715,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C5H12_Td.xyz",
+        "split": "challenge",
+        "expected": "Td",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.0940070496872067,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C5H5NNiO_C5v.xyz",
+        "split": "challenge",
+        "expected": "C5v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.8711309637874365,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C5H5P_C5.xyz",
+        "split": "challenge",
+        "expected": "C5",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.9002559818327427,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C5H5_C5h.xyz",
+        "split": "challenge",
+        "expected": "C5h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.8708389941602945,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C5H5_D5h.xyz",
+        "split": "challenge",
+        "expected": "D5h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.728212995454669,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C60_Ih.xyz",
+        "split": "challenge",
+        "expected": "Ih",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 3.3487729961052537,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C6CrH6_C6v.xyz",
+        "split": "challenge",
+        "expected": "C6v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.9337150258943439,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C6H12_D3d.xyz",
+        "split": "challenge",
+        "expected": "D3d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.1058819945901632,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C6H6P_C6.xyz",
+        "split": "challenge",
+        "expected": "C6",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.8327970281243324,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C6H6_S6.xyz",
+        "split": "challenge",
+        "expected": "S6",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.7803380722180009,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C6O6_C6h.xyz",
+        "split": "challenge",
+        "expected": "C6h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.7867970271036029,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C8H8_D4.xyz",
+        "split": "challenge",
+        "expected": "D4",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.2811330379918218,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C8H8_S8.xyz",
+        "split": "challenge",
+        "expected": "S8",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.0602150578051805,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C9CrH6O3_C3v.xyz",
+        "split": "challenge",
+        "expected": "C3v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.4858429785817862,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "COS_Cinfv.xyz",
+        "split": "challenge",
+        "expected": "Cinfv",
+        "predicted": "Cinfv",
+        "normalized_predicted": "Cinfv",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.1851679990068078,
+        "error": null
+      },
+      {
+        "name": "Cl2OS_Cs.xyz",
+        "split": "challenge",
+        "expected": "Cs",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.4195029614493251,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "Cl3MoN3_C2v.xyz",
+        "split": "challenge",
+        "expected": "C2v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.6073379190638661,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "Cl3MoN3_C3v.xyz",
+        "split": "challenge",
+        "expected": "C3v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.5527529865503311,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "CoN6O12_Th.xyz",
+        "split": "challenge",
+        "expected": "Th",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.2423000298440456,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "F4S_C2v.xyz",
+        "split": "challenge",
+        "expected": "C2v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.425544916652143,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "F7I_D5h.xyz",
+        "split": "challenge",
+        "expected": "D5h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.6241289665922523,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "F8Zr_D4d.xyz",
+        "split": "challenge",
+        "expected": "D4d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.6739209638908505,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "Fe4S4_Td.xyz",
+        "split": "challenge",
+        "expected": "Td",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.7109219441190362,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "H24N6Ni_O.xyz",
+        "split": "challenge",
+        "expected": "O",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 3.4202729584649205,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "H3_Cinfv.xyz",
+        "split": "challenge",
+        "expected": "Cinfv",
+        "predicted": "Cinfv",
+        "normalized_predicted": "Cinfv",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.18895906396210194,
+        "error": null
+      },
+      {
+        "name": "H3_D3h.xyz",
+        "split": "challenge",
+        "expected": "D3h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.3870859509333968,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "I3_Dinfh.xyz",
+        "split": "challenge",
+        "expected": "Dinfh",
+        "predicted": "Dinfh",
+        "normalized_predicted": "Dinfh",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.11700100731104612,
+        "error": null
+      },
+      {
+        "name": "N2_Dinfh.xyz",
+        "split": "challenge",
+        "expected": "Dinfh",
+        "predicted": "Dinfh",
+        "normalized_predicted": "Dinfh",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.08004205301404,
+        "error": null
+      },
+      {
+        "name": "Na8_Oh.xyz",
+        "split": "challenge",
+        "expected": "Oh",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.6310869939625263,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "S8_D4d.xyz",
+        "split": "challenge",
+        "expected": "D4d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.590295996516943,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "Ar_Kh.xyz",
+        "split": "rotated_permuted",
+        "expected": "Kh",
+        "predicted": "Kh",
+        "normalized_predicted": "Kh",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.05370797589421272,
+        "error": null
+      },
+      {
+        "name": "B12H12_Ih.xyz",
+        "split": "rotated_permuted",
+        "expected": "Ih",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.5589690301567316,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "BF3_D3h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D3h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.40687795262783766,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "BrCClFH_C1.xyz",
+        "split": "rotated_permuted",
+        "expected": "C1",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.4546279087662697,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "BrF5_C4v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C4v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.5075449589639902,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C10FeH10_D5h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D5h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.323634060099721,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C10H8_D2h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D2h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.4988851035013795,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C2Cl2F2H2_Ci.xyz",
+        "split": "rotated_permuted",
+        "expected": "Ci",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.7851299596950412,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C2Cl2H2_C2h.xyz",
+        "split": "rotated_permuted",
+        "expected": "C2h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.6292120087891817,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C2H2_Dinfh.xyz",
+        "split": "rotated_permuted",
+        "expected": "Dinfh",
+        "predicted": "Dinfh",
+        "normalized_predicted": "Dinfh",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.1695849932730198,
+        "error": null
+      },
+      {
+        "name": "C2H4_D2h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D2h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.5197949940338731,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C2H6_D3d.xyz",
+        "split": "rotated_permuted",
+        "expected": "D3d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.5978370318189263,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C2H6_D3h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D3h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.5843369290232658,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C3H3P_C3.xyz",
+        "split": "rotated_permuted",
+        "expected": "C3",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.5749620031565428,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C3H4_D2d.xyz",
+        "split": "rotated_permuted",
+        "expected": "D2d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.5500039551407099,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C4H6_C2h.xyz",
+        "split": "rotated_permuted",
+        "expected": "C2h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.688880099914968,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C6H6_D6h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D6h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.2463839957490563,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C8H8_Oh.xyz",
+        "split": "rotated_permuted",
+        "expected": "Oh",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.8190951086580753,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "CCl2H2_C2v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C2v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.4983780672773719,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "CCl3H_C3v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C3v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.44558593071997166,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "CClFH2_Cs.xyz",
+        "split": "rotated_permuted",
+        "expected": "Cs",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.4179199459031224,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "CH4_Td.xyz",
+        "split": "rotated_permuted",
+        "expected": "Td",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.5687950178980827,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "CHN_Cinfv.xyz",
+        "split": "rotated_permuted",
+        "expected": "Cinfv",
+        "predicted": "Cinfv",
+        "normalized_predicted": "Cinfv",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.3092520637437701,
+        "error": null
+      },
+      {
+        "name": "CO2_Dinfh.xyz",
+        "split": "rotated_permuted",
+        "expected": "Dinfh",
+        "predicted": "Dinfh",
+        "normalized_predicted": "Dinfh",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.15100103337317705,
+        "error": null
+      },
+      {
+        "name": "CO_Cinfv.xyz",
+        "split": "rotated_permuted",
+        "expected": "Cinfv",
+        "predicted": "Cinfv",
+        "normalized_predicted": "Cinfv",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.07712491787970066,
+        "error": null
+      },
+      {
+        "name": "Cl5P_D3h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D3h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.573420082218945,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "ClHO_Cs.xyz",
+        "split": "rotated_permuted",
+        "expected": "Cs",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.34212705213576555,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "ClH_Cinfv.xyz",
+        "split": "rotated_permuted",
+        "expected": "Cinfv",
+        "predicted": "Cinfv",
+        "normalized_predicted": "Cinfv",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.07333408575505018,
+        "error": null
+      },
+      {
+        "name": "F4Xe_D4h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D4h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.40083599742501974,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "F6S_Oh.xyz",
+        "split": "rotated_permuted",
+        "expected": "Oh",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.5383779061958194,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "H2O2_C2.xyz",
+        "split": "rotated_permuted",
+        "expected": "C2",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.35896000918000937,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "H2O_C2v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C2v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.2957519609481096,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "H2_Dinfh.xyz",
+        "split": "rotated_permuted",
+        "expected": "Dinfh",
+        "predicted": "Dinfh",
+        "normalized_predicted": "Dinfh",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.08583394810557365,
+        "error": null
+      },
+      {
+        "name": "H3N_C3v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C3v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.3574189031496644,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "O3_C2v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C2v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.2901690313592553,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "P4_Td.xyz",
+        "split": "rotated_permuted",
+        "expected": "Td",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.37887797225266695,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "B12H60_I.xyz",
+        "split": "rotated_permuted",
+        "expected": "I",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 7.194797974079847,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "B2H6_D2h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D2h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.9077149443328381,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "BH3O3_C3h.xyz",
+        "split": "rotated_permuted",
+        "expected": "C3h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.6141710327938199,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C10FeH10_D5.xyz",
+        "split": "rotated_permuted",
+        "expected": "D5",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.8166369991376996,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C10FeH10_D5d.xyz",
+        "split": "rotated_permuted",
+        "expected": "D5d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.8551789689809084,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C10H16_Td.xyz",
+        "split": "rotated_permuted",
+        "expected": "Td",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 2.6682260213419795,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C12CrH12_D6.xyz",
+        "split": "rotated_permuted",
+        "expected": "D6",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.9637210061773658,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C12CrH12_D6d.xyz",
+        "split": "rotated_permuted",
+        "expected": "D6d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.9636380020529032,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C12CrH12_D6h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D6h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 2.9756439616903663,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C16H16U_D8d.xyz",
+        "split": "rotated_permuted",
+        "expected": "D8d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 3.3501049038022757,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C16H16U_D8h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D8h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 2.472850028425455,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C20H20_Ih.xyz",
+        "split": "rotated_permuted",
+        "expected": "Ih",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 2.6191429933533072,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C2Cl2H2_C2v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C2v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.6415460957214236,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C2H2NO_C1.xyz",
+        "split": "rotated_permuted",
+        "expected": "C1",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.5145450122654438,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C2H2O2_D2h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D2h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.5032119806855917,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C2H2_D2h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D2h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.4360449966043234,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C2H4_D2.xyz",
+        "split": "rotated_permuted",
+        "expected": "D2",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.5960040725767612,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C2H6_D3.xyz",
+        "split": "rotated_permuted",
+        "expected": "D3",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.6227539852261543,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C3H6_D3h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D3h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.7166300201788545,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C4H4P_C4.xyz",
+        "split": "rotated_permuted",
+        "expected": "C4",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.6967129884287715,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C4H4Si_S4.xyz",
+        "split": "rotated_permuted",
+        "expected": "S4",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.6628370610997081,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C4H4_D4h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D4h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.6645879475399852,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C4H8_D4h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D4h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.8424640400335193,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C4N4Pt_C4h.xyz",
+        "split": "rotated_permuted",
+        "expected": "C4h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.6675870390608907,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C5H12_T.xyz",
+        "split": "rotated_permuted",
+        "expected": "T",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.1122990399599075,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C5H12_Td.xyz",
+        "split": "rotated_permuted",
+        "expected": "Td",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.4570100465789437,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C5H5NNiO_C5v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C5v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.9196309838443995,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C5H5P_C5.xyz",
+        "split": "rotated_permuted",
+        "expected": "C5",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.7942139636725187,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C5H5_C5h.xyz",
+        "split": "rotated_permuted",
+        "expected": "C5h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.8237970760092139,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C5H5_D5h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D5h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.558927004225552,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C60_Ih.xyz",
+        "split": "rotated_permuted",
+        "expected": "Ih",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 4.86265798099339,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C6CrH6_C6v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C6v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.2909260112792253,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C6H12_D3d.xyz",
+        "split": "rotated_permuted",
+        "expected": "D3d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.2109250528737903,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C6H6P_C6.xyz",
+        "split": "rotated_permuted",
+        "expected": "C6",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.012756023555994,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C6H6_S6.xyz",
+        "split": "rotated_permuted",
+        "expected": "S6",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.8716309675946832,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C6O6_C6h.xyz",
+        "split": "rotated_permuted",
+        "expected": "C6h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.8720480836927891,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C8H8_D4.xyz",
+        "split": "rotated_permuted",
+        "expected": "D4",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.0556739289313555,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C8H8_S8.xyz",
+        "split": "rotated_permuted",
+        "expected": "S8",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.1870499001815915,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "C9CrH6O3_C3v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C3v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.4782599173486233,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "COS_Cinfv.xyz",
+        "split": "rotated_permuted",
+        "expected": "Cinfv",
+        "predicted": "Cinfv",
+        "normalized_predicted": "Cinfv",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.12120907194912434,
+        "error": null
+      },
+      {
+        "name": "Cl2OS_Cs.xyz",
+        "split": "rotated_permuted",
+        "expected": "Cs",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.4421690246090293,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "Cl3MoN3_C2v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C2v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.7224211003631353,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "Cl3MoN3_C3v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C3v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.6620039930567145,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "CoN6O12_Th.xyz",
+        "split": "rotated_permuted",
+        "expected": "Th",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.7454699845984578,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "F4S_C2v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C2v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.8591728983446956,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "F7I_D5h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D5h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.39171804767102,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "F8Zr_D4d.xyz",
+        "split": "rotated_permuted",
+        "expected": "D4d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 3.074228996410966,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "Fe4S4_Td.xyz",
+        "split": "rotated_permuted",
+        "expected": "Td",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.893297023139894,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "H24N6Ni_O.xyz",
+        "split": "rotated_permuted",
+        "expected": "O",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 2.339973929338157,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "H3_Cinfv.xyz",
+        "split": "rotated_permuted",
+        "expected": "Cinfv",
+        "predicted": "Cinfv",
+        "normalized_predicted": "Cinfv",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.20412600133568048,
+        "error": null
+      },
+      {
+        "name": "H3_D3h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D3h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.5505449371412396,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "I3_Dinfh.xyz",
+        "split": "rotated_permuted",
+        "expected": "Dinfh",
+        "predicted": "Dinfh",
+        "normalized_predicted": "Dinfh",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.2147519262507558,
+        "error": null
+      },
+      {
+        "name": "N2_Dinfh.xyz",
+        "split": "rotated_permuted",
+        "expected": "Dinfh",
+        "predicted": "Dinfh",
+        "normalized_predicted": "Dinfh",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.11779309716075659,
+        "error": null
+      },
+      {
+        "name": "Na8_Oh.xyz",
+        "split": "rotated_permuted",
+        "expected": "Oh",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.9010060457512736,
+        "error": "NameError: name 'elements' is not defined"
+      },
+      {
+        "name": "S8_D4d.xyz",
+        "split": "rotated_permuted",
+        "expected": "D4d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.8528809994459152,
+        "error": "NameError: name 'elements' is not defined"
+      }
+    ]
+  }
+}

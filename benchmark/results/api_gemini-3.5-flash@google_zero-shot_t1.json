@@ -1,0 +1,3165 @@
+{
+  "metadata": {
+    "run_id": "api_gemini-3.5-flash@google_zero-shot_t1",
+    "runner_type": "api",
+    "harness": "llm-api (1-shot)",
+    "model": "gemini-3.5-flash@google",
+    "mode": "zero-shot",
+    "max_turns": 1,
+    "turns_used": 1,
+    "wall_time_s": 134.7565249990439,
+    "input_tokens": 1300,
+    "output_tokens": 31996,
+    "total_tokens": 33296,
+    "cost_usd": null,
+    "timestamp_utc": "2026-10-22T06:36:03.283541+00:00",
+    "workdir": null,
+    "exit_code": 0,
+    "notes": ""
+  },
+  "evaluation": {
+    "target": "/tmp/pgmol_bench_api_gemini-3.5-flash@google_zero-shot_t1_o1ktah_m",
+    "core": {
+      "split": "core",
+      "total": 36,
+      "exact_correct": 0,
+      "normalized_correct": 0,
+      "exact_accuracy": 0.0,
+      "normalized_accuracy": 0.0,
+      "avg_ms": 0.0,
+      "p95_ms": 0.0,
+      "total_s": 0.0,
+      "failures": [
+        {
+          "name": "Ar_Kh.xyz",
+          "expected": "Kh",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "B12H12_Ih.xyz",
+          "expected": "Ih",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "BF3_D3h.xyz",
+          "expected": "D3h",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "BrCClFH_C1.xyz",
+          "expected": "C1",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "BrF5_C4v.xyz",
+          "expected": "C4v",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C10FeH10_D5h.xyz",
+          "expected": "D5h",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C10H8_D2h.xyz",
+          "expected": "D2h",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C2Cl2F2H2_Ci.xyz",
+          "expected": "Ci",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C2Cl2H2_C2h.xyz",
+          "expected": "C2h",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C2H2_Dinfh.xyz",
+          "expected": "Dinfh",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C2H4_D2h.xyz",
+          "expected": "D2h",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C2H6_D3d.xyz",
+          "expected": "D3d",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C2H6_D3h.xyz",
+          "expected": "D3h",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C3H3P_C3.xyz",
+          "expected": "C3",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C3H4_D2d.xyz",
+          "expected": "D2d",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C4H6_C2h.xyz",
+          "expected": "C2h",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C6H6_D6h.xyz",
+          "expected": "D6h",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C8H8_Oh.xyz",
+          "expected": "Oh",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "CCl2H2_C2v.xyz",
+          "expected": "C2v",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "CCl3H_C3v.xyz",
+          "expected": "C3v",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "CClFH2_Cs.xyz",
+          "expected": "Cs",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "CH4_Td.xyz",
+          "expected": "Td",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "CHN_Cinfv.xyz",
+          "expected": "Cinfv",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "CO2_Dinfh.xyz",
+          "expected": "Dinfh",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "CO_Cinfv.xyz",
+          "expected": "Cinfv",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "Cl5P_D3h.xyz",
+          "expected": "D3h",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "ClHO_Cs.xyz",
+          "expected": "Cs",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "ClH_Cinfv.xyz",
+          "expected": "Cinfv",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "F4Xe_D4h.xyz",
+          "expected": "D4h",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "F6S_Oh.xyz",
+          "expected": "Oh",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "H2O2_C2.xyz",
+          "expected": "C2",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "H2O_C2v.xyz",
+          "expected": "C2v",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "H2_Dinfh.xyz",
+          "expected": "Dinfh",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "H3N_C3v.xyz",
+          "expected": "C3v",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "O3_C2v.xyz",
+          "expected": "C2v",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "P4_Td.xyz",
+          "expected": "Td",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        }
+      ]
+    },
+    "challenge": {
+      "split": "challenge",
+      "total": 55,
+      "exact_correct": 0,
+      "normalized_correct": 0,
+      "exact_accuracy": 0.0,
+      "normalized_accuracy": 0.0,
+      "avg_ms": 0.0,
+      "p95_ms": 0.0,
+      "total_s": 0.0,
+      "failures": [
+        {
+          "name": "B12H60_I.xyz",
+          "expected": "I",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "B2H6_D2h.xyz",
+          "expected": "D2h",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "BH3O3_C3h.xyz",
+          "expected": "C3h",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C10FeH10_D5.xyz",
+          "expected": "D5",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C10FeH10_D5d.xyz",
+          "expected": "D5d",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C10H16_Td.xyz",
+          "expected": "Td",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C12CrH12_D6.xyz",
+          "expected": "D6",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C12CrH12_D6d.xyz",
+          "expected": "D6d",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C12CrH12_D6h.xyz",
+          "expected": "D6h",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C16H16U_D8d.xyz",
+          "expected": "D8d",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C16H16U_D8h.xyz",
+          "expected": "D8h",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C20H20_Ih.xyz",
+          "expected": "Ih",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C2Cl2H2_C2v.xyz",
+          "expected": "C2v",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C2H2NO_C1.xyz",
+          "expected": "C1",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C2H2O2_D2h.xyz",
+          "expected": "D2h",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C2H2_D2h.xyz",
+          "expected": "D2h",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C2H4_D2.xyz",
+          "expected": "D2",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C2H6_D3.xyz",
+          "expected": "D3",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C3H6_D3h.xyz",
+          "expected": "D3h",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C4H4P_C4.xyz",
+          "expected": "C4",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C4H4Si_S4.xyz",
+          "expected": "S4",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C4H4_D4h.xyz",
+          "expected": "D4h",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C4H8_D4h.xyz",
+          "expected": "D4h",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C4N4Pt_C4h.xyz",
+          "expected": "C4h",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C5H12_T.xyz",
+          "expected": "T",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C5H12_Td.xyz",
+          "expected": "Td",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C5H5NNiO_C5v.xyz",
+          "expected": "C5v",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C5H5P_C5.xyz",
+          "expected": "C5",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C5H5_C5h.xyz",
+          "expected": "C5h",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C5H5_D5h.xyz",
+          "expected": "D5h",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C60_Ih.xyz",
+          "expected": "Ih",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C6CrH6_C6v.xyz",
+          "expected": "C6v",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C6H12_D3d.xyz",
+          "expected": "D3d",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C6H6P_C6.xyz",
+          "expected": "C6",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C6H6_S6.xyz",
+          "expected": "S6",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C6O6_C6h.xyz",
+          "expected": "C6h",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C8H8_D4.xyz",
+          "expected": "D4",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C8H8_S8.xyz",
+          "expected": "S8",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C9CrH6O3_C3v.xyz",
+          "expected": "C3v",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "COS_Cinfv.xyz",
+          "expected": "Cinfv",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "Cl2OS_Cs.xyz",
+          "expected": "Cs",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "Cl3MoN3_C2v.xyz",
+          "expected": "C2v",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "Cl3MoN3_C3v.xyz",
+          "expected": "C3v",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "CoN6O12_Th.xyz",
+          "expected": "Th",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "F4S_C2v.xyz",
+          "expected": "C2v",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "F7I_D5h.xyz",
+          "expected": "D5h",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "F8Zr_D4d.xyz",
+          "expected": "D4d",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "Fe4S4_Td.xyz",
+          "expected": "Td",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "H24N6Ni_O.xyz",
+          "expected": "O",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "H3_Cinfv.xyz",
+          "expected": "Cinfv",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "H3_D3h.xyz",
+          "expected": "D3h",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "I3_Dinfh.xyz",
+          "expected": "Dinfh",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "N2_Dinfh.xyz",
+          "expected": "Dinfh",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "Na8_Oh.xyz",
+          "expected": "Oh",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "S8_D4d.xyz",
+          "expected": "D4d",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        }
+      ]
+    },
+    "rotated_permuted": {
+      "split": "rotated_permuted",
+      "total": 91,
+      "exact_correct": 0,
+      "normalized_correct": 0,
+      "exact_accuracy": 0.0,
+      "normalized_accuracy": 0.0,
+      "avg_ms": 0.0,
+      "p95_ms": 0.0,
+      "total_s": 0.0,
+      "failures": [
+        {
+          "name": "Ar_Kh.xyz",
+          "expected": "Kh",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "B12H12_Ih.xyz",
+          "expected": "Ih",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "BF3_D3h.xyz",
+          "expected": "D3h",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "BrCClFH_C1.xyz",
+          "expected": "C1",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "BrF5_C4v.xyz",
+          "expected": "C4v",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C10FeH10_D5h.xyz",
+          "expected": "D5h",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C10H8_D2h.xyz",
+          "expected": "D2h",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C2Cl2F2H2_Ci.xyz",
+          "expected": "Ci",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C2Cl2H2_C2h.xyz",
+          "expected": "C2h",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C2H2_Dinfh.xyz",
+          "expected": "Dinfh",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C2H4_D2h.xyz",
+          "expected": "D2h",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C2H6_D3d.xyz",
+          "expected": "D3d",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C2H6_D3h.xyz",
+          "expected": "D3h",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C3H3P_C3.xyz",
+          "expected": "C3",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C3H4_D2d.xyz",
+          "expected": "D2d",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C4H6_C2h.xyz",
+          "expected": "C2h",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C6H6_D6h.xyz",
+          "expected": "D6h",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C8H8_Oh.xyz",
+          "expected": "Oh",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "CCl2H2_C2v.xyz",
+          "expected": "C2v",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "CCl3H_C3v.xyz",
+          "expected": "C3v",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "CClFH2_Cs.xyz",
+          "expected": "Cs",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "CH4_Td.xyz",
+          "expected": "Td",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "CHN_Cinfv.xyz",
+          "expected": "Cinfv",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "CO2_Dinfh.xyz",
+          "expected": "Dinfh",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "CO_Cinfv.xyz",
+          "expected": "Cinfv",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "Cl5P_D3h.xyz",
+          "expected": "D3h",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "ClHO_Cs.xyz",
+          "expected": "Cs",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "ClH_Cinfv.xyz",
+          "expected": "Cinfv",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "F4Xe_D4h.xyz",
+          "expected": "D4h",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "F6S_Oh.xyz",
+          "expected": "Oh",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "H2O2_C2.xyz",
+          "expected": "C2",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "H2O_C2v.xyz",
+          "expected": "C2v",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "H2_Dinfh.xyz",
+          "expected": "Dinfh",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "H3N_C3v.xyz",
+          "expected": "C3v",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "O3_C2v.xyz",
+          "expected": "C2v",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "P4_Td.xyz",
+          "expected": "Td",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "B12H60_I.xyz",
+          "expected": "I",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "B2H6_D2h.xyz",
+          "expected": "D2h",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "BH3O3_C3h.xyz",
+          "expected": "C3h",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C10FeH10_D5.xyz",
+          "expected": "D5",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C10FeH10_D5d.xyz",
+          "expected": "D5d",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C10H16_Td.xyz",
+          "expected": "Td",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C12CrH12_D6.xyz",
+          "expected": "D6",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C12CrH12_D6d.xyz",
+          "expected": "D6d",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C12CrH12_D6h.xyz",
+          "expected": "D6h",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C16H16U_D8d.xyz",
+          "expected": "D8d",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C16H16U_D8h.xyz",
+          "expected": "D8h",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C20H20_Ih.xyz",
+          "expected": "Ih",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C2Cl2H2_C2v.xyz",
+          "expected": "C2v",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C2H2NO_C1.xyz",
+          "expected": "C1",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C2H2O2_D2h.xyz",
+          "expected": "D2h",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C2H2_D2h.xyz",
+          "expected": "D2h",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C2H4_D2.xyz",
+          "expected": "D2",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C2H6_D3.xyz",
+          "expected": "D3",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C3H6_D3h.xyz",
+          "expected": "D3h",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C4H4P_C4.xyz",
+          "expected": "C4",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C4H4Si_S4.xyz",
+          "expected": "S4",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C4H4_D4h.xyz",
+          "expected": "D4h",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C4H8_D4h.xyz",
+          "expected": "D4h",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C4N4Pt_C4h.xyz",
+          "expected": "C4h",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C5H12_T.xyz",
+          "expected": "T",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C5H12_Td.xyz",
+          "expected": "Td",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C5H5NNiO_C5v.xyz",
+          "expected": "C5v",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C5H5P_C5.xyz",
+          "expected": "C5",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C5H5_C5h.xyz",
+          "expected": "C5h",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C5H5_D5h.xyz",
+          "expected": "D5h",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C60_Ih.xyz",
+          "expected": "Ih",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C6CrH6_C6v.xyz",
+          "expected": "C6v",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C6H12_D3d.xyz",
+          "expected": "D3d",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C6H6P_C6.xyz",
+          "expected": "C6",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C6H6_S6.xyz",
+          "expected": "S6",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C6O6_C6h.xyz",
+          "expected": "C6h",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C8H8_D4.xyz",
+          "expected": "D4",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C8H8_S8.xyz",
+          "expected": "S8",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "C9CrH6O3_C3v.xyz",
+          "expected": "C3v",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "COS_Cinfv.xyz",
+          "expected": "Cinfv",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "Cl2OS_Cs.xyz",
+          "expected": "Cs",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "Cl3MoN3_C2v.xyz",
+          "expected": "C2v",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "Cl3MoN3_C3v.xyz",
+          "expected": "C3v",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "CoN6O12_Th.xyz",
+          "expected": "Th",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "F4S_C2v.xyz",
+          "expected": "C2v",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "F7I_D5h.xyz",
+          "expected": "D5h",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "F8Zr_D4d.xyz",
+          "expected": "D4d",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "Fe4S4_Td.xyz",
+          "expected": "Td",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "H24N6Ni_O.xyz",
+          "expected": "O",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "H3_Cinfv.xyz",
+          "expected": "Cinfv",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "H3_D3h.xyz",
+          "expected": "D3h",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "I3_Dinfh.xyz",
+          "expected": "Dinfh",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "N2_Dinfh.xyz",
+          "expected": "Dinfh",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "Na8_Oh.xyz",
+          "expected": "Oh",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        },
+        {
+          "name": "S8_D4d.xyz",
+          "expected": "D4d",
+          "predicted": null,
+          "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+        }
+      ]
+    },
+    "overall_exact_accuracy": 0.0,
+    "overall_normalized_accuracy": 0.0,
+    "code_stats": {
+      "python_files": 1,
+      "lines_of_code": 290,
+      "forbidden_imports": []
+    },
+    "cases": [
+      {
+        "name": "Ar_Kh.xyz",
+        "split": "core",
+        "expected": "Kh",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "B12H12_Ih.xyz",
+        "split": "core",
+        "expected": "Ih",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "BF3_D3h.xyz",
+        "split": "core",
+        "expected": "D3h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "BrCClFH_C1.xyz",
+        "split": "core",
+        "expected": "C1",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "BrF5_C4v.xyz",
+        "split": "core",
+        "expected": "C4v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C10FeH10_D5h.xyz",
+        "split": "core",
+        "expected": "D5h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C10H8_D2h.xyz",
+        "split": "core",
+        "expected": "D2h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C2Cl2F2H2_Ci.xyz",
+        "split": "core",
+        "expected": "Ci",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C2Cl2H2_C2h.xyz",
+        "split": "core",
+        "expected": "C2h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C2H2_Dinfh.xyz",
+        "split": "core",
+        "expected": "Dinfh",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C2H4_D2h.xyz",
+        "split": "core",
+        "expected": "D2h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C2H6_D3d.xyz",
+        "split": "core",
+        "expected": "D3d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C2H6_D3h.xyz",
+        "split": "core",
+        "expected": "D3h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C3H3P_C3.xyz",
+        "split": "core",
+        "expected": "C3",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C3H4_D2d.xyz",
+        "split": "core",
+        "expected": "D2d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C4H6_C2h.xyz",
+        "split": "core",
+        "expected": "C2h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C6H6_D6h.xyz",
+        "split": "core",
+        "expected": "D6h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C8H8_Oh.xyz",
+        "split": "core",
+        "expected": "Oh",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "CCl2H2_C2v.xyz",
+        "split": "core",
+        "expected": "C2v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "CCl3H_C3v.xyz",
+        "split": "core",
+        "expected": "C3v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "CClFH2_Cs.xyz",
+        "split": "core",
+        "expected": "Cs",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "CH4_Td.xyz",
+        "split": "core",
+        "expected": "Td",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "CHN_Cinfv.xyz",
+        "split": "core",
+        "expected": "Cinfv",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "CO2_Dinfh.xyz",
+        "split": "core",
+        "expected": "Dinfh",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "CO_Cinfv.xyz",
+        "split": "core",
+        "expected": "Cinfv",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "Cl5P_D3h.xyz",
+        "split": "core",
+        "expected": "D3h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "ClHO_Cs.xyz",
+        "split": "core",
+        "expected": "Cs",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "ClH_Cinfv.xyz",
+        "split": "core",
+        "expected": "Cinfv",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "F4Xe_D4h.xyz",
+        "split": "core",
+        "expected": "D4h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "F6S_Oh.xyz",
+        "split": "core",
+        "expected": "Oh",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "H2O2_C2.xyz",
+        "split": "core",
+        "expected": "C2",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "H2O_C2v.xyz",
+        "split": "core",
+        "expected": "C2v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "H2_Dinfh.xyz",
+        "split": "core",
+        "expected": "Dinfh",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "H3N_C3v.xyz",
+        "split": "core",
+        "expected": "C3v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "O3_C2v.xyz",
+        "split": "core",
+        "expected": "C2v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "P4_Td.xyz",
+        "split": "core",
+        "expected": "Td",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "B12H60_I.xyz",
+        "split": "challenge",
+        "expected": "I",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "B2H6_D2h.xyz",
+        "split": "challenge",
+        "expected": "D2h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "BH3O3_C3h.xyz",
+        "split": "challenge",
+        "expected": "C3h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C10FeH10_D5.xyz",
+        "split": "challenge",
+        "expected": "D5",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C10FeH10_D5d.xyz",
+        "split": "challenge",
+        "expected": "D5d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C10H16_Td.xyz",
+        "split": "challenge",
+        "expected": "Td",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C12CrH12_D6.xyz",
+        "split": "challenge",
+        "expected": "D6",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C12CrH12_D6d.xyz",
+        "split": "challenge",
+        "expected": "D6d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C12CrH12_D6h.xyz",
+        "split": "challenge",
+        "expected": "D6h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C16H16U_D8d.xyz",
+        "split": "challenge",
+        "expected": "D8d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C16H16U_D8h.xyz",
+        "split": "challenge",
+        "expected": "D8h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C20H20_Ih.xyz",
+        "split": "challenge",
+        "expected": "Ih",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C2Cl2H2_C2v.xyz",
+        "split": "challenge",
+        "expected": "C2v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C2H2NO_C1.xyz",
+        "split": "challenge",
+        "expected": "C1",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C2H2O2_D2h.xyz",
+        "split": "challenge",
+        "expected": "D2h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C2H2_D2h.xyz",
+        "split": "challenge",
+        "expected": "D2h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C2H4_D2.xyz",
+        "split": "challenge",
+        "expected": "D2",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C2H6_D3.xyz",
+        "split": "challenge",
+        "expected": "D3",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C3H6_D3h.xyz",
+        "split": "challenge",
+        "expected": "D3h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C4H4P_C4.xyz",
+        "split": "challenge",
+        "expected": "C4",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C4H4Si_S4.xyz",
+        "split": "challenge",
+        "expected": "S4",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C4H4_D4h.xyz",
+        "split": "challenge",
+        "expected": "D4h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C4H8_D4h.xyz",
+        "split": "challenge",
+        "expected": "D4h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C4N4Pt_C4h.xyz",
+        "split": "challenge",
+        "expected": "C4h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C5H12_T.xyz",
+        "split": "challenge",
+        "expected": "T",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C5H12_Td.xyz",
+        "split": "challenge",
+        "expected": "Td",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C5H5NNiO_C5v.xyz",
+        "split": "challenge",
+        "expected": "C5v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C5H5P_C5.xyz",
+        "split": "challenge",
+        "expected": "C5",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C5H5_C5h.xyz",
+        "split": "challenge",
+        "expected": "C5h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C5H5_D5h.xyz",
+        "split": "challenge",
+        "expected": "D5h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C60_Ih.xyz",
+        "split": "challenge",
+        "expected": "Ih",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C6CrH6_C6v.xyz",
+        "split": "challenge",
+        "expected": "C6v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C6H12_D3d.xyz",
+        "split": "challenge",
+        "expected": "D3d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C6H6P_C6.xyz",
+        "split": "challenge",
+        "expected": "C6",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C6H6_S6.xyz",
+        "split": "challenge",
+        "expected": "S6",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C6O6_C6h.xyz",
+        "split": "challenge",
+        "expected": "C6h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C8H8_D4.xyz",
+        "split": "challenge",
+        "expected": "D4",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C8H8_S8.xyz",
+        "split": "challenge",
+        "expected": "S8",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C9CrH6O3_C3v.xyz",
+        "split": "challenge",
+        "expected": "C3v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "COS_Cinfv.xyz",
+        "split": "challenge",
+        "expected": "Cinfv",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "Cl2OS_Cs.xyz",
+        "split": "challenge",
+        "expected": "Cs",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "Cl3MoN3_C2v.xyz",
+        "split": "challenge",
+        "expected": "C2v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "Cl3MoN3_C3v.xyz",
+        "split": "challenge",
+        "expected": "C3v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "CoN6O12_Th.xyz",
+        "split": "challenge",
+        "expected": "Th",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "F4S_C2v.xyz",
+        "split": "challenge",
+        "expected": "C2v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "F7I_D5h.xyz",
+        "split": "challenge",
+        "expected": "D5h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "F8Zr_D4d.xyz",
+        "split": "challenge",
+        "expected": "D4d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "Fe4S4_Td.xyz",
+        "split": "challenge",
+        "expected": "Td",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "H24N6Ni_O.xyz",
+        "split": "challenge",
+        "expected": "O",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "H3_Cinfv.xyz",
+        "split": "challenge",
+        "expected": "Cinfv",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "H3_D3h.xyz",
+        "split": "challenge",
+        "expected": "D3h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "I3_Dinfh.xyz",
+        "split": "challenge",
+        "expected": "Dinfh",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "N2_Dinfh.xyz",
+        "split": "challenge",
+        "expected": "Dinfh",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "Na8_Oh.xyz",
+        "split": "challenge",
+        "expected": "Oh",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "S8_D4d.xyz",
+        "split": "challenge",
+        "expected": "D4d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "Ar_Kh.xyz",
+        "split": "rotated_permuted",
+        "expected": "Kh",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "B12H12_Ih.xyz",
+        "split": "rotated_permuted",
+        "expected": "Ih",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "BF3_D3h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D3h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "BrCClFH_C1.xyz",
+        "split": "rotated_permuted",
+        "expected": "C1",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "BrF5_C4v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C4v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C10FeH10_D5h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D5h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C10H8_D2h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D2h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C2Cl2F2H2_Ci.xyz",
+        "split": "rotated_permuted",
+        "expected": "Ci",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C2Cl2H2_C2h.xyz",
+        "split": "rotated_permuted",
+        "expected": "C2h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C2H2_Dinfh.xyz",
+        "split": "rotated_permuted",
+        "expected": "Dinfh",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C2H4_D2h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D2h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C2H6_D3d.xyz",
+        "split": "rotated_permuted",
+        "expected": "D3d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C2H6_D3h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D3h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C3H3P_C3.xyz",
+        "split": "rotated_permuted",
+        "expected": "C3",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C3H4_D2d.xyz",
+        "split": "rotated_permuted",
+        "expected": "D2d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C4H6_C2h.xyz",
+        "split": "rotated_permuted",
+        "expected": "C2h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C6H6_D6h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D6h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C8H8_Oh.xyz",
+        "split": "rotated_permuted",
+        "expected": "Oh",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "CCl2H2_C2v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C2v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "CCl3H_C3v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C3v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "CClFH2_Cs.xyz",
+        "split": "rotated_permuted",
+        "expected": "Cs",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "CH4_Td.xyz",
+        "split": "rotated_permuted",
+        "expected": "Td",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "CHN_Cinfv.xyz",
+        "split": "rotated_permuted",
+        "expected": "Cinfv",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "CO2_Dinfh.xyz",
+        "split": "rotated_permuted",
+        "expected": "Dinfh",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "CO_Cinfv.xyz",
+        "split": "rotated_permuted",
+        "expected": "Cinfv",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "Cl5P_D3h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D3h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "ClHO_Cs.xyz",
+        "split": "rotated_permuted",
+        "expected": "Cs",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "ClH_Cinfv.xyz",
+        "split": "rotated_permuted",
+        "expected": "Cinfv",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "F4Xe_D4h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D4h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "F6S_Oh.xyz",
+        "split": "rotated_permuted",
+        "expected": "Oh",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "H2O2_C2.xyz",
+        "split": "rotated_permuted",
+        "expected": "C2",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "H2O_C2v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C2v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "H2_Dinfh.xyz",
+        "split": "rotated_permuted",
+        "expected": "Dinfh",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "H3N_C3v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C3v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "O3_C2v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C2v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "P4_Td.xyz",
+        "split": "rotated_permuted",
+        "expected": "Td",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "B12H60_I.xyz",
+        "split": "rotated_permuted",
+        "expected": "I",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "B2H6_D2h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D2h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "BH3O3_C3h.xyz",
+        "split": "rotated_permuted",
+        "expected": "C3h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C10FeH10_D5.xyz",
+        "split": "rotated_permuted",
+        "expected": "D5",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C10FeH10_D5d.xyz",
+        "split": "rotated_permuted",
+        "expected": "D5d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C10H16_Td.xyz",
+        "split": "rotated_permuted",
+        "expected": "Td",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C12CrH12_D6.xyz",
+        "split": "rotated_permuted",
+        "expected": "D6",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C12CrH12_D6d.xyz",
+        "split": "rotated_permuted",
+        "expected": "D6d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C12CrH12_D6h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D6h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C16H16U_D8d.xyz",
+        "split": "rotated_permuted",
+        "expected": "D8d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C16H16U_D8h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D8h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C20H20_Ih.xyz",
+        "split": "rotated_permuted",
+        "expected": "Ih",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C2Cl2H2_C2v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C2v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C2H2NO_C1.xyz",
+        "split": "rotated_permuted",
+        "expected": "C1",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C2H2O2_D2h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D2h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C2H2_D2h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D2h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C2H4_D2.xyz",
+        "split": "rotated_permuted",
+        "expected": "D2",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C2H6_D3.xyz",
+        "split": "rotated_permuted",
+        "expected": "D3",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C3H6_D3h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D3h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C4H4P_C4.xyz",
+        "split": "rotated_permuted",
+        "expected": "C4",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C4H4Si_S4.xyz",
+        "split": "rotated_permuted",
+        "expected": "S4",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C4H4_D4h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D4h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C4H8_D4h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D4h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C4N4Pt_C4h.xyz",
+        "split": "rotated_permuted",
+        "expected": "C4h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C5H12_T.xyz",
+        "split": "rotated_permuted",
+        "expected": "T",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C5H12_Td.xyz",
+        "split": "rotated_permuted",
+        "expected": "Td",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C5H5NNiO_C5v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C5v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C5H5P_C5.xyz",
+        "split": "rotated_permuted",
+        "expected": "C5",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C5H5_C5h.xyz",
+        "split": "rotated_permuted",
+        "expected": "C5h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C5H5_D5h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D5h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C60_Ih.xyz",
+        "split": "rotated_permuted",
+        "expected": "Ih",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C6CrH6_C6v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C6v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C6H12_D3d.xyz",
+        "split": "rotated_permuted",
+        "expected": "D3d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C6H6P_C6.xyz",
+        "split": "rotated_permuted",
+        "expected": "C6",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C6H6_S6.xyz",
+        "split": "rotated_permuted",
+        "expected": "S6",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C6O6_C6h.xyz",
+        "split": "rotated_permuted",
+        "expected": "C6h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C8H8_D4.xyz",
+        "split": "rotated_permuted",
+        "expected": "D4",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C8H8_S8.xyz",
+        "split": "rotated_permuted",
+        "expected": "S8",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "C9CrH6O3_C3v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C3v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "COS_Cinfv.xyz",
+        "split": "rotated_permuted",
+        "expected": "Cinfv",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "Cl2OS_Cs.xyz",
+        "split": "rotated_permuted",
+        "expected": "Cs",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "Cl3MoN3_C2v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C2v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "Cl3MoN3_C3v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C3v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "CoN6O12_Th.xyz",
+        "split": "rotated_permuted",
+        "expected": "Th",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "F4S_C2v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C2v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "F7I_D5h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D5h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "F8Zr_D4d.xyz",
+        "split": "rotated_permuted",
+        "expected": "D4d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "Fe4S4_Td.xyz",
+        "split": "rotated_permuted",
+        "expected": "Td",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "H24N6Ni_O.xyz",
+        "split": "rotated_permuted",
+        "expected": "O",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "H3_Cinfv.xyz",
+        "split": "rotated_permuted",
+        "expected": "Cinfv",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "H3_D3h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D3h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "I3_Dinfh.xyz",
+        "split": "rotated_permuted",
+        "expected": "Dinfh",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "N2_Dinfh.xyz",
+        "split": "rotated_permuted",
+        "expected": "Dinfh",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "Na8_Oh.xyz",
+        "split": "rotated_permuted",
+        "expected": "Oh",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      },
+      {
+        "name": "S8_D4d.xyz",
+        "split": "rotated_permuted",
+        "expected": "D4d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0,
+        "error": "SyntaxError: invalid syntax (__init__.py, line 380)"
+      }
+    ]
+  }
+}

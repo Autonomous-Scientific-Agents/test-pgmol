@@ -1,0 +1,2301 @@
+{
+  "metadata": {
+    "run_id": "api_gpt-6-sol_zero-shot_t1",
+    "runner_type": "api",
+    "harness": "llm-api (1-shot)",
+    "model": "gpt-6-sol",
+    "mode": "zero-shot",
+    "max_turns": 1,
+    "turns_used": 1,
+    "wall_time_s": 62.782829915056936,
+    "input_tokens": 1267,
+    "output_tokens": 6789,
+    "total_tokens": 8056,
+    "cost_usd": null,
+    "timestamp_utc": "2026-10-22T06:14:20.167584+00:00",
+    "workdir": null,
+    "exit_code": 0,
+    "notes": ""
+  },
+  "evaluation": {
+    "target": "/tmp/pgmol_bench_api_gpt-6-sol_zero-shot_t1_iadjwrz_",
+    "core": {
+      "split": "core",
+      "total": 36,
+      "exact_correct": 34,
+      "normalized_correct": 34,
+      "exact_accuracy": 0.9444444444444444,
+      "normalized_accuracy": 0.9444444444444444,
+      "avg_ms": 7.142970441944069,
+      "p95_ms": 26.435656269313768,
+      "total_s": 0.2571469359099865,
+      "failures": [
+        {
+          "name": "C10FeH10_D5h.xyz",
+          "expected": "D5h",
+          "predicted": "I",
+          "error": null
+        },
+        {
+          "name": "C6H6_D6h.xyz",
+          "expected": "D6h",
+          "predicted": "Ih",
+          "error": null
+        }
+      ]
+    },
+    "challenge": {
+      "split": "challenge",
+      "total": 55,
+      "exact_correct": 38,
+      "normalized_correct": 38,
+      "exact_accuracy": 0.6909090909090909,
+      "normalized_accuracy": 0.6909090909090909,
+      "avg_ms": 115.90421713084321,
+      "p95_ms": 418.61844061640994,
+      "total_s": 6.374731942196377,
+      "failures": [
+        {
+          "name": "B12H60_I.xyz",
+          "expected": "I",
+          "predicted": null,
+          "error": "TimeoutError: Molecule evaluation exceeded per-molecule timeout (5.0s)"
+        },
+        {
+          "name": "C10FeH10_D5.xyz",
+          "expected": "D5",
+          "predicted": "I",
+          "error": null
+        },
+        {
+          "name": "C10FeH10_D5d.xyz",
+          "expected": "D5d",
+          "predicted": "Ih",
+          "error": null
+        },
+        {
+          "name": "C12CrH12_D6.xyz",
+          "expected": "D6",
+          "predicted": "I",
+          "error": null
+        },
+        {
+          "name": "C12CrH12_D6d.xyz",
+          "expected": "D6d",
+          "predicted": "I",
+          "error": null
+        },
+        {
+          "name": "C12CrH12_D6h.xyz",
+          "expected": "D6h",
+          "predicted": "Ih",
+          "error": null
+        },
+        {
+          "name": "C16H16U_D8d.xyz",
+          "expected": "D8d",
+          "predicted": "I",
+          "error": null
+        },
+        {
+          "name": "C16H16U_D8h.xyz",
+          "expected": "D8h",
+          "predicted": "Ih",
+          "error": null
+        },
+        {
+          "name": "C5H5NNiO_C5v.xyz",
+          "expected": "C5v",
+          "predicted": "I",
+          "error": null
+        },
+        {
+          "name": "C5H5P_C5.xyz",
+          "expected": "C5",
+          "predicted": "I",
+          "error": null
+        },
+        {
+          "name": "C5H5_C5h.xyz",
+          "expected": "C5h",
+          "predicted": "I",
+          "error": null
+        },
+        {
+          "name": "C5H5_D5h.xyz",
+          "expected": "D5h",
+          "predicted": "I",
+          "error": null
+        },
+        {
+          "name": "C60_Ih.xyz",
+          "expected": "Ih",
+          "predicted": null,
+          "error": "TimeoutError: Molecule evaluation exceeded per-molecule timeout (5.0s)"
+        },
+        {
+          "name": "C6CrH6_C6v.xyz",
+          "expected": "C6v",
+          "predicted": "I",
+          "error": null
+        },
+        {
+          "name": "C6H6P_C6.xyz",
+          "expected": "C6",
+          "predicted": "I",
+          "error": null
+        },
+        {
+          "name": "C6O6_C6h.xyz",
+          "expected": "C6h",
+          "predicted": "Ih",
+          "error": null
+        },
+        {
+          "name": "F7I_D5h.xyz",
+          "expected": "D5h",
+          "predicted": "I",
+          "error": null
+        }
+      ]
+    },
+    "rotated_permuted": {
+      "split": "rotated_permuted",
+      "total": 91,
+      "exact_correct": 72,
+      "normalized_correct": 72,
+      "exact_accuracy": 0.7912087912087912,
+      "normalized_accuracy": 0.7912087912087912,
+      "avg_ms": 75.03154798497825,
+      "p95_ms": 224.33667752193287,
+      "total_s": 6.82787086663302,
+      "failures": [
+        {
+          "name": "C10FeH10_D5h.xyz",
+          "expected": "D5h",
+          "predicted": "I",
+          "error": null
+        },
+        {
+          "name": "C6H6_D6h.xyz",
+          "expected": "D6h",
+          "predicted": "Ih",
+          "error": null
+        },
+        {
+          "name": "B12H60_I.xyz",
+          "expected": "I",
+          "predicted": null,
+          "error": "TimeoutError: Molecule evaluation exceeded per-molecule timeout (5.0s)"
+        },
+        {
+          "name": "C10FeH10_D5.xyz",
+          "expected": "D5",
+          "predicted": "I",
+          "error": null
+        },
+        {
+          "name": "C10FeH10_D5d.xyz",
+          "expected": "D5d",
+          "predicted": "Ih",
+          "error": null
+        },
+        {
+          "name": "C12CrH12_D6.xyz",
+          "expected": "D6",
+          "predicted": "I",
+          "error": null
+        },
+        {
+          "name": "C12CrH12_D6d.xyz",
+          "expected": "D6d",
+          "predicted": "I",
+          "error": null
+        },
+        {
+          "name": "C12CrH12_D6h.xyz",
+          "expected": "D6h",
+          "predicted": "Ih",
+          "error": null
+        },
+        {
+          "name": "C16H16U_D8d.xyz",
+          "expected": "D8d",
+          "predicted": "I",
+          "error": null
+        },
+        {
+          "name": "C16H16U_D8h.xyz",
+          "expected": "D8h",
+          "predicted": "Ih",
+          "error": null
+        },
+        {
+          "name": "C5H5NNiO_C5v.xyz",
+          "expected": "C5v",
+          "predicted": "I",
+          "error": null
+        },
+        {
+          "name": "C5H5P_C5.xyz",
+          "expected": "C5",
+          "predicted": "I",
+          "error": null
+        },
+        {
+          "name": "C5H5_C5h.xyz",
+          "expected": "C5h",
+          "predicted": "I",
+          "error": null
+        },
+        {
+          "name": "C5H5_D5h.xyz",
+          "expected": "D5h",
+          "predicted": "I",
+          "error": null
+        },
+        {
+          "name": "C60_Ih.xyz",
+          "expected": "Ih",
+          "predicted": null,
+          "error": "TimeoutError: Molecule evaluation exceeded per-molecule timeout (5.0s)"
+        },
+        {
+          "name": "C6CrH6_C6v.xyz",
+          "expected": "C6v",
+          "predicted": "I",
+          "error": null
+        },
+        {
+          "name": "C6H6P_C6.xyz",
+          "expected": "C6",
+          "predicted": "I",
+          "error": null
+        },
+        {
+          "name": "C6O6_C6h.xyz",
+          "expected": "C6h",
+          "predicted": "Ih",
+          "error": null
+        },
+        {
+          "name": "F7I_D5h.xyz",
+          "expected": "D5h",
+          "predicted": "I",
+          "error": null
+        }
+      ]
+    },
+    "overall_exact_accuracy": 0.7912087912087912,
+    "overall_normalized_accuracy": 0.7912087912087912,
+    "code_stats": {
+      "python_files": 1,
+      "lines_of_code": 283,
+      "forbidden_imports": []
+    },
+    "cases": [
+      {
+        "name": "Ar_Kh.xyz",
+        "split": "core",
+        "expected": "Kh",
+        "predicted": "Kh",
+        "normalized_predicted": "Kh",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.08216698188334703,
+        "error": null
+      },
+      {
+        "name": "B12H12_Ih.xyz",
+        "split": "core",
+        "expected": "Ih",
+        "predicted": "Ih",
+        "normalized_predicted": "Ih",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 42.68437693826854,
+        "error": null
+      },
+      {
+        "name": "BF3_D3h.xyz",
+        "split": "core",
+        "expected": "D3h",
+        "predicted": "D3h",
+        "normalized_predicted": "D3h",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 1.172297983430326,
+        "error": null
+      },
+      {
+        "name": "BrCClFH_C1.xyz",
+        "split": "core",
+        "expected": "C1",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 1.3948420528322458,
+        "error": null
+      },
+      {
+        "name": "BrF5_C4v.xyz",
+        "split": "core",
+        "expected": "C4v",
+        "predicted": "C4v",
+        "normalized_predicted": "C4v",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 2.1591379772871733,
+        "error": null
+      },
+      {
+        "name": "C10FeH10_D5h.xyz",
+        "split": "core",
+        "expected": "D5h",
+        "predicted": "I",
+        "normalized_predicted": "I",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 98.31053798552603,
+        "error": null
+      },
+      {
+        "name": "C10H8_D2h.xyz",
+        "split": "core",
+        "expected": "D2h",
+        "predicted": "D2h",
+        "normalized_predicted": "D2h",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 9.824599954299629,
+        "error": null
+      },
+      {
+        "name": "C2Cl2F2H2_Ci.xyz",
+        "split": "core",
+        "expected": "Ci",
+        "predicted": "Ci",
+        "normalized_predicted": "Ci",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 2.3953060153871775,
+        "error": null
+      },
+      {
+        "name": "C2Cl2H2_C2h.xyz",
+        "split": "core",
+        "expected": "C2h",
+        "predicted": "C2h",
+        "normalized_predicted": "C2h",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 1.1973819928243756,
+        "error": null
+      },
+      {
+        "name": "C2H2_Dinfh.xyz",
+        "split": "core",
+        "expected": "Dinfh",
+        "predicted": "Dinfh",
+        "normalized_predicted": "Dinfh",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.08854293264448643,
+        "error": null
+      },
+      {
+        "name": "C2H4_D2h.xyz",
+        "split": "core",
+        "expected": "D2h",
+        "predicted": "D2h",
+        "normalized_predicted": "D2h",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 1.3367990031838417,
+        "error": null
+      },
+      {
+        "name": "C2H6_D3d.xyz",
+        "split": "core",
+        "expected": "D3d",
+        "predicted": "D3d",
+        "normalized_predicted": "D3d",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 7.869255030527711,
+        "error": null
+      },
+      {
+        "name": "C2H6_D3h.xyz",
+        "split": "core",
+        "expected": "D3h",
+        "predicted": "D3h",
+        "normalized_predicted": "D3h",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 21.019416046328843,
+        "error": null
+      },
+      {
+        "name": "C3H3P_C3.xyz",
+        "split": "core",
+        "expected": "C3",
+        "predicted": "C3",
+        "normalized_predicted": "C3",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 16.711681033484638,
+        "error": null
+      },
+      {
+        "name": "C3H4_D2d.xyz",
+        "split": "core",
+        "expected": "D2d",
+        "predicted": "D2d",
+        "normalized_predicted": "D2d",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 4.1920250514522195,
+        "error": null
+      },
+      {
+        "name": "C4H6_C2h.xyz",
+        "split": "core",
+        "expected": "C2h",
+        "predicted": "C2h",
+        "normalized_predicted": "C2h",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 3.589729079976678,
+        "error": null
+      },
+      {
+        "name": "C6H6_D6h.xyz",
+        "split": "core",
+        "expected": "D6h",
+        "predicted": "Ih",
+        "normalized_predicted": "Ih",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 6.067077978514135,
+        "error": null
+      },
+      {
+        "name": "C8H8_Oh.xyz",
+        "split": "core",
+        "expected": "Oh",
+        "predicted": "Oh",
+        "normalized_predicted": "Oh",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 14.221458928659558,
+        "error": null
+      },
+      {
+        "name": "CCl2H2_C2v.xyz",
+        "split": "core",
+        "expected": "C2v",
+        "predicted": "C2v",
+        "normalized_predicted": "C2v",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 1.5888429479673505,
+        "error": null
+      },
+      {
+        "name": "CCl3H_C3v.xyz",
+        "split": "core",
+        "expected": "C3v",
+        "predicted": "C3v",
+        "normalized_predicted": "C3v",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 2.089513000100851,
+        "error": null
+      },
+      {
+        "name": "CClFH2_Cs.xyz",
+        "split": "core",
+        "expected": "Cs",
+        "predicted": "Cs",
+        "normalized_predicted": "Cs",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 1.9665949512273073,
+        "error": null
+      },
+      {
+        "name": "CH4_Td.xyz",
+        "split": "core",
+        "expected": "Td",
+        "predicted": "Td",
+        "normalized_predicted": "Td",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 2.0976790692657232,
+        "error": null
+      },
+      {
+        "name": "CHN_Cinfv.xyz",
+        "split": "core",
+        "expected": "Cinfv",
+        "predicted": "Cinfv",
+        "normalized_predicted": "Cinfv",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.0692510511726141,
+        "error": null
+      },
+      {
+        "name": "CO2_Dinfh.xyz",
+        "split": "core",
+        "expected": "Dinfh",
+        "predicted": "Dinfh",
+        "normalized_predicted": "Dinfh",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.07479195483028889,
+        "error": null
+      },
+      {
+        "name": "CO_Cinfv.xyz",
+        "split": "core",
+        "expected": "Cinfv",
+        "predicted": "Cinfv",
+        "normalized_predicted": "Cinfv",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.059333047829568386,
+        "error": null
+      },
+      {
+        "name": "Cl5P_D3h.xyz",
+        "split": "core",
+        "expected": "D3h",
+        "predicted": "D3h",
+        "normalized_predicted": "D3h",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 2.151138032786548,
+        "error": null
+      },
+      {
+        "name": "ClHO_Cs.xyz",
+        "split": "core",
+        "expected": "Cs",
+        "predicted": "Cs",
+        "normalized_predicted": "Cs",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.5337949842214584,
+        "error": null
+      },
+      {
+        "name": "ClH_Cinfv.xyz",
+        "split": "core",
+        "expected": "Cinfv",
+        "predicted": "Cinfv",
+        "normalized_predicted": "Cinfv",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.07145898416638374,
+        "error": null
+      },
+      {
+        "name": "F4Xe_D4h.xyz",
+        "split": "core",
+        "expected": "D4h",
+        "predicted": "D4h",
+        "normalized_predicted": "D4h",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 1.9816369749605656,
+        "error": null
+      },
+      {
+        "name": "F6S_Oh.xyz",
+        "split": "core",
+        "expected": "Oh",
+        "predicted": "Oh",
+        "normalized_predicted": "Oh",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 3.792898030951619,
+        "error": null
+      },
+      {
+        "name": "H2O2_C2.xyz",
+        "split": "core",
+        "expected": "C2",
+        "predicted": "C2",
+        "normalized_predicted": "C2",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 1.102464972063899,
+        "error": null
+      },
+      {
+        "name": "H2O_C2v.xyz",
+        "split": "core",
+        "expected": "C2v",
+        "predicted": "C2v",
+        "normalized_predicted": "C2v",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.5164609756320715,
+        "error": null
+      },
+      {
+        "name": "H2_Dinfh.xyz",
+        "split": "core",
+        "expected": "Dinfh",
+        "predicted": "Dinfh",
+        "normalized_predicted": "Dinfh",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.06587500683963299,
+        "error": null
+      },
+      {
+        "name": "H3N_C3v.xyz",
+        "split": "core",
+        "expected": "C3v",
+        "predicted": "C3v",
+        "normalized_predicted": "C3v",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 1.7190939979627728,
+        "error": null
+      },
+      {
+        "name": "O3_C2v.xyz",
+        "split": "core",
+        "expected": "C2v",
+        "predicted": "C2v",
+        "normalized_predicted": "C2v",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.6650870200246572,
+        "error": null
+      },
+      {
+        "name": "P4_Td.xyz",
+        "split": "core",
+        "expected": "Td",
+        "predicted": "Td",
+        "normalized_predicted": "Td",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 2.2843879414722323,
+        "error": null
+      },
+      {
+        "name": "B12H60_I.xyz",
+        "split": "challenge",
+        "expected": "I",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 2000.46605092939,
+        "error": "TimeoutError: Molecule evaluation exceeded per-molecule timeout (5.0s)"
+      },
+      {
+        "name": "B2H6_D2h.xyz",
+        "split": "challenge",
+        "expected": "D2h",
+        "predicted": "D2h",
+        "normalized_predicted": "D2h",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 2.6971399784088135,
+        "error": null
+      },
+      {
+        "name": "BH3O3_C3h.xyz",
+        "split": "challenge",
+        "expected": "C3h",
+        "predicted": "C3h",
+        "normalized_predicted": "C3h",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 2.7243500808253884,
+        "error": null
+      },
+      {
+        "name": "C10FeH10_D5.xyz",
+        "split": "challenge",
+        "expected": "D5",
+        "predicted": "I",
+        "normalized_predicted": "I",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 91.29232994746417,
+        "error": null
+      },
+      {
+        "name": "C10FeH10_D5d.xyz",
+        "split": "challenge",
+        "expected": "D5d",
+        "predicted": "Ih",
+        "normalized_predicted": "Ih",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 45.234099961817265,
+        "error": null
+      },
+      {
+        "name": "C10H16_Td.xyz",
+        "split": "challenge",
+        "expected": "Td",
+        "predicted": "Td",
+        "normalized_predicted": "Td",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 101.56751598697156,
+        "error": null
+      },
+      {
+        "name": "C12CrH12_D6.xyz",
+        "split": "challenge",
+        "expected": "D6",
+        "predicted": "I",
+        "normalized_predicted": "I",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 152.13389694690704,
+        "error": null
+      },
+      {
+        "name": "C12CrH12_D6d.xyz",
+        "split": "challenge",
+        "expected": "D6d",
+        "predicted": "I",
+        "normalized_predicted": "I",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 174.30369497742504,
+        "error": null
+      },
+      {
+        "name": "C12CrH12_D6h.xyz",
+        "split": "challenge",
+        "expected": "D6h",
+        "predicted": "Ih",
+        "normalized_predicted": "Ih",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 70.68200095091015,
+        "error": null
+      },
+      {
+        "name": "C16H16U_D8d.xyz",
+        "split": "challenge",
+        "expected": "D8d",
+        "predicted": "I",
+        "normalized_predicted": "I",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 486.3456189632416,
+        "error": null
+      },
+      {
+        "name": "C16H16U_D8h.xyz",
+        "split": "challenge",
+        "expected": "D8h",
+        "predicted": "Ih",
+        "normalized_predicted": "Ih",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 171.7149290489033,
+        "error": null
+      },
+      {
+        "name": "C20H20_Ih.xyz",
+        "split": "challenge",
+        "expected": "Ih",
+        "predicted": "Ih",
+        "normalized_predicted": "Ih",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 212.43237797170877,
+        "error": null
+      },
+      {
+        "name": "C2Cl2H2_C2v.xyz",
+        "split": "challenge",
+        "expected": "C2v",
+        "predicted": "C2v",
+        "normalized_predicted": "C2v",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 1.3760080328211188,
+        "error": null
+      },
+      {
+        "name": "C2H2NO_C1.xyz",
+        "split": "challenge",
+        "expected": "C1",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 1.7571349162608385,
+        "error": null
+      },
+      {
+        "name": "C2H2O2_D2h.xyz",
+        "split": "challenge",
+        "expected": "D2h",
+        "predicted": "D2h",
+        "normalized_predicted": "D2h",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 1.1364240199327469,
+        "error": null
+      },
+      {
+        "name": "C2H2_D2h.xyz",
+        "split": "challenge",
+        "expected": "D2h",
+        "predicted": "D2h",
+        "normalized_predicted": "D2h",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.6754630012437701,
+        "error": null
+      },
+      {
+        "name": "C2H4_D2.xyz",
+        "split": "challenge",
+        "expected": "D2",
+        "predicted": "D2",
+        "normalized_predicted": "D2",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 2.372889081016183,
+        "error": null
+      },
+      {
+        "name": "C2H6_D3.xyz",
+        "split": "challenge",
+        "expected": "D3",
+        "predicted": "D3",
+        "normalized_predicted": "D3",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 5.818743025884032,
+        "error": null
+      },
+      {
+        "name": "C3H6_D3h.xyz",
+        "split": "challenge",
+        "expected": "D3h",
+        "predicted": "D3h",
+        "normalized_predicted": "D3h",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 6.380954058840871,
+        "error": null
+      },
+      {
+        "name": "C4H4P_C4.xyz",
+        "split": "challenge",
+        "expected": "C4",
+        "predicted": "C4",
+        "normalized_predicted": "C4",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 5.713576101697981,
+        "error": null
+      },
+      {
+        "name": "C4H4Si_S4.xyz",
+        "split": "challenge",
+        "expected": "S4",
+        "predicted": "S4",
+        "normalized_predicted": "S4",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 7.495252997614443,
+        "error": null
+      },
+      {
+        "name": "C4H4_D4h.xyz",
+        "split": "challenge",
+        "expected": "D4h",
+        "predicted": "D4h",
+        "normalized_predicted": "D4h",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 2.336305915378034,
+        "error": null
+      },
+      {
+        "name": "C4H8_D4h.xyz",
+        "split": "challenge",
+        "expected": "D4h",
+        "predicted": "D4h",
+        "normalized_predicted": "D4h",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 8.24204902164638,
+        "error": null
+      },
+      {
+        "name": "C4N4Pt_C4h.xyz",
+        "split": "challenge",
+        "expected": "C4h",
+        "predicted": "C4h",
+        "normalized_predicted": "C4h",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 4.118398996070027,
+        "error": null
+      },
+      {
+        "name": "C5H12_T.xyz",
+        "split": "challenge",
+        "expected": "T",
+        "predicted": "T",
+        "normalized_predicted": "T",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 49.0265809930861,
+        "error": null
+      },
+      {
+        "name": "C5H12_Td.xyz",
+        "split": "challenge",
+        "expected": "Td",
+        "predicted": "Td",
+        "normalized_predicted": "Td",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 53.53719100821763,
+        "error": null
+      },
+      {
+        "name": "C5H5NNiO_C5v.xyz",
+        "split": "challenge",
+        "expected": "C5v",
+        "predicted": "I",
+        "normalized_predicted": "I",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 13.915581977926195,
+        "error": null
+      },
+      {
+        "name": "C5H5P_C5.xyz",
+        "split": "challenge",
+        "expected": "C5",
+        "predicted": "I",
+        "normalized_predicted": "I",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 12.522157048806548,
+        "error": null
+      },
+      {
+        "name": "C5H5_C5h.xyz",
+        "split": "challenge",
+        "expected": "C5h",
+        "predicted": "I",
+        "normalized_predicted": "I",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 4.569609998725355,
+        "error": null
+      },
+      {
+        "name": "C5H5_D5h.xyz",
+        "split": "challenge",
+        "expected": "D5h",
+        "predicted": "I",
+        "normalized_predicted": "I",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 3.8623970467597246,
+        "error": null
+      },
+      {
+        "name": "C60_Ih.xyz",
+        "split": "challenge",
+        "expected": "Ih",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 2000.2252999693155,
+        "error": "TimeoutError: Molecule evaluation exceeded per-molecule timeout (5.0s)"
+      },
+      {
+        "name": "C6CrH6_C6v.xyz",
+        "split": "challenge",
+        "expected": "C6v",
+        "predicted": "I",
+        "normalized_predicted": "I",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 17.69064599648118,
+        "error": null
+      },
+      {
+        "name": "C6H12_D3d.xyz",
+        "split": "challenge",
+        "expected": "D3d",
+        "predicted": "D3d",
+        "normalized_predicted": "D3d",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 22.51563302706927,
+        "error": null
+      },
+      {
+        "name": "C6H6P_C6.xyz",
+        "split": "challenge",
+        "expected": "C6",
+        "predicted": "I",
+        "normalized_predicted": "I",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 17.790146986953914,
+        "error": null
+      },
+      {
+        "name": "C6H6_S6.xyz",
+        "split": "challenge",
+        "expected": "S6",
+        "predicted": "S6",
+        "normalized_predicted": "S6",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 10.701271938160062,
+        "error": null
+      },
+      {
+        "name": "C6O6_C6h.xyz",
+        "split": "challenge",
+        "expected": "C6h",
+        "predicted": "Ih",
+        "normalized_predicted": "Ih",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 6.241703988052905,
+        "error": null
+      },
+      {
+        "name": "C8H8_D4.xyz",
+        "split": "challenge",
+        "expected": "D4",
+        "predicted": "D4",
+        "normalized_predicted": "D4",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 32.96244388911873,
+        "error": null
+      },
+      {
+        "name": "C8H8_S8.xyz",
+        "split": "challenge",
+        "expected": "S8",
+        "predicted": "S8",
+        "normalized_predicted": "S8",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 46.284231008030474,
+        "error": null
+      },
+      {
+        "name": "C9CrH6O3_C3v.xyz",
+        "split": "challenge",
+        "expected": "C3v",
+        "predicted": "C3v",
+        "normalized_predicted": "C3v",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 42.551500955596566,
+        "error": null
+      },
+      {
+        "name": "COS_Cinfv.xyz",
+        "split": "challenge",
+        "expected": "Cinfv",
+        "predicted": "Cinfv",
+        "normalized_predicted": "Cinfv",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.24825206492096186,
+        "error": null
+      },
+      {
+        "name": "Cl2OS_Cs.xyz",
+        "split": "challenge",
+        "expected": "Cs",
+        "predicted": "Cs",
+        "normalized_predicted": "Cs",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 1.104630995541811,
+        "error": null
+      },
+      {
+        "name": "Cl3MoN3_C2v.xyz",
+        "split": "challenge",
+        "expected": "C2v",
+        "predicted": "C2v",
+        "normalized_predicted": "C2v",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 2.0884289406239986,
+        "error": null
+      },
+      {
+        "name": "Cl3MoN3_C3v.xyz",
+        "split": "challenge",
+        "expected": "C3v",
+        "predicted": "C3v",
+        "normalized_predicted": "C3v",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 1.9960540812462568,
+        "error": null
+      },
+      {
+        "name": "CoN6O12_Th.xyz",
+        "split": "challenge",
+        "expected": "Th",
+        "predicted": "Th",
+        "normalized_predicted": "Th",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 44.52084505464882,
+        "error": null
+      },
+      {
+        "name": "F4S_C2v.xyz",
+        "split": "challenge",
+        "expected": "C2v",
+        "predicted": "C2v",
+        "normalized_predicted": "C2v",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 1.4209250221028924,
+        "error": null
+      },
+      {
+        "name": "F7I_D5h.xyz",
+        "split": "challenge",
+        "expected": "D5h",
+        "predicted": "I",
+        "normalized_predicted": "I",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 3.047727048397064,
+        "error": null
+      },
+      {
+        "name": "F8Zr_D4d.xyz",
+        "split": "challenge",
+        "expected": "D4d",
+        "predicted": "D4d",
+        "normalized_predicted": "D4d",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 15.914553077891469,
+        "error": null
+      },
+      {
+        "name": "Fe4S4_Td.xyz",
+        "split": "challenge",
+        "expected": "Td",
+        "predicted": "Td",
+        "normalized_predicted": "Td",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 3.4730200422927737,
+        "error": null
+      },
+      {
+        "name": "H24N6Ni_O.xyz",
+        "split": "challenge",
+        "expected": "O",
+        "predicted": "O",
+        "normalized_predicted": "O",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 389.5925070391968,
+        "error": null
+      },
+      {
+        "name": "H3_Cinfv.xyz",
+        "split": "challenge",
+        "expected": "Cinfv",
+        "predicted": "Cinfv",
+        "normalized_predicted": "Cinfv",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.25679299142211676,
+        "error": null
+      },
+      {
+        "name": "H3_D3h.xyz",
+        "split": "challenge",
+        "expected": "D3h",
+        "predicted": "D3h",
+        "normalized_predicted": "D3h",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.8033380145207047,
+        "error": null
+      },
+      {
+        "name": "I3_Dinfh.xyz",
+        "split": "challenge",
+        "expected": "Dinfh",
+        "predicted": "Dinfh",
+        "normalized_predicted": "Dinfh",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.08641695603728294,
+        "error": null
+      },
+      {
+        "name": "N2_Dinfh.xyz",
+        "split": "challenge",
+        "expected": "Dinfh",
+        "predicted": "Dinfh",
+        "normalized_predicted": "Dinfh",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.0668760621920228,
+        "error": null
+      },
+      {
+        "name": "Na8_Oh.xyz",
+        "split": "challenge",
+        "expected": "Oh",
+        "predicted": "Oh",
+        "normalized_predicted": "Oh",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 5.001862999051809,
+        "error": null
+      },
+      {
+        "name": "S8_D4d.xyz",
+        "split": "challenge",
+        "expected": "D4d",
+        "predicted": "D4d",
+        "normalized_predicted": "D4d",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 11.696111061610281,
+        "error": null
+      },
+      {
+        "name": "Ar_Kh.xyz",
+        "split": "rotated_permuted",
+        "expected": "Kh",
+        "predicted": "Kh",
+        "normalized_predicted": "Kh",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.14537607785314322,
+        "error": null
+      },
+      {
+        "name": "B12H12_Ih.xyz",
+        "split": "rotated_permuted",
+        "expected": "Ih",
+        "predicted": "Ih",
+        "normalized_predicted": "Ih",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 50.89721700642258,
+        "error": null
+      },
+      {
+        "name": "BF3_D3h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D3h",
+        "predicted": "D3h",
+        "normalized_predicted": "D3h",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 1.5909679932519794,
+        "error": null
+      },
+      {
+        "name": "BrCClFH_C1.xyz",
+        "split": "rotated_permuted",
+        "expected": "C1",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 1.2827570317313075,
+        "error": null
+      },
+      {
+        "name": "BrF5_C4v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C4v",
+        "predicted": "C4v",
+        "normalized_predicted": "C4v",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 2.2745130117982626,
+        "error": null
+      },
+      {
+        "name": "C10FeH10_D5h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D5h",
+        "predicted": "I",
+        "normalized_predicted": "I",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 89.40273604821414,
+        "error": null
+      },
+      {
+        "name": "C10H8_D2h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D2h",
+        "predicted": "D2h",
+        "normalized_predicted": "D2h",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 10.43251994997263,
+        "error": null
+      },
+      {
+        "name": "C2Cl2F2H2_Ci.xyz",
+        "split": "rotated_permuted",
+        "expected": "Ci",
+        "predicted": "Ci",
+        "normalized_predicted": "Ci",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 2.8157669585198164,
+        "error": null
+      },
+      {
+        "name": "C2Cl2H2_C2h.xyz",
+        "split": "rotated_permuted",
+        "expected": "C2h",
+        "predicted": "C2h",
+        "normalized_predicted": "C2h",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 1.4453839976340532,
+        "error": null
+      },
+      {
+        "name": "C2H2_Dinfh.xyz",
+        "split": "rotated_permuted",
+        "expected": "Dinfh",
+        "predicted": "Dinfh",
+        "normalized_predicted": "Dinfh",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.12233399320393801,
+        "error": null
+      },
+      {
+        "name": "C2H4_D2h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D2h",
+        "predicted": "D2h",
+        "normalized_predicted": "D2h",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 1.589051098562777,
+        "error": null
+      },
+      {
+        "name": "C2H6_D3d.xyz",
+        "split": "rotated_permuted",
+        "expected": "D3d",
+        "predicted": "D3d",
+        "normalized_predicted": "D3d",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 4.36302600428462,
+        "error": null
+      },
+      {
+        "name": "C2H6_D3h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D3h",
+        "predicted": "D3h",
+        "normalized_predicted": "D3h",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 6.15207792725414,
+        "error": null
+      },
+      {
+        "name": "C3H3P_C3.xyz",
+        "split": "rotated_permuted",
+        "expected": "C3",
+        "predicted": "C3",
+        "normalized_predicted": "C3",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 3.993941005319357,
+        "error": null
+      },
+      {
+        "name": "C3H4_D2d.xyz",
+        "split": "rotated_permuted",
+        "expected": "D2d",
+        "predicted": "D2d",
+        "normalized_predicted": "D2d",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 3.3161028986796737,
+        "error": null
+      },
+      {
+        "name": "C4H6_C2h.xyz",
+        "split": "rotated_permuted",
+        "expected": "C2h",
+        "predicted": "C2h",
+        "normalized_predicted": "C2h",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 3.449228941462934,
+        "error": null
+      },
+      {
+        "name": "C6H6_D6h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D6h",
+        "predicted": "Ih",
+        "normalized_predicted": "Ih",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 7.97958904877305,
+        "error": null
+      },
+      {
+        "name": "C8H8_Oh.xyz",
+        "split": "rotated_permuted",
+        "expected": "Oh",
+        "predicted": "Oh",
+        "normalized_predicted": "Oh",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 22.887260071001947,
+        "error": null
+      },
+      {
+        "name": "CCl2H2_C2v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C2v",
+        "predicted": "C2v",
+        "normalized_predicted": "C2v",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 3.681439091451466,
+        "error": null
+      },
+      {
+        "name": "CCl3H_C3v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C3v",
+        "predicted": "C3v",
+        "normalized_predicted": "C3v",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 4.159983014687896,
+        "error": null
+      },
+      {
+        "name": "CClFH2_Cs.xyz",
+        "split": "rotated_permuted",
+        "expected": "Cs",
+        "predicted": "Cs",
+        "normalized_predicted": "Cs",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 2.9508090810850263,
+        "error": null
+      },
+      {
+        "name": "CH4_Td.xyz",
+        "split": "rotated_permuted",
+        "expected": "Td",
+        "predicted": "Td",
+        "normalized_predicted": "Td",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 2.3874719627201557,
+        "error": null
+      },
+      {
+        "name": "CHN_Cinfv.xyz",
+        "split": "rotated_permuted",
+        "expected": "Cinfv",
+        "predicted": "Cinfv",
+        "normalized_predicted": "Cinfv",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.1440010964870453,
+        "error": null
+      },
+      {
+        "name": "CO2_Dinfh.xyz",
+        "split": "rotated_permuted",
+        "expected": "Dinfh",
+        "predicted": "Dinfh",
+        "normalized_predicted": "Dinfh",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.10516692418605089,
+        "error": null
+      },
+      {
+        "name": "CO_Cinfv.xyz",
+        "split": "rotated_permuted",
+        "expected": "Cinfv",
+        "predicted": "Cinfv",
+        "normalized_predicted": "Cinfv",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.06304203998297453,
+        "error": null
+      },
+      {
+        "name": "Cl5P_D3h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D3h",
+        "predicted": "D3h",
+        "normalized_predicted": "D3h",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 1.7482179682701826,
+        "error": null
+      },
+      {
+        "name": "ClHO_Cs.xyz",
+        "split": "rotated_permuted",
+        "expected": "Cs",
+        "predicted": "Cs",
+        "normalized_predicted": "Cs",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.4777939757332206,
+        "error": null
+      },
+      {
+        "name": "ClH_Cinfv.xyz",
+        "split": "rotated_permuted",
+        "expected": "Cinfv",
+        "predicted": "Cinfv",
+        "normalized_predicted": "Cinfv",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.30166900251060724,
+        "error": null
+      },
+      {
+        "name": "F4Xe_D4h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D4h",
+        "predicted": "D4h",
+        "normalized_predicted": "D4h",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 1.7946349689736962,
+        "error": null
+      },
+      {
+        "name": "F6S_Oh.xyz",
+        "split": "rotated_permuted",
+        "expected": "Oh",
+        "predicted": "Oh",
+        "normalized_predicted": "Oh",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 4.399233963340521,
+        "error": null
+      },
+      {
+        "name": "H2O2_C2.xyz",
+        "split": "rotated_permuted",
+        "expected": "C2",
+        "predicted": "C2",
+        "normalized_predicted": "C2",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 1.2502570170909166,
+        "error": null
+      },
+      {
+        "name": "H2O_C2v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C2v",
+        "predicted": "C2v",
+        "normalized_predicted": "C2v",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.5430040182545781,
+        "error": null
+      },
+      {
+        "name": "H2_Dinfh.xyz",
+        "split": "rotated_permuted",
+        "expected": "Dinfh",
+        "predicted": "Dinfh",
+        "normalized_predicted": "Dinfh",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.1033339649438858,
+        "error": null
+      },
+      {
+        "name": "H3N_C3v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C3v",
+        "predicted": "C3v",
+        "normalized_predicted": "C3v",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 1.6618430381640792,
+        "error": null
+      },
+      {
+        "name": "O3_C2v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C2v",
+        "predicted": "C2v",
+        "normalized_predicted": "C2v",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.6545039359480143,
+        "error": null
+      },
+      {
+        "name": "P4_Td.xyz",
+        "split": "rotated_permuted",
+        "expected": "Td",
+        "predicted": "Td",
+        "normalized_predicted": "Td",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 2.3718889569863677,
+        "error": null
+      },
+      {
+        "name": "B12H60_I.xyz",
+        "split": "rotated_permuted",
+        "expected": "I",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 2000.470258994028,
+        "error": "TimeoutError: Molecule evaluation exceeded per-molecule timeout (5.0s)"
+      },
+      {
+        "name": "B2H6_D2h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D2h",
+        "predicted": "D2h",
+        "normalized_predicted": "D2h",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 2.9003919335082173,
+        "error": null
+      },
+      {
+        "name": "BH3O3_C3h.xyz",
+        "split": "rotated_permuted",
+        "expected": "C3h",
+        "predicted": "C3h",
+        "normalized_predicted": "C3h",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 2.2350139915943146,
+        "error": null
+      },
+      {
+        "name": "C10FeH10_D5.xyz",
+        "split": "rotated_permuted",
+        "expected": "D5",
+        "predicted": "I",
+        "normalized_predicted": "I",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 90.76457703486085,
+        "error": null
+      },
+      {
+        "name": "C10FeH10_D5d.xyz",
+        "split": "rotated_permuted",
+        "expected": "D5d",
+        "predicted": "Ih",
+        "normalized_predicted": "Ih",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 46.24852305278182,
+        "error": null
+      },
+      {
+        "name": "C10H16_Td.xyz",
+        "split": "rotated_permuted",
+        "expected": "Td",
+        "predicted": "Td",
+        "normalized_predicted": "Td",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 114.94159500580281,
+        "error": null
+      },
+      {
+        "name": "C12CrH12_D6.xyz",
+        "split": "rotated_permuted",
+        "expected": "D6",
+        "predicted": "I",
+        "normalized_predicted": "I",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 188.2703190203756,
+        "error": null
+      },
+      {
+        "name": "C12CrH12_D6d.xyz",
+        "split": "rotated_permuted",
+        "expected": "D6d",
+        "predicted": "I",
+        "normalized_predicted": "I",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 163.8718000613153,
+        "error": null
+      },
+      {
+        "name": "C12CrH12_D6h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D6h",
+        "predicted": "Ih",
+        "normalized_predicted": "Ih",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 74.8848170042038,
+        "error": null
+      },
+      {
+        "name": "C16H16U_D8d.xyz",
+        "split": "rotated_permuted",
+        "expected": "D8d",
+        "predicted": "I",
+        "normalized_predicted": "I",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 481.3561730552465,
+        "error": null
+      },
+      {
+        "name": "C16H16U_D8h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D8h",
+        "predicted": "Ih",
+        "normalized_predicted": "Ih",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 180.27764605358243,
+        "error": null
+      },
+      {
+        "name": "C20H20_Ih.xyz",
+        "split": "rotated_permuted",
+        "expected": "Ih",
+        "predicted": "Ih",
+        "normalized_predicted": "Ih",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 260.40303602349013,
+        "error": null
+      },
+      {
+        "name": "C2Cl2H2_C2v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C2v",
+        "predicted": "C2v",
+        "normalized_predicted": "C2v",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 1.5743420226499438,
+        "error": null
+      },
+      {
+        "name": "C2H2NO_C1.xyz",
+        "split": "rotated_permuted",
+        "expected": "C1",
+        "predicted": "C1",
+        "normalized_predicted": "C1",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 2.0566779421642423,
+        "error": null
+      },
+      {
+        "name": "C2H2O2_D2h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D2h",
+        "predicted": "D2h",
+        "normalized_predicted": "D2h",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 1.297550043091178,
+        "error": null
+      },
+      {
+        "name": "C2H2_D2h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D2h",
+        "predicted": "D2h",
+        "normalized_predicted": "D2h",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.9422139264643192,
+        "error": null
+      },
+      {
+        "name": "C2H4_D2.xyz",
+        "split": "rotated_permuted",
+        "expected": "D2",
+        "predicted": "D2",
+        "normalized_predicted": "D2",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 2.2124709794297814,
+        "error": null
+      },
+      {
+        "name": "C2H6_D3.xyz",
+        "split": "rotated_permuted",
+        "expected": "D3",
+        "predicted": "D3",
+        "normalized_predicted": "D3",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 6.063453038223088,
+        "error": null
+      },
+      {
+        "name": "C3H6_D3h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D3h",
+        "predicted": "D3h",
+        "normalized_predicted": "D3h",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 7.015625014901161,
+        "error": null
+      },
+      {
+        "name": "C4H4P_C4.xyz",
+        "split": "rotated_permuted",
+        "expected": "C4",
+        "predicted": "C4",
+        "normalized_predicted": "C4",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 6.668830988928676,
+        "error": null
+      },
+      {
+        "name": "C4H4Si_S4.xyz",
+        "split": "rotated_permuted",
+        "expected": "S4",
+        "predicted": "S4",
+        "normalized_predicted": "S4",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 6.477413000538945,
+        "error": null
+      },
+      {
+        "name": "C4H4_D4h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D4h",
+        "predicted": "D4h",
+        "normalized_predicted": "D4h",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 2.7016409439966083,
+        "error": null
+      },
+      {
+        "name": "C4H8_D4h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D4h",
+        "predicted": "D4h",
+        "normalized_predicted": "D4h",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 8.923885994590819,
+        "error": null
+      },
+      {
+        "name": "C4N4Pt_C4h.xyz",
+        "split": "rotated_permuted",
+        "expected": "C4h",
+        "predicted": "C4h",
+        "normalized_predicted": "C4h",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 4.222150077112019,
+        "error": null
+      },
+      {
+        "name": "C5H12_T.xyz",
+        "split": "rotated_permuted",
+        "expected": "T",
+        "predicted": "T",
+        "normalized_predicted": "T",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 57.1261290460825,
+        "error": null
+      },
+      {
+        "name": "C5H12_Td.xyz",
+        "split": "rotated_permuted",
+        "expected": "Td",
+        "predicted": "Td",
+        "normalized_predicted": "Td",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 63.01128794439137,
+        "error": null
+      },
+      {
+        "name": "C5H5NNiO_C5v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C5v",
+        "predicted": "I",
+        "normalized_predicted": "I",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 15.070297988131642,
+        "error": null
+      },
+      {
+        "name": "C5H5P_C5.xyz",
+        "split": "rotated_permuted",
+        "expected": "C5",
+        "predicted": "I",
+        "normalized_predicted": "I",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 12.261739000678062,
+        "error": null
+      },
+      {
+        "name": "C5H5_C5h.xyz",
+        "split": "rotated_permuted",
+        "expected": "C5h",
+        "predicted": "I",
+        "normalized_predicted": "I",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 7.419627043418586,
+        "error": null
+      },
+      {
+        "name": "C5H5_D5h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D5h",
+        "predicted": "I",
+        "normalized_predicted": "I",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 6.032368983142078,
+        "error": null
+      },
+      {
+        "name": "C60_Ih.xyz",
+        "split": "rotated_permuted",
+        "expected": "Ih",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 2000.2319660270587,
+        "error": "TimeoutError: Molecule evaluation exceeded per-molecule timeout (5.0s)"
+      },
+      {
+        "name": "C6CrH6_C6v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C6v",
+        "predicted": "I",
+        "normalized_predicted": "I",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 17.43568608071655,
+        "error": null
+      },
+      {
+        "name": "C6H12_D3d.xyz",
+        "split": "rotated_permuted",
+        "expected": "D3d",
+        "predicted": "D3d",
+        "normalized_predicted": "D3d",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 26.425322983413935,
+        "error": null
+      },
+      {
+        "name": "C6H6P_C6.xyz",
+        "split": "rotated_permuted",
+        "expected": "C6",
+        "predicted": "I",
+        "normalized_predicted": "I",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 19.681783043779433,
+        "error": null
+      },
+      {
+        "name": "C6H6_S6.xyz",
+        "split": "rotated_permuted",
+        "expected": "S6",
+        "predicted": "S6",
+        "normalized_predicted": "S6",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 11.34731702040881,
+        "error": null
+      },
+      {
+        "name": "C6O6_C6h.xyz",
+        "split": "rotated_permuted",
+        "expected": "C6h",
+        "predicted": "Ih",
+        "normalized_predicted": "Ih",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 6.813373998738825,
+        "error": null
+      },
+      {
+        "name": "C8H8_D4.xyz",
+        "split": "rotated_permuted",
+        "expected": "D4",
+        "predicted": "D4",
+        "normalized_predicted": "D4",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 34.88520497921854,
+        "error": null
+      },
+      {
+        "name": "C8H8_S8.xyz",
+        "split": "rotated_permuted",
+        "expected": "S8",
+        "predicted": "S8",
+        "normalized_predicted": "S8",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 48.396536032669246,
+        "error": null
+      },
+      {
+        "name": "C9CrH6O3_C3v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C3v",
+        "predicted": "C3v",
+        "normalized_predicted": "C3v",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 42.288749013096094,
+        "error": null
+      },
+      {
+        "name": "COS_Cinfv.xyz",
+        "split": "rotated_permuted",
+        "expected": "Cinfv",
+        "predicted": "Cinfv",
+        "normalized_predicted": "Cinfv",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.14262599870562553,
+        "error": null
+      },
+      {
+        "name": "Cl2OS_Cs.xyz",
+        "split": "rotated_permuted",
+        "expected": "Cs",
+        "predicted": "Cs",
+        "normalized_predicted": "Cs",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 1.0320059955120087,
+        "error": null
+      },
+      {
+        "name": "Cl3MoN3_C2v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C2v",
+        "predicted": "C2v",
+        "normalized_predicted": "C2v",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 2.389181056059897,
+        "error": null
+      },
+      {
+        "name": "Cl3MoN3_C3v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C3v",
+        "predicted": "C3v",
+        "normalized_predicted": "C3v",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 2.221262897364795,
+        "error": null
+      },
+      {
+        "name": "CoN6O12_Th.xyz",
+        "split": "rotated_permuted",
+        "expected": "Th",
+        "predicted": "Th",
+        "normalized_predicted": "Th",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 48.63557906355709,
+        "error": null
+      },
+      {
+        "name": "F4S_C2v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C2v",
+        "predicted": "C2v",
+        "normalized_predicted": "C2v",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 3.8569819880649447,
+        "error": null
+      },
+      {
+        "name": "F7I_D5h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D5h",
+        "predicted": "I",
+        "normalized_predicted": "I",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 8.21921497117728,
+        "error": null
+      },
+      {
+        "name": "F8Zr_D4d.xyz",
+        "split": "rotated_permuted",
+        "expected": "D4d",
+        "predicted": "D4d",
+        "normalized_predicted": "D4d",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 20.772747113369405,
+        "error": null
+      },
+      {
+        "name": "Fe4S4_Td.xyz",
+        "split": "rotated_permuted",
+        "expected": "Td",
+        "predicted": "Td",
+        "normalized_predicted": "Td",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 3.762106061913073,
+        "error": null
+      },
+      {
+        "name": "H24N6Ni_O.xyz",
+        "split": "rotated_permuted",
+        "expected": "O",
+        "predicted": "O",
+        "normalized_predicted": "O",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 449.61090199649334,
+        "error": null
+      },
+      {
+        "name": "H3_Cinfv.xyz",
+        "split": "rotated_permuted",
+        "expected": "Cinfv",
+        "predicted": "Cinfv",
+        "normalized_predicted": "Cinfv",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.2332929288968444,
+        "error": null
+      },
+      {
+        "name": "H3_D3h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D3h",
+        "predicted": "D3h",
+        "normalized_predicted": "D3h",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.8277550805360079,
+        "error": null
+      },
+      {
+        "name": "I3_Dinfh.xyz",
+        "split": "rotated_permuted",
+        "expected": "Dinfh",
+        "predicted": "Dinfh",
+        "normalized_predicted": "Dinfh",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.09291805326938629,
+        "error": null
+      },
+      {
+        "name": "N2_Dinfh.xyz",
+        "split": "rotated_permuted",
+        "expected": "Dinfh",
+        "predicted": "Dinfh",
+        "normalized_predicted": "Dinfh",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 0.09054201655089855,
+        "error": null
+      },
+      {
+        "name": "Na8_Oh.xyz",
+        "split": "rotated_permuted",
+        "expected": "Oh",
+        "predicted": "Oh",
+        "normalized_predicted": "Oh",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 6.198787014000118,
+        "error": null
+      },
+      {
+        "name": "S8_D4d.xyz",
+        "split": "rotated_permuted",
+        "expected": "D4d",
+        "predicted": "D4d",
+        "normalized_predicted": "D4d",
+        "exact_match": true,
+        "normalized_match": true,
+        "elapsed_ms": 11.639026924967766,
+        "error": null
+      }
+    ]
+  }
+}

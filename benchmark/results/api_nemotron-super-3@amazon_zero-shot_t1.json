@@ -1,0 +1,3165 @@
+{
+  "metadata": {
+    "run_id": "api_nemotron-super-3@amazon_zero-shot_t1",
+    "runner_type": "api",
+    "harness": "llm-api (1-shot)",
+    "model": "nemotron-super-3@amazon",
+    "mode": "zero-shot",
+    "max_turns": 1,
+    "turns_used": 1,
+    "wall_time_s": 32.7490669459803,
+    "input_tokens": 1292,
+    "output_tokens": 4179,
+    "total_tokens": 5471,
+    "cost_usd": null,
+    "timestamp_utc": "2026-10-22T06:27:27.094576+00:00",
+    "workdir": null,
+    "exit_code": 0,
+    "notes": ""
+  },
+  "evaluation": {
+    "target": "/tmp/pgmol_bench_api_nemotron-super-3@amazon_zero-shot_t1_31rfi_qj",
+    "core": {
+      "split": "core",
+      "total": 36,
+      "exact_correct": 0,
+      "normalized_correct": 0,
+      "exact_accuracy": 0.0,
+      "normalized_accuracy": 0.0,
+      "avg_ms": 0.08587900406887962,
+      "p95_ms": 0.08542777504771948,
+      "total_s": 0.0030916441464796662,
+      "failures": [
+        {
+          "name": "Ar_Kh.xyz",
+          "expected": "Kh",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0001\n"
+        },
+        {
+          "name": "B12H12_Ih.xyz",
+          "expected": "Ih",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0002\n"
+        },
+        {
+          "name": "BF3_D3h.xyz",
+          "expected": "D3h",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0003\n"
+        },
+        {
+          "name": "BrCClFH_C1.xyz",
+          "expected": "C1",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0004\n"
+        },
+        {
+          "name": "BrF5_C4v.xyz",
+          "expected": "C4v",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0005\n"
+        },
+        {
+          "name": "C10FeH10_D5h.xyz",
+          "expected": "D5h",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0006\n"
+        },
+        {
+          "name": "C10H8_D2h.xyz",
+          "expected": "D2h",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0007\n"
+        },
+        {
+          "name": "C2Cl2F2H2_Ci.xyz",
+          "expected": "Ci",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0008\n"
+        },
+        {
+          "name": "C2Cl2H2_C2h.xyz",
+          "expected": "C2h",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0009\n"
+        },
+        {
+          "name": "C2H2_Dinfh.xyz",
+          "expected": "Dinfh",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0010\n"
+        },
+        {
+          "name": "C2H4_D2h.xyz",
+          "expected": "D2h",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0011\n"
+        },
+        {
+          "name": "C2H6_D3d.xyz",
+          "expected": "D3d",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0012\n"
+        },
+        {
+          "name": "C2H6_D3h.xyz",
+          "expected": "D3h",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0013\n"
+        },
+        {
+          "name": "C3H3P_C3.xyz",
+          "expected": "C3",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0014\n"
+        },
+        {
+          "name": "C3H4_D2d.xyz",
+          "expected": "D2d",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0015\n"
+        },
+        {
+          "name": "C4H6_C2h.xyz",
+          "expected": "C2h",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0016\n"
+        },
+        {
+          "name": "C6H6_D6h.xyz",
+          "expected": "D6h",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0017\n"
+        },
+        {
+          "name": "C8H8_Oh.xyz",
+          "expected": "Oh",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0018\n"
+        },
+        {
+          "name": "CCl2H2_C2v.xyz",
+          "expected": "C2v",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0019\n"
+        },
+        {
+          "name": "CCl3H_C3v.xyz",
+          "expected": "C3v",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0020\n"
+        },
+        {
+          "name": "CClFH2_Cs.xyz",
+          "expected": "Cs",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0021\n"
+        },
+        {
+          "name": "CH4_Td.xyz",
+          "expected": "Td",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0022\n"
+        },
+        {
+          "name": "CHN_Cinfv.xyz",
+          "expected": "Cinfv",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0023\n"
+        },
+        {
+          "name": "CO2_Dinfh.xyz",
+          "expected": "Dinfh",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0024\n"
+        },
+        {
+          "name": "CO_Cinfv.xyz",
+          "expected": "Cinfv",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0025\n"
+        },
+        {
+          "name": "Cl5P_D3h.xyz",
+          "expected": "D3h",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0026\n"
+        },
+        {
+          "name": "ClHO_Cs.xyz",
+          "expected": "Cs",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0027\n"
+        },
+        {
+          "name": "ClH_Cinfv.xyz",
+          "expected": "Cinfv",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0028\n"
+        },
+        {
+          "name": "F4Xe_D4h.xyz",
+          "expected": "D4h",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0029\n"
+        },
+        {
+          "name": "F6S_Oh.xyz",
+          "expected": "Oh",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0030\n"
+        },
+        {
+          "name": "H2O2_C2.xyz",
+          "expected": "C2",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0031\n"
+        },
+        {
+          "name": "H2O_C2v.xyz",
+          "expected": "C2v",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0032\n"
+        },
+        {
+          "name": "H2_Dinfh.xyz",
+          "expected": "Dinfh",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0033\n"
+        },
+        {
+          "name": "H3N_C3v.xyz",
+          "expected": "C3v",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0034\n"
+        },
+        {
+          "name": "O3_C2v.xyz",
+          "expected": "C2v",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0035\n"
+        },
+        {
+          "name": "P4_Td.xyz",
+          "expected": "Td",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0036\n"
+        }
+      ]
+    },
+    "challenge": {
+      "split": "challenge",
+      "total": 55,
+      "exact_correct": 0,
+      "normalized_correct": 0,
+      "exact_accuracy": 0.0,
+      "normalized_accuracy": 0.0,
+      "avg_ms": 0.03830107267607342,
+      "p95_ms": 0.04461711505427956,
+      "total_s": 0.002106558997184038,
+      "failures": [
+        {
+          "name": "B12H60_I.xyz",
+          "expected": "I",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0037\n"
+        },
+        {
+          "name": "B2H6_D2h.xyz",
+          "expected": "D2h",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0038\n"
+        },
+        {
+          "name": "BH3O3_C3h.xyz",
+          "expected": "C3h",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0039\n"
+        },
+        {
+          "name": "C10FeH10_D5.xyz",
+          "expected": "D5",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0040\n"
+        },
+        {
+          "name": "C10FeH10_D5d.xyz",
+          "expected": "D5d",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0041\n"
+        },
+        {
+          "name": "C10H16_Td.xyz",
+          "expected": "Td",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0042\n"
+        },
+        {
+          "name": "C12CrH12_D6.xyz",
+          "expected": "D6",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0043\n"
+        },
+        {
+          "name": "C12CrH12_D6d.xyz",
+          "expected": "D6d",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0044\n"
+        },
+        {
+          "name": "C12CrH12_D6h.xyz",
+          "expected": "D6h",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0045\n"
+        },
+        {
+          "name": "C16H16U_D8d.xyz",
+          "expected": "D8d",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0046\n"
+        },
+        {
+          "name": "C16H16U_D8h.xyz",
+          "expected": "D8h",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0047\n"
+        },
+        {
+          "name": "C20H20_Ih.xyz",
+          "expected": "Ih",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0048\n"
+        },
+        {
+          "name": "C2Cl2H2_C2v.xyz",
+          "expected": "C2v",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0049\n"
+        },
+        {
+          "name": "C2H2NO_C1.xyz",
+          "expected": "C1",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0050\n"
+        },
+        {
+          "name": "C2H2O2_D2h.xyz",
+          "expected": "D2h",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0051\n"
+        },
+        {
+          "name": "C2H2_D2h.xyz",
+          "expected": "D2h",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0052\n"
+        },
+        {
+          "name": "C2H4_D2.xyz",
+          "expected": "D2",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0053\n"
+        },
+        {
+          "name": "C2H6_D3.xyz",
+          "expected": "D3",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0054\n"
+        },
+        {
+          "name": "C3H6_D3h.xyz",
+          "expected": "D3h",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0055\n"
+        },
+        {
+          "name": "C4H4P_C4.xyz",
+          "expected": "C4",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0056\n"
+        },
+        {
+          "name": "C4H4Si_S4.xyz",
+          "expected": "S4",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0057\n"
+        },
+        {
+          "name": "C4H4_D4h.xyz",
+          "expected": "D4h",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0058\n"
+        },
+        {
+          "name": "C4H8_D4h.xyz",
+          "expected": "D4h",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0059\n"
+        },
+        {
+          "name": "C4N4Pt_C4h.xyz",
+          "expected": "C4h",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0060\n"
+        },
+        {
+          "name": "C5H12_T.xyz",
+          "expected": "T",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0061\n"
+        },
+        {
+          "name": "C5H12_Td.xyz",
+          "expected": "Td",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0062\n"
+        },
+        {
+          "name": "C5H5NNiO_C5v.xyz",
+          "expected": "C5v",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0063\n"
+        },
+        {
+          "name": "C5H5P_C5.xyz",
+          "expected": "C5",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0064\n"
+        },
+        {
+          "name": "C5H5_C5h.xyz",
+          "expected": "C5h",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0065\n"
+        },
+        {
+          "name": "C5H5_D5h.xyz",
+          "expected": "D5h",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0066\n"
+        },
+        {
+          "name": "C60_Ih.xyz",
+          "expected": "Ih",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0067\n"
+        },
+        {
+          "name": "C6CrH6_C6v.xyz",
+          "expected": "C6v",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0068\n"
+        },
+        {
+          "name": "C6H12_D3d.xyz",
+          "expected": "D3d",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0069\n"
+        },
+        {
+          "name": "C6H6P_C6.xyz",
+          "expected": "C6",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0070\n"
+        },
+        {
+          "name": "C6H6_S6.xyz",
+          "expected": "S6",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0071\n"
+        },
+        {
+          "name": "C6O6_C6h.xyz",
+          "expected": "C6h",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0072\n"
+        },
+        {
+          "name": "C8H8_D4.xyz",
+          "expected": "D4",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0073\n"
+        },
+        {
+          "name": "C8H8_S8.xyz",
+          "expected": "S8",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0074\n"
+        },
+        {
+          "name": "C9CrH6O3_C3v.xyz",
+          "expected": "C3v",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0075\n"
+        },
+        {
+          "name": "COS_Cinfv.xyz",
+          "expected": "Cinfv",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0076\n"
+        },
+        {
+          "name": "Cl2OS_Cs.xyz",
+          "expected": "Cs",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0077\n"
+        },
+        {
+          "name": "Cl3MoN3_C2v.xyz",
+          "expected": "C2v",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0078\n"
+        },
+        {
+          "name": "Cl3MoN3_C3v.xyz",
+          "expected": "C3v",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0079\n"
+        },
+        {
+          "name": "CoN6O12_Th.xyz",
+          "expected": "Th",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0080\n"
+        },
+        {
+          "name": "F4S_C2v.xyz",
+          "expected": "C2v",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0081\n"
+        },
+        {
+          "name": "F7I_D5h.xyz",
+          "expected": "D5h",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0082\n"
+        },
+        {
+          "name": "F8Zr_D4d.xyz",
+          "expected": "D4d",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0083\n"
+        },
+        {
+          "name": "Fe4S4_Td.xyz",
+          "expected": "Td",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0084\n"
+        },
+        {
+          "name": "H24N6Ni_O.xyz",
+          "expected": "O",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0085\n"
+        },
+        {
+          "name": "H3_Cinfv.xyz",
+          "expected": "Cinfv",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0086\n"
+        },
+        {
+          "name": "H3_D3h.xyz",
+          "expected": "D3h",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0087\n"
+        },
+        {
+          "name": "I3_Dinfh.xyz",
+          "expected": "Dinfh",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0088\n"
+        },
+        {
+          "name": "N2_Dinfh.xyz",
+          "expected": "Dinfh",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0089\n"
+        },
+        {
+          "name": "Na8_Oh.xyz",
+          "expected": "Oh",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0090\n"
+        },
+        {
+          "name": "S8_D4d.xyz",
+          "expected": "D4d",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: molecule_0091\n"
+        }
+      ]
+    },
+    "rotated_permuted": {
+      "split": "rotated_permuted",
+      "total": 91,
+      "exact_correct": 0,
+      "normalized_correct": 0,
+      "exact_accuracy": 0.0,
+      "normalized_accuracy": 0.0,
+      "avg_ms": 0.07513511649609267,
+      "p95_ms": 0.05120900459587574,
+      "total_s": 0.006837295601144433,
+      "failures": [
+        {
+          "name": "Ar_Kh.xyz",
+          "expected": "Kh",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "B12H12_Ih.xyz",
+          "expected": "Ih",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "BF3_D3h.xyz",
+          "expected": "D3h",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "BrCClFH_C1.xyz",
+          "expected": "C1",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "BrF5_C4v.xyz",
+          "expected": "C4v",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "C10FeH10_D5h.xyz",
+          "expected": "D5h",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "C10H8_D2h.xyz",
+          "expected": "D2h",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "C2Cl2F2H2_Ci.xyz",
+          "expected": "Ci",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "C2Cl2H2_C2h.xyz",
+          "expected": "C2h",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "C2H2_Dinfh.xyz",
+          "expected": "Dinfh",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "C2H4_D2h.xyz",
+          "expected": "D2h",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "C2H6_D3d.xyz",
+          "expected": "D3d",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "C2H6_D3h.xyz",
+          "expected": "D3h",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "C3H3P_C3.xyz",
+          "expected": "C3",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "C3H4_D2d.xyz",
+          "expected": "D2d",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "C4H6_C2h.xyz",
+          "expected": "C2h",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "C6H6_D6h.xyz",
+          "expected": "D6h",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "C8H8_Oh.xyz",
+          "expected": "Oh",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "CCl2H2_C2v.xyz",
+          "expected": "C2v",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "CCl3H_C3v.xyz",
+          "expected": "C3v",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "CClFH2_Cs.xyz",
+          "expected": "Cs",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "CH4_Td.xyz",
+          "expected": "Td",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "CHN_Cinfv.xyz",
+          "expected": "Cinfv",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "CO2_Dinfh.xyz",
+          "expected": "Dinfh",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "CO_Cinfv.xyz",
+          "expected": "Cinfv",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "Cl5P_D3h.xyz",
+          "expected": "D3h",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "ClHO_Cs.xyz",
+          "expected": "Cs",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "ClH_Cinfv.xyz",
+          "expected": "Cinfv",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "F4Xe_D4h.xyz",
+          "expected": "D4h",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "F6S_Oh.xyz",
+          "expected": "Oh",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "H2O2_C2.xyz",
+          "expected": "C2",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "H2O_C2v.xyz",
+          "expected": "C2v",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "H2_Dinfh.xyz",
+          "expected": "Dinfh",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "H3N_C3v.xyz",
+          "expected": "C3v",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "O3_C2v.xyz",
+          "expected": "C2v",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "P4_Td.xyz",
+          "expected": "Td",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "B12H60_I.xyz",
+          "expected": "I",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "B2H6_D2h.xyz",
+          "expected": "D2h",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "BH3O3_C3h.xyz",
+          "expected": "C3h",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "C10FeH10_D5.xyz",
+          "expected": "D5",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "C10FeH10_D5d.xyz",
+          "expected": "D5d",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "C10H16_Td.xyz",
+          "expected": "Td",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "C12CrH12_D6.xyz",
+          "expected": "D6",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "C12CrH12_D6d.xyz",
+          "expected": "D6d",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "C12CrH12_D6h.xyz",
+          "expected": "D6h",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "C16H16U_D8d.xyz",
+          "expected": "D8d",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "C16H16U_D8h.xyz",
+          "expected": "D8h",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "C20H20_Ih.xyz",
+          "expected": "Ih",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "C2Cl2H2_C2v.xyz",
+          "expected": "C2v",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "C2H2NO_C1.xyz",
+          "expected": "C1",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "C2H2O2_D2h.xyz",
+          "expected": "D2h",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "C2H2_D2h.xyz",
+          "expected": "D2h",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "C2H4_D2.xyz",
+          "expected": "D2",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "C2H6_D3.xyz",
+          "expected": "D3",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "C3H6_D3h.xyz",
+          "expected": "D3h",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "C4H4P_C4.xyz",
+          "expected": "C4",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "C4H4Si_S4.xyz",
+          "expected": "S4",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "C4H4_D4h.xyz",
+          "expected": "D4h",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "C4H8_D4h.xyz",
+          "expected": "D4h",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "C4N4Pt_C4h.xyz",
+          "expected": "C4h",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "C5H12_T.xyz",
+          "expected": "T",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "C5H12_Td.xyz",
+          "expected": "Td",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "C5H5NNiO_C5v.xyz",
+          "expected": "C5v",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "C5H5P_C5.xyz",
+          "expected": "C5",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "C5H5_C5h.xyz",
+          "expected": "C5h",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "C5H5_D5h.xyz",
+          "expected": "D5h",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "C60_Ih.xyz",
+          "expected": "Ih",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "C6CrH6_C6v.xyz",
+          "expected": "C6v",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "C6H12_D3d.xyz",
+          "expected": "D3d",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "C6H6P_C6.xyz",
+          "expected": "C6",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "C6H6_S6.xyz",
+          "expected": "S6",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "C6O6_C6h.xyz",
+          "expected": "C6h",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "C8H8_D4.xyz",
+          "expected": "D4",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "C8H8_S8.xyz",
+          "expected": "S8",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "C9CrH6O3_C3v.xyz",
+          "expected": "C3v",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "COS_Cinfv.xyz",
+          "expected": "Cinfv",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "Cl2OS_Cs.xyz",
+          "expected": "Cs",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "Cl3MoN3_C2v.xyz",
+          "expected": "C2v",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "Cl3MoN3_C3v.xyz",
+          "expected": "C3v",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "CoN6O12_Th.xyz",
+          "expected": "Th",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "F4S_C2v.xyz",
+          "expected": "C2v",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "F7I_D5h.xyz",
+          "expected": "D5h",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "F8Zr_D4d.xyz",
+          "expected": "D4d",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "Fe4S4_Td.xyz",
+          "expected": "Td",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "H24N6Ni_O.xyz",
+          "expected": "O",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "H3_Cinfv.xyz",
+          "expected": "Cinfv",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "H3_D3h.xyz",
+          "expected": "D3h",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "I3_Dinfh.xyz",
+          "expected": "Dinfh",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "N2_Dinfh.xyz",
+          "expected": "Dinfh",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "Na8_Oh.xyz",
+          "expected": "Oh",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        },
+        {
+          "name": "S8_D4d.xyz",
+          "expected": "D4d",
+          "predicted": null,
+          "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+        }
+      ]
+    },
+    "overall_exact_accuracy": 0.0,
+    "overall_normalized_accuracy": 0.0,
+    "code_stats": {
+      "python_files": 1,
+      "lines_of_code": 353,
+      "forbidden_imports": []
+    },
+    "cases": [
+      {
+        "name": "Ar_Kh.xyz",
+        "split": "core",
+        "expected": "Kh",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.09470898658037186,
+        "error": "ValueError: Invalid atom line 1: molecule_0001\n"
+      },
+      {
+        "name": "B12H12_Ih.xyz",
+        "split": "core",
+        "expected": "Ih",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.05545897874981165,
+        "error": "ValueError: Invalid atom line 1: molecule_0002\n"
+      },
+      {
+        "name": "BF3_D3h.xyz",
+        "split": "core",
+        "expected": "D3h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.04383397754281759,
+        "error": "ValueError: Invalid atom line 1: molecule_0003\n"
+      },
+      {
+        "name": "BrCClFH_C1.xyz",
+        "split": "core",
+        "expected": "C1",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.08233403787016869,
+        "error": "ValueError: Invalid atom line 1: molecule_0004\n"
+      },
+      {
+        "name": "BrF5_C4v.xyz",
+        "split": "core",
+        "expected": "C4v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 1.668510027229786,
+        "error": "ValueError: Invalid atom line 1: molecule_0005\n"
+      },
+      {
+        "name": "C10FeH10_D5h.xyz",
+        "split": "core",
+        "expected": "D5h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.04249997437000275,
+        "error": "ValueError: Invalid atom line 1: molecule_0006\n"
+      },
+      {
+        "name": "C10H8_D2h.xyz",
+        "split": "core",
+        "expected": "D2h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03825000021606684,
+        "error": "ValueError: Invalid atom line 1: molecule_0007\n"
+      },
+      {
+        "name": "C2Cl2F2H2_Ci.xyz",
+        "split": "core",
+        "expected": "Ci",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03925000783056021,
+        "error": "ValueError: Invalid atom line 1: molecule_0008\n"
+      },
+      {
+        "name": "C2Cl2H2_C2h.xyz",
+        "split": "core",
+        "expected": "C2h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03683404065668583,
+        "error": "ValueError: Invalid atom line 1: molecule_0009\n"
+      },
+      {
+        "name": "C2H2_Dinfh.xyz",
+        "split": "core",
+        "expected": "Dinfh",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.057251076214015484,
+        "error": "ValueError: Invalid atom line 1: molecule_0010\n"
+      },
+      {
+        "name": "C2H4_D2h.xyz",
+        "split": "core",
+        "expected": "D2h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0363329891115427,
+        "error": "ValueError: Invalid atom line 1: molecule_0011\n"
+      },
+      {
+        "name": "C2H6_D3d.xyz",
+        "split": "core",
+        "expected": "D3d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03545801155269146,
+        "error": "ValueError: Invalid atom line 1: molecule_0012\n"
+      },
+      {
+        "name": "C2H6_D3h.xyz",
+        "split": "core",
+        "expected": "D3h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.035624951124191284,
+        "error": "ValueError: Invalid atom line 1: molecule_0013\n"
+      },
+      {
+        "name": "C3H3P_C3.xyz",
+        "split": "core",
+        "expected": "C3",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.035917037166655064,
+        "error": "ValueError: Invalid atom line 1: molecule_0014\n"
+      },
+      {
+        "name": "C3H4_D2d.xyz",
+        "split": "core",
+        "expected": "D2d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.034624943509697914,
+        "error": "ValueError: Invalid atom line 1: molecule_0015\n"
+      },
+      {
+        "name": "C4H6_C2h.xyz",
+        "split": "core",
+        "expected": "C2h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.036792014725506306,
+        "error": "ValueError: Invalid atom line 1: molecule_0016\n"
+      },
+      {
+        "name": "C6H6_D6h.xyz",
+        "split": "core",
+        "expected": "D6h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03554194699972868,
+        "error": "ValueError: Invalid atom line 1: molecule_0017\n"
+      },
+      {
+        "name": "C8H8_Oh.xyz",
+        "split": "core",
+        "expected": "Oh",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.035792007111012936,
+        "error": "ValueError: Invalid atom line 1: molecule_0018\n"
+      },
+      {
+        "name": "CCl2H2_C2v.xyz",
+        "split": "core",
+        "expected": "C2v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0353760551661253,
+        "error": "ValueError: Invalid atom line 1: molecule_0019\n"
+      },
+      {
+        "name": "CCl3H_C3v.xyz",
+        "split": "core",
+        "expected": "C3v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.034334021620452404,
+        "error": "ValueError: Invalid atom line 1: molecule_0020\n"
+      },
+      {
+        "name": "CClFH2_Cs.xyz",
+        "split": "core",
+        "expected": "Cs",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03354193177074194,
+        "error": "ValueError: Invalid atom line 1: molecule_0021\n"
+      },
+      {
+        "name": "CH4_Td.xyz",
+        "split": "core",
+        "expected": "Td",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03370910417288542,
+        "error": "ValueError: Invalid atom line 1: molecule_0022\n"
+      },
+      {
+        "name": "CHN_Cinfv.xyz",
+        "split": "core",
+        "expected": "Cinfv",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03466696944087744,
+        "error": "ValueError: Invalid atom line 1: molecule_0023\n"
+      },
+      {
+        "name": "CO2_Dinfh.xyz",
+        "split": "core",
+        "expected": "Dinfh",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03400002606213093,
+        "error": "ValueError: Invalid atom line 1: molecule_0024\n"
+      },
+      {
+        "name": "CO_Cinfv.xyz",
+        "split": "core",
+        "expected": "Cinfv",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.051875016652047634,
+        "error": "ValueError: Invalid atom line 1: molecule_0025\n"
+      },
+      {
+        "name": "Cl5P_D3h.xyz",
+        "split": "core",
+        "expected": "D3h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03687501884996891,
+        "error": "ValueError: Invalid atom line 1: molecule_0026\n"
+      },
+      {
+        "name": "ClHO_Cs.xyz",
+        "split": "core",
+        "expected": "Cs",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0350830378010869,
+        "error": "ValueError: Invalid atom line 1: molecule_0027\n"
+      },
+      {
+        "name": "ClH_Cinfv.xyz",
+        "split": "core",
+        "expected": "Cinfv",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03404100425541401,
+        "error": "ValueError: Invalid atom line 1: molecule_0028\n"
+      },
+      {
+        "name": "F4Xe_D4h.xyz",
+        "split": "core",
+        "expected": "D4h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.046291970647871494,
+        "error": "ValueError: Invalid atom line 1: molecule_0029\n"
+      },
+      {
+        "name": "F6S_Oh.xyz",
+        "split": "core",
+        "expected": "Oh",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03395904786884785,
+        "error": "ValueError: Invalid atom line 1: molecule_0030\n"
+      },
+      {
+        "name": "H2O2_C2.xyz",
+        "split": "core",
+        "expected": "C2",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03424996975809336,
+        "error": "ValueError: Invalid atom line 1: molecule_0031\n"
+      },
+      {
+        "name": "H2O_C2v.xyz",
+        "split": "core",
+        "expected": "C2v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.033791991882026196,
+        "error": "ValueError: Invalid atom line 1: molecule_0032\n"
+      },
+      {
+        "name": "H2_Dinfh.xyz",
+        "split": "core",
+        "expected": "Dinfh",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03412598744034767,
+        "error": "ValueError: Invalid atom line 1: molecule_0033\n"
+      },
+      {
+        "name": "H3N_C3v.xyz",
+        "split": "core",
+        "expected": "C3v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03345799632370472,
+        "error": "ValueError: Invalid atom line 1: molecule_0034\n"
+      },
+      {
+        "name": "O3_C2v.xyz",
+        "split": "core",
+        "expected": "C2v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03370898775756359,
+        "error": "ValueError: Invalid atom line 1: molecule_0035\n"
+      },
+      {
+        "name": "P4_Td.xyz",
+        "split": "core",
+        "expected": "Td",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.033541000448167324,
+        "error": "ValueError: Invalid atom line 1: molecule_0036\n"
+      },
+      {
+        "name": "B12H60_I.xyz",
+        "split": "challenge",
+        "expected": "I",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.044042011722922325,
+        "error": "ValueError: Invalid atom line 1: molecule_0037\n"
+      },
+      {
+        "name": "B2H6_D2h.xyz",
+        "split": "challenge",
+        "expected": "D2h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03704207483679056,
+        "error": "ValueError: Invalid atom line 1: molecule_0038\n"
+      },
+      {
+        "name": "BH3O3_C3h.xyz",
+        "split": "challenge",
+        "expected": "C3h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0342510174959898,
+        "error": "ValueError: Invalid atom line 1: molecule_0039\n"
+      },
+      {
+        "name": "C10FeH10_D5.xyz",
+        "split": "challenge",
+        "expected": "D5",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03504089545458555,
+        "error": "ValueError: Invalid atom line 1: molecule_0040\n"
+      },
+      {
+        "name": "C10FeH10_D5d.xyz",
+        "split": "challenge",
+        "expected": "D5d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03533391281962395,
+        "error": "ValueError: Invalid atom line 1: molecule_0041\n"
+      },
+      {
+        "name": "C10H16_Td.xyz",
+        "split": "challenge",
+        "expected": "Td",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.04249997437000275,
+        "error": "ValueError: Invalid atom line 1: molecule_0042\n"
+      },
+      {
+        "name": "C12CrH12_D6.xyz",
+        "split": "challenge",
+        "expected": "D6",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.036209006793797016,
+        "error": "ValueError: Invalid atom line 1: molecule_0043\n"
+      },
+      {
+        "name": "C12CrH12_D6d.xyz",
+        "split": "challenge",
+        "expected": "D6d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03508396912366152,
+        "error": "ValueError: Invalid atom line 1: molecule_0044\n"
+      },
+      {
+        "name": "C12CrH12_D6h.xyz",
+        "split": "challenge",
+        "expected": "D6h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.035334029234945774,
+        "error": "ValueError: Invalid atom line 1: molecule_0045\n"
+      },
+      {
+        "name": "C16H16U_D8d.xyz",
+        "split": "challenge",
+        "expected": "D8d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0355839729309082,
+        "error": "ValueError: Invalid atom line 1: molecule_0046\n"
+      },
+      {
+        "name": "C16H16U_D8h.xyz",
+        "split": "challenge",
+        "expected": "D8h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03666698466986418,
+        "error": "ValueError: Invalid atom line 1: molecule_0047\n"
+      },
+      {
+        "name": "C20H20_Ih.xyz",
+        "split": "challenge",
+        "expected": "Ih",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03708305303007364,
+        "error": "ValueError: Invalid atom line 1: molecule_0048\n"
+      },
+      {
+        "name": "C2Cl2H2_C2v.xyz",
+        "split": "challenge",
+        "expected": "C2v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.035375007428228855,
+        "error": "ValueError: Invalid atom line 1: molecule_0049\n"
+      },
+      {
+        "name": "C2H2NO_C1.xyz",
+        "split": "challenge",
+        "expected": "C1",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03466696944087744,
+        "error": "ValueError: Invalid atom line 1: molecule_0050\n"
+      },
+      {
+        "name": "C2H2O2_D2h.xyz",
+        "split": "challenge",
+        "expected": "D2h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.10841700714081526,
+        "error": "ValueError: Invalid atom line 1: molecule_0051\n"
+      },
+      {
+        "name": "C2H2_D2h.xyz",
+        "split": "challenge",
+        "expected": "D2h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.035708071663975716,
+        "error": "ValueError: Invalid atom line 1: molecule_0052\n"
+      },
+      {
+        "name": "C2H4_D2.xyz",
+        "split": "challenge",
+        "expected": "D2",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03466696944087744,
+        "error": "ValueError: Invalid atom line 1: molecule_0053\n"
+      },
+      {
+        "name": "C2H6_D3.xyz",
+        "split": "challenge",
+        "expected": "D3",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03466696944087744,
+        "error": "ValueError: Invalid atom line 1: molecule_0054\n"
+      },
+      {
+        "name": "C3H6_D3h.xyz",
+        "split": "challenge",
+        "expected": "D3h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.035208999179303646,
+        "error": "ValueError: Invalid atom line 1: molecule_0055\n"
+      },
+      {
+        "name": "C4H4P_C4.xyz",
+        "split": "challenge",
+        "expected": "C4",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03504205960780382,
+        "error": "ValueError: Invalid atom line 1: molecule_0056\n"
+      },
+      {
+        "name": "C4H4Si_S4.xyz",
+        "split": "challenge",
+        "expected": "S4",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03487605135887861,
+        "error": "ValueError: Invalid atom line 1: molecule_0057\n"
+      },
+      {
+        "name": "C4H4_D4h.xyz",
+        "split": "challenge",
+        "expected": "D4h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03458396531641483,
+        "error": "ValueError: Invalid atom line 1: molecule_0058\n"
+      },
+      {
+        "name": "C4H8_D4h.xyz",
+        "split": "challenge",
+        "expected": "D4h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03529200330376625,
+        "error": "ValueError: Invalid atom line 1: molecule_0059\n"
+      },
+      {
+        "name": "C4N4Pt_C4h.xyz",
+        "split": "challenge",
+        "expected": "C4h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03562599886208773,
+        "error": "ValueError: Invalid atom line 1: molecule_0060\n"
+      },
+      {
+        "name": "C5H12_T.xyz",
+        "split": "challenge",
+        "expected": "T",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03583403304219246,
+        "error": "ValueError: Invalid atom line 1: molecule_0061\n"
+      },
+      {
+        "name": "C5H12_Td.xyz",
+        "split": "challenge",
+        "expected": "Td",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03545801155269146,
+        "error": "ValueError: Invalid atom line 1: molecule_0062\n"
+      },
+      {
+        "name": "C5H5NNiO_C5v.xyz",
+        "split": "challenge",
+        "expected": "C5v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0354590592905879,
+        "error": "ValueError: Invalid atom line 1: molecule_0063\n"
+      },
+      {
+        "name": "C5H5P_C5.xyz",
+        "split": "challenge",
+        "expected": "C5",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03616698086261749,
+        "error": "ValueError: Invalid atom line 1: molecule_0064\n"
+      },
+      {
+        "name": "C5H5_C5h.xyz",
+        "split": "challenge",
+        "expected": "C5h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.035207951441407204,
+        "error": "ValueError: Invalid atom line 1: molecule_0065\n"
+      },
+      {
+        "name": "C5H5_D5h.xyz",
+        "split": "challenge",
+        "expected": "D5h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03666698466986418,
+        "error": "ValueError: Invalid atom line 1: molecule_0066\n"
+      },
+      {
+        "name": "C60_Ih.xyz",
+        "split": "challenge",
+        "expected": "Ih",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03954197745770216,
+        "error": "ValueError: Invalid atom line 1: molecule_0067\n"
+      },
+      {
+        "name": "C6CrH6_C6v.xyz",
+        "split": "challenge",
+        "expected": "C6v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03516697324812412,
+        "error": "ValueError: Invalid atom line 1: molecule_0068\n"
+      },
+      {
+        "name": "C6H12_D3d.xyz",
+        "split": "challenge",
+        "expected": "D3d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.035499921068549156,
+        "error": "ValueError: Invalid atom line 1: molecule_0069\n"
+      },
+      {
+        "name": "C6H6P_C6.xyz",
+        "split": "challenge",
+        "expected": "C6",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03525102511048317,
+        "error": "ValueError: Invalid atom line 1: molecule_0070\n"
+      },
+      {
+        "name": "C6H6_S6.xyz",
+        "split": "challenge",
+        "expected": "S6",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.034791999496519566,
+        "error": "ValueError: Invalid atom line 1: molecule_0071\n"
+      },
+      {
+        "name": "C6O6_C6h.xyz",
+        "split": "challenge",
+        "expected": "C6h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.034374999813735485,
+        "error": "ValueError: Invalid atom line 1: molecule_0072\n"
+      },
+      {
+        "name": "C8H8_D4.xyz",
+        "split": "challenge",
+        "expected": "D4",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.035792007111012936,
+        "error": "ValueError: Invalid atom line 1: molecule_0073\n"
+      },
+      {
+        "name": "C8H8_S8.xyz",
+        "split": "challenge",
+        "expected": "S8",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03545801155269146,
+        "error": "ValueError: Invalid atom line 1: molecule_0074\n"
+      },
+      {
+        "name": "C9CrH6O3_C3v.xyz",
+        "split": "challenge",
+        "expected": "C3v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.035667093470692635,
+        "error": "ValueError: Invalid atom line 1: molecule_0075\n"
+      },
+      {
+        "name": "COS_Cinfv.xyz",
+        "split": "challenge",
+        "expected": "Cinfv",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.04595902282744646,
+        "error": "ValueError: Invalid atom line 1: molecule_0076\n"
+      },
+      {
+        "name": "Cl2OS_Cs.xyz",
+        "split": "challenge",
+        "expected": "Cs",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03487500362098217,
+        "error": "ValueError: Invalid atom line 1: molecule_0077\n"
+      },
+      {
+        "name": "Cl3MoN3_C2v.xyz",
+        "split": "challenge",
+        "expected": "C2v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03487605135887861,
+        "error": "ValueError: Invalid atom line 1: molecule_0078\n"
+      },
+      {
+        "name": "Cl3MoN3_C3v.xyz",
+        "split": "challenge",
+        "expected": "C3v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03462505992501974,
+        "error": "ValueError: Invalid atom line 1: molecule_0079\n"
+      },
+      {
+        "name": "CoN6O12_Th.xyz",
+        "split": "challenge",
+        "expected": "Th",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.035125063732266426,
+        "error": "ValueError: Invalid atom line 1: molecule_0080\n"
+      },
+      {
+        "name": "F4S_C2v.xyz",
+        "split": "challenge",
+        "expected": "C2v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0351249473169446,
+        "error": "ValueError: Invalid atom line 1: molecule_0081\n"
+      },
+      {
+        "name": "F7I_D5h.xyz",
+        "split": "challenge",
+        "expected": "D5h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03487500362098217,
+        "error": "ValueError: Invalid atom line 1: molecule_0082\n"
+      },
+      {
+        "name": "F8Zr_D4d.xyz",
+        "split": "challenge",
+        "expected": "D4d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03654090687632561,
+        "error": "ValueError: Invalid atom line 1: molecule_0083\n"
+      },
+      {
+        "name": "Fe4S4_Td.xyz",
+        "split": "challenge",
+        "expected": "Td",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03541703335940838,
+        "error": "ValueError: Invalid atom line 1: molecule_0084\n"
+      },
+      {
+        "name": "H24N6Ni_O.xyz",
+        "split": "challenge",
+        "expected": "O",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03883405588567257,
+        "error": "ValueError: Invalid atom line 1: molecule_0085\n"
+      },
+      {
+        "name": "H3_Cinfv.xyz",
+        "split": "challenge",
+        "expected": "Cinfv",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03499991726130247,
+        "error": "ValueError: Invalid atom line 1: molecule_0086\n"
+      },
+      {
+        "name": "H3_D3h.xyz",
+        "split": "challenge",
+        "expected": "D3h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03429199568927288,
+        "error": "ValueError: Invalid atom line 1: molecule_0087\n"
+      },
+      {
+        "name": "I3_Dinfh.xyz",
+        "split": "challenge",
+        "expected": "Dinfh",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03408396150916815,
+        "error": "ValueError: Invalid atom line 1: molecule_0088\n"
+      },
+      {
+        "name": "N2_Dinfh.xyz",
+        "split": "challenge",
+        "expected": "Dinfh",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0404169550165534,
+        "error": "ValueError: Invalid atom line 1: molecule_0089\n"
+      },
+      {
+        "name": "Na8_Oh.xyz",
+        "split": "challenge",
+        "expected": "Oh",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.08566700853407383,
+        "error": "ValueError: Invalid atom line 1: molecule_0090\n"
+      },
+      {
+        "name": "S8_D4d.xyz",
+        "split": "challenge",
+        "expected": "D4d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.036209006793797016,
+        "error": "ValueError: Invalid atom line 1: molecule_0091\n"
+      },
+      {
+        "name": "Ar_Kh.xyz",
+        "split": "rotated_permuted",
+        "expected": "Kh",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03529200330376625,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "B12H12_Ih.xyz",
+        "split": "rotated_permuted",
+        "expected": "Ih",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03724999260157347,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "BF3_D3h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D3h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.035708071663975716,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "BrCClFH_C1.xyz",
+        "split": "rotated_permuted",
+        "expected": "C1",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03474997356534004,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "BrF5_C4v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C4v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.034917029552161694,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "C10FeH10_D5h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D5h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03733392804861069,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "C10H8_D2h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D2h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0362499849870801,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "C2Cl2F2H2_Ci.xyz",
+        "split": "rotated_permuted",
+        "expected": "Ci",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03524997737258673,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "C2Cl2H2_C2h.xyz",
+        "split": "rotated_permuted",
+        "expected": "C2h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03445905167609453,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "C2H2_Dinfh.xyz",
+        "split": "rotated_permuted",
+        "expected": "Dinfh",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 3.114852006547153,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "C2H4_D2h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D2h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.04091695882380009,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "C2H6_D3d.xyz",
+        "split": "rotated_permuted",
+        "expected": "D3d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.037125078961253166,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "C2H6_D3h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D3h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.036334036849439144,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "C3H3P_C3.xyz",
+        "split": "rotated_permuted",
+        "expected": "C3",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03612600266933441,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "C3H4_D2d.xyz",
+        "split": "rotated_permuted",
+        "expected": "D2d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03520806785672903,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "C4H6_C2h.xyz",
+        "split": "rotated_permuted",
+        "expected": "C2h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0355009688064456,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "C6H6_D6h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D6h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03570900298655033,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "C8H8_Oh.xyz",
+        "split": "rotated_permuted",
+        "expected": "Oh",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03583391662687063,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "CCl2H2_C2v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C2v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.035125063732266426,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "CCl3H_C3v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C3v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.034499913454055786,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "CClFH2_Cs.xyz",
+        "split": "rotated_permuted",
+        "expected": "Cs",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03454193938523531,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "CH4_Td.xyz",
+        "split": "rotated_permuted",
+        "expected": "Td",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03441690932959318,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "CHN_Cinfv.xyz",
+        "split": "rotated_permuted",
+        "expected": "Cinfv",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03458396531641483,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "CO2_Dinfh.xyz",
+        "split": "rotated_permuted",
+        "expected": "Dinfh",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.033917021937668324,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "CO_Cinfv.xyz",
+        "split": "rotated_permuted",
+        "expected": "Cinfv",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.06100104656070471,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "Cl5P_D3h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D3h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03529200330376625,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "ClHO_Cs.xyz",
+        "split": "rotated_permuted",
+        "expected": "Cs",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03362505231052637,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "ClH_Cinfv.xyz",
+        "split": "rotated_permuted",
+        "expected": "Cinfv",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03420806024223566,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "F4Xe_D4h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D4h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03416696563363075,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "F6S_Oh.xyz",
+        "split": "rotated_permuted",
+        "expected": "Oh",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03558292519301176,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "H2O2_C2.xyz",
+        "split": "rotated_permuted",
+        "expected": "C2",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03554194699972868,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "H2O_C2v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C2v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03416708204895258,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "H2_Dinfh.xyz",
+        "split": "rotated_permuted",
+        "expected": "Dinfh",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.034084077924489975,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "H3N_C3v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C3v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.05945900920778513,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "O3_C2v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C2v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03429199568927288,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "P4_Td.xyz",
+        "split": "rotated_permuted",
+        "expected": "Td",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.034791999496519566,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "B12H60_I.xyz",
+        "split": "rotated_permuted",
+        "expected": "I",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.045708962716162205,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "B2H6_D2h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D2h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.04254200030118227,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "BH3O3_C3h.xyz",
+        "split": "rotated_permuted",
+        "expected": "C3h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.047708977945148945,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "C10FeH10_D5.xyz",
+        "split": "rotated_permuted",
+        "expected": "D5",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0367090106010437,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "C10FeH10_D5d.xyz",
+        "split": "rotated_permuted",
+        "expected": "D5d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03533298149704933,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "C10H16_Td.xyz",
+        "split": "rotated_permuted",
+        "expected": "Td",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03550003748387098,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "C12CrH12_D6.xyz",
+        "split": "rotated_permuted",
+        "expected": "D6",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03616698086261749,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "C12CrH12_D6d.xyz",
+        "split": "rotated_permuted",
+        "expected": "D6d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.035833101719617844,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "C12CrH12_D6h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D6h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03558292519301176,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "C16H16U_D8d.xyz",
+        "split": "rotated_permuted",
+        "expected": "D8d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03641692455857992,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "C16H16U_D8h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D8h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03550003748387098,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "C20H20_Ih.xyz",
+        "split": "rotated_permuted",
+        "expected": "Ih",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.039207981899380684,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "C2Cl2H2_C2v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C2v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.036041950806975365,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "C2H2NO_C1.xyz",
+        "split": "rotated_permuted",
+        "expected": "C1",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03470899537205696,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "C2H2O2_D2h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D2h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.034334021620452404,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "C2H2_D2h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D2h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03412598744034767,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "C2H4_D2.xyz",
+        "split": "rotated_permuted",
+        "expected": "D2",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.033542048186063766,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "C2H6_D3.xyz",
+        "split": "rotated_permuted",
+        "expected": "D3",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03545801155269146,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "C3H6_D3h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D3h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03650004509836435,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "C4H4P_C4.xyz",
+        "split": "rotated_permuted",
+        "expected": "C4",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03483402542769909,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "C4H4Si_S4.xyz",
+        "split": "rotated_permuted",
+        "expected": "S4",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.034958007745444775,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "C4H4_D4h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D4h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03420806024223566,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "C4H8_D4h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D4h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.05141703877598047,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "C4N4Pt_C4h.xyz",
+        "split": "rotated_permuted",
+        "expected": "C4h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.035250093787908554,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "C5H12_T.xyz",
+        "split": "rotated_permuted",
+        "expected": "T",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03599992487579584,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "C5H12_Td.xyz",
+        "split": "rotated_permuted",
+        "expected": "Td",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03645906690508127,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "C5H5NNiO_C5v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C5v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03524997737258673,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "C5H5P_C5.xyz",
+        "split": "rotated_permuted",
+        "expected": "C5",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.035084085538983345,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "C5H5_C5h.xyz",
+        "split": "rotated_permuted",
+        "expected": "C5h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0355009688064456,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "C5H5_D5h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D5h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03508396912366152,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "C60_Ih.xyz",
+        "split": "rotated_permuted",
+        "expected": "Ih",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.039207981899380684,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "C6CrH6_C6v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C6v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03545801155269146,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "C6H12_D3d.xyz",
+        "split": "rotated_permuted",
+        "expected": "D3d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.034708064049482346,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "C6H6P_C6.xyz",
+        "split": "rotated_permuted",
+        "expected": "C6",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.037792022339999676,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "C6H6_S6.xyz",
+        "split": "rotated_permuted",
+        "expected": "S6",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0354590592905879,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "C6O6_C6h.xyz",
+        "split": "rotated_permuted",
+        "expected": "C6h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03462505992501974,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "C8H8_D4.xyz",
+        "split": "rotated_permuted",
+        "expected": "D4",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03554206341505051,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "C8H8_S8.xyz",
+        "split": "rotated_permuted",
+        "expected": "S8",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03483402542769909,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "C9CrH6O3_C3v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C3v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03504101186990738,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "COS_Cinfv.xyz",
+        "split": "rotated_permuted",
+        "expected": "Cinfv",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03366696182638407,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "Cl2OS_Cs.xyz",
+        "split": "rotated_permuted",
+        "expected": "Cs",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.033833086490631104,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "Cl3MoN3_C2v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C2v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03445800393819809,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "Cl3MoN3_C3v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C3v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03516697324812412,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "CoN6O12_Th.xyz",
+        "split": "rotated_permuted",
+        "expected": "Th",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.05100097041577101,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "F4S_C2v.xyz",
+        "split": "rotated_permuted",
+        "expected": "C2v",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03474997356534004,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "F7I_D5h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D5h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0338749960064888,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "F8Zr_D4d.xyz",
+        "split": "rotated_permuted",
+        "expected": "D4d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.034334021620452404,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "Fe4S4_Td.xyz",
+        "split": "rotated_permuted",
+        "expected": "Td",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0338749960064888,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "H24N6Ni_O.xyz",
+        "split": "rotated_permuted",
+        "expected": "O",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.45771209988743067,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "H3_Cinfv.xyz",
+        "split": "rotated_permuted",
+        "expected": "Cinfv",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03987504169344902,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "H3_D3h.xyz",
+        "split": "rotated_permuted",
+        "expected": "D3h",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.034208991564810276,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "I3_Dinfh.xyz",
+        "split": "rotated_permuted",
+        "expected": "Dinfh",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03324996214359999,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "N2_Dinfh.xyz",
+        "split": "rotated_permuted",
+        "expected": "Dinfh",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.041874940507113934,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "Na8_Oh.xyz",
+        "split": "rotated_permuted",
+        "expected": "Oh",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.0353760551661253,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      },
+      {
+        "name": "S8_D4d.xyz",
+        "split": "rotated_permuted",
+        "expected": "D4d",
+        "predicted": null,
+        "normalized_predicted": "",
+        "exact_match": false,
+        "normalized_match": false,
+        "elapsed_ms": 0.03429199568927288,
+        "error": "ValueError: Invalid atom line 1: rotated_translated_permuted\n"
+      }
+    ]
+  }
+}
