@@ -209,8 +209,15 @@ _WORKER_SCRIPT = r"""
 import importlib
 import json
 from pathlib import Path
+import signal
 import sys
 import time
+
+class CaseTimeoutError(Exception):
+    pass
+
+def _alarm_handler(signum, frame):
+    raise CaseTimeoutError("Molecule evaluation exceeded per-molecule timeout (5.0s)")
 
 def load_detector(target_dir: Path):
     for candidate in (target_dir / "src", target_dir):
@@ -245,12 +252,17 @@ def main():
         print(json.dumps({"fatal_error": f"{type(exc).__name__}: {exc}"}))
         return
 
+    if hasattr(signal, "SIGALRM"):
+        signal.signal(signal.SIGALRM, _alarm_handler)
+
     results = []
     for item in cases:
         xyz_path = Path(item["xyz_path"])
         t0 = time.perf_counter()
         pred = None
         err = None
+        if hasattr(signal, "setitimer"):
+            signal.setitimer(signal.ITIMER_REAL, 2.0)
         try:
             res = detector(xyz_path)
             if isinstance(res, str):
@@ -261,12 +273,17 @@ def main():
                 pred = str(res.symbol)
             else:
                 pred = str(res)
+        except CaseTimeoutError as exc:
+            err = f"TimeoutError: {exc}"
         except Exception as exc:
             try:
                 res = detector(str(xyz_path))
                 pred = res if isinstance(res, str) else str(res)
             except Exception as exc2:
                 err = f"{type(exc2).__name__}: {exc2}"
+        finally:
+            if hasattr(signal, "setitimer"):
+                signal.setitimer(signal.ITIMER_REAL, 0.0)
         elapsed_ms = (time.perf_counter() - t0) * 1000.0
         results.append({
             "id": item["id"],
@@ -288,7 +305,7 @@ class BenchmarkEvaluator:
         self,
         validation_dir: Path = VALIDATION_DIR,
         seed: int = 20261022,
-        timeout_s: float = 180.0,
+        timeout_s: float = 420.0,
     ) -> None:
         self.validation_dir = validation_dir
         self.seed = seed

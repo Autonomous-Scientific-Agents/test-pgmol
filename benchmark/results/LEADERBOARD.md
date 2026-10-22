@@ -1,0 +1,29 @@
+| Run ID | Harness · Model | Mode | Core (36) | Challenge (55) | Rotated + Permuted (91) | Core time (avg / total) | Challenge time (avg / total) | Gen Wall Time | LOC |
+|---|---|---|---:|---:|---:|---:|---:|---:|---:|
+| `api_gpt-6-astra_zero-shot_t1` | llm-api (1-shot) · gpt-6-astra | `zero-shot` | **36/36 (100.0%)** | **55/55 (100.0%)** | **91/91 (100.0%)** | 2.38 ms / 0.086 s | 2.99 ms / 0.164 s | 202.0 s | 488 |
+| `api_claude-sonnet-5-5_zero-shot_t1` | llm-api (1-shot) · claude-sonnet-5-5 | `zero-shot` | **36/36 (100.0%)** | **55/55 (100.0%)** | **91/91 (100.0%)** | 1.26 ms / 0.045 s | 3.11 ms / 0.171 s | 234.3 s | 171 |
+| `api_gpt-6.1-sol_zero-shot_t1` | llm-api (1-shot) · gpt-6.1-sol | `zero-shot` | **36/36 (100.0%)** | **55/55 (100.0%)** | **91/91 (100.0%)** | 3.26 ms / 0.117 s | 5.20 ms / 0.286 s | 126.7 s | 385 |
+| `api_gpt-5.6-terra_zero-shot_t1` | llm-api (1-shot) · gpt-5.6-terra | `zero-shot` | **36/36 (100.0%)** | **55/55 (100.0%)** | **91/91 (100.0%)** | 7.64 ms / 0.275 s | 12.88 ms / 0.709 s | 60.5 s | 351 |
+| `api_claude-opus-5-5_zero-shot_t1` | llm-api (1-shot) · claude-opus-5-5-medium@amazon | `zero-shot` | **36/36 (100.0%)** | **55/55 (100.0%)** | **91/91 (100.0%)** | 1.48 ms / 0.053 s | 16.31 ms / 0.897 s | 194.3 s | 367 |
+| `api_claude-haiku-5-5_zero-shot_t1` | llm-api (1-shot) · claude-haiku-low | `zero-shot` | **36/36 (100.0%)** | **55/55 (100.0%)** | **91/91 (100.0%)** | 2.48 ms / 0.089 s | 42.42 ms / 2.333 s | 144.9 s | 241 |
+| `api_gemini-4-argon@google_zero-shot_t1` | llm-api (1-shot) · gemini-4-argon@google | `zero-shot` | **36/36 (100.0%)** | **55/55 (100.0%)** | 90/91 (98.9%) | 32.83 ms / 1.182 s | 210.76 ms / 11.592 s | 107.5 s | 548 |
+| `api_gpt-5.6-sol_zero-shot_t1` | llm-api (1-shot) · gpt-5.6-sol | `zero-shot` | **36/36 (100.0%)** | 54/55 (98.2%) | 90/91 (98.9%) | 11.34 ms / 0.408 s | 77.95 ms / 4.287 s | 119.2 s | 462 |
+| `api_gemini-3.8-flash@google_zero-shot_t1` | llm-api (1-shot) · gemini-3.8-flash-low@google | `zero-shot` | 35/36 (97.2%) | 51/55 (92.7%) | 85/91 (93.4%) | 11.64 ms / 0.419 s | 42.76 ms / 2.352 s | 31.6 s | 337 |
+| `api_gemini-3.1-pro-preview@google_zero-shot_t1` | llm-api (1-shot) · gemini-3.1-pro-preview@google | `zero-shot` | 35/36 (97.2%) | 50/55 (90.9%) | 86/91 (94.5%) | 6.17 ms / 0.222 s | 96.62 ms / 5.314 s | 187.3 s | 202 |
+| `api_gemini-3.7-flash@google_zero-shot_t1` | llm-api (1-shot) · gemini-3.7-flash-medium@google | `zero-shot` | 35/36 (97.2%) | 44/55 (80.0%) | 80/91 (87.9%) | 79.21 ms / 2.851 s | 587.12 ms / 32.292 s | 80.6 s | 295 |
+| `api_gpt-5.6-luna_zero-shot_t1` | llm-api (1-shot) · gpt-5.6-luna | `zero-shot` | 31/36 (86.1%) | 45/55 (81.8%) | 76/91 (83.5%) | 6.97 ms / 0.251 s | 104.22 ms / 5.732 s | 53.6 s | 350 |
+| `api_inkling-small@cborg_zero-shot_t1` | llm-api (1-shot) · inkling-small@cborg | `zero-shot` | 31/36 (86.1%) | 42/55 (76.4%) | 71/91 (78.0%) | 4.77 ms / 0.172 s | 22.38 ms / 1.231 s | 109.1 s | 331 |
+| `api_gpt-6-sol_zero-shot_t1` | llm-api (1-shot) · gpt-6-sol | `zero-shot` | 34/36 (94.4%) | 38/55 (69.1%) | 72/91 (79.1%) | 7.14 ms / 0.257 s | 115.90 ms / 6.375 s | 62.8 s | 283 |
+| `api_gpt-6-luna_zero-shot_t1` | llm-api (1-shot) · gpt-6-luna | `zero-shot` | 32/36 (88.9%) | 37/55 (67.3%) | 69/91 (75.8%) | 4.82 ms / 0.174 s | 36.68 ms / 2.017 s | 59.1 s | 408 |
+| `api_gpt-oss-120b_zero-shot_t1` | llm-api (1-shot) · gpt-oss-120b | `zero-shot` | 23/36 (63.9%) | 29/55 (52.7%) | 37/91 (40.7%) | 25.79 ms / 0.928 s | 294.80 ms / 16.214 s | 30.1 s | 280 |
+| `api_gemma-4@cborg_zero-shot_t1` | llm-api (1-shot) · gemma-4@cborg | `zero-shot` | 20/36 (55.6%) | 32/55 (58.2%) | 27/91 (29.7%) | 2.72 ms / 0.098 s | 6.55 ms / 0.360 s | 28.1 s | 181 |
+| `api_gemini-3.1-flash-lite@google_zero-shot_t1` | llm-api (1-shot) · gemini-3.1-flash-lite@google | `zero-shot` | 9/36 (25.0%) | 6/55 (10.9%) | 15/91 (16.5%) | 0.19 ms / 0.007 s | 0.25 ms / 0.014 s | 3.9 s | 60 |
+| `api_llama-4-maverick@amazon_zero-shot_t1` | llm-api (1-shot) · llama-4-maverick@amazon | `zero-shot` | 7/36 (19.4%) | 4/55 (7.3%) | 11/91 (12.1%) | 0.92 ms / 0.033 s | 1.02 ms / 0.056 s | 12.0 s | 191 |
+| `api_gemini-2.5-pro@google_zero-shot_t1` | llm-api (1-shot) · gemini-2.5-pro@google | `zero-shot` | 8/36 (22.2%) | 5/55 (9.1%) | 8/91 (8.8%) | 2.84 ms / 0.102 s | 51.21 ms / 2.817 s | 149.1 s | 275 |
+| `api_gpt-oss-20b@cborg_zero-shot_t1` | llm-api (1-shot) · gpt-oss-20b@cborg | `zero-shot` | 6/36 (16.7%) | 4/55 (7.3%) | 3/91 (3.3%) | 1.69 ms / 0.061 s | 0.98 ms / 0.054 s | 69.6 s | 266 |
+| `api_nova-pro-1@amazon_zero-shot_t1` | llm-api (1-shot) · nova-pro-1@amazon | `zero-shot` | 4/36 (11.1%) | 2/55 (3.6%) | 6/91 (6.6%) | 0.76 ms / 0.028 s | 0.13 ms / 0.007 s | 4.9 s | 48 |
+| `api_devstral-2@amazon_zero-shot_t1` | llm-api (1-shot) · devstral-2@amazon | `zero-shot` | 1/36 (2.8%) | 0/55 (0.0%) | 1/91 (1.1%) | 0.35 ms / 0.013 s | 0.15 ms / 0.008 s | 48.7 s | 248 |
+| `api_gemini-3.5-flash-lite@google_zero-shot_t1` | llm-api (1-shot) · gemini-3.5-flash-lite@google | `zero-shot` | 0/36 (0.0%) | 0/55 (0.0%) | 0/91 (0.0%) | 0.00 ms / 0.000 s | 0.00 ms / 0.000 s | 16.3 s | 396 |
+| `api_gemini-3.5-flash@google_zero-shot_t1` | llm-api (1-shot) · gemini-3.5-flash@google | `zero-shot` | 0/36 (0.0%) | 0/55 (0.0%) | 0/91 (0.0%) | 0.00 ms / 0.000 s | 0.00 ms / 0.000 s | 134.8 s | 290 |
+| `api_mistral-large-3@amazon_zero-shot_t1` | llm-api (1-shot) · mistral-large-3@amazon | `zero-shot` | 0/36 (0.0%) | 0/55 (0.0%) | 0/91 (0.0%) | 0.00 ms / 0.000 s | 0.00 ms / 0.000 s | 99.6 s | 429 |
+| `api_nemotron-super-3@amazon_zero-shot_t1` | llm-api (1-shot) · nemotron-super-3@amazon | `zero-shot` | 0/36 (0.0%) | 0/55 (0.0%) | 0/91 (0.0%) | 0.09 ms / 0.003 s | 0.04 ms / 0.002 s | 32.7 s | 353 |

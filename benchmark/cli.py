@@ -133,6 +133,12 @@ def build_parser() -> argparse.ArgumentParser:
         type=Path,
         help="Result JSON files (defaults to all *.json in benchmark/results/).",
     )
+    p_board.add_argument(
+        "--output",
+        type=Path,
+        default=None,
+        help="Optional Markdown file path to write the leaderboard to.",
+    )
 
     return parser
 
@@ -203,7 +209,11 @@ def main(argv: list[str] | None = None) -> int:
         if not files:
             print("No result JSON files found.", file=sys.stderr)
             return 1
-        print(generate_markdown_leaderboard(files))
+        md = generate_markdown_leaderboard(files)
+        print(md)
+        if args.output:
+            args.output.parent.mkdir(parents=True, exist_ok=True)
+            args.output.write_text(md + "\n", encoding="utf-8")
         return 0
 
     return 1

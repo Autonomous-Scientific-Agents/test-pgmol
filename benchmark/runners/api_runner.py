@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import ast
 import json
 import os
 from pathlib import Path
@@ -15,17 +16,47 @@ import urllib.request
 
 from benchmark.evaluator import BenchmarkEvaluator
 from benchmark.runners import BenchmarkRunReport, RunMetadata
-from benchmark.workspace import VisibilityMode, WorkspaceManager
+from benchmark.workspace import REPO_ROOT, VisibilityMode, WorkspaceManager
 
-CODE_BLOCK_RE = re.compile(r"```(?:python|py)?\s*\n(.*?)```", re.DOTALL)
+PY_BLOCK_RE = re.compile(r"```(?:python|py)\s*\n(.*?)```", re.DOTALL | re.IGNORECASE)
+ANY_BLOCK_RE = re.compile(r"```[a-zA-Z0-9_-]*\s*\n(.*?)```", re.DOTALL)
+UNCLOSED_PY_BLOCK_RE = re.compile(r"```(?:python|py)\s*\n(.*)$", re.DOTALL | re.IGNORECASE)
 
 
 def extract_python_code(response_text: str) -> str:
     """Extract Python source code from a markdown-fenced LLM response."""
-    matches = CODE_BLOCK_RE.findall(response_text)
-    if matches:
-        # Pick the longest python block if multiple exist
-        return max(matches, key=len).strip() + "\n"
+    py_matches = [m.strip() for m in PY_BLOCK_RE.findall(response_text) if m.strip()]
+    valid_py = []
+    for block in py_matches:
+        try:
+            ast.parse(block)
+            valid_py.append(block)
+        except SyntaxError:
+            continue
+    if valid_py:
+        # If one block has detect_point_group, pick the longest such block; otherwise combine
+        with_fn = [b for b in valid_py if "def detect_point_group" in b or "detect_point_group =" in b]
+        if with_fn:
+            return max(with_fn, key=len) + "\n"
+        return "\n\n".join(valid_py) + "\n"
+    if py_matches:
+        return max(py_matches, key=len) + "\n"
+
+    # Check if there is an unclosed ```python block (e.g., truncated at max_tokens)
+    unclosed = UNCLOSED_PY_BLOCK_RE.search(response_text)
+    if unclosed:
+        return unclosed.group(1).strip() + "\n"
+
+    any_matches = [m.strip() for m in ANY_BLOCK_RE.findall(response_text) if m.strip()]
+    for block in sorted(any_matches, key=len, reverse=True):
+        try:
+            ast.parse(block)
+            return block + "\n"
+        except SyntaxError:
+            continue
+    if any_matches:
+        return max(any_matches, key=len) + "\n"
+
     return response_text.strip() + "\n"
 
 
@@ -68,31 +99,79 @@ class OpenAICompatibleClient:
     def chat_completion(
         self, messages: list[dict[str, str]]
     ) -> tuple[str, dict[str, int]]:
+        last_exc: Exception | None = None
+        for effort in (None, "medium", "low"):
+            try:
+                return self._do_request(messages, reasoning_effort=effort)
+            except urllib.error.HTTPError as exc:
+                last_exc = exc
+                if exc.code in (502, 504, 524):
+                    continue
+                err_body = exc.read().decode("utf-8", errors="replace")
+                raise RuntimeError(f"API HTTP {exc.code}: {err_body}") from exc
+            except TimeoutError as exc:
+                last_exc = exc
+                continue
+        raise RuntimeError(f"API request timed out after retries: {last_exc}")
+
+    def _do_request(
+        self,
+        messages: list[dict[str, str]],
+        reasoning_effort: str | None = None,
+    ) -> tuple[str, dict[str, int]]:
         url = f"{self.base_url}/chat/completions"
         payload: dict[str, Any] = {
             "model": self.model,
             "messages": messages,
             "max_tokens": self.max_tokens,
+            "stream": True,
+            "stream_options": {"include_usage": True},
         }
+        if reasoning_effort is not None:
+            payload["reasoning_effort"] = reasoning_effort
         if self.temperature is not None:
             payload["temperature"] = self.temperature
         data = json.dumps(payload).encode("utf-8")
         headers = {
             "Content-Type": "application/json",
+            "Accept": "text/event-stream",
+            "User-Agent": "pgmol-bench/0.1.0",
         }
         if self.api_key:
             headers["Authorization"] = f"Bearer {self.api_key}"
 
         req = urllib.request.Request(url, data=data, headers=headers, method="POST")
-        try:
-            with urllib.request.urlopen(req, timeout=self.timeout_s) as resp:
-                body = json.loads(resp.read().decode("utf-8"))
-        except urllib.error.HTTPError as exc:
-            err_body = exc.read().decode("utf-8", errors="replace")
-            raise RuntimeError(f"API HTTP {exc.code}: {err_body}") from exc
+        content_parts: list[str] = []
+        usage: dict[str, Any] = {}
 
-        content = body["choices"][0]["message"]["content"]
-        usage = body.get("usage", {})
+        with urllib.request.urlopen(req, timeout=self.timeout_s) as resp:
+            ctype = (resp.headers.get("Content-Type") or "").lower()
+            if "application/json" in ctype and "event-stream" not in ctype:
+                body = json.loads(resp.read().decode("utf-8"))
+                content = body["choices"][0]["message"].get("content") or ""
+                usage = body.get("usage", {})
+            else:
+                for raw_line in resp:
+                    line = raw_line.decode("utf-8", errors="replace").strip()
+                    if not line or not line.startswith("data:"):
+                        continue
+                    data_str = line[5:].strip()
+                    if data_str == "[DONE]":
+                        break
+                    try:
+                        chunk = json.loads(data_str)
+                    except Exception:
+                        continue
+                    if chunk.get("usage"):
+                        usage = chunk["usage"]
+                    choices = chunk.get("choices") or []
+                    if choices:
+                        delta = choices[0].get("delta") or {}
+                        piece = delta.get("content")
+                        if piece:
+                            content_parts.append(piece)
+                content = "".join(content_parts)
+
         token_counts = {
             "prompt_tokens": int(usage.get("prompt_tokens", 0)),
             "completion_tokens": int(usage.get("completion_tokens", 0)),
@@ -178,6 +257,9 @@ class LLMAPIRunner:
                 code = extract_python_code(reply_text)
                 init_path = ctx.workdir / "src" / "pgmol" / "__init__.py"
                 init_path.write_text(code, encoding="utf-8")
+                gen_dir = REPO_ROOT / "benchmark" / "results" / "generated"
+                gen_dir.mkdir(parents=True, exist_ok=True)
+                (gen_dir / f"{run_id}.py").write_text(code, encoding="utf-8")
 
                 if turn >= max_turns:
                     break
