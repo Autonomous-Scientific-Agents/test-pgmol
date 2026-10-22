@@ -75,7 +75,7 @@ def build_parser() -> argparse.ArgumentParser:
     )
     p_api.add_argument("--base-url", default=None, help="OpenAI-compatible base URL.")
     p_api.add_argument("--api-key", default=None, help="API key (defaults to OPENAI_API_KEY / AMSC_API_KEY).")
-    p_api.add_argument("--temperature", type=float, default=0.0, help="Sampling temperature (default: 0.0).")
+    p_api.add_argument("--temperature", type=float, default=None, help="Sampling temperature (optional).")
     p_api.add_argument("--keep-workdir", action="store_true", help="Preserve temporary workspace after run.")
     p_api.add_argument("--run-id", default=None, help="Custom run identifier.")
     p_api.add_argument(

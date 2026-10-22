@@ -37,21 +37,27 @@ class OpenAICompatibleClient:
         model: str,
         base_url: str | None = None,
         api_key: str | None = None,
-        temperature: float = 0.0,
-        max_tokens: int = 16384,
-        timeout_s: float = 300.0,
+        temperature: float | None = None,
+        max_tokens: int = 32000,
+        timeout_s: float = 600.0,
     ) -> None:
-        self.model = model
+        self.model = model.removeprefix("amsc-mag/")
         self.base_url = (
             base_url
+            or os.environ.get("AMSC_BASE_URL")
             or os.environ.get("OPENAI_BASE_URL")
             or os.environ.get("OPENAI_API_BASE")
-            or "https://api.openai.com/v1"
+            or (
+                "https://mag.genesis.americansciencecloud.org/v1"
+                if (os.environ.get("AMSC_TOKEN") or os.environ.get("AMSC_API_KEY"))
+                else "https://api.openai.com/v1"
+            )
         ).rstrip("/")
         self.api_key = (
             api_key
-            or os.environ.get("OPENAI_API_KEY")
+            or os.environ.get("AMSC_TOKEN")
             or os.environ.get("AMSC_API_KEY")
+            or os.environ.get("OPENAI_API_KEY")
             or os.environ.get("OPENROUTER_API_KEY")
             or ""
         )
@@ -66,9 +72,10 @@ class OpenAICompatibleClient:
         payload: dict[str, Any] = {
             "model": self.model,
             "messages": messages,
-            "temperature": self.temperature,
             "max_tokens": self.max_tokens,
         }
+        if self.temperature is not None:
+            payload["temperature"] = self.temperature
         data = json.dumps(payload).encode("utf-8")
         headers = {
             "Content-Type": "application/json",
@@ -120,7 +127,7 @@ class LLMAPIRunner:
         max_turns: int = 1,
         base_url: str | None = None,
         api_key: str | None = None,
-        temperature: float = 0.0,
+        temperature: float | None = None,
         keep_workdir: bool = False,
         run_id: str | None = None,
         chat_fn: Any | None = None,
