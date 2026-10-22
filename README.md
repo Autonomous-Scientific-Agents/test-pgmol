@@ -15,8 +15,30 @@ what you get with the reference repositories below. This repo is part of the
 |---|---|
 | `validation/core_xyz/` | 36 molecules, from H₂ to ferrocene and cubane. The expected point group is in the filename: `<formula>_<pointgroup>.xyz`. |
 | `validation/challenge_xyz/` | 55 harder cases (high symmetry groups, near-symmetric geometries) for after the core set passes. |
+| `benchmark/` | Standardized `pgmol-bench` runner for evaluating both LLM APIs (1-shot or multi-turn) and headless CLI agents (`claude-code`, `opencode`, `codex`, `aider`) with strict workspace isolation and anonymized evaluation. |
 
 Infinite groups use the ASCII labels `Cinfv` and `Dinfh`; a single atom is `Kh`. Coordinates are in ångströms.
+
+## Standardized Benchmark Runner (`benchmark/`)
+
+`benchmark/` provides an isolated evaluation harness supporting two visibility modes (`--mode core-visible` where only the 36 core molecules are mounted in the workspace, and `--mode zero-shot` where all XYZ files are held out) and evaluates against anonymized filenames (`mol_0001.xyz`) across **Core (36)**, **Challenge (55)**, and **3D Rotated + Translated + Permuted (91)**:
+
+```bash
+# 1. Score an existing repository or directory
+PYTHONPATH=. uv run --isolated --project benchmark python -m benchmark score \
+  --target /path/to/repo --harness opencode --model gemini-4-argon
+
+# 2. Benchmark an LLM API (1-shot or multi-turn self-repair loop)
+PYTHONPATH=. uv run --isolated --project benchmark python -m benchmark api \
+  --model gpt-5 --mode core-visible --turns 3
+
+# 3. Benchmark a headless CLI coding agent in an isolated workspace
+PYTHONPATH=. uv run --isolated --project benchmark python -m benchmark agent \
+  --harness claude-code --model claude-opus-4-6 --mode core-visible
+
+# 4. Generate a Markdown leaderboard table from JSON reports
+PYTHONPATH=. uv run --isolated --project benchmark python -m benchmark leaderboard
+```
 
 ## Try it
 
